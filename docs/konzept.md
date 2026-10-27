@@ -11,6 +11,18 @@ Einsteiger müssen diese Fachbegriffe **nicht** kennen. Wir übersetzen die ents
 
 **Leitgedanke: Es gibt nicht die eine beste Linux-Distribution. Es kommt auf die Anforderungen an.**
 
+## Für wen ist der Distrochooser gedacht?
+
+Die wichtigste Zielgruppe sind **Linux-Neulinge, Umsteiger und Menschen, die noch nicht wissen, welche Distribution sie wählen sollen**. Wer bereits sein gewünschtes Init-System, Paketformat oder Release-Modell kennt, kann gezielter selbst auswählen. Solche technischen Fragen würden gerade diejenigen abschrecken, denen wir den Einstieg erleichtern möchten. Auch erfahrene Nutzer können das Tool verwenden, aber sie bestimmen nicht die Komplexität des Einstiegs.
+
+**Der Nutzer muss Linux nicht verstehen, bevor er eine Distribution auswählen darf. Der Distrochooser soll zuerst den Nutzer verstehen.** Darum fragen wir nach Einsatzzweck, Gerät, Erwartungen und Umgang mit dem System – nicht nach Linux-Fachbegriffen. Das Fachwissen steckt in der Gewichtung im Hintergrund.
+
+### Bewusst begrenzte Komplexität
+
+Linux ist vielseitig: Mit genügend Wissen und Aufwand lassen sich viele Distributionen für sehr unterschiedliche Zwecke einrichten. Deshalb ist die Frage **„Kann Distribution X das?“** selten hilfreich. Wir fragen stattdessen: **„Wie gut passt Distribution X mit ihren Grundprinzipien und ihrem typischen Einrichtungs- und Pflegeaufwand zu diesem Menschen?“** Wir bewerten die praktische Eignung als Ausgangspunkt, nicht jede theoretisch mögliche Konfiguration.
+
+Jede zusätzliche Frage muss die Empfehlungen sinnvoll unterscheiden. Eine Frage nur deshalb aufzunehmen, weil ein technisches Merkmal existiert, macht das Tool nicht automatisch besser. **Keep it simple bedeutet nicht oberflächlich, sondern bewusste Auswahl:** wenig Reibung für Einsteiger, nachvollziehbare Differenzierung im Hintergrund. Die Empfehlungen sollen ein freundlicher Anfang sein, kein technischer Eignungstest.
+
 ## Acht Hauptfragen
 1. **Hauptnutzung:** Alltag, Büro, Gaming, Kreatives, Programmieren, Experimentieren (Mehrfachauswahl).
 2. **Gerätetyp:** Desktop, Laptop, Mini-PC/anderes oder noch kein Gerät.
