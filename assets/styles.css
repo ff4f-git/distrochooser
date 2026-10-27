@@ -422,3 +422,7 @@ a{color:var(--cyan)}
 
 /* Match the terminal prompt and cursor to the green ready messages. */
 .brand-prompt,.brand-cursor{color:var(--green)}
+
+/* Right-aligned window controls: green, yellow, red (red on outer edge). */
+.bar .dot:first-child{background:#28c840}
+.bar .dot:last-child{background:#ff5f57}
