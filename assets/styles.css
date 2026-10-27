@@ -440,3 +440,7 @@ a{color:var(--cyan)}
 /* Two readable tab rows on narrow phones instead of four cramped columns. */
 @media(max-width:520px){.terminal-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;width:100%}.terminal-tab{min-width:0;overflow-wrap:anywhere;font-size:11px;padding:9px 5px}.bar{align-items:center}}
 @media(prefers-reduced-motion:reduce){.brand-cursor,.boot-sequence > *{animation:none}.terminal-tab{transition:none}}
+
+/* Character-by-character terminal boot. Cursor follows the currently typed line. */
+.boot .boot-typing::after{content:'_';display:inline;color:var(--green);animation:terminal-cursor-blink .75s steps(1,end) infinite}
+@media(prefers-reduced-motion:reduce){.boot .boot-typing::after{animation:none;content:none}}
