@@ -11,6 +11,10 @@ Einsteiger müssen diese Fachbegriffe **nicht** kennen. Wir übersetzen die ents
 
 **Leitgedanke: Es gibt nicht die eine beste Linux-Distribution. Es kommt auf die Anforderungen an.**
 
+### Woher die Idee kam
+
+Ein entscheidender Anstoß war **Chris Titus** und seine sinngemäße Antwort auf die Frage nach der besten Linux-Distribution: **„It depends on …“ – es kommt darauf an.** Dieser Gedanke brachte eine schon lange bestehende Idee auf den Punkt: Statt immer dieselben Distributionen pauschal als die besten zu empfehlen, sollte zuerst der Mensch mit seinen Bedürfnissen im Mittelpunkt stehen. Daraus entstand der Anspruch, mit möglichst wenigen, leicht verständlichen Fragen eine sinnvolle, individuelle Auswahl zu ermöglichen. Nicht Linux-Wissen soll Voraussetzung für die Empfehlung sein – die Empfehlung soll den Einstieg in Linux erleichtern.
+
 ## Für wen ist der Distrochooser gedacht?
 
 Die wichtigste Zielgruppe sind **Linux-Neulinge, Umsteiger und Menschen, die noch nicht wissen, welche Distribution sie wählen sollen**. Wer bereits sein gewünschtes Init-System, Paketformat oder Release-Modell kennt, kann gezielter selbst auswählen. Solche technischen Fragen würden gerade diejenigen abschrecken, denen wir den Einstieg erleichtern möchten. Auch erfahrene Nutzer können das Tool verwenden, aber sie bestimmen nicht die Komplexität des Einstiegs.
