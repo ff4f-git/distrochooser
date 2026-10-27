@@ -30,12 +30,17 @@ main{
   justify-content:space-between;
   align-items:center;
   margin-bottom:24px;
-  gap:12px}
+  gap:16px}
 
 .brand{
   color:var(--cyan);
-  font-size:21px;
-  font-weight:700;
+  font-family:"JetBrains Mono",monospace;
+  font-size:clamp(19px,2.9vw,29px);
+  font-weight:800;
+  letter-spacing:.035em;
+  line-height:1.25;
+  text-shadow:0 0 15px rgba(35,191,220,.13);
+  overflow-wrap:anywhere;
   text-decoration:none}
 
 .language-switch{
@@ -374,3 +379,5 @@ footer a{
 .statistics p{font-size:12px;line-height:1.7}
 .statistics #statisticsStatus{margin:12px 0 0;color:var(--green)}
 .statistics .btn{max-width:100%;white-space:normal;text-align:left}
+
+@media(max-width:520px){.brand{font-size:clamp(16px,4.3vw,22px);letter-spacing:.01em}.top{gap:9px}.language-switch{flex-shrink:0}}
