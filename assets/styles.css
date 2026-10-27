@@ -414,3 +414,8 @@ a{color:var(--cyan)}
 
 /* Terminal-style brand cursor. */
 .brand-cursor{color:var(--cyan);display:inline-block;margin-left:1px;text-shadow:0 0 12px rgba(35,191,220,.35)}
+
+/* Terminal header: command symbol left, tabs center, window controls right. */
+.bar .terminal-symbol{margin:0 0 10px 0;flex:none}
+.bar .dots{margin:0 0 10px auto;flex:none}
+@media(max-width:520px){.bar .terminal-symbol{margin-left:0}.bar .dots{margin-left:auto}}
