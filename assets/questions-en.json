@@ -1,0 +1,170 @@
+[
+  {
+    "title": "What will you mainly use your computer for?",
+    "hint": "You can select multiple answers.",
+    "options": [
+      [
+        "Everyday use & internet",
+        "B"
+      ],
+      [
+        "Office & productivity",
+        "C"
+      ],
+      [
+        "Gaming",
+        "D"
+      ],
+      [
+        "Creative work",
+        "E"
+      ],
+      [
+        "Programming & development",
+        "F"
+      ],
+      [
+        "Technology & experimenting",
+        "G"
+      ]
+    ]
+  },
+  {
+    "title": "What kind of computer do you use?",
+    "hint": "Choose the answer that fits you best.",
+    "options": [
+      [
+        "Desktop PC",
+        "H"
+      ],
+      [
+        "Notebook / laptop",
+        "I"
+      ],
+      [
+        "Mini PC / other",
+        "J"
+      ],
+      [
+        "Not yet — I plan to buy one",
+        "K"
+      ]
+    ]
+  },
+  {
+    "title": "Approximately how old is your computer?",
+    "hint": "Choose the answer that fits you best.",
+    "options": [
+      [
+        "Less than 1 year",
+        "L"
+      ],
+      [
+        "1–3 years",
+        "M"
+      ],
+      [
+        "4–7 years",
+        "N"
+      ],
+      [
+        "8 years or older",
+        "O"
+      ],
+      [
+        "I don’t know",
+        "P"
+      ]
+    ]
+  },
+  {
+    "title": "How do you want to use your operating system?",
+    "hint": "Choose the answer that fits you best.",
+    "options": [
+      [
+        "Turn it on, use it, and worry as little as possible",
+        "Q"
+      ],
+      [
+        "Learn Linux and try a few things",
+        "R"
+      ],
+      [
+        "Tinker, configure, and experiment",
+        "S"
+      ]
+    ]
+  },
+  {
+    "title": "How important is the appearance?",
+    "hint": "Choose the answer that fits you best.",
+    "options": [
+      [
+        "Classic and familiar",
+        "T"
+      ],
+      [
+        "Modern and attractive",
+        "U"
+      ],
+      [
+        "I don’t mind",
+        "V"
+      ]
+    ]
+  },
+  {
+    "title": "How much do you want to customize your desktop?",
+    "hint": "Choose the answer that fits you best.",
+    "options": [
+      [
+        "Very little",
+        "W"
+      ],
+      [
+        "Some customization",
+        "X"
+      ],
+      [
+        "Customize everything",
+        "Y"
+      ]
+    ]
+  },
+  {
+    "title": "How important is it to easily undo changes?",
+    "hint": "Choose the answer that fits you best.",
+    "options": [
+      [
+        "Very important",
+        "Z"
+      ],
+      [
+        "Would be useful",
+        "AA"
+      ],
+      [
+        "Not important",
+        "AB"
+      ]
+    ]
+  },
+  {
+    "title": "How much Linux experience do you have?",
+    "hint": "Choose the answer that fits you best.",
+    "options": [
+      [
+        "Beginner",
+        "AC"
+      ],
+      [
+        "Intermediate",
+        "AD"
+      ],
+      [
+        "Advanced",
+        "AE"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "Linux Mint Cinnamon": {
+    "label": "The easy all-rounder",
+    "description": "Familiar controls, proven tools, and little day-to-day maintenance. Cinnamon offers a traditional desktop."
+  },
+  "Linux Mint Xfce": {
+    "label": "Lightweight and practical",
+    "description": "The more resource-friendly Mint edition: a classic desktop, easy to use, and suitable for older computers."
+  },
+  "Zorin OS Core": {
+    "label": "An elegant transition",
+    "description": "A beginner-friendly Ubuntu derivative with a polished, familiar interface and an emphasis on switching easily."
+  },
+  "Ubuntu GNOME": {
+    "label": "The popular all-rounder",
+    "description": "Widely used, well documented, and supported by a large software ecosystem. GNOME offers a distinct, streamlined workflow."
+  },
+  "Kubuntu": {
+    "label": "Ubuntu with KDE flexibility",
+    "description": "An Ubuntu foundation with Plasma: familiar desktop interaction and extensive settings out of the box."
+  },
+  "Debian GNOME": {
+    "label": "The steady classic",
+    "description": "Conservative package maintenance and a solid foundation for people who value consistency over the newest releases."
+  },
+  "Debian KDE": {
+    "label": "Stability meets flexibility",
+    "description": "Debian’s steady foundation paired with the versatile Plasma desktop: conservative at its core, customizable on the surface."
+  },
+  "Fedora Workstation": {
+    "label": "Modern Linux with GNOME",
+    "description": "Up-to-date technologies, a focused GNOME desktop, and a relatively fast release cycle."
+  },
+  "Fedora KDE": {
+    "label": "Current and customizable",
+    "description": "Fedora with KDE Plasma: modern software and an interface you can personalize without much manual work."
+  },
+  "openSUSE Leap KDE": {
+    "label": "A measured KDE foundation",
+    "description": "Focused on consistency, with KDE Plasma, management tools, and Btrfs snapshots for rollbacks when configured appropriately."
+  },
+  "openSUSE Tumbleweed KDE": {
+    "label": "Rolling release with a safety net",
+    "description": "Very recent packages, KDE Plasma, and well-integrated Btrfs/Snapper rollback support in a typical installation."
+  },
+  "MX Linux Xfce": {
+    "label": "Practical and resource-friendly",
+    "description": "A Debian-based distribution with a lightweight Xfce desktop and its own setup and management utilities."
+  },
+  "Linux Lite": {
+    "label": "Simple on older PCs",
+    "description": "A lightweight Ubuntu-based desktop distribution with familiar controls and an emphasis on an easy start."
+  },
+  "elementary OS": {
+    "label": "Consistent by design",
+    "description": "A carefully designed minimalist desktop with its own interface and intentionally limited customization."
+  },
+  "Pop!_OS COSMIC": {
+    "label": "Productivity with COSMIC",
+    "description": "An independent, modern COSMIC desktop with thoughtful window workflows and many built-in options."
+  },
+  "Bazzite KDE": {
+    "label": "Gaming first, maintenance second",
+    "description": "A gaming-focused, image-based Fedora system with Steam integration, KDE, and straightforward system rollback."
+  },
+  "Nobara KDE": {
+    "label": "Fedora tuned for gamers",
+    "description": "A Fedora derivative customized for gaming and multimedia, maintained as a more specialized community project."
+  },
+  "CachyOS KDE": {
+    "label": "Performance for enthusiasts",
+    "description": "An Arch-based distribution with performance tuning and fresh packages, aimed at people who enjoy actively managing their system."
+  },
+  "EndeavourOS KDE": {
+    "label": "Arch with a head start",
+    "description": "Close to Arch Linux, but easier to get started with. Rolling releases and ongoing maintenance remain part of the experience."
+  },
+  "Arch Linux (Eigenbau)": {
+    "label": "Build your own Linux",
+    "description": "A minimal starting point with maximum control. Installation, desktop selection, and maintenance are largely up to you."
+  },
+  "NixOS KDE": {
+    "label": "Your system as configuration",
+    "description": "Declarative system configuration and reproducible setups with powerful rollback concepts, but a substantial learning curve."
+  },
+  "Omarchy": {
+    "label": "An opinionated tiling workflow",
+    "description": "A preconfigured Arch/Hyprland environment with keyboard-oriented workflows and deliberate design choices, not a conventional desktop."
+  }
+}

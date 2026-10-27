@@ -1,0 +1,90 @@
+{
+  "Linux Mint Cinnamon": {
+    "label": "Der unkomplizierte Allrounder",
+    "description": "Vertraute Bedienung, bewährte Werkzeuge und wenig Aufwand im Alltag. Cinnamon bietet einen klassischen Desktop."
+  },
+  "Linux Mint Xfce": {
+    "label": "Schlank und alltagstauglich",
+    "description": "Die ressourcenschonendere Mint-Variante: klassischer Desktop, einfache Bedienung und gut für ältere Rechner."
+  },
+  "Zorin OS Core": {
+    "label": "Der elegante Umstieg",
+    "description": "Einsteigerfreundliches Ubuntu-Derivat mit aufgeräumter, vertraut wirkender Oberfläche und Fokus auf einfachen Umstieg."
+  },
+  "Ubuntu GNOME": {
+    "label": "Der große Allrounder",
+    "description": "Weit verbreitet, gut dokumentiert und mit großem Softwareangebot. GNOME setzt auf einen klaren, eigenständigen Workflow."
+  },
+  "Kubuntu": {
+    "label": "Ubuntu mit KDE-Freiheit",
+    "description": "Die Ubuntu-Basis kombiniert mit Plasma: vertraute Desktop-Bedienung und viele Einstellungen direkt an Bord."
+  },
+  "Debian GNOME": {
+    "label": "Der ruhige Klassiker",
+    "description": "Konservative Paketpflege und eine solide Basis für alle, die Beständigkeit höher schätzen als neueste Versionen."
+  },
+  "Debian KDE": {
+    "label": "Beständigkeit trifft Flexibilität",
+    "description": "Debians ruhige Basis mit dem vielseitigen Plasma-Desktop – stabil im Konzept, anpassbar in der Oberfläche."
+  },
+  "Fedora Workstation": {
+    "label": "Modernes Linux mit GNOME",
+    "description": "Aktuelle Technologien, ein klarer GNOME-Desktop und ein vergleichsweise zügiger Veröffentlichungsrhythmus."
+  },
+  "Fedora KDE": {
+    "label": "Aktuell und anpassbar",
+    "description": "Fedora mit KDE Plasma: moderne Software und eine Oberfläche, die sich ohne viel Handarbeit gestalten lässt."
+  },
+  "openSUSE Leap KDE": {
+    "label": "Die bedächtige KDE-Basis",
+    "description": "Auf Beständigkeit ausgelegt: KDE Plasma, Cockpit und Myrlyn zur Verwaltung sowie Btrfs-Snapshots für System-Rollbacks bei passender Einrichtung."
+  },
+  "openSUSE Tumbleweed KDE": {
+    "label": "Rolling Release mit Sicherheitsnetz",
+    "description": "Sehr aktuelle Pakete, KDE Plasma und standardmäßig gut integrierte Btrfs/Snapper-Rollbacks bei typischer Installation."
+  },
+  "MX Linux Xfce": {
+    "label": "Praktisch und ressourcenschonend",
+    "description": "Debian-basierte Distribution mit leichtem Xfce-Desktop und eigenen Werkzeugen für Verwaltung und Einrichtung."
+  },
+  "Linux Lite": {
+    "label": "Einfach auf älteren PCs",
+    "description": "Ubuntu-basierte, leichtgewichtige Desktop-Distribution mit vertrauter Bedienung und Fokus auf den unkomplizierten Einstieg."
+  },
+  "elementary OS": {
+    "label": "Design aus einem Guss",
+    "description": "Konsequente, minimalistische Desktop-Gestaltung mit eigener Oberfläche und bewusst begrenzten Anpassungsmöglichkeiten."
+  },
+  "Pop!_OS COSMIC": {
+    "label": "Produktivität mit COSMIC",
+    "description": "Eigenständiger, moderner COSMIC-Desktop mit durchdachten Fenster-Workflows und vielen Einstellungen direkt im System."
+  },
+  "Bazzite KDE": {
+    "label": "Gaming zuerst, Pflege danach",
+    "description": "Gaming-orientiertes, imagebasiertes Fedora-System mit Steam-Fokus, KDE und einfacher Rückkehr zu früheren Systemständen."
+  },
+  "Nobara KDE": {
+    "label": "Fedora für Spieler optimiert",
+    "description": "Gaming- und Multimedia-orientierte Fedora-Abwandlung mit zusätzlichen Anpassungen; stärker spezialisiertes Community-Projekt."
+  },
+  "CachyOS KDE": {
+    "label": "Performance für Enthusiasten",
+    "description": "Arch-basierte Distribution mit Leistungsoptimierungen und aktuellen Paketen – attraktiv für Nutzer, die ein aktives System mögen."
+  },
+  "EndeavourOS KDE": {
+    "label": "Arch mit Starthilfe",
+    "description": "Nah an Arch Linux, aber mit komfortablerem Einstieg. Rolling Release und Systempflege bleiben Teil des Konzepts."
+  },
+  "Arch Linux (Eigenbau)": {
+    "label": "Du baust dein Linux selbst",
+    "description": "Minimaler Ausgangspunkt, maximale Kontrolle. Installation, Desktop und laufende Pflege liegen weitgehend in deiner Hand."
+  },
+  "NixOS KDE": {
+    "label": "Das System als Konfiguration",
+    "description": "Deklarative Systemkonfiguration und reproduzierbare Setups mit mächtigen Rollback-Konzepten – dafür eine deutliche Lernkurve."
+  },
+  "Omarchy": {
+    "label": "Meinungsstarker Tiling-Workflow",
+    "description": "Vorkonfigurierte Arch-/Hyprland-Umgebung mit tastaturorientiertem Workflow und klaren Designentscheidungen; kein klassischer Desktop."
+  }
+}
