@@ -4,6 +4,8 @@
 
 A bilingual, browser-based Linux distribution recommender. Answer a few questions and discover three Linux distributions that may suit your hardware, experience, and preferences.
 
+![Linux Distrochooser – deutsche Terminal-Oberfläche / German terminal interface](docs/images/distrochooser.jpg)
+
 > **Live demo:** https://ff4f-git.github.io/distrochooser/
 
 ---
