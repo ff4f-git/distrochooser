@@ -58,8 +58,3 @@ Es erscheinen **drei Empfehlungen** mit kurzen Beschreibungen und rein visuellen
 - Auf der Live-Webseite bleibt der Abschluss **„Du möchtest Linux ausprobieren und umsteigen?“** mit **„IT-Anfrage starten“** erhalten.
 
 **KISS:** Acht verständliche Fragen für den Besucher, eine nachvollziehbare, differenzierte Bewertung im Hintergrund.
-
-
-### Ergebnisdarstellung – visuelle Vergleichsbalken (27.10.2026)
-
-Die Top 3 zeigen **keine Punktzahlen und keine Prozentwerte**. Ein vollständig gefüllter erster Balken dient als Vergleichsreferenz für den höchsten tatsächlich erreichten Gesamtwert. Die Alternativen werden relativ dazu auf einer intern auf 50–100 % verkürzten Skala dargestellt, damit auch kleinere Unterschiede sichtbar werden. Keine numerische Skala oder Berechnungserklärung im Frontend.
