@@ -400,3 +400,14 @@ a{color:var(--cyan)}
 .privacy-copy hr{border:0;border-top:1px solid var(--line);margin:28px 0}
 #total{color:var(--green);font-size:23px;font-weight:700} .stats-summary{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:15px 0 24px}.stats-summary #countLabel{margin:0;color:var(--muted)}.stats-summary #total{line-height:1}.stats-summary #period{font-size:12px;color:var(--muted)}.stats-back-top{display:inline-block;margin:0 0 18px;font-size:12px}.statslist .rank{display:flex;align-items:center;gap:9px}.rank-medal{font-size:18px}.statslist .result:nth-child(1) .rank{color:#e4c16a}.statslist .result:nth-child(2) .rank{color:#bac7d2}.statslist .result:nth-child(3) .rank{color:#c99b78}.statslist{margin-top:24px}.statslist .result:last-child{border-bottom:0}.stat-count{color:var(--cyan);font-size:13px;font-weight:700;white-space:nowrap}.statslist .meter{margin:12px 0}.statslist .rank{font-size:12px;font-weight:700;margin-bottom:9px}
 @media(max-width:520px){.actions .btn{padding:12px 14px}.stats-summary{gap:8px 12px}.statslist .distro-name{flex-basis:100%}.statslist .stat-count{margin-left:34px}#topLabel{font-size:18px}}
+
+/* Terminal-style page tabs, shared across all three pages. */
+.bar{gap:12px;flex-wrap:wrap;padding:10px 14px 0}
+.dots{flex:none;margin-bottom:10px}
+.terminal-tabs{display:flex;flex:1;min-width:0;align-items:flex-end;gap:5px;flex-wrap:wrap}
+.terminal-tab{display:inline-block;padding:9px 13px 10px;border:1px solid #344a59;border-bottom:0;border-radius:7px 7px 0 0;background:#0c151c;color:var(--muted);font-size:12px;font-weight:600;line-height:1.35;text-decoration:none;transition:background .16s,color .16s,border-color .16s}
+.terminal-tab:hover{color:var(--cyan);background:#12303a;border-color:var(--cyan)}
+.terminal-tab.active{background:var(--panel);color:var(--fg);border-color:#466171;box-shadow:inset 0 2px 0 var(--cyan)}
+.terminal-tab.active:hover{color:var(--cyan)}
+.bar .terminal-symbol{margin:0 0 10px auto}
+@media(max-width:520px){.bar{gap:7px;padding:10px 10px 0}.terminal-tabs{order:3;flex-basis:100%;gap:4px}.terminal-tab{flex:1;text-align:center;padding:9px 5px;font-size:clamp(9px,2.65vw,12px)}.bar .terminal-symbol{margin-left:auto}}
