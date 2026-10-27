@@ -5,7 +5,7 @@
 
 ## Deutsch
 
-### Dateien und Reihenfolge
+### Erstinstallation (bereits durchgeführt) und Reihenfolge
 
 **Wichtig:** Die SQL-Abfragen im Abschnitt „Auswertung“ erstellen **keine** Tabelle. Die komplette Migration steht in [`supabase/migrations/202610270001_statistics.sql`](../supabase/migrations/202610270001_statistics.sql). Sie wurde im **privaten Supabase SQL Editor** ausgeführt. Erst danach funktionieren Auswertungsabfragen auf `public.questionnaire_statistics`.
 
@@ -34,7 +34,13 @@
 
    Den tatsächlichen Joblauf in `cron.job_run_details` prüfen, sobald ein Lauf stattgefunden hat. Die Migration löscht täglich um 03:15 Uhr nach Datenbank-/Cron-Zeitzone Datensätze mit `submitted_on <= current_date - 89`. Backup- und Plattformprotokoll-Aufbewahrung sind separat zu prüfen. Für RLS und RPC-Rechte zusätzlich im Dashboard kontrollieren, dass `anon`/`authenticated` keine Lese-/Schreibrechte erhalten.
 7. **Datenschutz vor Aktivierung:** Tatsächlichen Betreiber, Supabase-Anbieter und Region, Zweck, konkrete Felder, Einwilligung, Aufbewahrung, technische Verarbeitung von IP-Adressen und Log-Aufbewahrung in den Datenschutzhinweisen nennen. Die Anwendung speichert in der Statistik keine IP, keinen User-Agent, keinen Referrer und keine genaue Uhrzeit; die Infrastruktur kann solche Daten dennoch verarbeiten. Seltene Antwortprofile können unterscheidbar sein – keine vollständige Anonymität versprechen. Einwilligungstext in `assets/app.js` auf Deutsch und Englisch prüfen.
-8. **Erst nach allen Prüfungen:** Nur die öffentliche Funktions-URL in [`assets/statistics-config.js`](../assets/statistics-config.js) eintragen und über GitHub Pages veröffentlichen. **Nie** den `SUPABASE_SERVICE_ROLE_KEY` im Frontend ablegen. `SUPABASE_URL` und `SUPABASE_SERVICE_ROLE_KEY` sind serverseitige Supabase-Funktionsumgebung; optional `STATISTICS_ORIGIN` (Standard `https://ff4f-git.github.io`). Vorher bleibt der Statistik-Button deaktiviert.
+8. **Für neue Installationen erst nach allen Prüfungen:** Nur die öffentliche Funktions-URL in [`assets/statistics-config.js`](../assets/statistics-config.js) eintragen und über GitHub Pages veröffentlichen. **Nie** den `SUPABASE_SERVICE_ROLE_KEY` im Frontend ablegen. `SUPABASE_URL` und `SUPABASE_SERVICE_ROLE_KEY` sind serverseitige Supabase-Funktionsumgebung; optional `STATISTICS_ORIGIN` (Standard `https://ff4f-git.github.io`). Vorher bleibt der Statistik-Button deaktiviert.
+
+### Öffentliche Rangliste (aktiv)
+
+Die Seite [statistik.html](../statistik.html) zeigt ab dem **ersten freiwilligen Beitrag** die Gesamtzahl und maximal drei Distributionen, sortiert nach der Häufigkeit ihrer **Erstempfehlung** (`top3[0]`), bei Gleichstand alphabetisch. Die Plätze 2 und 3 dieser Rangliste sind ebenfalls Erstempfehlungen aus anderen Beiträgen – nicht die internen Plätze 2 und 3 jedes einzelnen Ergebnisses. Der Link im Footer ist immer sichtbar; der zusätzliche Button im Ergebnisbereich erscheint erst nach erfolgreicher Übermittlung. Die Werte zählen Beiträge, nicht einzelne Besucher.
+
+Nach der Basismigration `202610270001_statistics.sql` wurden `202610270002_public_statistics.sql` (historische Fünfer-Schwelle) und zuletzt **`202610270003_top_three_from_first.sql`** ausgeführt. Nur die letzte Definition von `public.public_statistics()` ist maßgeblich. **Die Fünfer-Schwelle gilt für die öffentliche Rangliste nicht mehr.** Auch ein einzelner Beitrag kann eine Distribution sichtbar machen; keine formale Anonymitätsgarantie. Die Tabelle selbst bleibt privat und die RPC für `service_role` reserviert. Die Edge Function stellt die Aggregate über GET bereit. Für diese SQL-Änderung ist kein erneutes Function-Deployment nötig. Details: [Öffentliche Statistik](public-statistics.md).
 
 ### Auswertung (nur privat)
 
@@ -94,7 +100,13 @@ Nur ein ausdrücklicher Klick nach dem Ergebnis übermittelt. Die Serverfunktion
 
    Inspect `cron.job_run_details` after the job has run. The migration schedules deletion at 03:15 in the database/cron time zone for rows with `submitted_on <= current_date - 89`. Verify RLS and denied `anon`/`authenticated` access; review provider logs and backups separately.
 6. **Privacy review is mandatory before launch:** Publish accurate details about the operator, Supabase region, purpose, collected fields, consent, retention, technical IP processing and platform logs. No IP, user agent, referrer or exact timestamp is stored in the statistics table, but infrastructure may still process them. Rare answer combinations may be distinguishable; do not promise complete anonymity. Review the German and English consent text in `assets/app.js`.
-7. **Only after verification**, put the public function URL in [`assets/statistics-config.js`](../assets/statistics-config.js) and publish the site. Never expose `SUPABASE_SERVICE_ROLE_KEY` in client-side code. `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` belong in the Supabase function environment; optional `STATISTICS_ORIGIN` defaults to `https://ff4f-git.github.io`. Until the URL is configured, the contribution button stays disabled.
+7. **For new installations, only after verification**, put the public function URL in [`assets/statistics-config.js`](../assets/statistics-config.js) and publish the site. Never expose `SUPABASE_SERVICE_ROLE_KEY` in client-side code. `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` belong in the Supabase function environment; optional `STATISTICS_ORIGIN` defaults to `https://ff4f-git.github.io`. Until the URL is configured, the contribution button stays disabled.
+
+### Public ranking (active)
+
+The [public dashboard](../statistik.html) shows the total and up to three most frequent **first-choice recommendations** (`top3[0]`) starting with the first voluntary contribution; ties are alphabetical. Public ranks #2 and #3 refer to other first-choice recommendations, not the second and third recommendations within each result. Counts are submissions, not unique visitors. The footer link is always visible; the additional results-page link appears only after a successful opt-in submission.
+
+The migrations are `202610270001_statistics.sql` (private table), `202610270002_public_statistics.sql` (historical five-count rule), and **`202610270003_top_three_from_first.sql`** (current RPC). The five-count public suppression has been removed; a one-count recommendation can be published, so there is no anonymity guarantee. Raw table access remains private. The Edge Function serves aggregate data over GET, and a SQL-only update needs no redeployment. See [public statistics](public-statistics.md).
 
 ### Private reporting
 
