@@ -99,7 +99,7 @@ Nur ein ausdrücklicher Klick nach dem Ergebnis übermittelt. Die Serverfunktion
 6. **Privacy review is mandatory before launch:** Publish accurate details about the operator, Supabase region, purpose, collected fields, consent, retention, technical IP processing and platform logs. No IP, user agent, referrer or exact timestamp is stored in the statistics table, but infrastructure may still process them. Rare answer combinations may be distinguishable; do not promise complete anonymity. Review the German and English consent text in `assets/app.js`.
 7. **For new installations, only after verification**, put the public function URL in [`assets/statistics-config.js`](../assets/statistics-config.js) and publish the site. Never expose `SUPABASE_SERVICE_ROLE_KEY` in client-side code. `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` belong in the Supabase function environment; optional `STATISTICS_ORIGIN` defaults to `https://ff4f-git.github.io`. Until the URL is configured, the contribution button stays disabled.
 
-### Public ranking (active)
+### Public ranking 
 
 The [public dashboard](../statistik.html) shows the total and up to three most frequent **first-choice recommendations** (`top3[0]`) starting with the first voluntary contribution; ties are alphabetical. Public ranks #2 and #3 refer to other first-choice recommendations, not the second and third recommendations within each result. Counts are submissions, not unique visitors. The footer link is always visible; the additional results-page link appears only after a successful opt-in submission.
 
