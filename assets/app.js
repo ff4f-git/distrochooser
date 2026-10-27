@@ -120,6 +120,7 @@ function optionButton(label, selected, onClick, multi = false) {
 function setLanguage(nextLanguage) {
   language = nextLanguage;
   document.documentElement.lang = language;
+  document.querySelectorAll('[data-nav-de]').forEach(a => { a.textContent = a.dataset[language === 'de' ? 'navDe' : 'navEn']; });
   $('langDe').setAttribute('aria-pressed', String(language === 'de'));
   $('langEn').setAttribute('aria-pressed', String(language === 'en'));
   document.querySelectorAll('[data-i18n]').forEach(element => {
