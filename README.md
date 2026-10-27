@@ -24,7 +24,7 @@ Linux bietet viele Möglichkeiten – aber welche Distribution passt zu deinem A
 - Drei Empfehlungen mit kurzen Erläuterungen und relativer visueller Einordnung.
 - Umschaltbare Oberfläche auf **Deutsch und Englisch**, auch während des Fragebogens.
 - Eine transparente Punktematrix und eine dokumentierte Bewertungslogik.
-- Freiwillige Ergebnisstatistik nach dem Test (derzeit noch nicht für Besucher aktiviert).
+- Freiwillige Ergebnisstatistik nach dem Test mit öffentlicher Top-3-Rangliste.
 
 ### Wie entstehen die Empfehlungen?
 
@@ -32,7 +32,7 @@ Jede Antwort ist mit Gewichtungen für die berücksichtigten Distributionen verk
 
 Die Gewichtungen sind bewusst redaktionelle Einschätzungen. Sie können sich mit der Entwicklung von Distributionen ändern und ersetzen keine eigene Recherche, insbesondere bei Treibern, Hardware-Kompatibilität und Spielen mit Anti-Cheat.
 
-**Freiwillige Statistik (Einrichtungsstand 27.10.2026):** Die Supabase-Datenbankmigration wurde ausgeführt und die Edge Function `submit-statistics` erfolgreich bereitgestellt. Live-Tests, Datenschutzprüfung und Freischaltung der öffentlichen URL stehen noch aus. Antworten werden nicht automatisch gesendet. [Einrichtung und Prüfung (DE/EN)](docs/statistics-setup.md).
+**Freiwillige Statistik (Stand 27.10.2026):** Live und erfolgreich getestet: Beiträge werden ausschließlich nach ausdrücklichem Klick auf „Ergebnis zur Statistik beitragen“ übertragen. Nach erfolgreichem Beitrag erscheint ein zusätzlicher Link „Öffentliche Statistik ansehen“ im Ergebnisbereich; der Footer-Link ist immer sichtbar. Die [öffentliche Statistik](statistik.html) zeigt ab dem ersten Beitrag die Gesamtzahl und maximal drei Distributionen, sortiert nach Häufigkeit ihrer **Erstplatzierung** (bei Gleichstand alphabetisch). Es handelt sich um Empfehlungen des Modells, nicht um Nutzerstimmen für eine Distribution. Die Statistik umfasst etwa 90 Tage und ist nicht repräsentativ. [Betrieb und Einrichtung (DE/EN)](docs/statistics-setup.md) · [Öffentliche Auswertung](docs/public-statistics.md).
 
 Mehr dazu: [Konzept](docs/konzept.md) · [Bewertungslogik](docs/bewertungslogik.md) · [Punktematrix](data/punktematrix.xlsx)
 
@@ -54,7 +54,7 @@ Linux offers a wealth of choices, but where should you start? **Linux Distrochoo
 - Three recommendations with brief explanations and relative visual comparisons.
 - A **German/English** language switch that works throughout the questionnaire.
 - An inspectable scoring matrix and documentation of the recommendation model.
-- Optional post-result statistics contribution (not yet enabled for visitors).
+- Optional post-result statistics contribution with a public top-three ranking.
 
 ### How does it work?
 
@@ -62,7 +62,7 @@ Each answer contributes weighted points to the included distributions. Gaming-re
 
 Weights reflect editorial judgment and may change as distributions evolve. Always verify hardware, driver, and game compatibility independently, especially for multiplayer games with anti-cheat systems.
 
-**Optional statistics (setup status as of 27 October 2026):** The Supabase database migration has been applied and the `submit-statistics` Edge Function deployed. Live testing, privacy review and publishing the endpoint configuration are still pending. Answers are never sent automatically. [Bilingual setup and verification guide](docs/statistics-setup.md).
+**Optional statistics (27 October 2026):** Live and tested. Only an explicit click submits a result. After a successful contribution, a “View public statistics” link appears in the results; the footer link remains available to everyone. The [public dashboard](statistik.html) displays the total and up to three most frequent **first-choice recommendations** starting with the first contribution (alphabetical tie-break). These are model recommendations, not votes for a distribution. Figures cover approximately 90 days and are not representative. [Operations guide](docs/statistics-setup.md) · [Public statistics](docs/public-statistics.md).
 
 For a closer look, see the [concept](docs/concept.md), [scoring documentation](docs/scoring-logic.md), and [scoring matrix](data/punktematrix.xlsx).
 
@@ -81,10 +81,13 @@ assets/gpu-bonus.json       Gaming GPU adjustments
 assets/questions-en.json    English questions and answer labels
 assets/descriptions-de.json German result descriptions
 assets/descriptions-en.json English result descriptions
-assets/statistics-config.js  Optional statistics endpoint (empty until enabled)
-supabase/migrations/         Private database migration / Datenbankmigration
+assets/statistics-config.js  Active public statistics endpoint
+supabase/migrations/         Private storage and public aggregation SQL migrations
 supabase/functions/          Server-side submission handler / Serverfunktion
 docs/statistics-setup.md     Bilingual setup and operations / Anleitung DE/EN
+statistik.html                Public statistics dashboard / Öffentliche Statistik
+datenschutz.html             Privacy notice / Datenschutzhinweise
+docs/public-statistics.md    Public dashboard configuration / Einrichtung
 docs/                       Concept and scoring notes / Dokumentation
 ```
 
