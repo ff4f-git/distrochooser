@@ -1,5 +1,7 @@
 # Linux Distrochooser Distrochooser – Konzept v2.0
 
+**Deutsch · [English](concept.md)**
+
 ## Die Idee
 Wir wollen **keinen weiteren Distrochooser, der Lieblingsdistributionen des Entwicklers oder gerade gehypte Systeme bevorzugt**. Stattdessen betrachten wir möglichst sachlich die Stärken und Schwächen der einzelnen Distributionen.
 
@@ -28,7 +30,7 @@ Einsteiger müssen diese Fachbegriffe **nicht** kennen. Wir übersetzen die ents
 - **Erfahrung ist nicht gleich Wunsch nach Aufwand:** Auch Profis können ein unkompliziertes System bevorzugen. Die starke Profi-Wertung berücksichtigt anspruchsvolle Systeme, ohne sie automatisch gewinnen zu lassen.
 - **Keine Ergebnislenkung:** Die Matrix wird nicht angepasst, um einen bestimmten Sieger zu erzeugen.
 
-Die **konkreten Bewertungsrahmen, Begründungen und Rechenregeln** stehen in `Linux DistrochooserDistrochooser_Bewertungslogik_v2.0.md`; die Einzelwerte in der Excel-Punktematrix.
+Die **konkreten Bewertungsrahmen, Begründungen und Rechenregeln** stehen in [Bewertungslogik](bewertungslogik.md); die Einzelwerte in der Excel-Punktematrix.
 
 ## Ergebnis und Grenzen
 Es erscheinen **drei Empfehlungen** mit kurzen Beschreibungen und rein visuellen Vergleichsbalken. Im Ergebnis werden **weder Prozentwerte noch Punktzahlen** angezeigt. Der Balken des höchsten tatsächlich erreichten Gesamtpunktwerts ist vollständig gefüllt; die anderen Balken werden auf einer intern verkürzten Skala von 50 bis 100 % des Bestwerts dargestellt. Die Balken sind eine visuelle Rang- und Abstandshilfe, keine Eignungswahrscheinlichkeit. Konkrete Hardware-, Anwendungs- und Spielekompatibilität muss gegebenenfalls zusätzlich geprüft werden. Snapshots ersetzen kein Backup.

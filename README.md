@@ -4,13 +4,13 @@
 
 A bilingual, browser-based Linux distribution recommender. Answer a few questions and discover three Linux distributions that may suit your hardware, experience, and preferences.
 
-![Linux Distrochooser – deutsche Terminal-Oberfläche / German terminal interface](docs/images/distrochooser.jpg)
-
 > **Live demo:** https://ff4f-git.github.io/distrochooser/
 
 ---
 
 ## Deutsch
+
+![Linux Distrochooser – deutsche Terminal-Oberfläche](docs/images/distrochooser.jpg)
 
 ### Finde ein Linux, das zu dir passt
 
@@ -37,6 +37,8 @@ Mehr dazu: [Konzept](docs/konzept.md) · [Bewertungslogik](docs/bewertungslogik.
 
 ## English
 
+![Linux Distrochooser – English terminal interface](docs/images/distrochooser-en.jpg)
+
 ### Find a Linux distribution that fits you
 
 Linux offers a wealth of choices, but where should you start? **Linux Distrochooser** is an interactive questionnaire that helps you explore distributions based on your needs, rather than presenting a generic popularity ranking.
@@ -56,7 +58,7 @@ Each answer contributes weighted points to the included distributions. Gaming-re
 
 Weights reflect editorial judgment and may change as distributions evolve. Always verify hardware, driver, and game compatibility independently, especially for multiplayer games with anti-cheat systems.
 
-For a closer look, see the [concept (German)](docs/konzept.md), [scoring documentation (German)](docs/bewertungslogik.md), and [scoring matrix](data/punktematrix.xlsx).
+For a closer look, see the [concept](docs/concept.md), [scoring documentation](docs/scoring-logic.md), and [scoring matrix](data/punktematrix.xlsx).
 
 ---
 

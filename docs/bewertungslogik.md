@@ -1,5 +1,7 @@
 # Linux Distrochooser Distrochooser – Bewertungslogik v2.0
 
+**Deutsch · [English](scoring-logic.md)**
+
 ## 1. Grundprinzip
 Der Distrochooser empfiehlt nicht die beliebtesten Distributionen oder persönliche Favoriten. Er vergleicht die Anforderungen des Nutzers mit den Stärken und Schwächen der Distributionen – insbesondere ihrem technischen Grundkonzept und dem Zusammenspiel ihrer Bestandteile.
 

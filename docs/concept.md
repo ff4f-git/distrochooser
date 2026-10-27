@@ -1,0 +1,47 @@
+# Linux Distrochooser – Concept v2.0
+
+**[Deutsch](konzept.md) · English**
+
+## The idea
+We do **not want another distro chooser that favors its developer’s favorite distributions or whatever systems are currently hyped**. Instead, we aim to consider each distribution’s strengths and weaknesses as objectively as possible.
+
+Appearance and preinstalled software are not the only factors. What matters is **the underlying technical concept and how its components work together**: for example, the update and maintenance model, package management, system architecture, security, and recovery. Many features can be added later, but integration and long-term maintenance effort vary.
+
+Beginners **do not** need to know these technical terms. We translate the key requirements into eight simple questions. The answers and a deliberately selective scoring matrix produce three suitable recommendations—possibly including a distribution the visitor had never considered.
+
+**Guiding principle: There is no single best Linux distribution. It depends on your requirements.**
+
+## Eight main questions
+1. **Main use:** Everyday tasks, office work, gaming, creative work, programming, experimenting (multiple selections).
+2. **Device type:** Desktop, laptop, mini PC/other, or no device yet.
+3. **Device age:** Devices at least eight years old trigger a RAM follow-up question.
+4. **Approach to the system:** Simply use it, learn Linux, or configure it yourself.
+5. **Appearance:** What kind of interface do you prefer?
+6. **Customization:** How much should you be able to change?
+7. **Recovery:** How important is the ability to undo changes?
+8. **Linux experience:** Deliberately asked last.
+
+The GPU question appears **only for gaming**. “I don’t know” is a valid answer and adds no GPU bonus.
+
+## Scoring principles
+- **Suitability over popularity:** No favorite distribution and no blanket ranking.
+- **Clear differentiation:** Positive and negative scores reveal real differences; no artificially narrow, mostly positive ratings.
+- **Relevance determines weight:** Fundamental requirements matter more than appearance, for example.
+- **Experience does not imply a desire for maintenance work:** Experts may also prefer an uncomplicated system. The strong expert weighting accounts for demanding systems without making them automatic winners.
+- **No steering toward a predetermined result:** The matrix is not adjusted to produce a particular winner.
+
+The **specific scoring ranges, explanations, and calculation rules** are documented in [Scoring logic](scoring-logic.md); individual values are in the [Excel scoring matrix](../data/punktematrix.xlsx).
+
+## Results and limitations
+The tool displays **three recommendations** with brief descriptions and purely visual comparison bars. Results show **neither percentages nor point totals**. The bar for the highest total actually achieved is completely filled; the other bars use an internally shortened scale from 50 to 100% of that best score. The bars help compare rank and distance; they do not express the probability of suitability. Specific hardware, application, and game compatibility may need separate verification. Snapshots do not replace backups.
+
+## Implementation
+- **22 curated distribution variants**, deliberately excluding Manjaro.
+- Local calculation in the browser, without an AI API or a dedicated scoring backend.
+- Dark terminal appearance in navy and cyan, with progress, Back/Next, and restart.
+- The live website retains the closing invitation **“Would you like to try Linux and switch?”** with **“Start an IT inquiry.”**
+
+**KISS:** Eight understandable questions for visitors, with transparent, differentiated scoring behind the scenes.
+
+### Results display – visual comparison bars (2026-10-27)
+The top three show **no point totals and no percentages**. A fully filled first bar provides the reference for the highest total actually achieved. The alternatives are shown relative to it on an internally shortened 50–100% scale so that smaller differences remain visible. No numerical scale or calculation explanation appears in the frontend.
