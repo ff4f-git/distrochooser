@@ -118,7 +118,7 @@ Well-integrated office and communication software, an understandable interface, 
 
 **Rule for new distributions:** Check the actual shipped or basic installation state and hardware integration that is genuinely enabled. Do not evaluate theoretical installability alone. For desktops and mini PCs, use only the spread real differences justify; clear laptop integration benefits may carry considerably more weight. Excel matrix scores remain unchanged.
 
-### Question 3 – Device age and RAM follow-up (agreed)
+### Question 3 – Device age and RAM follow-up 
 
 **Device age scoring range: −10 to +10 points.** Age indicates a broad technical tendency: for **under one year**, current kernels, drivers, and firmware are favored over conservative LTS versions; for **1–3 years**, all distributions are neutral (0 points); for **4–7 years**, resource-efficient systems receive moderate advantages; for **8+ years**, this preference is stronger. **Unknown** remains neutral (0 points). Not every old computer is assumed to be weak.
 
@@ -132,7 +132,7 @@ Well-integrated office and communication software, an understandable interface, 
 
 Thus, with 32+ GB, lightweight systems are not favored because of age, and more extensive systems are not penalized for it. Other answers determine the recommendation. The RAM correction is a deliberately simplified approximation; it does not measure CPU/GPU performance. Values remain within −10 to +10.
 
-### Question 4 – Approach to the system (agreed)
+### Question 4 – Approach to the system 
 
 **This question is a central decision point.** The three answers deliberately have different actual scoring spreads even though the overall permitted range is −20 to +20. Fully using that range for every answer would be objectively inappropriate.
 
@@ -142,7 +142,7 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 
 **Rule for new distributions:** For “Learn,” evaluate educational suitability and entry barriers, not maximum technical complexity. For “Tinker,” evaluate the actual freedom of the system model. Preserve the deliberately different weights.
 
-### Question 5 – Appearance (agreed; no score changes)
+### Question 5 – Appearance 
 
 **Scoring range: −5 to +5 points.** Visual and ergonomic preferences are supplementary criteria that may affect close results without overriding technical suitability. Evaluate the **intended or shipped desktop concept**, not the theoretical possibility of installing a different desktop later.
 
@@ -152,7 +152,7 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 
 **Rule for new distributions:** Assess the default desktop and its intended interaction concept. KDE may score well for both classic and modern. Preserve the deliberately low weighting and neutral “No preference” answer. **All values remain unchanged.**
 
-### Question 6 – Customization (agreed; no score changes)
+### Question 6 – Customization 
 
 **Scoring range: −10 to +10 points.** What matters is **how well the distribution supports the desired degree of customization**. Evaluate both effort and attainable freedom in the desktop, interaction, window management, theming, and workflows. The number of graphical settings dialogs is not the only consideration. Changes using simple keyboard shortcuts or prepared selection menus also count as straightforward.
 
@@ -164,7 +164,7 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 
 **Rule for new distributions:** Evaluate each of the three answer columns separately by actual effort, available tools, and attainable freedom. Do not equate “easy” with “superficial” or “extensive” with “difficult.” **All scores remain unchanged.**
 
-### Question 7 – System recovery (agreed criteria; no score changes)
+### Question 7 – System recovery 
 
 **Scoring range: −10 to +10 points.** This refers exclusively to **recovering the operating system** after faulty updates or configuration changes—**not backing up personal data**. Evaluate actual recovery usability in the intended installation state and the effort required to set it up. The mere possibility of eventually installing a backup application is insufficient for a high score.
 
@@ -176,7 +176,7 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 
 **Rule for new distributions:** Check the actual default installation path: filesystem, snapshot tool, setup, recovery path even when booting fails, and required manual steps. For “Very important,” strongly reward prepared integration; for “Would be useful,” give more credit to easy later setup. **The existing scoring matrix remains unchanged for now**; in particular, a possible Fedora adjustment was discussed but not agreed.
 
-### Question 8 – Linux experience (agreed; no score changes)
+### Question 8 – Linux experience 
 
 **Scoring range: −20 to +40 points.** This question is a deliberately strongly weighted **adjustment for user experience**. The Distrochooser primarily targets non-experts, so several earlier questions reward preconfiguration, low maintenance, and an easy introduction. Experienced users may deliberately prefer a less preconfigured but freely customizable foundation. An expert answer should prevent these distributions from being pushed out of the top three by the beginner-oriented baseline weighting.
 
@@ -186,7 +186,7 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 
 **Rule for new distributions:** Do not reward technical difficulty alone. What matters is whether the distribution provides a useful foundation for the respective experience level. Preserve the targeted adjustment for experts without steering every expert answer to the same distribution regardless of use and hardware. The existing matrix was judged plausible across different answer combinations; **no score changes**.
 
-### GPU follow-up – gaming only (agreed; no score changes)
+### GPU follow-up – gaming only 
 
 **Scoring range: 0 to +5 points per distribution.** This question appears only if **“Gaming”** was selected in Question 1. It refines the general gaming suitability already assessed there according to graphics type, but must not dominate it.
 
