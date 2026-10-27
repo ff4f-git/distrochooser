@@ -12,6 +12,12 @@ A bilingual, browser-based Linux distribution recommender. Answer a few question
 
 ![Linux Distrochooser – deutsche Terminal-Oberfläche](docs/images/distrochooser.jpg)
 
+### Unsere Philosophie: Linux soll einladend sein
+
+**Du musst Linux nicht verstehen, um die richtige Linux-Distribution zu finden.** Genau dabei soll dir der Distrochooser helfen. Wer nach einer Distribution sucht, ist häufig Anfänger, Umsteiger oder einfach unsicher. Statt diesen Menschen mit Fragen zu Init-Systemen, Paketformaten oder anderen Linux-Fachbegriffen abzuschrecken, fragen wir nach ihrem Alltag, ihrer Hardware und ihren Wünschen. Die technische Bewertung gehört in die Punktematrix – nicht als Voraussetzung vor den Fragebogen.
+
+**Keep it simple:** So wenige, so verständliche Fragen wie möglich, aber so differenzierte Empfehlungen wie nötig. Wir bewerten nicht, was sich mit genug Zeit aus jeder Distribution machen *ließe*, sondern wie gut sie sich mit ihren charakteristischen Eigenschaften als Ausgangspunkt für einen Menschen eignet. Profis dürfen mitmachen, sind aber nicht die Zielgruppe, für die wir den Einstieg unnötig kompliziert machen. Unser Ziel ist, Neugier auf Linux zu wecken – nicht sie mit Komplexität zu ersticken.
+
 ### Finde ein Linux, das zu dir passt
 
 Linux bietet viele Möglichkeiten – aber welche Distribution passt zu deinem Alltag? **Linux Distrochooser** hilft dir, diese Frage spielerisch und nachvollziehbar zu beantworten. Statt eine beliebige Rangliste anzuzeigen, fragt das Tool nach deinen Anforderungen und vergleicht sie mit einem redaktionell gepflegten Bewertungsmodell.
@@ -41,6 +47,12 @@ Mehr dazu: [Konzept](docs/konzept.md) · [Bewertungslogik](docs/bewertungslogik.
 ## English
 
 ![Linux Distrochooser – English terminal interface](docs/images/distrochooser-en.jpg)
+
+### Our philosophy: Make Linux welcoming
+
+**You shouldn't need to understand Linux to find the right Linux distribution.** That's what this chooser is here for. People looking for a distribution are often beginners, switchers, or simply unsure where to start. Rather than confronting them with questions about init systems, package formats, or other Linux jargon, we ask about everyday use, hardware, and preferences. The technical reasoning belongs in the scoring matrix—not as a prerequisite for taking the questionnaire.
+
+**Keep it simple:** As few clear questions as possible, with as much differentiation as necessary. We don't score everything a distribution *could* become with enough effort; we score how suitable its characteristic defaults and design principles make it as a starting point for a particular person. Experienced users are welcome, but they aren't the audience we should make the entry point harder for. Our aim is to encourage curiosity about Linux, not overwhelm it with complexity.
 
 ### Find a Linux distribution that fits you
 
