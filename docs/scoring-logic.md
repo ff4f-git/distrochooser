@@ -102,8 +102,6 @@ Well-integrated office and communication software, an understandable interface, 
 
 **Rule for new distributions:** Assess freedom and technical experimentation opportunities based on the specific system model. Deliberate restrictions can justify negative scores here even if they offer clear advantages for other uses.
 
-**Question 1 status:** The content of all six answer options has been agreed. Existing Excel matrix scores remain unchanged.
-
 ### Question 2 – Device type
 
 **Scoring range: −10 to +10 points.** Device type is generally a supplementary suitability criterion, not a categorical exclusion. Larger gaps are used only when objectively justified by device-specific differences. Small differences are deliberately useful: they can affect the order when total scores are otherwise close.
