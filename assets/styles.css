@@ -383,3 +383,20 @@ footer a{
 @media(max-width:520px){.brand{font-size:clamp(16px,4.3vw,22px);letter-spacing:.01em}.top{gap:9px}.language-switch{flex-shrink:0}}
 
 .feedback-area{margin:22px 0 18px}.feedback-link{display:inline-flex;align-items:center;text-decoration:none;max-width:100%;white-space:normal}.feedback-note{color:var(--muted);font-size:11px;margin:9px 0 0;line-height:1.6}
+
+/* Shared links, keyboard focus and compact layouts. */
+a{color:var(--cyan)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;max-width:100%;white-space:normal}
+.btn:focus-visible,.option:focus-visible,.lang-button:focus-visible,a:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+.language-switch{flex-shrink:0}
+.top .brand{min-width:0}
+.result-head{flex-wrap:wrap}
+.distro-name{flex:1 1 200px}
+.stat-count{margin-left:auto}
+.statistics-view-link{text-decoration:none;margin-top:14px}
+.privacy-copy h2{font-size:17px;color:var(--fg);margin:26px 0 8px}
+.privacy-copy p{color:#a9bac4;font-size:13px;overflow-wrap:anywhere}
+.privacy-copy{margin:0}
+.privacy-copy hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+#total{color:var(--green);font-size:23px;font-weight:700} .stats-summary{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:15px 0 24px}.stats-summary #countLabel{margin:0;color:var(--muted)}.stats-summary #total{line-height:1}.stats-summary #period{font-size:12px;color:var(--muted)}.stats-back-top{display:inline-block;margin:0 0 18px;font-size:12px}.statslist .rank{display:flex;align-items:center;gap:9px}.rank-medal{font-size:18px}.statslist .result:nth-child(1) .rank{color:#e4c16a}.statslist .result:nth-child(2) .rank{color:#bac7d2}.statslist .result:nth-child(3) .rank{color:#c99b78}.statslist{margin-top:24px}.statslist .result:last-child{border-bottom:0}.stat-count{color:var(--cyan);font-size:13px;font-weight:700;white-space:nowrap}.statslist .meter{margin:12px 0}.statslist .rank{font-size:12px;font-weight:700;margin-bottom:9px}
+@media(max-width:520px){.actions .btn{padding:12px 14px}.stats-summary{gap:8px 12px}.statslist .distro-name{flex-basis:100%}.statslist .stat-count{margin-left:34px}#topLabel{font-size:18px}}
