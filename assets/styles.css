@@ -444,3 +444,11 @@ a{color:var(--cyan)}
 /* Character-by-character terminal boot. Cursor follows the currently typed line. */
 .boot .boot-typing::after{content:'_';display:inline;color:var(--green);animation:terminal-cursor-blink .75s steps(1,end) infinite}
 @media(prefers-reduced-motion:reduce){.boot .boot-typing::after{animation:none;content:none}}
+
+/* Transparent, answer-based explanations for each recommendation. */
+.match-explanation{margin-top:18px;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:#101b24}
+.match-explanation h3{margin:0 0 9px;color:var(--cyan);font-size:13px;line-height:1.5}
+.match-explanation ul{margin:0;padding:0;list-style:none;display:grid;gap:7px}
+.match-explanation li{color:var(--fg);font-size:12px;line-height:1.65;overflow-wrap:anywhere}
+.match-explanation li::before{content:'✓ ';color:var(--green)}
+.match-explanation p{margin:0;color:var(--muted);font-size:12px}
