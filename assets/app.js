@@ -230,27 +230,273 @@ function scoreDistributions() {
   })).sort((a, b) => b.score - a.score || a.index - b.index);
 }
 
-// Explain recommendations using positive contributions from the actual scoring matrix.
-function matchingReasons(distro) {
-  const questions = language === 'de' ? DATA.questions : QUESTIONS_EN;
-  const matches = [];
-  answers.forEach((codes, questionIndex) => {
-    const options = questions[questionIndex].options;
-    const positive = codes.map(code => ({
-      code, points: Number(distro.points[code]) || 0,
-      label: options.find(option => option[1] === code)?.[0]
-    })).filter(item => item.points > 0 && item.label);
-    if (questionIndex === 2 && answers[2][0] === 'O' && ram) {
-      const choice = RAM_CHOICES.find(item => item.code === ram);
-      const points = Number(distro.points[ram]) || 0;
-      if (choice && points > 0) positive.push({ points, label: choice[language] });
-    }
-    positive.sort((a,b) => b.points - a.points);
-    if (positive.length) matches.push({ questionIndex, ...positive[0] });
-  });
-  matches.sort((a,b) => b.points - a.points || a.questionIndex - b.questionIndex);
-  return matches.slice(0,3);
-}
+// Three editorially defined strengths per distribution; rankings still use the scoring matrix.
+const DISTRO_STRENGTHS = {
+  "Linux Mint Cinnamon": {
+    "de": [
+      "Einsteigerfreundlich",
+      "Vertraute Desktop-Oberfläche",
+      "Alltagstauglich"
+    ],
+    "en": [
+      "Beginner-friendly",
+      "Familiar desktop layout",
+      "Great for everyday tasks"
+    ]
+  },
+  "Linux Mint Xfce": {
+    "de": [
+      "Ressourcenschonend",
+      "Einsteigerfreundlich",
+      "Stabil und alltagstauglich"
+    ],
+    "en": [
+      "Light on resources",
+      "Beginner-friendly",
+      "Stable for everyday use"
+    ]
+  },
+  "Zorin OS Core": {
+    "de": [
+      "Einfacher Umstieg von Windows",
+      "Modernes, ansprechendes Design",
+      "Einsteigerfreundlich"
+    ],
+    "en": [
+      "Easy transition from Windows",
+      "Modern, polished design",
+      "Beginner-friendly"
+    ]
+  },
+  "Ubuntu GNOME": {
+    "de": [
+      "Große Community und umfangreiche Hilfe",
+      "Moderner GNOME-Desktop",
+      "Vielseitig einsetzbar"
+    ],
+    "en": [
+      "Large community and extensive help",
+      "Modern GNOME desktop",
+      "Versatile for work and development"
+    ]
+  },
+  "Kubuntu": {
+    "de": [
+      "Umfangreiche Anpassungsmöglichkeiten",
+      "Vertraute und moderne Desktop-Oberfläche",
+      "Große Softwareauswahl und Ubuntu-Basis"
+    ],
+    "en": [
+      "Extensive customization",
+      "Familiar yet modern desktop",
+      "Wide software selection and Ubuntu base"
+    ]
+  },
+  "Debian GNOME": {
+    "de": [
+      "Hohe Stabilität",
+      "Bewährte, langfristig gepflegte Pakete",
+      "Flexibel mit GNOME-Desktop"
+    ],
+    "en": [
+      "High stability",
+      "Well-tested, long-maintained packages",
+      "Flexible GNOME desktop"
+    ]
+  },
+  "Debian KDE": {
+    "de": [
+      "Hohe Stabilität",
+      "Bewährte, langfristig gepflegte Pakete",
+      "Anpassbarer KDE-Plasma-Desktop"
+    ],
+    "en": [
+      "High stability",
+      "Well-tested, long-maintained packages",
+      "Customizable KDE Plasma desktop"
+    ]
+  },
+  "Fedora Workstation": {
+    "de": [
+      "Aktuelle Technologien",
+      "Modernes GNOME-Erlebnis",
+      "Gut für Entwicklung und produktive Arbeit"
+    ],
+    "en": [
+      "Modern technologies",
+      "Up-to-date GNOME experience",
+      "Strong for development and productivity"
+    ]
+  },
+  "Fedora KDE": {
+    "de": [
+      "Aktuelle Technologien",
+      "Anpassbarer KDE-Plasma-Desktop",
+      "Gut für Entwicklung und produktive Arbeit"
+    ],
+    "en": [
+      "Modern technologies",
+      "Customizable KDE Plasma desktop",
+      "Strong for development and productivity"
+    ]
+  },
+  "openSUSE Leap KDE": {
+    "de": [
+      "Stabilitätsorientierte Veröffentlichungen",
+      "Werkzeuge zur Systemverwaltung",
+      "Anpassbarer KDE-Plasma-Desktop"
+    ],
+    "en": [
+      "Stability-focused releases",
+      "System administration tools",
+      "Customizable KDE Plasma desktop"
+    ]
+  },
+  "openSUSE Tumbleweed KDE": {
+    "de": [
+      "Aktuelle Software durch Rolling Release",
+      "Automatisierte Qualitätstests mit openQA",
+      "Snapshots und Wiederherstellung mit Snapper"
+    ],
+    "en": [
+      "Current software through rolling release",
+      "Automated testing with openQA",
+      "Snapshots and rollback with Snapper"
+    ]
+  },
+  "MX Linux Xfce": {
+    "de": [
+      "Ressourcenschonender Xfce-Desktop",
+      "Praktische MX-Werkzeuge",
+      "Stabile Debian-Basis"
+    ],
+    "en": [
+      "Lightweight Xfce desktop",
+      "Practical MX tools",
+      "Stable Debian base"
+    ]
+  },
+  "Linux Lite": {
+    "de": [
+      "Einfacher Einstieg",
+      "Vertraute Bedienung",
+      "Für ältere Hardware geeignet"
+    ],
+    "en": [
+      "Easy to get started",
+      "Familiar interface",
+      "Suitable for older hardware"
+    ]
+  },
+  "elementary OS": {
+    "de": [
+      "Konsistentes, elegantes Design",
+      "Einfacher, fokussierter Desktop",
+      "Integrierte Desktop-Anwendungen"
+    ],
+    "en": [
+      "Consistent, elegant design",
+      "Simple, focused desktop",
+      "Integrated desktop applications"
+    ]
+  },
+  "Pop!_OS COSMIC": {
+    "de": [
+      "Produktives Arbeiten mit COSMIC",
+      "Entwicklerfreundliche Arbeitsumgebung",
+      "Fokus auf Hardware- und Grafikunterstützung"
+    ],
+    "en": [
+      "Productivity with COSMIC",
+      "Developer-friendly workflow",
+      "Focus on hardware and graphics support"
+    ]
+  },
+  "Bazzite KDE": {
+    "de": [
+      "Gaming-orientierte Einrichtung",
+      "Steam- und Controller-Fokus",
+      "Rollback-freundliches Systemkonzept"
+    ],
+    "en": [
+      "Gaming-oriented setup",
+      "Steam and controller focus",
+      "Rollback-friendly system design"
+    ]
+  },
+  "Nobara KDE": {
+    "de": [
+      "Gaming- und Streaming-Fokus",
+      "Vorbereitete Multimedia-Werkzeuge",
+      "KDE-Plasma-Anpassbarkeit"
+    ],
+    "en": [
+      "Gaming and streaming focus",
+      "Preconfigured multimedia tools",
+      "KDE Plasma customization"
+    ]
+  },
+  "CachyOS KDE": {
+    "de": [
+      "Performance-orientierte Optimierungen",
+      "Aktuelle Arch-basierte Software",
+      "Anpassbarer KDE-Plasma-Desktop"
+    ],
+    "en": [
+      "Performance-focused optimizations",
+      "Current Arch-based software",
+      "Customizable KDE Plasma desktop"
+    ]
+  },
+  "EndeavourOS KDE": {
+    "de": [
+      "Arch-nahe Erfahrung mit Installer",
+      "Rolling Release und aktuelle Pakete",
+      "Große Konfigurationsfreiheit"
+    ],
+    "en": [
+      "Arch-like experience with installer",
+      "Rolling release and current packages",
+      "Extensive configuration freedom"
+    ]
+  },
+  "Arch Linux (Eigenbau)": {
+    "de": [
+      "Maximale Kontrolle",
+      "Aktuelle Software durch Rolling Release",
+      "Lernen und Experimentieren"
+    ],
+    "en": [
+      "Maximum control",
+      "Current software through rolling release",
+      "Learning and experimentation"
+    ]
+  },
+  "NixOS KDE": {
+    "de": [
+      "Deklarative Systemkonfiguration",
+      "Reproduzierbare Setups und Rollbacks",
+      "Große Anpassungsfreiheit"
+    ],
+    "en": [
+      "Declarative system configuration",
+      "Reproducible setups and rollbacks",
+      "Extensive customization"
+    ]
+  },
+  "Omarchy": {
+    "de": [
+      "Vorkonfigurierte Tiling-Arbeitsumgebung",
+      "Tastaturorientierter Workflow",
+      "Arch-Basis für erfahrene Nutzer"
+    ],
+    "en": [
+      "Preconfigured tiling environment",
+      "Keyboard-focused workflow",
+      "Arch base for experienced users"
+    ]
+  }
+};
 
 function showResults(scroll = true) {
   resultsVisible = true;
@@ -296,25 +542,19 @@ function showResults(scroll = true) {
     const reason = document.createElement('p');
     reason.className = 'reason';
     reason.textContent = descriptions[distro.name]?.description || t.missing;
-    const matches = matchingReasons(distro);
+    const strengths = DISTRO_STRENGTHS[distro.name]?.[language] || [];
     const explanation = document.createElement('section');
     explanation.className = 'match-explanation';
     const explanationTitle = document.createElement('h3');
-    explanationTitle.textContent = language === 'de' ? 'Warum passt diese Distribution zu dir?' : 'Why does this distribution fit you?';
+    explanationTitle.textContent = language === 'de' ? 'Die drei Hauptstärken' : 'Three key strengths';
     explanation.append(explanationTitle);
-    if (matches.length) {
-      const list = document.createElement('ul');
-      for (const match of matches) {
-        const item = document.createElement('li');
-        item.textContent = (language === 'de' ? 'Deine Auswahl „' : 'Your choice “') + match.label + (language === 'de' ? '“ passt laut Bewertung gut dazu.' : '” is a positive match in the scoring model.');
-        list.append(item);
-      }
-      explanation.append(list);
-    } else {
-      const note = document.createElement('p');
-      note.textContent = language === 'de' ? 'Keine einzelnen starken Übereinstimmungen; die Empfehlung ergibt sich aus der Gesamtbewertung.' : 'No individually strong matches; this recommendation comes from the overall score.';
-      explanation.append(note);
+    const list = document.createElement('ul');
+    for (const strength of strengths) {
+      const item = document.createElement('li');
+      item.textContent = strength;
+      list.append(item);
     }
+    explanation.append(list);
     article.append(rank, head, label, meter, reason, explanation);
     $('resultList').append(article);
   });
