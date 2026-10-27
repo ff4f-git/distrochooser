@@ -11,6 +11,18 @@ Beginners **do not** need to know these technical terms. We translate the key re
 
 **Guiding principle: There is no single best Linux distribution. It depends on your requirements.**
 
+## Who is this chooser for?
+
+Our primary audience is **Linux beginners, people switching operating systems, and anyone who doesn't yet know which distribution to choose**. Someone who already knows their preferred init system, package format, or release model can make a more targeted choice independently. Asking about those details up front would discourage the very people we want to welcome. Experienced users can use the tool too, but they should not determine how complicated the entry point becomes.
+
+**Users should not have to understand Linux before choosing a distribution. The chooser should understand the user first.** We therefore ask about everyday needs, hardware, expectations, and willingness to maintain a system—not Linux terminology. The expertise lives in the scoring model behind the questions.
+
+### Deliberately limited complexity
+
+Linux is flexible: with enough expertise and effort, many distributions can be configured for very different tasks. So **“Can distribution X do this?”** is rarely the useful question. Instead we ask: **“How well do distribution X's design principles and typical setup and maintenance requirements suit this person?”** We evaluate practical suitability as a starting point, not every theoretically possible configuration.
+
+Every additional question must meaningfully improve the recommendations. Including a question just because a technical distinction exists does not automatically make the tool better. **Keep it simple does not mean simplistic; it means selective:** a welcoming experience for beginners, with understandable differentiation behind the scenes. A recommendation should be an inviting first step, not a technical entrance exam.
+
 ## Eight main questions
 1. **Main use:** Everyday tasks, office work, gaming, creative work, programming, experimenting (multiple selections).
 2. **Device type:** Desktop, laptop, mini PC/other, or no device yet.
