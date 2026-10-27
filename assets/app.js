@@ -68,6 +68,7 @@ const TEXT = {
     done: 'ANALYSIS COMPLETE', resultsTitle: 'Your Linux recommendations',
     resultsHint: 'The Linux distributions that best fit your requirements.',
     restart: '↻ Start over', edit: '← Edit answers',
+    feedback: '💬 Give feedback ↗', feedbackNote: 'Opens GitHub Issues in a new tab. A GitHub account is required.',
     footer: 'Linux Distrochooser · Recommendations are based on an editorially weighted scoring matrix, not an objective measure of quality.',
     step: 'QUESTION', choose: 'Choose the answer that fits you best.',
     best: 'BEST MATCH', alternative: 'ALTERNATIVE', missing: 'More information about this distribution is coming soon.',
