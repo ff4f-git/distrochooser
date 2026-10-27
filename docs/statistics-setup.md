@@ -1,11 +1,8 @@
 # Freiwillige Statistik / Optional statistics
 
-> **Stand / Status: 27.10.2026.** Datenbankmigration im Supabase-Projekt ausgeführt und Edge Function `submit-statistics` erfolgreich mit `--use-api` bereitgestellt (laut Betreiber-Test im Terminal). **Noch nicht verifiziert:** erfolgreicher Ende-zu-Ende-Test, RLS-/Cron-Prüfung, Datenschutzhinweise und Aktivierung der URL auf GitHub Pages. Keine produktive Erfassung behaupten.  
-> **As of 27 October 2026:** Database migration applied and Edge Function deployed using `--use-api` (operator-reported terminal success). **Still pending:** end-to-end test, RLS/cron verification, privacy notice and enabling the public endpoint. Do not claim live collection.
-
 ## Deutsch
 
-### Erstinstallation (bereits durchgeführt) und Reihenfolge
+### Erstinstallation und Reihenfolge
 
 **Wichtig:** Die SQL-Abfragen im Abschnitt „Auswertung“ erstellen **keine** Tabelle. Die komplette Migration steht in [`supabase/migrations/202610270001_statistics.sql`](../supabase/migrations/202610270001_statistics.sql). Sie wurde im **privaten Supabase SQL Editor** ausgeführt. Erst danach funktionieren Auswertungsabfragen auf `public.questionnaire_statistics`.
 
@@ -36,13 +33,13 @@
 7. **Datenschutz vor Aktivierung:** Tatsächlichen Betreiber, Supabase-Anbieter und Region, Zweck, konkrete Felder, Einwilligung, Aufbewahrung, technische Verarbeitung von IP-Adressen und Log-Aufbewahrung in den Datenschutzhinweisen nennen. Die Anwendung speichert in der Statistik keine IP, keinen User-Agent, keinen Referrer und keine genaue Uhrzeit; die Infrastruktur kann solche Daten dennoch verarbeiten. Seltene Antwortprofile können unterscheidbar sein – keine vollständige Anonymität versprechen. Einwilligungstext in `assets/app.js` auf Deutsch und Englisch prüfen.
 8. **Für neue Installationen erst nach allen Prüfungen:** Nur die öffentliche Funktions-URL in [`assets/statistics-config.js`](../assets/statistics-config.js) eintragen und über GitHub Pages veröffentlichen. **Nie** den `SUPABASE_SERVICE_ROLE_KEY` im Frontend ablegen. `SUPABASE_URL` und `SUPABASE_SERVICE_ROLE_KEY` sind serverseitige Supabase-Funktionsumgebung; optional `STATISTICS_ORIGIN` (Standard `https://ff4f-git.github.io`). Vorher bleibt der Statistik-Button deaktiviert.
 
-### Öffentliche Rangliste (aktiv)
+### Öffentliche Rangliste
 
 Die Seite [statistik.html](../statistik.html) zeigt ab dem **ersten freiwilligen Beitrag** die Gesamtzahl und maximal drei Distributionen, sortiert nach der Häufigkeit ihrer **Erstempfehlung** (`top3[0]`), bei Gleichstand alphabetisch. Die Plätze 2 und 3 dieser Rangliste sind ebenfalls Erstempfehlungen aus anderen Beiträgen – nicht die internen Plätze 2 und 3 jedes einzelnen Ergebnisses. Der Link im Footer ist immer sichtbar; der zusätzliche Button im Ergebnisbereich erscheint erst nach erfolgreicher Übermittlung. Die Werte zählen Beiträge, nicht einzelne Besucher.
 
 Nach der Basismigration `202610270001_statistics.sql` wurden `202610270002_public_statistics.sql` (historische Fünfer-Schwelle) und zuletzt **`202610270003_top_three_from_first.sql`** ausgeführt. Nur die letzte Definition von `public.public_statistics()` ist maßgeblich. **Die Fünfer-Schwelle gilt für die öffentliche Rangliste nicht mehr.** Auch ein einzelner Beitrag kann eine Distribution sichtbar machen; keine formale Anonymitätsgarantie. Die Tabelle selbst bleibt privat und die RPC für `service_role` reserviert. Die Edge Function stellt die Aggregate über GET bereit. Für diese SQL-Änderung ist kein erneutes Function-Deployment nötig. Details: [Öffentliche Statistik](public-statistics.md).
 
-### Auswertung (nur privat)
+### Auswertung 
 
 ```sql
 -- Erstempfehlungen je Modellversion
