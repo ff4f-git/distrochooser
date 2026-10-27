@@ -419,3 +419,6 @@ a{color:var(--cyan)}
 .bar .terminal-symbol{margin:0 0 10px 0;flex:none}
 .bar .dots{margin:0 0 10px auto;flex:none}
 @media(max-width:520px){.bar .terminal-symbol{margin-left:0}.bar .dots{margin-left:auto}}
+
+/* Match the terminal prompt and cursor to the green ready messages. */
+.brand-prompt,.brand-cursor{color:var(--green)}
