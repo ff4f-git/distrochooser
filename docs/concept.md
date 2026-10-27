@@ -11,6 +11,10 @@ Beginners **do not** need to know these technical terms. We translate the key re
 
 **Guiding principle: There is no single best Linux distribution. It depends on your requirements.**
 
+### Where the idea came from
+
+A key inspiration was **Chris Titus** and his response, in essence, to the question of which Linux distribution is best: **“It depends on …”** That thought crystallized an idea that had been taking shape for years: rather than repeatedly declaring the same distributions to be the best for everyone, start with the person and their needs. This became the foundation for a chooser that asks as few clear, approachable questions as possible while still offering meaningful, individualized recommendations. Linux knowledge should not be a prerequisite for getting a recommendation—the recommendation should help people take their first steps into Linux.
+
 ## Who is this chooser for?
 
 Our primary audience is **Linux beginners, people switching operating systems, and anyone who doesn't yet know which distribution to choose**. Someone who already knows their preferred init system, package format, or release model can make a more targeted choice independently. Asking about those details up front would discourage the very people we want to welcome. Experienced users can use the tool too, but they should not determine how complicated the entry point becomes.
