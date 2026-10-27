@@ -381,3 +381,5 @@ footer a{
 .statistics .btn{max-width:100%;white-space:normal;text-align:left}
 
 @media(max-width:520px){.brand{font-size:clamp(16px,4.3vw,22px);letter-spacing:.01em}.top{gap:9px}.language-switch{flex-shrink:0}}
+
+.feedback-area{margin:22px 0 18px}.feedback-link{display:inline-flex;align-items:center;text-decoration:none;max-width:100%;white-space:normal}.feedback-note{color:var(--muted);font-size:11px;margin:9px 0 0;line-height:1.6}
