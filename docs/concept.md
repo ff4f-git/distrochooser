@@ -58,6 +58,3 @@ The tool displays **three recommendations** with brief descriptions and purely v
 - The live website retains the closing invitation **“Would you like to try Linux and switch?”** with **“Start an IT inquiry.”**
 
 **KISS:** Eight understandable questions for visitors, with transparent, differentiated scoring behind the scenes.
-
-### Results display – visual comparison bars (2026-10-27)
-The top three show **no point totals and no percentages**. A fully filled first bar provides the reference for the highest total actually achieved. The alternatives are shown relative to it on an internally shortened 50–100% scale so that smaller differences remain visible. No numerical scale or calculation explanation appears in the frontend.
