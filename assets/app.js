@@ -29,6 +29,8 @@ function renderStatistics() {
   $('statisticsButton').textContent = state === 'sending' ? t.sending : t.button;
   $('statisticsButton').disabled = !statistics.enabled || ['sending','sent'].includes(state);
   $('statisticsStatus').textContent = !statistics.enabled ? t.unavailable : (t[state] || '');
+  $('statisticsViewLink').textContent = language === 'de' ? '📊 Öffentliche Statistik ansehen' : '📊 View public statistics';
+  $('statisticsViewLink').classList.toggle('hidden', state !== 'sent');
 }
 
 // Keep answer codes and GPU bonus keys stable across languages.
