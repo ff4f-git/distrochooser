@@ -102,7 +102,6 @@ Hinzu kommen gut integrierte Büro- und Kommunikationssoftware, ein verständlic
 
 **Regel für neue Distributionen:** Freiheit und technische Experimentiermöglichkeiten anhand des konkreten Systemmodells beurteilen. Bewusste Einschränkungen können hier Minuspunkte rechtfertigen, auch wenn sie in anderen Nutzungsarten klare Vorteile bringen.
 
-**Status Frage 1:** Alle sechs Antwortmöglichkeiten sind inhaltlich abgestimmt. Die bestehenden Punkte der Excel-Matrix bleiben unverändert.
 
 ### Frage 2 – Gerätetyp
 
