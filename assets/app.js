@@ -52,6 +52,7 @@ const TEXT = {
     done: 'ANALYSE ABGESCHLOSSEN', resultsTitle: 'Deine Linux-Empfehlungen',
     resultsHint: 'Die passendsten Linux-Distributionen für dich – abgestimmt auf deine Anforderungen.',
     restart: '↻ Neu starten', edit: '← Antworten ändern',
+    feedback: '💬 Feedback geben ↗', feedbackNote: 'Öffnet GitHub Issues in einem neuen Tab. Ein GitHub-Konto ist erforderlich.',
     footer: 'Linux Distrochooser · Empfehlungen auf Basis einer redaktionell gewichteten Punktematrix; keine objektive Qualitätsmessung.',
     step: 'FRAGE', choose: 'Wähle die Antwort, die am besten zu dir passt.',
     best: 'BESTER MATCH', alternative: 'ALTERNATIVE', missing: 'Weitere Informationen zu dieser Distribution folgen.',
