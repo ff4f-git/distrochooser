@@ -118,7 +118,7 @@ Hinzu kommen gut integrierte Büro- und Kommunikationssoftware, ein verständlic
 
 **Regel für neue Distributionen:** Den konkreten Auslieferungs- beziehungsweise Grundinstallationszustand und die tatsächlich aktivierte Hardwareintegration prüfen. Nicht allein die theoretische Installierbarkeit bewerten. Bei Desktop und Mini-PC nur so stark spreizen, wie die realen Unterschiede es rechtfertigen; beim Notebook dürfen klare Integrationsvorteile deutlich stärker zählen. Die Punktwerte der Excel-Matrix bleiben unverändert.
 
-### Frage 3 – Gerätealter und RAM-Zusatzfrage (abgestimmt)
+### Frage 3 – Gerätealter und RAM-Zusatzfrage
 
 **Bewertungsrahmen Gerätealter: −10 bis +10 Punkte.** Die Altersangabe dient der groben technischen Tendenz: Bei **unter einem Jahr** werden aktuelle Kernel, Treiber und Firmware gegenüber konservativen LTS-Ständen bevorzugt; bei **1–3 Jahren** sind alle Distributionen neutral (0 Punkte); bei **4–7 Jahren** erhalten ressourcenschonende Systeme moderate Vorteile; bei **8+ Jahren** ist diese Bevorzugung stärker. **Unbekannt** bleibt neutral (0 Punkte). Es wird nicht unterstellt, dass jeder alte Rechner schwach ist.
 
@@ -132,7 +132,7 @@ Hinzu kommen gut integrierte Büro- und Kommunikationssoftware, ein verständlic
 
 Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umfangreichere Systeme deshalb benachteiligt. Andere Antworten bestimmen die Empfehlung. Die RAM-Korrektur ist eine bewusst vereinfachte Näherung; sie misst nicht CPU/GPU-Leistung. Die Werte liegen jeweils im Bereich −10 bis +10.
 
-### Frage 4 – Umgang mit dem System (abgestimmt)
+### Frage 4 – Umgang mit dem System 
 
 **Diese Frage ist eine zentrale Weichenstellung.** Die drei Antworten haben bewusst unterschiedlich große tatsächliche Punktespannen, obwohl der zulässige Gesamtrahmen −20 bis +20 beträgt. Eine volle Ausschöpfung dieses Rahmens bei jeder Antwort wäre sachlich falsch.
 
@@ -142,7 +142,7 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 
 **Regel für neue Distributionen:** Bei „Lernen“ pädagogische Eignung und Einstiegshürde bewerten, nicht maximale technische Komplexität. Bei „Basteln“ die tatsächliche Freiheit des Systemmodells bewerten. Die absichtlich unterschiedlichen Gewichte beibehalten.
 
-### Frage 5 – Aussehen (abgestimmt; keine Punktänderungen)
+### Frage 5 – Aussehen 
 
 **Bewertungsrahmen: −5 bis +5 Punkte.** Die optische und ergonomische Präferenz ist ein ergänzendes Kriterium, das knappe Ergebnisse beeinflussen darf, aber nicht die technische Eignung überlagern soll. Bewertet wird das **vorgesehene beziehungsweise ausgelieferte Desktop-Konzept**, nicht die theoretische Möglichkeit, später einen anderen Desktop zu installieren.
 
@@ -152,7 +152,7 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 
 **Regel für neue Distributionen:** Standarddesktop und tatsächlich vorgesehenes Bedienkonzept beurteilen. KDE darf bei klassisch und modern zugleich gut abschneiden. Die bewusst geringe Gewichtung und neutrale „Egal“-Antwort beibehalten. **Alle Werte bleiben unverändert.**
 
-### Frage 6 – Anpassbarkeit (abgestimmt; keine Punktänderungen)
+### Frage 6 – Anpassbarkeit 
 
 **Bewertungsrahmen: −10 bis +10 Punkte.** Entscheidend ist, **wie gut die Distribution den gewünschten Grad an Anpassung unterstützt**. Bewertet werden dabei sowohl der erforderliche Aufwand als auch die tatsächlich erreichbare Gestaltungsfreiheit bei Desktop, Bedienung, Fensterverwaltung, Theming und Arbeitsabläufen. Es geht nicht ausschließlich um die Zahl grafischer Einstellungsdialoge. Anpassungen per einfacher Tastenkombination oder vorbereitetem Auswahlmenü zählen ebenso als unkompliziert.
 
@@ -164,7 +164,7 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 
 **Regel für neue Distributionen:** Jede der drei Antwortspalten getrennt nach tatsächlichem Aufwand, vorhandenen Hilfsmitteln und erreichbarer Gestaltungsfreiheit bewerten. Keine pauschale Gleichsetzung von „einfach“ mit „oberflächlich“ oder von „tiefgreifend“ mit „schwierig“. **Alle Punkte bleiben unverändert.**
 
-### Frage 7 – Wiederherstellung des Systems (abgestimmter Bewertungsmaßstab; keine Punktänderungen)
+### Frage 7 – Wiederherstellung des Systems 
 
 **Bewertungsrahmen: −10 bis +10 Punkte.** Gemeint ist ausschließlich die **Wiederherstellung des Betriebssystems** nach fehlerhaften Updates oder Konfigurationsänderungen – **nicht die Sicherung persönlicher Daten**. Bewertet wird die tatsächliche Nutzbarkeit der Wiederherstellung im vorgesehenen Installationszustand und der Aufwand, sie einzurichten. Die bloße technische Möglichkeit, irgendwann ein Backup-Programm zu installieren, reicht für eine hohe Bewertung nicht aus.
 
@@ -176,7 +176,7 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 
 **Regel für neue Distributionen:** Den realen Standardinstallationsweg prüfen: Dateisystem, Snapshot-Werkzeug, Einrichtung, Wiederherstellungsweg auch bei Startproblemen und erforderliche manuelle Schritte. Bei „Sehr wichtig“ vorbereitete Integration stark belohnen; bei „Wäre praktisch“ die leichte Nachrüstbarkeit stärker gelten lassen. **Die bisherige Punktematrix bleibt vorerst unverändert**; insbesondere wurde eine mögliche Anpassung der Fedora-Werte nur angesprochen, nicht beschlossen.
 
-### Frage 8 – Linux-Erfahrung (abgestimmt; keine Punktänderungen)
+### Frage 8 – Linux-Erfahrung 
 
 **Bewertungsrahmen: −20 bis +40 Punkte.** Die Frage ist eine bewusst stark gewichtete **Korrektur für die Erfahrung des Nutzers**. Der Distrochooser richtet sich primär an Laien; mehrere vorangehende Fragen belohnen daher Vorkonfiguration, niedrigen Pflegeaufwand und unkomplizierten Einstieg. Erfahrene Anwender können dagegen bewusst eine weniger vorkonfigurierte, dafür frei gestaltbare Grundlage bevorzugen. Diese Distributionen sollen bei einer Profi-Antwort nicht durch die einsteigerorientierte Grundgewichtung aus den Top 3 gedrängt werden.
 
@@ -186,7 +186,7 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 
 **Regel für neue Distributionen:** Nicht bloß technische Schwierigkeit belohnen. Entscheidend ist, ob die Distribution für den jeweiligen Erfahrungsstand eine sinnvolle Grundlage darstellt. Den gezielten Ausgleich für Profis beibehalten, ohne jede Profi-Antwort unabhängig von Nutzung und Hardware auf dieselbe Distribution zu lenken. Die bisherige Matrix wurde anhand verschiedener Antwortkombinationen als plausibel beurteilt; **keine Punktänderungen**.
 
-### GPU-Zusatzfrage – nur bei Gaming (abgestimmt; keine Punktänderungen)
+### GPU-Zusatzfrage – nur bei Gaming 
 
 **Bewertungsrahmen: 0 bis +5 Punkte je Distribution.** Die Frage erscheint nur, wenn in Frage 1 **„Gaming“** gewählt wurde. Sie präzisiert die bereits in Frage 1 bewertete allgemeine Gaming-Eignung anhand des Grafiktyps, darf sie aber nicht dominieren.
 
