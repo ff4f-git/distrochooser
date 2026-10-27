@@ -4,7 +4,7 @@
 
 A bilingual, browser-based Linux distribution recommender. Answer a few questions and discover three Linux distributions that may suit your hardware, experience, and preferences.
 
-> **Live demo:** https://paulich69.github.io/linux-distrochooser/
+> **Live demo:** https://paulich69.github.io/distrochooser/
 
 ---
 
