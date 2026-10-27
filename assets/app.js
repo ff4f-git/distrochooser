@@ -117,6 +117,31 @@ function optionButton(label, selected, onClick, multi = false) {
   return button;
 }
 
+// Type the boot messages character by character with a terminal cursor.
+let bootTypingRun = 0;
+async function typeBootMessages() {
+  const run = ++bootTypingRun;
+  const lines = [...document.querySelectorAll('.boot > *')];
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    lines.forEach(line => line.classList.remove('boot-typing'));
+    return;
+  }
+  const texts = lines.map(line => line.textContent);
+  lines.forEach(line => { line.textContent = ''; line.classList.add('boot-typing'); });
+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    await wait(i === 0 ? 100 : 170);
+    for (const char of texts[i]) {
+      if (run !== bootTypingRun) return;
+      line.textContent += char;
+      await wait(24);
+    }
+    if (run !== bootTypingRun) return;
+    line.classList.remove('boot-typing');
+  }
+}
+
 function setLanguage(nextLanguage) {
   language = nextLanguage;
   document.documentElement.lang = language;
@@ -129,6 +154,7 @@ function setLanguage(nextLanguage) {
   });
   if (resultsVisible) showResults(false);
   else render();
+  void typeBootMessages();
 }
 
 function render() {
