@@ -1,4 +1,35 @@
 import { DISTRO_ICONS } from './icons.js';
+import { STATISTICS_ENDPOINT } from './statistics-config.js';
+import { createStatisticsClient } from './statistics.js';
+
+const statistics = createStatisticsClient(STATISTICS_ENDPOINT);
+const STAT_TEXT = {
+  de: {title:'Freiwillige Statistik', help:'Mit deinem Klick übermittelst du deine Antwortkombination, zutreffende RAM-/GPU-Auswahl, die drei Empfehlungen, Sprache und Modellversion an unseren Statistikdienst (Supabase). Die Teilnahme ist freiwillig und beeinflusst dein Ergebnis nicht. Keine Namen, E-Mail-Adressen, Cookies oder dauerhaften Besucherkennungen. Deine IP-Adresse wird technisch an den Dienst übertragen und kann in dessen Betriebsprotokollen vorkommen; sie wird nicht in unserem Statistikdatensatz gespeichert. Die Datensätze werden nach spätestens 90 Tagen gelöscht.',
+    button:'Ergebnis zur Statistik beitragen', sending:'Wird gesendet …', sent:'Danke! Dein Ergebnis wurde gezählt.', error:'Senden fehlgeschlagen. Du kannst es erneut versuchen.', unavailable:'Die Statistik ist noch nicht eingerichtet. Es werden keine Antworten übertragen.'},
+  en: {title:'Optional statistics', help:'By clicking, you send your answer combination, applicable RAM/GPU selection, three recommendations, language and model version to our statistics service (Supabase). Participation is optional and does not affect your results. No names, email addresses, cookies or persistent visitor identifiers. Your IP address is technically transmitted to the service and may appear in its operational logs; it is not stored in our statistics records. Records are deleted within 90 days.',
+    button:'Contribute my result to statistics', sending:'Sending …', sent:'Thank you! Your result was counted.', error:'Could not send. You can try again.', unavailable:'Statistics are not configured yet. No answers are transmitted.'}
+};
+
+function statisticsPayload() {
+  return { modelVersion:'2.1.1', language,
+    answers:answers.map(codes => [...codes].sort()),
+    ram:answers[2][0] === 'O' ? ram : null,
+    gpu:answers[0].includes('D') ? gpu : null,
+    top3:scoreDistributions().slice(0,3).map(distro => distro.name) };
+}
+function statisticsKey(payload) {
+  // Language changes must not count the same answers again.
+  return JSON.stringify([payload.answers,payload.ram,payload.gpu,payload.modelVersion]);
+}
+function renderStatistics() {
+  const t = STAT_TEXT[language];
+  const state = statistics.state(statisticsKey(statisticsPayload()));
+  $('statisticsTitle').textContent = t.title;
+  $('statisticsHelp').textContent = t.help;
+  $('statisticsButton').textContent = state === 'sending' ? t.sending : t.button;
+  $('statisticsButton').disabled = !statistics.enabled || ['sending','sent'].includes(state);
+  $('statisticsStatus').textContent = !statistics.enabled ? t.unavailable : (t[state] || '');
+}
 
 // Keep answer codes and GPU bonus keys stable across languages.
 const [DATA, GPU_BONUS, DESCRIPTIONS_DE, DESCRIPTIONS_EN, QUESTIONS_EN] = await Promise.all([
@@ -226,6 +257,7 @@ function showResults(scroll = true) {
 
   $('wizard').classList.add('hidden');
   $('results').style.display = 'block';
+  renderStatistics();
   if (scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -246,4 +278,12 @@ $('restart').addEventListener('click', () => {
 $('edit').addEventListener('click', () => { step = DATA.questions.length - 1; render(); });
 $('langDe').addEventListener('click', () => setLanguage('de'));
 $('langEn').addEventListener('click', () => setLanguage('en'));
+$('statisticsButton').addEventListener('click', async () => {
+  if (!resultsVisible || !statistics.enabled) return;
+  const payload = statisticsPayload();
+  const pending = statistics.submit(statisticsKey(payload), payload);
+  renderStatistics();
+  try { await pending; } catch { /* Inline status provides a retry. */ }
+  if (resultsVisible) renderStatistics();
+});
 setLanguage('de');

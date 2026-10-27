@@ -1,0 +1,156 @@
+{
+  "Omarchy": {
+    "Nvidia GeForce": 0,
+    "AMD Radeon": 3,
+    "Intel Grafik": 3,
+    "Hybrid / mehrere": 0,
+    "Weiß ich nicht": 0
+  },
+  "NixOS KDE": {
+    "Nvidia GeForce": 0,
+    "AMD Radeon": 3,
+    "Intel Grafik": 3,
+    "Hybrid / mehrere": 1,
+    "Weiß ich nicht": 0
+  },
+  "Arch Linux (Eigenbau)": {
+    "Nvidia GeForce": 0,
+    "AMD Radeon": 4,
+    "Intel Grafik": 4,
+    "Hybrid / mehrere": 1,
+    "Weiß ich nicht": 0
+  },
+  "EndeavourOS KDE": {
+    "Nvidia GeForce": 2,
+    "AMD Radeon": 4,
+    "Intel Grafik": 4,
+    "Hybrid / mehrere": 2,
+    "Weiß ich nicht": 0
+  },
+  "CachyOS KDE": {
+    "Nvidia GeForce": 4,
+    "AMD Radeon": 5,
+    "Intel Grafik": 5,
+    "Hybrid / mehrere": 4,
+    "Weiß ich nicht": 0
+  },
+  "Nobara KDE": {
+    "Nvidia GeForce": 5,
+    "AMD Radeon": 5,
+    "Intel Grafik": 5,
+    "Hybrid / mehrere": 5,
+    "Weiß ich nicht": 0
+  },
+  "Bazzite KDE": {
+    "Nvidia GeForce": 4,
+    "AMD Radeon": 5,
+    "Intel Grafik": 5,
+    "Hybrid / mehrere": 4,
+    "Weiß ich nicht": 0
+  },
+  "Pop!_OS COSMIC": {
+    "Nvidia GeForce": 5,
+    "AMD Radeon": 4,
+    "Intel Grafik": 4,
+    "Hybrid / mehrere": 5,
+    "Weiß ich nicht": 0
+  },
+  "elementary OS": {
+    "Nvidia GeForce": 1,
+    "AMD Radeon": 2,
+    "Intel Grafik": 2,
+    "Hybrid / mehrere": 1,
+    "Weiß ich nicht": 0
+  },
+  "Linux Lite": {
+    "Nvidia GeForce": 2,
+    "AMD Radeon": 2,
+    "Intel Grafik": 2,
+    "Hybrid / mehrere": 2,
+    "Weiß ich nicht": 0
+  },
+  "MX Linux Xfce": {
+    "Nvidia GeForce": 2,
+    "AMD Radeon": 2,
+    "Intel Grafik": 2,
+    "Hybrid / mehrere": 2,
+    "Weiß ich nicht": 0
+  },
+  "openSUSE Tumbleweed KDE": {
+    "Nvidia GeForce": 2,
+    "AMD Radeon": 4,
+    "Intel Grafik": 5,
+    "Hybrid / mehrere": 3,
+    "Weiß ich nicht": 0
+  },
+  "openSUSE Leap KDE": {
+    "Nvidia GeForce": 2,
+    "AMD Radeon": 2,
+    "Intel Grafik": 3,
+    "Hybrid / mehrere": 2,
+    "Weiß ich nicht": 0
+  },
+  "Fedora KDE": {
+    "Nvidia GeForce": 2,
+    "AMD Radeon": 4,
+    "Intel Grafik": 5,
+    "Hybrid / mehrere": 3,
+    "Weiß ich nicht": 0
+  },
+  "Fedora Workstation": {
+    "Nvidia GeForce": 2,
+    "AMD Radeon": 4,
+    "Intel Grafik": 5,
+    "Hybrid / mehrere": 3,
+    "Weiß ich nicht": 0
+  },
+  "Debian KDE": {
+    "Nvidia GeForce": 1,
+    "AMD Radeon": 2,
+    "Intel Grafik": 3,
+    "Hybrid / mehrere": 2,
+    "Weiß ich nicht": 0
+  },
+  "Debian GNOME": {
+    "Nvidia GeForce": 1,
+    "AMD Radeon": 2,
+    "Intel Grafik": 3,
+    "Hybrid / mehrere": 2,
+    "Weiß ich nicht": 0
+  },
+  "Kubuntu": {
+    "Nvidia GeForce": 3,
+    "AMD Radeon": 3,
+    "Intel Grafik": 4,
+    "Hybrid / mehrere": 4,
+    "Weiß ich nicht": 0
+  },
+  "Ubuntu GNOME": {
+    "Nvidia GeForce": 3,
+    "AMD Radeon": 3,
+    "Intel Grafik": 4,
+    "Hybrid / mehrere": 4,
+    "Weiß ich nicht": 0
+  },
+  "Zorin OS Core": {
+    "Nvidia GeForce": 3,
+    "AMD Radeon": 3,
+    "Intel Grafik": 3,
+    "Hybrid / mehrere": 3,
+    "Weiß ich nicht": 0
+  },
+  "Linux Mint Xfce": {
+    "Nvidia GeForce": 3,
+    "AMD Radeon": 3,
+    "Intel Grafik": 3,
+    "Hybrid / mehrere": 4,
+    "Weiß ich nicht": 0
+  },
+  "Linux Mint Cinnamon": {
+    "Nvidia GeForce": 3,
+    "AMD Radeon": 3,
+    "Intel Grafik": 3,
+    "Hybrid / mehrere": 4,
+    "Weiß ich nicht": 0
+  }
+}

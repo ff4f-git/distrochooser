@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=2.1.2">
-  <script type="module" src="assets/app.js?v=2.1.1"></script>
+  <link rel="stylesheet" href="assets/styles.css?v=2.2.0">
+  <script type="module" src="assets/app.js?v=2.2.0"></script>
 </head>
 <body>
   <main>
@@ -62,6 +62,12 @@
           <p class="hint" data-i18n="resultsHint">Die passendsten Linux-Distributionen für dich – abgestimmt auf deine Anforderungen.</p>
           <div id="resultList"></div>
           <div id="warnings"></div>
+          <aside class="extra statistics" aria-labelledby="statisticsTitle">
+            <h2 id="statisticsTitle"></h2>
+            <p id="statisticsHelp"></p>
+            <button type="button" class="btn secondary" id="statisticsButton" disabled></button>
+            <p id="statisticsStatus" role="status" aria-live="polite"></p>
+          </aside>
           <div class="actions">
             <button class="btn secondary" id="restart" data-i18n="restart">↻ Neu starten</button>
             <button class="btn" id="edit" data-i18n="edit">← Antworten ändern</button>
