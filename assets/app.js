@@ -230,6 +230,28 @@ function scoreDistributions() {
   })).sort((a, b) => b.score - a.score || a.index - b.index);
 }
 
+// Explain recommendations using positive contributions from the actual scoring matrix.
+function matchingReasons(distro) {
+  const questions = language === 'de' ? DATA.questions : QUESTIONS_EN;
+  const matches = [];
+  answers.forEach((codes, questionIndex) => {
+    const options = questions[questionIndex].options;
+    const positive = codes.map(code => ({
+      code, points: Number(distro.points[code]) || 0,
+      label: options.find(option => option[1] === code)?.[0]
+    })).filter(item => item.points > 0 && item.label);
+    if (questionIndex === 2 && answers[2][0] === 'O' && ram) {
+      const choice = RAM_CHOICES.find(item => item.code === ram);
+      const points = Number(distro.points[ram]) || 0;
+      if (choice && points > 0) positive.push({ points, label: choice[language] });
+    }
+    positive.sort((a,b) => b.points - a.points);
+    if (positive.length) matches.push({ questionIndex, ...positive[0] });
+  });
+  matches.sort((a,b) => b.points - a.points || a.questionIndex - b.questionIndex);
+  return matches.slice(0,3);
+}
+
 function showResults(scroll = true) {
   resultsVisible = true;
   const t = TEXT[language];
@@ -274,7 +296,26 @@ function showResults(scroll = true) {
     const reason = document.createElement('p');
     reason.className = 'reason';
     reason.textContent = descriptions[distro.name]?.description || t.missing;
-    article.append(rank, head, label, meter, reason);
+    const matches = matchingReasons(distro);
+    const explanation = document.createElement('section');
+    explanation.className = 'match-explanation';
+    const explanationTitle = document.createElement('h3');
+    explanationTitle.textContent = language === 'de' ? 'Warum passt diese Distribution zu dir?' : 'Why does this distribution fit you?';
+    explanation.append(explanationTitle);
+    if (matches.length) {
+      const list = document.createElement('ul');
+      for (const match of matches) {
+        const item = document.createElement('li');
+        item.textContent = (language === 'de' ? 'Deine Auswahl „' : 'Your choice “') + match.label + (language === 'de' ? '“ passt laut Bewertung gut dazu.' : '” is a positive match in the scoring model.');
+        list.append(item);
+      }
+      explanation.append(list);
+    } else {
+      const note = document.createElement('p');
+      note.textContent = language === 'de' ? 'Keine einzelnen starken Übereinstimmungen; die Empfehlung ergibt sich aus der Gesamtbewertung.' : 'No individually strong matches; this recommendation comes from the overall score.';
+      explanation.append(note);
+    }
+    article.append(rank, head, label, meter, reason, explanation);
     $('resultList').append(article);
   });
 
