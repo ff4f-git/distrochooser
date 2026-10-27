@@ -121,6 +121,7 @@ function setLanguage(nextLanguage) {
   language = nextLanguage;
   document.documentElement.lang = language;
   document.querySelectorAll('[data-nav-de]').forEach(a => { a.textContent = a.dataset[language === 'de' ? 'navDe' : 'navEn']; });
+  document.querySelectorAll('a[href]').forEach(a => { if (a.origin === location.origin && (a.pathname.endsWith('/') || a.pathname.endsWith('/index.html') || a.pathname.endsWith('/statistik.html') || a.pathname.endsWith('/datenschutz.html'))) a.search = language === 'en' ? '?lang=en' : ''; });
   $('langDe').setAttribute('aria-pressed', String(language === 'de'));
   $('langEn').setAttribute('aria-pressed', String(language === 'en'));
   document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -291,4 +292,4 @@ $('statisticsButton').addEventListener('click', async () => {
   try { await pending; } catch { /* Inline status provides a retry. */ }
   if (resultsVisible) renderStatistics();
 });
-setLanguage('de');
+setLanguage(new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'de');
