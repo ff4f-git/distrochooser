@@ -411,3 +411,6 @@ a{color:var(--cyan)}
 .terminal-tab.active:hover{color:var(--cyan)}
 .bar .terminal-symbol{margin:0 0 10px auto}
 @media(max-width:520px){.bar{gap:7px;padding:10px 10px 0}.terminal-tabs{order:3;flex-basis:100%;gap:4px}.terminal-tab{flex:1;text-align:center;padding:9px 5px;font-size:clamp(9px,2.65vw,12px)}.bar .terminal-symbol{margin-left:auto}}
+
+/* Terminal-style brand cursor. */
+.brand-cursor{color:var(--cyan);display:inline-block;margin-left:1px;text-shadow:0 0 12px rgba(35,191,220,.35)}
