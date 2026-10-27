@@ -55,7 +55,7 @@ main{
 .lang-button[aria-pressed="true"]{
   color:var(--bg);
   background:var(--cyan);
-  border-color:var(--cyan}}
+  border-color:var(--cyan)}
 
 .window{
   border:1px solid #344a59;
