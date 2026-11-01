@@ -1684,7 +1684,387 @@
         "Hybrid / mehrere": 0,
         "Weiß ich nicht": 0
       }
+    },
+    {
+      "id": "solus",
+      "name": "Solus",
+      "active": false,
+      "url": "https://getsol.us/",
+      "icon": [
+        "",
+        "#23bfdc"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Eigenständiges Desktop-Linux mit fortlaufenden Updates",
+          "description": "Solus ist eine eigenständige Linux-Distribution für Desktop-Rechner. Sie verbindet vorkonfigurierte Desktop-Umgebungen mit einem eigenen, kuratierten Paketangebot und fortlaufenden Aktualisierungen. Software wird über die Paketverwaltung eopkg installiert."
+        },
+        "en": {
+          "label": "Independent desktop Linux with rolling updates",
+          "description": "Solus is an independent Linux distribution for desktop computers. It combines preconfigured desktop environments with its own curated package collection and rolling updates. Software is installed through the eopkg package manager."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Auf den Desktop ausgerichtete Gesamtabstimmung",
+          "Fortlaufende Updates ohne feste Versionssprünge",
+          "Eigenes, kuratiertes Softwareangebot"
+        ],
+        "en": [
+          "Desktop-focused integration",
+          "Rolling updates without fixed release upgrades",
+          "Its own curated software collection"
+        ]
+      },
+      "points": {
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0,
+        "J": 0,
+        "K": 0,
+        "L": 0,
+        "M": 0,
+        "N": 0,
+        "O": 0,
+        "P": 0,
+        "Q": 0,
+        "R": 0,
+        "S": 0,
+        "T": 0,
+        "U": 0,
+        "V": 0,
+        "W": 0,
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 0,
+        "AD": 0,
+        "AE": 0,
+        "AG": 0,
+        "AH": 0,
+        "AI": 0,
+        "AJ": 0,
+        "AK": 0
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 0,
+        "Intel Grafik": 0,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "gentoo-linux",
+      "name": "Gentoo Linux",
+      "active": false,
+      "url": "https://www.gentoo.org/",
+      "icon": [
+        "",
+        "#23bfdc"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Flexibel anpassbares Linux mit Portage",
+          "description": "Gentoo Linux richtet sich an Menschen, die ihr System im Detail selbst gestalten möchten. Die Paketverwaltung Portage unterstützt das Bauen aus Quellcode sowie Binärpakete. Softwarefunktionen, Desktop und Systemaufbau lassen sich gezielt anpassen; dafür sind Einarbeitung und Pflege erforderlich."
+        },
+        "en": {
+          "label": "Highly customisable Linux with Portage",
+          "description": "Gentoo Linux is aimed at people who want detailed control over their system. The Portage package manager supports building from source as well as binary packages. Software features, the desktop and system layout can be tailored to individual needs, with time required for learning and maintenance."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Feine Kontrolle über Softwarefunktionen und Abhängigkeiten",
+          "Portage mit Quellcode- und Binärpaketen",
+          "Sehr flexibel bei Desktop und Systemaufbau"
+        ],
+        "en": [
+          "Fine-grained control over software features and dependencies",
+          "Portage with source and binary packages",
+          "Flexible desktop and system configuration"
+        ]
+      },
+      "points": {
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0,
+        "J": 0,
+        "K": 0,
+        "L": 0,
+        "M": 0,
+        "N": 0,
+        "O": 0,
+        "P": 0,
+        "Q": 0,
+        "R": 0,
+        "S": 0,
+        "T": 0,
+        "U": 0,
+        "V": 0,
+        "W": 0,
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 0,
+        "AD": 0,
+        "AE": 0,
+        "AG": 0,
+        "AH": 0,
+        "AI": 0,
+        "AJ": 0,
+        "AK": 0
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 0,
+        "Intel Grafik": 0,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "tuxedo-os",
+      "name": "TUXEDO OS",
+      "active": false,
+      "url": "https://www.tuxedocomputers.com/os",
+      "icon": [
+        "",
+        "#23bfdc"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "KDE-Desktop mit Werkzeugen von TUXEDO",
+          "description": "TUXEDO OS bietet einen vorkonfigurierten Desktop mit KDE Plasma und ergänzenden Werkzeugen von TUXEDO Computers. Ein Schwerpunkt ist die Abstimmung auf unterstützte TUXEDO-Hardware. Das System kann auch auf anderen kompatiblen Rechnern genutzt werden; der Umfang der Hardwarefunktionen hängt vom Gerät ab."
+        },
+        "en": {
+          "label": "KDE desktop with tools from TUXEDO",
+          "description": "TUXEDO OS provides a preconfigured KDE Plasma desktop and additional tools from TUXEDO Computers. A key focus is integration with supported TUXEDO hardware. It can also be used on other compatible computers; available hardware features depend on the device."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Vorkonfigurierter KDE-Plasma-Desktop",
+          "Zusätzliche Werkzeuge von TUXEDO Computers",
+          "Abstimmung auf unterstützte TUXEDO-Hardware"
+        ],
+        "en": [
+          "Preconfigured KDE Plasma desktop",
+          "Additional tools from TUXEDO Computers",
+          "Integration with supported TUXEDO hardware"
+        ]
+      },
+      "points": {
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0,
+        "J": 0,
+        "K": 0,
+        "L": 0,
+        "M": 0,
+        "N": 0,
+        "O": 0,
+        "P": 0,
+        "Q": 0,
+        "R": 0,
+        "S": 0,
+        "T": 0,
+        "U": 0,
+        "V": 0,
+        "W": 0,
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 0,
+        "AD": 0,
+        "AE": 0,
+        "AG": 0,
+        "AH": 0,
+        "AI": 0,
+        "AJ": 0,
+        "AK": 0
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 0,
+        "Intel Grafik": 0,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "void-linux",
+      "name": "Void Linux",
+      "active": false,
+      "url": "https://voidlinux.org/",
+      "icon": [
+        "",
+        "#23bfdc"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Eigenständiges Rolling-Release-Linux mit runit",
+          "description": "Void Linux ist eine eigenständige Distribution mit fortlaufenden Updates, der Paketverwaltung XBPS und dem Dienstesystem runit. Sie bietet eine schlanke Grundlage für einen selbst zusammengestellten Desktop. Varianten mit glibc oder musl stehen zur Auswahl; Einrichtung und Softwareauswahl setzen Eigeninitiative voraus."
+        },
+        "en": {
+          "label": "Independent rolling-release Linux with runit",
+          "description": "Void Linux is an independent distribution with rolling updates, the XBPS package manager and the runit service manager. It provides a lean foundation for a desktop assembled to suit individual needs. Both glibc and musl variants are available; setup and software selection require a hands-on approach."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Schlanke Grundlage mit runit",
+          "Eigene Paketverwaltung XBPS",
+          "Auswahl zwischen glibc und musl"
+        ],
+        "en": [
+          "Lean foundation with runit",
+          "Its own XBPS package manager",
+          "Choice of glibc or musl"
+        ]
+      },
+      "points": {
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0,
+        "J": 0,
+        "K": 0,
+        "L": 0,
+        "M": 0,
+        "N": 0,
+        "O": 0,
+        "P": 0,
+        "Q": 0,
+        "R": 0,
+        "S": 0,
+        "T": 0,
+        "U": 0,
+        "V": 0,
+        "W": 0,
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 0,
+        "AD": 0,
+        "AE": 0,
+        "AG": 0,
+        "AH": 0,
+        "AI": 0,
+        "AJ": 0,
+        "AK": 0
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 0,
+        "Intel Grafik": 0,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "antix",
+      "name": "antiX",
+      "active": false,
+      "url": "https://antixlinux.com/",
+      "icon": [
+        "",
+        "#23bfdc"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Leichtgewichtiges Debian-basiertes Linux",
+          "description": "antiX ist eine leichtgewichtige, Debian-basierte Distribution ohne systemd. Sie setzt auf sparsame Fenstermanager wie IceWM und eignet sich besonders für ältere oder leistungsschwächere Rechner. Live-Betrieb und Werkzeuge für portable Installationen gehören zu ihren Schwerpunkten."
+        },
+        "en": {
+          "label": "Lightweight Debian-based Linux",
+          "description": "antiX is a lightweight Debian-based distribution without systemd. It uses resource-efficient window managers such as IceWM and is particularly suited to older or less powerful computers. Live operation and tools for portable installations are among its main strengths."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Sparsame Oberfläche für ältere Rechner",
+          "Debian-basierte Softwareauswahl",
+          "Vielseitige Live- und USB-Werkzeuge"
+        ],
+        "en": [
+          "Resource-efficient interface for older computers",
+          "Debian-based software collection",
+          "Versatile live and USB tools"
+        ]
+      },
+      "points": {
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 0,
+        "J": 0,
+        "K": 0,
+        "L": 0,
+        "M": 0,
+        "N": 0,
+        "O": 0,
+        "P": 0,
+        "Q": 0,
+        "R": 0,
+        "S": 0,
+        "T": 0,
+        "U": 0,
+        "V": 0,
+        "W": 0,
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 0,
+        "AD": 0,
+        "AE": 0,
+        "AG": 0,
+        "AH": 0,
+        "AI": 0,
+        "AJ": 0,
+        "AK": 0
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 0,
+        "Intel Grafik": 0,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
     }
   ],
-  "version": "catalog-51368c507d387cbd829cfab537f6ec9339f2edf6830394f1337d9c5a6f9de2e7"
+  "version": "catalog-0424bbb78b587590671c2230e1ba6fb6db9db1ed342dc075634c029e810f1f76"
 }

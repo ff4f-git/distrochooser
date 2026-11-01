@@ -7,15 +7,15 @@ import bonuses from '../assets/gpu-bonus.json' with {type:'json'};
 import {validateCatalog,runtimeFromCatalog,generatedFiles,excelExport,simulate,GPU,RAM,canonicalJson} from '../assets/catalog-core.js';
 import {validateSubmission} from '../supabase/functions/submit-statistics/validate.js';
 import {loadPublishedCatalog} from '../assets/catalog-client.js';
-test('migration preserves all 22 distributions, all scores, GPU bonuses and three strengths per language',()=>{
+test('catalog preserves all distributions, all scores, GPU bonuses and three strengths per language',()=>{
  const r=runtimeFromCatalog(catalog);assert.deepEqual(r.model.distros.map(({id,...d})=>d),model.distros.map(({id,...d})=>d));assert.deepEqual(r.bonuses,bonuses);
  for(const d of catalog.distributions)for(const lang of ['de','en'])assert.equal(d.strengths[lang].length,3);
- assert.equal(validateCatalog(catalog,catalog).distributions.length,22);
+ assert.equal(validateCatalog(catalog,catalog).distributions.length,catalog.distributions.length);
 });
 test('adding and deactivating a distribution updates every generated runtime asset',()=>{
  const c=structuredClone(catalog);const added={...structuredClone(c.distributions[0]),id:'test-distro',name:'Test distro'};c.distributions.push(added);c.distributions[0].active=false;
  const clean={...validateCatalog(c,catalog),version:'catalog-'+'a'.repeat(64)},files=generatedFiles(clean),r=runtimeFromCatalog(clean);
- assert.equal(r.model.distros.length,22);assert.ok(!r.model.distros.some(d=>d.name===catalog.distributions[0].name));assert.ok(r.model.distros.some(d=>d.name==='Test distro'));
+ assert.equal(r.model.distros.length,catalog.distributions.filter(d=>d.active).length);assert.ok(!r.model.distros.some(d=>d.name===catalog.distributions[0].name));assert.ok(r.model.distros.some(d=>d.name==='Test distro'));
  assert.deepEqual(JSON.parse(files['assets/model.json']),JSON.parse(files['supabase/functions/submit-statistics/model.json']));
  assert.ok(JSON.parse(files['assets/descriptions-de.json'])['Test distro']);assert.ok(files['docs/scores-de.md'].includes('Test distro'));assert.ok(clean.distributions.some(d=>!d.active));
 });
