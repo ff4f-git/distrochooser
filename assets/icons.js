@@ -71,7 +71,7 @@ export const DISTRO_ICONS = {
     "",
     "#38b9e7"
   ],
-  "NixOS KDE": [
+  "NixOS": [
     "",
     "#81b7e8"
   ],

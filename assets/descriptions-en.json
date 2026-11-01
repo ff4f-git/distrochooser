@@ -71,7 +71,7 @@
     "label": "Build your own Linux",
     "description": "A minimal starting point with maximum control. Installation, desktop selection, and maintenance are largely up to you."
   },
-  "NixOS KDE": {
+  "NixOS": {
     "label": "Your system as configuration",
     "description": "Declarative system configuration and reproducible setups with powerful rollback concepts, but a substantial learning curve."
   },

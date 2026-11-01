@@ -71,7 +71,7 @@
     "label": "Du baust dein Linux selbst",
     "description": "Minimaler Ausgangspunkt, maximale Kontrolle. Installation, Desktop und laufende Pflege liegen weitgehend in deiner Hand."
   },
-  "NixOS KDE": {
+  "NixOS": {
     "label": "Das System als Konfiguration",
     "description": "Deklarative Systemkonfiguration und reproduzierbare Setups mit mächtigen Rollback-Konzepten – dafür eine deutliche Lernkurve."
   },

@@ -1535,7 +1535,7 @@
     },
     {
       "id": "nixos-kde",
-      "name": "NixOS KDE",
+      "name": "NixOS",
       "active": true,
       "url": "",
       "icon": [
@@ -1686,5 +1686,5 @@
       }
     }
   ],
-  "version": "catalog-f321c91002aa9b5b9fc9ee944229e3c6c42de14d923386e16835386333b005e7"
+  "version": "catalog-86c8474305735b191f473127bddc477ec1f264ea093fe169cd4d8de67d3da5cc"
 }

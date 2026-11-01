@@ -1,6 +1,6 @@
 # Veröffentlichte Bewertungen
 
-Version: `catalog-f321c91002aa9b5b9fc9ee944229e3c6c42de14d923386e16835386333b005e7`
+Version: `catalog-86c8474305735b191f473127bddc477ec1f264ea093fe169cd4d8de67d3da5cc`
 
 Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 
@@ -26,7 +26,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | CachyOS KDE | 5 | 5 | 20 | 5 | 10 | 15 |
 | EndeavourOS KDE | 5 | 5 | 5 | 5 | 10 | 15 |
 | Arch Linux | 0 | 5 | 5 | 5 | 15 | 15 |
-| NixOS KDE | 0 | 0 | -10 | -5 | 15 | 15 |
+| NixOS | 0 | 0 | -10 | -5 | 15 | 15 |
 | Omarchy | 5 | 0 | 5 | 0 | 15 | 15 |
 
 ## Was für einen Rechner nutzt du?
@@ -51,7 +51,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | CachyOS KDE | 0 | 6 | 5 | 0 |
 | EndeavourOS KDE | 0 | 6 | 5 | 0 |
 | Arch Linux | 0 | -11 | 0 | 0 |
-| NixOS KDE | 0 | -8 | 0 | 0 |
+| NixOS | 0 | -8 | 0 | 0 |
 | Omarchy | 0 | 11 | 0 | 0 |
 
 ## Wie alt ist dein Rechner ungefähr?
@@ -76,7 +76,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | CachyOS KDE | 15 | 0 | 0 | 0 | 0 |
 | EndeavourOS KDE | 15 | 0 | 0 | 5 | 0 |
 | Arch Linux | 15 | 0 | 0 | 5 | 0 |
-| NixOS KDE | 10 | 0 | 0 | 5 | 0 |
+| NixOS | 10 | 0 | 0 | 5 | 0 |
 | Omarchy | 15 | 0 | 0 | 0 | 0 |
 
 ## Wie möchtest du mit deinem Betriebssystem umgehen?
@@ -101,7 +101,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | CachyOS KDE | -5 | 3 | 17 |
 | EndeavourOS KDE | -10 | -5 | 15 |
 | Arch Linux | -20 | -20 | 10 |
-| NixOS KDE | -5 | -10 | 14 |
+| NixOS | -5 | -10 | 14 |
 | Omarchy | 0 | -8 | 20 |
 
 ## Wie wichtig ist dir das Aussehen?
@@ -126,7 +126,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | CachyOS KDE | 5 | 10 | 0 |
 | EndeavourOS KDE | 5 | 10 | 0 |
 | Arch Linux | 0 | 0 | 0 |
-| NixOS KDE | 5 | 10 | 0 |
+| NixOS | 5 | 10 | 0 |
 | Omarchy | -5 | 15 | 0 |
 
 ## Wie möchtest du deine Desktop-Oberfläche anpassen?
@@ -151,7 +151,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | CachyOS KDE | 10 | 10 | 10 |
 | EndeavourOS KDE | 5 | 10 | 10 |
 | Arch Linux | 0 | 0 | 15 |
-| NixOS KDE | 5 | 10 | 10 |
+| NixOS | 5 | 10 | 10 |
 | Omarchy | 15 | 15 | 15 |
 
 ## Wie wichtig ist dir, Änderungen einfach rückgängig zu machen?
@@ -176,7 +176,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | CachyOS KDE | 5 | 5 | 0 |
 | EndeavourOS KDE | 0 | 0 | 0 |
 | Arch Linux | 0 | -5 | 0 |
-| NixOS KDE | 5 | 5 | 0 |
+| NixOS | 5 | 5 | 0 |
 | Omarchy | 0 | 5 | 0 |
 
 ## Wie viel Erfahrung hast du bereits mit Linux?
@@ -201,7 +201,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | CachyOS KDE | 0 | 10 | 20 |
 | EndeavourOS KDE | 0 | 10 | 20 |
 | Arch Linux | -10 | 0 | 40 |
-| NixOS KDE | -10 | 0 | 40 |
+| NixOS | -10 | 0 | 40 |
 | Omarchy | 0 | 10 | 20 |
 
 ## RAM / GPU
@@ -226,5 +226,5 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | CachyOS KDE | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
 | EndeavourOS KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | Arch Linux | 5 | 5 | 0 | 0 | -5 | 0 | 5 | 5 | 0 | 0 |
-| NixOS KDE | -10 | 0 | 5 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
+| NixOS | -10 | 0 | 5 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
 | Omarchy | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
