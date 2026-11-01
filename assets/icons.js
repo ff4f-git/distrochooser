@@ -55,7 +55,7 @@ export const DISTRO_ICONS = {
     "",
     "#b88ef0"
   ],
-  "Nobara KDE": [
+  "Nobara": [
     "",
     "#a1c2e9"
   ],

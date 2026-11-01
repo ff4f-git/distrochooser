@@ -1,5 +1,5 @@
 {
-  "version": "catalog-9a46e8217da096c4ad337907ab10dbd72642e605248e4a241810012bf9e19208",
+  "version": "catalog-51368c507d387cbd829cfab537f6ec9339f2edf6830394f1337d9c5a6f9de2e7",
   "questions": [
     {
       "title": "Wofür möchtest du deinen Rechner hauptsächlich nutzen?",
@@ -741,7 +741,7 @@
     },
     {
       "id": "nobara-kde",
-      "name": "Nobara KDE",
+      "name": "Nobara",
       "points": {
         "B": 5,
         "C": 5,

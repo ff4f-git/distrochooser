@@ -55,7 +55,7 @@
     "label": "Gaming first, maintenance second",
     "description": "A gaming-focused, image-based Fedora system with Steam integration, KDE, and straightforward system rollback."
   },
-  "Nobara KDE": {
+  "Nobara": {
     "label": "Fedora tuned for gamers",
     "description": "A Fedora derivative customized for gaming and multimedia, maintained as a more specialized community project."
   },
