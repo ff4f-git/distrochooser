@@ -205,7 +205,34 @@ Entscheidend ist die tatsächlich bereitgestellte Lösung – nicht, ob sich ein
 
 **Abgrenzung:** Btrfs allein ist kein fertiger Rollback. Ein Snapshot allein garantiert noch keinen einfachen Wiederherstellungsweg. Umgekehrt werden Arch und andere Distributionen nicht abgewertet, nur weil ein Nutzer die entsprechenden Werkzeuge selbst einrichten müsste. Theoretische Nachrüstbarkeit ist kein Bonus.
 
-**Spalte AA („Wäre praktisch“) wird separat bewertet.** Die Werte der bisherigen Matrix bleiben dort bis zur gemeinsamen Überarbeitung unverändert. Spalte AB („Nicht wichtig“) bleibt für alle Distributionen bei 0.
+**Spalte AA („Wäre praktisch“) – freigegebene Bewertung:** Bei dieser schwächer gewichteten Antwort wird nicht zwischen einer bereits integrierten und einer einfach einzurichtenden Wiederherstellung unterschieden. **+5** gibt es für vorhandene oder einfach einzurichtende Mechanismen, **0** bei merklichem zusätzlichem Konfigurationsaufwand, **−5** bei erheblichem Aufwand gegenüber anderen Distributionen. Ein klarer Malus ist bei Arch Linux (Eigenbau) gerechtfertigt, weil die Wiederherstellungsstrategie und ihre Integration weitgehend selbst geplant werden müssen.
+
+| Distribution | AA: Wäre praktisch |
+|---|---:|
+| Linux Mint Cinnamon | +5 |
+| Linux Mint Xfce | +5 |
+| Zorin OS Core | 0 |
+| Ubuntu GNOME | 0 |
+| Kubuntu | 0 |
+| Debian GNOME | 0 |
+| Debian KDE | 0 |
+| Fedora Workstation | 0 |
+| Fedora KDE | 0 |
+| openSUSE Leap KDE | +5 |
+| openSUSE Tumbleweed KDE | +5 |
+| MX Linux Xfce | +5 |
+| Linux Lite | 0 |
+| elementary OS | 0 |
+| Pop!_OS COSMIC | 0 |
+| Bazzite KDE | +5 |
+| Nobara KDE | 0 |
+| CachyOS KDE | +5 |
+| EndeavourOS KDE | 0 |
+| Arch Linux (Eigenbau) | -5 |
+| NixOS KDE | +5 |
+| Omarchy | +5 |
+
+**Spalte AB („Nicht wichtig“)** bleibt für alle Distributionen bei **0**: Ohne Wunsch nach Systemwiederherstellung soll dieses Merkmal die Empfehlung nicht beeinflussen.
 
 ### Frage 8 – Linux-Erfahrung 
 
