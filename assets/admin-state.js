@@ -9,6 +9,13 @@ export class AdminDraft{
  dirty(){return JSON.stringify(this.publishable())!==JSON.stringify(this.reference);}
  published(id){return this.reference.distributions.some(d=>d.id===id);}
  select(id){if(!this.visible().some(d=>d.id===id))throw Error('Distribution nicht vorhanden.');this.selected=id;}
+ updateMetadata(values){
+  const d=this.selectedDistribution(),id=String(values.id);
+  if(this.published(d.id)&&id!==d.id)throw Error('Die veröffentlichte ID darf nicht geändert werden.');
+  if(this.catalog.distributions.some(other=>other!==d&&other.id===id))throw Error('Diese ID wird bereits verwendet.');
+  d.id=id;this.selected=id;d.name=String(values.name);d.url=String(values.url);d.active=values.active;
+  for(const lang of ['de','en']){d.descriptions[lang]={label:String(values['label-'+lang]),description:String(values['description-'+lang])};d.strengths[lang]=[0,1,2].map(i=>String(values[`strength-${lang}-${i}`]));}
+ }
  add(){let id='neue-distribution',n=1;while(this.catalog.distributions.some(d=>d.id===id))id='neue-distribution-'+n++;const codes=[...this.catalog.questions.flatMap(q=>q.options.map(o=>o[1])),...RAM.map(o=>o[1])];this.catalog.distributions.push({id,name:'Neue Distribution',active:false,url:'',icon:['\uf17c','#23bfdc'],descriptions:{de:{label:'',description:''},en:{label:'',description:''}},strengths:{de:['','',''],en:['','','']},points:Object.fromEntries(codes.map(c=>[c,['V','AB','AJ'].includes(c)?0:null])),gpu:Object.fromEntries(GPU.map(k=>[k,null]))});this.selected=id;this.view='distributions';return this.selectedDistribution();}
  remove(id){const remaining=this.visible().filter(d=>d.id!==id);if(!remaining.some(d=>d.active))throw Error('Mindestens eine aktive Distribution muss im Katalog bleiben.');if(this.published(id))this.deletedIds.add(id);else this.catalog.distributions=this.catalog.distributions.filter(d=>d.id!==id);if(this.selected===id)this.selected=remaining[0].id;}
  undoDeletions(){this.deletedIds.clear();}

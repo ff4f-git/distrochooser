@@ -8,7 +8,7 @@ import {validateCatalog,runtimeFromCatalog,generatedFiles,excelExport,simulate,G
 import {validateSubmission} from '../supabase/functions/submit-statistics/validate.js';
 import {loadPublishedCatalog} from '../assets/catalog-client.js';
 test('migration preserves all 22 distributions, all scores, GPU bonuses and three strengths per language',()=>{
- const r=runtimeFromCatalog(catalog);assert.deepEqual(r.model.distros.map(({id,...d})=>d),model.distros);assert.deepEqual(r.bonuses,bonuses);
+ const r=runtimeFromCatalog(catalog);assert.deepEqual(r.model.distros.map(({id,...d})=>d),model.distros.map(({id,...d})=>d));assert.deepEqual(r.bonuses,bonuses);
  for(const d of catalog.distributions)for(const lang of ['de','en'])assert.equal(d.strengths[lang].length,3);
  assert.equal(validateCatalog(catalog,catalog).distributions.length,22);
 });

@@ -7,6 +7,8 @@ Der geschützte Bearbeitungszugang befindet sich unter [admin.html](../admin.htm
 
 Änderungen bleiben beim Wechsel zwischen Fragen, Distributionen und Arbeitsbereichen im Entwurf erhalten. **Speichern & veröffentlichen** übernimmt alle Änderungen gemeinsam. **Änderungen verwerfen** setzt den gesamten Entwurf zurück. Speicheraktionen und Meldungen stehen im normalen Seitenfluss und verdecken keine Eingaben.
 
+Vor dem Speichern werden sichtbare Stammdaten erneut aus dem Formular übernommen, auch wenn ein Browser keine Eingabeereignisse gemeldet hat. Die Erfolgsmeldung erscheint erst nach einem unabhängigen Neuladen und vollständigen Vergleich des veröffentlichten Katalogs. Bei Fehlern bleiben die Änderungen im Entwurf; die Meldung nennt den betroffenen Schritt und eine Vorgangskennung.
+
 ## Zugang
 
 Ein kurzlebiger GitHub Fine-grained Personal Access Token benötigt ausschließlich Zugriff auf `ff4f-git/distrochooser` und **Contents: Read and write**. Das GitHub-Konto muss Schreibrecht für das Repository besitzen. Der Token wird nicht im Repository, Local Storage, Cookies oder in der Datenbank gespeichert. Der Browser hält ihn nur im Arbeitsspeicher; Abmelden oder Schließen der Seite entfernt ihn. Der Server prüft die GitHub-Rechte bei jedem Admin-Zugriff. Token niemals im Chat oder in Issues posten.

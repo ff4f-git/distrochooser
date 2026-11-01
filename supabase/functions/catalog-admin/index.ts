@@ -6,13 +6,14 @@ const db=async(path:string,init:RequestInit={})=>{
  const url=Deno.env.get('SUPABASE_URL'),key=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
  if(!url||!key)throw Error('Datenverwaltung ist nicht erreichbar.');
  const res=await fetch(url+'/rest/v1/'+path,{...init,headers:{apikey:key,Authorization:'Bearer '+key,'Content-Type':'application/json',...init.headers},signal:AbortSignal.timeout(12000)});
- if(!res.ok)throw Error('Speichern des Versionsstands fehlgeschlagen.');return res.status===204?null:res.json();
+ if(!res.ok){let code='';try{const detail=await res.json();if(typeof detail.code==='string')code=detail.code;}catch{}throw Error('Datenverwaltung: HTTP '+res.status+(code?' ('+code+')':'')+'.');}return res.status===204?null:res.json();
 };
 const current=async()=>{const rows=await db('distribution_release_current?select=version&singleton=eq.true');if(!rows.length)throw Error('Keine Veröffentlichung vorhanden.');const [row]=await db('distribution_releases?select=catalog,github_commit&version=eq.'+encodeURIComponent(rows[0].version));return row;};
 const base64=(bytes:Uint8Array)=>{let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(s);};
 export async function handler(request:Request){
+ const requestId=crypto.randomUUID();let stage='Zugriff prüfen';
  const headers={'Access-Control-Allow-Origin':ORIGIN,'Vary':'Origin','Access-Control-Allow-Headers':'content-type,authorization','Access-Control-Allow-Methods':'GET,POST,OPTIONS','Cache-Control':'no-store'};
- const reply=(status:number,body:object)=>Response.json(body,{status,headers});
+ const reply=(status:number,body:object)=>Response.json({...body,requestId},{status,headers});
  if(request.headers.get('origin')&&request.headers.get('origin')!==ORIGIN)return reply(403,{error:'Zugriff nicht erlaubt.'});
  if(request.method==='OPTIONS')return new Response(null,{status:204,headers});
  try{
@@ -22,8 +23,8 @@ export async function handler(request:Request){
   const token=request.headers.get('authorization')?.replace(/^Bearer /,'');
   if(!token||token.length>500)return reply(401,{error:'Bitte mit GitHub verbinden.'});
   const gh=async(path:string,init:RequestInit={})=>{
-   const res=await fetch('https://api.github.com/'+path,{...init,headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json',...init.headers},signal:AbortSignal.timeout(15000)});
-   if(!res.ok){if([401,403].includes(res.status))throw Error('GitHub-Zugriff verweigert. Token und Schreibrechte prüfen.');if(res.status===422)throw Error('Zwischenzeitliche Änderung auf main. Neu laden und erneut speichern.');throw Error('GitHub-Veröffentlichung fehlgeschlagen ('+res.status+').');}return res.json();
+   const res=await fetch('https://api.github.com/'+path,{...init,headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','User-Agent':'Distrochooser-Admin','X-GitHub-Api-Version':'2022-11-28','Content-Type':'application/json',...init.headers},signal:AbortSignal.timeout(15000)});
+   if(!res.ok){let reason='';try{const detail=await res.json();if(typeof detail.message==='string')reason=detail.message.slice(0,250);}catch{}if([401,403].includes(res.status))throw Error('GitHub-Zugriff verweigert. Token und Schreibrechte prüfen.'+(reason?' '+reason:''));if(res.status===422)throw Error('GitHub hat die Veröffentlichung abgelehnt. '+reason);throw Error('GitHub-Veröffentlichung fehlgeschlagen ('+res.status+'). '+reason);}return res.json();
   };
   const [user,repo]=await Promise.all([gh('user'),gh('repos/'+REPO)]);
   if(!repo.permissions?.push)return reply(403,{error:'Schreibrecht für '+REPO+' erforderlich.'});
@@ -33,7 +34,7 @@ export async function handler(request:Request){
   const reader=request.body?.getReader();if(!reader)return reply(400,{error:'Formulardaten fehlen.'});
   const chunks=[];let size=0;while(true){const {done,value}=await reader.read();if(done)break;size+=value.length;if(size>1500000){await reader.cancel();return reply(413,{error:'Katalog zu groß.'});}chunks.push(value);}
   const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length;}
-  const input=JSON.parse(new TextDecoder().decode(bytes));
+  stage='Formulardaten prüfen';const input=JSON.parse(new TextDecoder().decode(bytes));
   if(input.expectedVersion!==row.catalog.version)return reply(409,{error:'Der Datenstand wurde inzwischen geändert. Bitte neu laden.'});
   const clean=validateCatalog(input.catalog,reference);
   const existing=new Set(clean.distributions.map(d=>d.id));
@@ -45,18 +46,20 @@ export async function handler(request:Request){
   if(version===row.catalog.version)return reply(200,{catalog:row.catalog,head:ref.object.sha,unchanged:true});
   const catalog={...clean,version};let commit=ref.object.sha;
   // Retry after a transient database failure: reactivate the exact committed catalog.
-  const committed=await gh('repos/'+REPO+'/contents/data/distributions.json?ref='+commit);
+  stage='GitHub-Datenstand lesen';const committed=await gh('repos/'+REPO+'/contents/data/distributions.json?ref='+commit);
   const committedVersion=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(committed.content.replace(/\s/g,'')),c=>c.charCodeAt(0)))).version;
   if(committedVersion!==version){
    if(input.expectedHead!==commit)return reply(409,{error:'main wurde zwischenzeitlich geändert. Bitte neu laden.'});
-   const sourceCommit=await gh('repos/'+REPO+'/git/commits/'+commit);
+   stage='GitHub-Veröffentlichung erzeugen';const sourceCommit=await gh('repos/'+REPO+'/git/commits/'+commit);
    const binary=await gh('repos/'+REPO+'/git/blobs',{method:'POST',body:JSON.stringify({encoding:'base64',content:base64(excelExport(catalog))})});
    const tree=await gh('repos/'+REPO+'/git/trees',{method:'POST',body:JSON.stringify({base_tree:sourceCommit.tree.sha,tree:[...Object.entries(generatedFiles(catalog)).map(([path,content])=>({path,mode:'100644',type:'blob',content})),{path:'data/punktematrix.xlsx',mode:'100644',type:'blob',sha:binary.sha}]})});
    const created=await gh('repos/'+REPO+'/git/commits',{method:'POST',body:JSON.stringify({message:'Publish distribution catalog '+version.slice(8,20)+' by '+user.login,tree:tree.sha,parents:[commit]})});
-   await gh('repos/'+REPO+'/git/refs/heads/main',{method:'PATCH',body:JSON.stringify({sha:created.sha,force:false})});commit=created.sha;
+   stage='main aktualisieren';await gh('repos/'+REPO+'/git/refs/heads/main',{method:'PATCH',body:JSON.stringify({sha:created.sha,force:false})});commit=created.sha;
+   const verifiedRef=await gh('repos/'+REPO+'/git/ref/heads/main');if(verifiedRef.object.sha!==commit)throw Error('Der neue Commit konnte auf main nicht bestätigt werden.');
   }
-  await db('rpc/activate_distribution_release',{method:'POST',body:JSON.stringify({expected_version:row.catalog.version,new_catalog:catalog,commit_sha:commit,actor:user.login})});
-  return reply(200,{catalog,head:commit,user:user.login});
- }catch(error){return reply(400,{error:error instanceof Error?error.message:'Speichern fehlgeschlagen.'});}
+  stage='Supabase-Version aktivieren';await db('rpc/activate_distribution_release',{method:'POST',body:JSON.stringify({expected_version:row.catalog.version,new_catalog:catalog,commit_sha:commit,actor:user.login})});
+  stage='Veröffentlichung nachprüfen';const verified=await current();if(verified.catalog.version!==version||JSON.stringify(validateCatalog(verified.catalog,reference))!==JSON.stringify(clean))throw Error('Der aktivierte Datenstand stimmt nicht mit der Änderung überein.');
+  return reply(200,{catalog:verified.catalog,head:commit,user:user.login,published:true});
+ }catch(error){const message=error instanceof Error?error.message:'Speichern fehlgeschlagen.';console.error(JSON.stringify({requestId,stage,error:message}));return reply(400,{error:message,stage});}
 }
 Deno.serve(handler);

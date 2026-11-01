@@ -5,25 +5,25 @@ globalThis.Deno={env:{get:key=>key==='SUPABASE_URL'?'https://database.test':'tes
 const {handler}=await import('../supabase/functions/catalog-admin/index.ts');
 const original=globalThis.fetch;
 function mock({head='head-a',push=true,failGit=false}={}){
- const writes=[];globalThis.fetch=async(url,init={})=>{
+ let active=seed,branch=head;const writes=[];globalThis.fetch=async(url,init={})=>{
   const u=new URL(url),path=u.pathname;
   if(init.method&&init.method!=='GET')writes.push({path,body:JSON.parse(init.body)});
   let result;
   if(u.hostname==='database.test'){
-   if(path.endsWith('distribution_release_current'))result=[{version:seed.version}];
-   else if(path.endsWith('distribution_releases'))result=[{catalog:seed,github_commit:'head-a'}];
-   else if(path.endsWith('activate_distribution_release'))result='activated';
+   if(path.endsWith('distribution_release_current'))result=[{version:active.version}];
+   else if(path.endsWith('distribution_releases'))result=[{catalog:active,github_commit:'head-a'}];
+   else if(path.endsWith('activate_distribution_release')){active=JSON.parse(init.body).new_catalog;result='activated';}
   }else{
    if(failGit)return Response.json({message:'Bad credentials'},{status:401});
    if(path==='/user')result={login:'test-editor'};
    else if(path.endsWith('/distrochooser'))result={permissions:{push}};
-   else if(path.endsWith('/git/ref/heads/main'))result={object:{sha:head}};
+   else if(path.endsWith('/git/ref/heads/main'))result={object:{sha:branch}};
    else if(path.includes('/contents/data/distributions.json'))result={content:Buffer.from(JSON.stringify(seed)).toString('base64')};
    else if(path.includes('/git/commits/')&&!init.method)result={tree:{sha:'base-tree'}};
    else if(path.endsWith('/git/blobs'))result={sha:'excel-blob'};
    else if(path.endsWith('/git/trees'))result={sha:'new-tree'};
    else if(path.endsWith('/git/commits'))result={sha:'new-commit'};
-   else if(path.endsWith('/git/refs/heads/main'))result={object:{sha:'new-commit'}};
+   else if(path.endsWith('/git/refs/heads/main')){branch='new-commit';result={object:{sha:branch}};}
   }
   assert.notEqual(result,undefined,'unexpected fetch '+url);return Response.json(result);
  };return writes;
