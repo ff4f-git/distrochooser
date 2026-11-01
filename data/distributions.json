@@ -176,24 +176,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Der unkomplizierte Allrounder",
-          "description": "Vertraute Bedienung, bewährte Werkzeuge und wenig Aufwand im Alltag. Cinnamon bietet einen klassischen Desktop."
+          "label": "Vertraut im Alltag",
+          "description": "Klassische Oberfläche mit Startmenü und bewährten Werkzeugen. Cinnamon erleichtert den Einstieg und die tägliche Arbeit."
         },
         "en": {
-          "label": "The easy all-rounder",
-          "description": "Familiar controls, proven tools, and little day-to-day maintenance. Cinnamon offers a traditional desktop."
+          "label": "Familiar everyday computing",
+          "description": "A traditional interface with an application menu and established tools. Cinnamon helps you get started and handle everyday tasks."
         }
       },
       "strengths": {
         "de": [
-          "Einsteigerfreundlich",
-          "Vertraute Desktop-Oberfläche",
-          "Alltagstauglich"
+          "Einsteigerfreundliche Bedienung",
+          "Klassische Desktop-Oberfläche",
+          "Praktische Werkzeuge für den Alltag"
         ],
         "en": [
-          "Beginner-friendly",
-          "Familiar desktop layout",
-          "Great for everyday tasks"
+          "Beginner-friendly controls",
+          "Traditional desktop layout",
+          "Practical tools for everyday tasks"
         ]
       },
       "points": {
@@ -252,24 +252,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Der elegante Umstieg",
-          "description": "Einsteigerfreundliches Ubuntu-Derivat mit aufgeräumter, vertraut wirkender Oberfläche und Fokus auf einfachen Umstieg."
+          "label": "Ein leichterer Umstieg",
+          "description": "Eine aufgeräumte Oberfläche mit vertrauten Bedienelementen erleichtert den Wechsel von Windows. Die Ubuntu-Basis bietet eine breite Softwareauswahl."
         },
         "en": {
-          "label": "An elegant transition",
-          "description": "A beginner-friendly Ubuntu derivative with a polished, familiar interface and an emphasis on switching easily."
+          "label": "An easier transition",
+          "description": "A tidy interface with familiar controls helps people switching from Windows. Its Ubuntu foundation provides a wide choice of software."
         }
       },
       "strengths": {
         "de": [
-          "Einfacher Umstieg von Windows",
-          "Modernes, ansprechendes Design",
-          "Einsteigerfreundlich"
+          "Vertraute Bedienung für Windows-Umsteiger",
+          "Aufgeräumte Oberfläche",
+          "Breite Softwareauswahl"
         ],
         "en": [
-          "Easy transition from Windows",
-          "Modern, polished design",
-          "Beginner-friendly"
+          "Familiar controls for people switching from Windows",
+          "Tidy interface",
+          "Wide choice of software"
         ]
       },
       "points": {
@@ -328,24 +328,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Der große Allrounder",
-          "description": "Weit verbreitet, gut dokumentiert und mit großem Softwareangebot. GNOME setzt auf einen klaren, eigenständigen Workflow."
+          "label": "Vielseitig und gut dokumentiert",
+          "description": "Große Community und ein breites Softwareangebot. Die GNOME-Oberfläche setzt auf eine zentrale Übersicht für Programme und Fenster."
         },
         "en": {
-          "label": "The popular all-rounder",
-          "description": "Widely used, well documented, and supported by a large software ecosystem. GNOME offers a distinct, streamlined workflow."
+          "label": "Versatile and well documented",
+          "description": "A large community and a wide choice of software. The GNOME interface brings applications and windows together in a central overview."
         }
       },
       "strengths": {
         "de": [
-          "Große Community und umfangreiche Hilfe",
-          "Moderner GNOME-Desktop",
-          "Vielseitig einsetzbar"
+          "Umfangreiche Hilfe durch die Community",
+          "Übersichtliche GNOME-Oberfläche",
+          "Breite Softwareauswahl"
         ],
         "en": [
-          "Large community and extensive help",
-          "Modern GNOME desktop",
-          "Versatile for work and development"
+          "Extensive community help",
+          "Clear GNOME interface",
+          "Wide choice of software"
         ]
       },
       "points": {
@@ -404,24 +404,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Ubuntu mit KDE-Freiheit",
-          "description": "Die Ubuntu-Basis kombiniert mit Plasma: vertraute Desktop-Bedienung und viele Einstellungen direkt an Bord."
+          "label": "Ubuntu mit vielen Einstellungen",
+          "description": "Die Ubuntu-Basis kombiniert mit KDE Plasma: klassische Desktop-Bedienung und viele Möglichkeiten, Aussehen und Verhalten anzupassen."
         },
         "en": {
-          "label": "Ubuntu with KDE flexibility",
-          "description": "An Ubuntu foundation with Plasma: familiar desktop interaction and extensive settings out of the box."
+          "label": "Ubuntu with plenty of settings",
+          "description": "An Ubuntu foundation with KDE Plasma: traditional desktop controls and many options for adjusting appearance and behavior."
         }
       },
       "strengths": {
         "de": [
-          "Umfangreiche Anpassungsmöglichkeiten",
-          "Vertraute und moderne Desktop-Oberfläche",
-          "Große Softwareauswahl und Ubuntu-Basis"
+          "Viele Einstellungen direkt zugänglich",
+          "Klassische Desktop-Bedienung",
+          "Breite Softwareauswahl auf Ubuntu-Basis"
         ],
         "en": [
-          "Extensive customization",
-          "Familiar yet modern desktop",
-          "Wide software selection and Ubuntu base"
+          "Many settings readily accessible",
+          "Traditional desktop controls",
+          "Wide software choice on an Ubuntu foundation"
         ]
       },
       "points": {
@@ -480,24 +480,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Der ruhige Klassiker",
-          "description": "Konservative Paketpflege und eine solide Basis für alle, die Beständigkeit höher schätzen als neueste Versionen."
+          "label": "Beständigkeit im Mittelpunkt",
+          "description": "Gründlich erprobte Software und langfristige Pflege stehen im Vordergrund. Dafür sind Programme oft weniger aktuell als bei Distributionen mit häufigeren Neuerungen."
         },
         "en": {
-          "label": "The steady classic",
-          "description": "Conservative package maintenance and a solid foundation for people who value consistency over the newest releases."
+          "label": "Consistency comes first",
+          "description": "Thoroughly tested software and long-term maintenance take priority. Applications are often less recent than in distributions that introduce changes more frequently."
         }
       },
       "strengths": {
         "de": [
-          "Hohe Stabilität",
-          "Bewährte, langfristig gepflegte Pakete",
-          "Flexibel mit GNOME-Desktop"
+          "Gründlich erprobte Software",
+          "Langfristige Pflege der stabilen Version",
+          "Große Softwareauswahl"
         ],
         "en": [
-          "High stability",
-          "Well-tested, long-maintained packages",
-          "Flexible GNOME desktop"
+          "Thoroughly tested software",
+          "Long-term maintenance of the stable release",
+          "Wide choice of software"
         ]
       },
       "points": {
@@ -556,24 +556,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Modernes Linux mit GNOME",
-          "description": "Aktuelle Technologien, ein klarer GNOME-Desktop und ein vergleichsweise zügiger Veröffentlichungsrhythmus."
+          "label": "Aktuelle Software mit GNOME",
+          "description": "Moderne Software und eine aufgeräumte GNOME-Oberfläche. Neue Hauptversionen erscheinen häufig und erfordern regelmäßige Versionswechsel."
         },
         "en": {
-          "label": "Modern Linux with GNOME",
-          "description": "Up-to-date technologies, a focused GNOME desktop, and a relatively fast release cycle."
+          "label": "Recent software with GNOME",
+          "description": "Modern software and a tidy GNOME interface. New major releases arrive frequently and require regular release upgrades."
         }
       },
       "strengths": {
         "de": [
-          "Aktuelle Technologien",
-          "Modernes GNOME-Erlebnis",
-          "Gut für Entwicklung und produktive Arbeit"
+          "Aktuelle Software",
+          "Aufgeräumte GNOME-Oberfläche",
+          "Werkzeuge für Entwicklung und produktive Arbeit"
         ],
         "en": [
-          "Modern technologies",
-          "Up-to-date GNOME experience",
-          "Strong for development and productivity"
+          "Recent software",
+          "Tidy GNOME interface",
+          "Tools for development and productive work"
         ]
       },
       "points": {
@@ -633,23 +633,23 @@
       "descriptions": {
         "de": {
           "label": "Aktuell und anpassbar",
-          "description": "Fedora mit KDE Plasma: moderne Software und eine Oberfläche, die sich ohne viel Handarbeit gestalten lässt."
+          "description": "Fedora kombiniert moderne Software mit KDE Plasma. Aussehen und Verhalten lassen sich über viele Einstellungen anpassen; regelmäßige Versionswechsel gehören dazu."
         },
         "en": {
-          "label": "Current and customizable",
-          "description": "Fedora with KDE Plasma: modern software and an interface you can personalize without much manual work."
+          "label": "Recent and customizable",
+          "description": "Fedora combines modern software with KDE Plasma. Many settings let you adjust appearance and behavior; regular release upgrades are part of its maintenance."
         }
       },
       "strengths": {
         "de": [
-          "Aktuelle Technologien",
-          "Anpassbarer KDE-Plasma-Desktop",
-          "Gut für Entwicklung und produktive Arbeit"
+          "Aktuelle Software",
+          "Viele Desktop-Einstellungen",
+          "Werkzeuge für Entwicklung und produktive Arbeit"
         ],
         "en": [
-          "Modern technologies",
-          "Customizable KDE Plasma desktop",
-          "Strong for development and productivity"
+          "Recent software",
+          "Extensive desktop settings",
+          "Tools for development and productive work"
         ]
       },
       "points": {
@@ -708,24 +708,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Die bedächtige KDE-Basis",
-          "description": "Auf Beständigkeit ausgelegt: KDE Plasma, Cockpit und Myrlyn zur Verwaltung sowie Btrfs-Snapshots für System-Rollbacks bei passender Einrichtung."
+          "label": "Eine beständige Desktop-Basis",
+          "description": "Stabilitätsorientierte Veröffentlichungen und Werkzeuge zur Systemverwaltung. Bei passender Einrichtung lassen sich frühere Systemstände wiederherstellen."
         },
         "en": {
-          "label": "A measured KDE foundation",
-          "description": "Focused on consistency, with KDE Plasma, management tools, and Btrfs snapshots for rollbacks when configured appropriately."
+          "label": "A consistent desktop foundation",
+          "description": "Stability-focused releases and system administration tools. With an appropriate setup, you can restore earlier system states."
         }
       },
       "strengths": {
         "de": [
           "Stabilitätsorientierte Veröffentlichungen",
           "Werkzeuge zur Systemverwaltung",
-          "Anpassbarer KDE-Plasma-Desktop"
+          "Wiederherstellung früherer Systemstände bei passender Einrichtung"
         ],
         "en": [
           "Stability-focused releases",
           "System administration tools",
-          "Customizable KDE Plasma desktop"
+          "Restoring earlier system states with an appropriate setup"
         ]
       },
       "points": {
@@ -784,24 +784,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Rolling Release mit Sicherheitsnetz",
-          "description": "Sehr aktuelle Pakete, KDE Plasma und standardmäßig gut integrierte Btrfs/Snapper-Rollbacks bei typischer Installation."
+          "label": "Fortlaufend aktuell mit Rückweg",
+          "description": "Neue Software kommt über fortlaufende, automatisiert getestete Updates. Bei typischer Einrichtung helfen gespeicherte Systemstände, Änderungen rückgängig zu machen."
         },
         "en": {
-          "label": "Rolling release with a safety net",
-          "description": "Very recent packages, KDE Plasma, and well-integrated Btrfs/Snapper rollback support in a typical installation."
+          "label": "Rolling updates with a way back",
+          "description": "New software arrives through rolling updates that undergo automated testing. A typical setup saves system states to help you undo changes."
         }
       },
       "strengths": {
         "de": [
-          "Aktuelle Software durch Rolling Release",
-          "Automatisierte Qualitätstests mit openQA",
-          "Snapshots und Wiederherstellung mit Snapper"
+          "Fortlaufend aktuelle Software",
+          "Automatisierte Tests vor der Veröffentlichung",
+          "Integrierte Wiederherstellung bei typischer Einrichtung"
         ],
         "en": [
-          "Current software through rolling release",
-          "Automated testing with openQA",
-          "Snapshots and rollback with Snapper"
+          "Continuously updated software",
+          "Automated testing before release",
+          "Integrated recovery in a typical setup"
         ]
       },
       "points": {
@@ -861,23 +861,23 @@
       "descriptions": {
         "de": {
           "label": "Praktisch und ressourcenschonend",
-          "description": "Debian-basierte Distribution mit leichtem Xfce-Desktop und eigenen Werkzeugen für Verwaltung und Einrichtung."
+          "description": "Eine Debian-Basis mit der sparsamen Xfce-Oberfläche. Eigene MX-Werkzeuge helfen beim Einrichten und Verwalten des Systems."
         },
         "en": {
-          "label": "Practical and resource-friendly",
-          "description": "A Debian-based distribution with a lightweight Xfce desktop and its own setup and management utilities."
+          "label": "Practical and resource-efficient",
+          "description": "A Debian foundation with the resource-efficient Xfce interface. MX tools help you set up and manage the system."
         }
       },
       "strengths": {
         "de": [
-          "Ressourcenschonender Xfce-Desktop",
-          "Praktische MX-Werkzeuge",
+          "Ressourcenschonende Xfce-Oberfläche",
+          "Praktische Einrichtungswerkzeuge",
           "Stabile Debian-Basis"
         ],
         "en": [
-          "Lightweight Xfce desktop",
-          "Practical MX tools",
-          "Stable Debian base"
+          "Resource-efficient Xfce interface",
+          "Practical setup tools",
+          "Stable Debian foundation"
         ]
       },
       "points": {
@@ -936,24 +936,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Einfach auf älteren PCs",
-          "description": "Ubuntu-basierte, leichtgewichtige Desktop-Distribution mit vertrauter Bedienung und Fokus auf den unkomplizierten Einstieg."
+          "label": "Einfacher Einstieg mit Xfce",
+          "description": "Eine Ubuntu-Basis mit sparsamer, klassischer Xfce-Oberfläche. Eigene Hilfswerkzeuge unterstützen den Einstieg und die Einrichtung."
         },
         "en": {
-          "label": "Simple on older PCs",
-          "description": "A lightweight Ubuntu-based desktop distribution with familiar controls and an emphasis on an easy start."
+          "label": "An approachable start with Xfce",
+          "description": "An Ubuntu foundation with a resource-efficient, traditional Xfce interface. Its own tools help you get started and set up the system."
         }
       },
       "strengths": {
         "de": [
-          "Einfacher Einstieg",
-          "Vertraute Bedienung",
-          "Für ältere Hardware geeignet"
+          "Klassische, sparsame Oberfläche",
+          "Hilfswerkzeuge für den Einstieg",
+          "Softwareauswahl auf Ubuntu-Basis"
         ],
         "en": [
-          "Easy to get started",
-          "Familiar interface",
-          "Suitable for older hardware"
+          "Traditional, resource-efficient interface",
+          "Tools to help you get started",
+          "Software choice on an Ubuntu foundation"
         ]
       },
       "points": {
@@ -1012,24 +1012,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Design aus einem Guss",
-          "description": "Konsequente, minimalistische Desktop-Gestaltung mit eigener Oberfläche und bewusst begrenzten Anpassungsmöglichkeiten."
+          "label": "Einheitlich und aufgeräumt",
+          "description": "Eine bewusst schlicht gestaltete Oberfläche mit aufeinander abgestimmten Anwendungen. Die Anpassungsmöglichkeiten sind begrenzter als bei vielen anderen Desktops."
         },
         "en": {
-          "label": "Consistent by design",
-          "description": "A carefully designed minimalist desktop with its own interface and intentionally limited customization."
+          "label": "Consistent and tidy",
+          "description": "A deliberately simple interface with applications designed to work together. Customization is more limited than on many other desktops."
         }
       },
       "strengths": {
         "de": [
-          "Konsistentes, elegantes Design",
-          "Einfacher, fokussierter Desktop",
-          "Integrierte Desktop-Anwendungen"
+          "Einheitliche Gestaltung",
+          "Aufgeräumte Bedienoberfläche",
+          "Abgestimmte Desktop-Anwendungen"
         ],
         "en": [
-          "Consistent, elegant design",
-          "Simple, focused desktop",
-          "Integrated desktop applications"
+          "Consistent design",
+          "Tidy interface",
+          "Coordinated desktop applications"
         ]
       },
       "points": {
@@ -1088,24 +1088,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Produktivität mit COSMIC",
-          "description": "Eigenständiger, moderner COSMIC-Desktop mit durchdachten Fenster-Workflows und vielen Einstellungen direkt im System."
+          "label": "Fenster im Griff mit COSMIC",
+          "description": "Die COSMIC-Oberfläche bietet viele Einstellungen und kann Fenster automatisch nebeneinander anordnen. Der Schwerpunkt liegt auf produktivem Arbeiten."
         },
         "en": {
-          "label": "Productivity with COSMIC",
-          "description": "An independent, modern COSMIC desktop with thoughtful window workflows and many built-in options."
+          "label": "Organize your windows with COSMIC",
+          "description": "The COSMIC interface offers many settings and can automatically arrange windows side by side. Its focus is on productive work."
         }
       },
       "strengths": {
         "de": [
-          "Produktives Arbeiten mit COSMIC",
-          "Entwicklerfreundliche Arbeitsumgebung",
-          "Fokus auf Hardware- und Grafikunterstützung"
+          "Automatische Fensteranordnung",
+          "Viele Desktop-Einstellungen",
+          "Werkzeuge für Entwicklung und produktive Arbeit"
         ],
         "en": [
-          "Productivity with COSMIC",
-          "Developer-friendly workflow",
-          "Focus on hardware and graphics support"
+          "Automatic window arrangement",
+          "Extensive desktop settings",
+          "Tools for development and productive work"
         ]
       },
       "points": {
@@ -1164,24 +1164,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Gaming zuerst, Pflege danach",
-          "description": "Gaming-orientiertes, imagebasiertes Fedora-System mit Steam-Fokus, KDE und einfacher Rückkehr zu früheren Systemständen."
+          "label": "Auf Spielen ausgerichtet",
+          "description": "Ein Fedora-basiertes System mit vorbereiteten Spielewerkzeugen und Steam-Fokus. Updates erneuern die Systembasis gemeinsam; frühere Systemstände lassen sich wieder auswählen."
         },
         "en": {
-          "label": "Gaming first, maintenance second",
-          "description": "A gaming-focused, image-based Fedora system with Steam integration, KDE, and straightforward system rollback."
+          "label": "Built around gaming",
+          "description": "A Fedora-based system with preconfigured gaming tools and a focus on Steam. Updates replace the system foundation together, with earlier system states available to select again."
         }
       },
       "strengths": {
         "de": [
-          "Gaming-orientierte Einrichtung",
+          "Vorbereitete Spielewerkzeuge",
           "Steam- und Controller-Fokus",
-          "Rollback-freundliches Systemkonzept"
+          "Rückkehr zu früheren Systemständen"
         ],
         "en": [
-          "Gaming-oriented setup",
-          "Steam and controller focus",
-          "Rollback-friendly system design"
+          "Preconfigured gaming tools",
+          "Focus on Steam and controllers",
+          "Return to earlier system states"
         ]
       },
       "points": {
@@ -1240,24 +1240,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Fedora für Spieler optimiert",
-          "description": "Gaming- und Multimedia-orientierte Fedora-Abwandlung mit zusätzlichen Anpassungen; stärker spezialisiertes Community-Projekt."
+          "label": "Spielen und Medien bearbeiten",
+          "description": "Eine für Spiele und Multimedia angepasste Fedora-Variante. Zusätzliche Werkzeuge erleichtern den Start; Einrichtung und Pflege folgen den Vorgaben des Nobara-Projekts."
         },
         "en": {
-          "label": "Fedora tuned for gamers",
-          "description": "A Fedora derivative customized for gaming and multimedia, maintained as a more specialized community project."
+          "label": "Gaming and media creation",
+          "description": "A Fedora variant adapted for gaming and multimedia. Additional tools help you get started; setup and maintenance follow the Nobara project’s guidance."
         }
       },
       "strengths": {
         "de": [
-          "Gaming- und Streaming-Fokus",
-          "Vorbereitete Multimedia-Werkzeuge",
-          "KDE-Plasma-Anpassbarkeit"
+          "Vorbereitete Spielewerkzeuge",
+          "Werkzeuge für Streaming und Medienarbeit",
+          "Anpassbare KDE-Plasma-Oberfläche"
         ],
         "en": [
-          "Gaming and streaming focus",
-          "Preconfigured multimedia tools",
-          "KDE Plasma customization"
+          "Preconfigured gaming tools",
+          "Tools for streaming and media creation",
+          "Customizable KDE Plasma interface"
         ]
       },
       "points": {
@@ -1316,24 +1316,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Performance für Enthusiasten",
-          "description": "Arch-basierte Distribution mit Leistungsoptimierungen und aktuellen Paketen – attraktiv für Nutzer, die ein aktives System mögen."
+          "label": "Arch mit Leistungsfokus",
+          "description": "Eine Arch-basierte Distribution mit Leistungsoptimierungen und fortlaufend aktueller Software. Vorkonfigurierte Werkzeuge erleichtern den Start; regelmäßige Systempflege bleibt erforderlich."
         },
         "en": {
-          "label": "Performance for enthusiasts",
-          "description": "An Arch-based distribution with performance tuning and fresh packages, aimed at people who enjoy actively managing their system."
+          "label": "Arch with a performance focus",
+          "description": "An Arch-based distribution with performance tuning and continuously updated software. Preconfigured tools help you get started; regular system maintenance is still required."
         }
       },
       "strengths": {
         "de": [
-          "Performance-orientierte Optimierungen",
-          "Aktuelle Arch-basierte Software",
-          "Anpassbarer KDE-Plasma-Desktop"
+          "Leistungsorientierte Anpassungen",
+          "Fortlaufend aktuelle Software",
+          "Vorkonfigurierte Einrichtungswerkzeuge"
         ],
         "en": [
-          "Performance-focused optimizations",
-          "Current Arch-based software",
-          "Customizable KDE Plasma desktop"
+          "Performance-focused adjustments",
+          "Continuously updated software",
+          "Preconfigured setup tools"
         ]
       },
       "points": {
@@ -1393,23 +1393,23 @@
       "descriptions": {
         "de": {
           "label": "Arch mit Starthilfe",
-          "description": "Nah an Arch Linux, aber mit komfortablerem Einstieg. Rolling Release und Systempflege bleiben Teil des Konzepts."
+          "description": "Nah an Arch Linux, aber mit Installationshilfe und vorbereiteter Oberfläche. Software wird fortlaufend aktualisiert; Einrichtung und Pflege erfordern Eigeninitiative."
         },
         "en": {
           "label": "Arch with a head start",
-          "description": "Close to Arch Linux, but easier to get started with. Rolling releases and ongoing maintenance remain part of the experience."
+          "description": "Close to Arch Linux, with installation assistance and a preconfigured interface. Software is continuously updated; setup and maintenance require a hands-on approach."
         }
       },
       "strengths": {
         "de": [
-          "Arch-nahe Erfahrung mit Installer",
-          "Rolling Release und aktuelle Pakete",
-          "Große Konfigurationsfreiheit"
+          "Installationshilfe für den Einstieg",
+          "Fortlaufend aktuelle Software",
+          "Große Freiheit bei der Systemgestaltung"
         ],
         "en": [
-          "Arch-like experience with installer",
-          "Rolling release and current packages",
-          "Extensive configuration freedom"
+          "Installation assistance to get started",
+          "Continuously updated software",
+          "Extensive freedom to shape the system"
         ]
       },
       "points": {
@@ -1468,24 +1468,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Du baust dein Linux selbst",
-          "description": "Minimaler Ausgangspunkt, maximale Kontrolle. Installation, Desktop und laufende Pflege liegen weitgehend in deiner Hand."
+          "label": "Linux selbst zusammenstellen",
+          "description": "Eine minimale Grundlage, aus der du dein System selbst aufbaust. Installation, Oberfläche und laufende Pflege liegen weitgehend in deiner Hand."
         },
         "en": {
-          "label": "Build your own Linux",
-          "description": "A minimal starting point with maximum control. Installation, desktop selection, and maintenance are largely up to you."
+          "label": "Assemble your own Linux system",
+          "description": "A minimal foundation for building your own system. Installation, interface selection and ongoing maintenance are largely up to you."
         }
       },
       "strengths": {
         "de": [
-          "Maximale Kontrolle",
-          "Aktuelle Software durch Rolling Release",
-          "Lernen und Experimentieren"
+          "Große Kontrolle über den Systemaufbau",
+          "Fortlaufend aktuelle Software",
+          "Viele Möglichkeiten zum Lernen und Experimentieren"
         ],
         "en": [
-          "Maximum control",
-          "Current software through rolling release",
-          "Learning and experimentation"
+          "Extensive control over the system layout",
+          "Continuously updated software",
+          "Many opportunities to learn and experiment"
         ]
       },
       "points": {
@@ -1544,24 +1544,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Das System als Konfiguration",
-          "description": "Deklarative Systemkonfiguration und reproduzierbare Setups mit mächtigen Rollback-Konzepten – dafür eine deutliche Lernkurve."
+          "label": "Das System als Bauplan",
+          "description": "Du beschreibst die Einrichtung in Konfigurationsdateien und kannst sie erneut anwenden. Frühere Systemstände lassen sich wieder auswählen; das besondere Konzept erfordert Einarbeitung."
         },
         "en": {
-          "label": "Your system as configuration",
-          "description": "Declarative system configuration and reproducible setups with powerful rollback concepts, but a substantial learning curve."
+          "label": "Your system as a blueprint",
+          "description": "You describe the setup in configuration files and can apply it again. Earlier system states remain available to select; the distinctive approach takes time to learn."
         }
       },
       "strengths": {
         "de": [
-          "Deklarative Systemkonfiguration",
-          "Reproduzierbare Setups und Rollbacks",
-          "Große Anpassungsfreiheit"
+          "Systemeinrichtung in Konfigurationsdateien",
+          "Wiederholbar einrichtbare Systeme",
+          "Rückkehr zu früheren Systemständen"
         ],
         "en": [
-          "Declarative system configuration",
-          "Reproducible setups and rollbacks",
-          "Extensive customization"
+          "System setup defined in configuration files",
+          "Repeatable system setups",
+          "Return to earlier system states"
         ]
       },
       "points": {
@@ -1620,24 +1620,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Meinungsstarker Tiling-Workflow",
-          "description": "Vorkonfigurierte Arch-/Hyprland-Umgebung mit tastaturorientiertem Workflow und klaren Designentscheidungen; kein klassischer Desktop."
+          "label": "Fenster automatisch anordnen",
+          "description": "Eine vorkonfigurierte Arch-Umgebung, die Fenster automatisch nebeneinander anordnet und auf Tastaturbedienung setzt. Der Arbeitsstil ist ungewohnt und erfordert Einarbeitung."
         },
         "en": {
-          "label": "An opinionated tiling workflow",
-          "description": "A preconfigured Arch/Hyprland environment with keyboard-oriented workflows and deliberate design choices, not a conventional desktop."
+          "label": "Arrange windows automatically",
+          "description": "A preconfigured Arch environment that automatically arranges windows side by side and emphasizes keyboard controls. Its unfamiliar working style takes time to learn."
         }
       },
       "strengths": {
         "de": [
-          "Vorkonfigurierte Tiling-Arbeitsumgebung",
-          "Tastaturorientierter Workflow",
-          "Arch-Basis für erfahrene Nutzer"
+          "Vorkonfigurierte Arbeitsumgebung",
+          "Automatische Fensteranordnung",
+          "Viele Funktionen per Tastatur erreichbar"
         ],
         "en": [
-          "Preconfigured tiling environment",
-          "Keyboard-focused workflow",
-          "Arch base for experienced users"
+          "Preconfigured working environment",
+          "Automatic window arrangement",
+          "Many functions accessible from the keyboard"
         ]
       },
       "points": {
@@ -1696,24 +1696,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Eigenständiges Desktop-Linux mit fortlaufenden Updates",
-          "description": "Solus ist eine eigenständige Linux-Distribution für Desktop-Rechner. Sie verbindet vorkonfigurierte Desktop-Umgebungen mit einem eigenen, kuratierten Paketangebot und fortlaufenden Aktualisierungen. Software wird über die Paketverwaltung eopkg installiert."
+          "label": "Eigenständig und auf den Desktop ausgerichtet",
+          "description": "Eine eigenständige Distribution mit vorbereiteten Desktop-Oberflächen und einer eigenen Softwareauswahl. Fortlaufende Updates halten das System aktuell."
         },
         "en": {
-          "label": "Independent desktop Linux with rolling updates",
-          "description": "Solus is an independent Linux distribution for desktop computers. It combines preconfigured desktop environments with its own curated package collection and rolling updates. Software is installed through the eopkg package manager."
+          "label": "Independent and desktop-focused",
+          "description": "An independent distribution with preconfigured desktop interfaces and its own software selection. Rolling updates keep the system current."
         }
       },
       "strengths": {
         "de": [
-          "Auf den Desktop ausgerichtete Gesamtabstimmung",
-          "Fortlaufende Updates ohne feste Versionssprünge",
-          "Eigenes, kuratiertes Softwareangebot"
+          "Auf den Desktop abgestimmte Einrichtung",
+          "Fortlaufende Software-Updates",
+          "Eigene, gepflegte Softwareauswahl"
         ],
         "en": [
-          "Desktop-focused integration",
-          "Rolling updates without fixed release upgrades",
-          "Its own curated software collection"
+          "Desktop-focused setup",
+          "Rolling software updates",
+          "Its own maintained software selection"
         ]
       },
       "points": {
@@ -1772,24 +1772,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Flexibel anpassbares Linux mit Portage",
-          "description": "Gentoo Linux richtet sich an Menschen, die ihr System im Detail selbst gestalten möchten. Die Paketverwaltung Portage unterstützt das Bauen aus Quellcode sowie Binärpakete. Softwarefunktionen, Desktop und Systemaufbau lassen sich gezielt anpassen; dafür sind Einarbeitung und Pflege erforderlich."
+          "label": "Linux bis ins Detail gestalten",
+          "description": "Softwarefunktionen und Systemaufbau lassen sich sehr gezielt anpassen. Programme können aus Quellcode gebaut oder als fertige Pakete installiert werden; Einrichtung und Pflege brauchen Zeit und Erfahrung."
         },
         "en": {
-          "label": "Highly customisable Linux with Portage",
-          "description": "Gentoo Linux is aimed at people who want detailed control over their system. The Portage package manager supports building from source as well as binary packages. Software features, the desktop and system layout can be tailored to individual needs, with time required for learning and maintenance."
+          "label": "Shape Linux in detail",
+          "description": "Software features and the system layout can be tailored closely to your needs. Programs can be built from source or installed as ready-made packages; setup and maintenance take time and experience."
         }
       },
       "strengths": {
         "de": [
-          "Feine Kontrolle über Softwarefunktionen und Abhängigkeiten",
-          "Portage mit Quellcode- und Binärpaketen",
-          "Sehr flexibel bei Desktop und Systemaufbau"
+          "Feine Auswahl von Softwarefunktionen",
+          "Große Freiheit beim Systemaufbau",
+          "Wahl zwischen selbst gebauten und fertigen Programmpaketen"
         ],
         "en": [
-          "Fine-grained control over software features and dependencies",
-          "Portage with source and binary packages",
-          "Flexible desktop and system configuration"
+          "Detailed choice of software features",
+          "Extensive freedom in system layout",
+          "Choice of building software or using ready-made packages"
         ]
       },
       "points": {
@@ -1848,24 +1848,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "KDE-Desktop mit Werkzeugen von TUXEDO",
-          "description": "TUXEDO OS bietet einen vorkonfigurierten Desktop mit KDE Plasma und ergänzenden Werkzeugen von TUXEDO Computers. Ein Schwerpunkt ist die Abstimmung auf unterstützte TUXEDO-Hardware. Das System kann auch auf anderen kompatiblen Rechnern genutzt werden; der Umfang der Hardwarefunktionen hängt vom Gerät ab."
+          "label": "KDE mit TUXEDO-Werkzeugen",
+          "description": "Eine vorbereitete KDE-Plasma-Oberfläche mit zusätzlichen Werkzeugen von TUXEDO Computers. Ein Schwerpunkt ist die Abstimmung auf unterstützte Geräte dieses Herstellers."
         },
         "en": {
-          "label": "KDE desktop with tools from TUXEDO",
-          "description": "TUXEDO OS provides a preconfigured KDE Plasma desktop and additional tools from TUXEDO Computers. A key focus is integration with supported TUXEDO hardware. It can also be used on other compatible computers; available hardware features depend on the device."
+          "label": "KDE with TUXEDO tools",
+          "description": "A preconfigured KDE Plasma interface with additional tools from TUXEDO Computers. A key focus is integration with supported devices from this manufacturer."
         }
       },
       "strengths": {
         "de": [
-          "Vorkonfigurierter KDE-Plasma-Desktop",
-          "Zusätzliche Werkzeuge von TUXEDO Computers",
-          "Abstimmung auf unterstützte TUXEDO-Hardware"
+          "Vorkonfigurierte KDE-Plasma-Oberfläche",
+          "Zusätzliche Einrichtungswerkzeuge",
+          "Abstimmung auf unterstützte TUXEDO-Geräte"
         ],
         "en": [
-          "Preconfigured KDE Plasma desktop",
-          "Additional tools from TUXEDO Computers",
-          "Integration with supported TUXEDO hardware"
+          "Preconfigured KDE Plasma interface",
+          "Additional setup tools",
+          "Integration with supported TUXEDO devices"
         ]
       },
       "points": {
@@ -1924,24 +1924,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Eigenständiges Rolling-Release-Linux mit runit",
-          "description": "Void Linux ist eine eigenständige Distribution mit fortlaufenden Updates, der Paketverwaltung XBPS und dem Dienstesystem runit. Sie bietet eine schlanke Grundlage für einen selbst zusammengestellten Desktop. Varianten mit glibc oder musl stehen zur Auswahl; Einrichtung und Softwareauswahl setzen Eigeninitiative voraus."
+          "label": "Schlanke Grundlage zum Selbstgestalten",
+          "description": "Eine eigenständige Distribution mit fortlaufenden Updates und schlankem Systemaufbau. Softwareauswahl, Einrichtung und Pflege erfordern Eigeninitiative und Erfahrung."
         },
         "en": {
-          "label": "Independent rolling-release Linux with runit",
-          "description": "Void Linux is an independent distribution with rolling updates, the XBPS package manager and the runit service manager. It provides a lean foundation for a desktop assembled to suit individual needs. Both glibc and musl variants are available; setup and software selection require a hands-on approach."
+          "label": "A lean foundation to make your own",
+          "description": "An independent distribution with rolling updates and a lean system layout. Software selection, setup and maintenance require a hands-on approach and experience."
         }
       },
       "strengths": {
         "de": [
-          "Schlanke Grundlage mit runit",
-          "Eigene Paketverwaltung XBPS",
-          "Auswahl zwischen glibc und musl"
+          "Schlanker Systemaufbau",
+          "Fortlaufende Software-Updates",
+          "Viel Freiheit bei der Softwareauswahl"
         ],
         "en": [
-          "Lean foundation with runit",
-          "Its own XBPS package manager",
-          "Choice of glibc or musl"
+          "Lean system layout",
+          "Rolling software updates",
+          "Extensive freedom in software selection"
         ]
       },
       "points": {
@@ -2000,24 +2000,24 @@
       ],
       "descriptions": {
         "de": {
-          "label": "Leichtgewichtiges Debian-basiertes Linux",
-          "description": "antiX ist eine leichtgewichtige, Debian-basierte Distribution ohne systemd. Sie setzt auf sparsame Fenstermanager wie IceWM und eignet sich besonders für ältere oder leistungsschwächere Rechner. Live-Betrieb und Werkzeuge für portable Installationen gehören zu ihren Schwerpunkten."
+          "label": "Sparsam auf älteren Rechnern",
+          "description": "Eine Debian-basierte Distribution mit besonders sparsamer Oberfläche für ältere oder leistungsschwächere Rechner. Sie bietet vielseitige Werkzeuge für den Betrieb direkt vom USB-Stick."
         },
         "en": {
-          "label": "Lightweight Debian-based Linux",
-          "description": "antiX is a lightweight Debian-based distribution without systemd. It uses resource-efficient window managers such as IceWM and is particularly suited to older or less powerful computers. Live operation and tools for portable installations are among its main strengths."
+          "label": "Lightweight on older computers",
+          "description": "A Debian-based distribution with a particularly resource-efficient interface for older or less powerful computers. It offers versatile tools for running directly from a USB drive."
         }
       },
       "strengths": {
         "de": [
-          "Sparsame Oberfläche für ältere Rechner",
-          "Debian-basierte Softwareauswahl",
-          "Vielseitige Live- und USB-Werkzeuge"
+          "Sparsame Oberfläche",
+          "Softwareauswahl auf Debian-Basis",
+          "Vielseitige Werkzeuge für den USB-Betrieb"
         ],
         "en": [
-          "Resource-efficient interface for older computers",
-          "Debian-based software collection",
-          "Versatile live and USB tools"
+          "Resource-efficient interface",
+          "Software choice on a Debian foundation",
+          "Versatile tools for running from USB"
         ]
       },
       "points": {
@@ -2066,5 +2066,5 @@
       }
     }
   ],
-  "version": "catalog-0424bbb78b587590671c2230e1ba6fb6db9db1ed342dc075634c029e810f1f76"
+  "version": "catalog-41c0b55d97f555db953ceedb558299243a1949b11bac02558ccc84a01150d529"
 }

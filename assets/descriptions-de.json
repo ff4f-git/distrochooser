@@ -1,82 +1,82 @@
 {
   "Linux Mint Cinnamon": {
-    "label": "Der unkomplizierte Allrounder",
-    "description": "Vertraute Bedienung, bewährte Werkzeuge und wenig Aufwand im Alltag. Cinnamon bietet einen klassischen Desktop."
+    "label": "Vertraut im Alltag",
+    "description": "Klassische Oberfläche mit Startmenü und bewährten Werkzeugen. Cinnamon erleichtert den Einstieg und die tägliche Arbeit."
   },
   "Zorin OS Core": {
-    "label": "Der elegante Umstieg",
-    "description": "Einsteigerfreundliches Ubuntu-Derivat mit aufgeräumter, vertraut wirkender Oberfläche und Fokus auf einfachen Umstieg."
+    "label": "Ein leichterer Umstieg",
+    "description": "Eine aufgeräumte Oberfläche mit vertrauten Bedienelementen erleichtert den Wechsel von Windows. Die Ubuntu-Basis bietet eine breite Softwareauswahl."
   },
   "Ubuntu": {
-    "label": "Der große Allrounder",
-    "description": "Weit verbreitet, gut dokumentiert und mit großem Softwareangebot. GNOME setzt auf einen klaren, eigenständigen Workflow."
+    "label": "Vielseitig und gut dokumentiert",
+    "description": "Große Community und ein breites Softwareangebot. Die GNOME-Oberfläche setzt auf eine zentrale Übersicht für Programme und Fenster."
   },
   "Kubuntu": {
-    "label": "Ubuntu mit KDE-Freiheit",
-    "description": "Die Ubuntu-Basis kombiniert mit Plasma: vertraute Desktop-Bedienung und viele Einstellungen direkt an Bord."
+    "label": "Ubuntu mit vielen Einstellungen",
+    "description": "Die Ubuntu-Basis kombiniert mit KDE Plasma: klassische Desktop-Bedienung und viele Möglichkeiten, Aussehen und Verhalten anzupassen."
   },
   "Debian": {
-    "label": "Der ruhige Klassiker",
-    "description": "Konservative Paketpflege und eine solide Basis für alle, die Beständigkeit höher schätzen als neueste Versionen."
+    "label": "Beständigkeit im Mittelpunkt",
+    "description": "Gründlich erprobte Software und langfristige Pflege stehen im Vordergrund. Dafür sind Programme oft weniger aktuell als bei Distributionen mit häufigeren Neuerungen."
   },
   "Fedora Workstation": {
-    "label": "Modernes Linux mit GNOME",
-    "description": "Aktuelle Technologien, ein klarer GNOME-Desktop und ein vergleichsweise zügiger Veröffentlichungsrhythmus."
+    "label": "Aktuelle Software mit GNOME",
+    "description": "Moderne Software und eine aufgeräumte GNOME-Oberfläche. Neue Hauptversionen erscheinen häufig und erfordern regelmäßige Versionswechsel."
   },
   "Fedora KDE Plasma Desktop": {
     "label": "Aktuell und anpassbar",
-    "description": "Fedora mit KDE Plasma: moderne Software und eine Oberfläche, die sich ohne viel Handarbeit gestalten lässt."
+    "description": "Fedora kombiniert moderne Software mit KDE Plasma. Aussehen und Verhalten lassen sich über viele Einstellungen anpassen; regelmäßige Versionswechsel gehören dazu."
   },
   "openSUSE Leap": {
-    "label": "Die bedächtige KDE-Basis",
-    "description": "Auf Beständigkeit ausgelegt: KDE Plasma, Cockpit und Myrlyn zur Verwaltung sowie Btrfs-Snapshots für System-Rollbacks bei passender Einrichtung."
+    "label": "Eine beständige Desktop-Basis",
+    "description": "Stabilitätsorientierte Veröffentlichungen und Werkzeuge zur Systemverwaltung. Bei passender Einrichtung lassen sich frühere Systemstände wiederherstellen."
   },
   "openSUSE Tumbleweed": {
-    "label": "Rolling Release mit Sicherheitsnetz",
-    "description": "Sehr aktuelle Pakete, KDE Plasma und standardmäßig gut integrierte Btrfs/Snapper-Rollbacks bei typischer Installation."
+    "label": "Fortlaufend aktuell mit Rückweg",
+    "description": "Neue Software kommt über fortlaufende, automatisiert getestete Updates. Bei typischer Einrichtung helfen gespeicherte Systemstände, Änderungen rückgängig zu machen."
   },
   "MX Linux Xfce": {
     "label": "Praktisch und ressourcenschonend",
-    "description": "Debian-basierte Distribution mit leichtem Xfce-Desktop und eigenen Werkzeugen für Verwaltung und Einrichtung."
+    "description": "Eine Debian-Basis mit der sparsamen Xfce-Oberfläche. Eigene MX-Werkzeuge helfen beim Einrichten und Verwalten des Systems."
   },
   "Linux Lite": {
-    "label": "Einfach auf älteren PCs",
-    "description": "Ubuntu-basierte, leichtgewichtige Desktop-Distribution mit vertrauter Bedienung und Fokus auf den unkomplizierten Einstieg."
+    "label": "Einfacher Einstieg mit Xfce",
+    "description": "Eine Ubuntu-Basis mit sparsamer, klassischer Xfce-Oberfläche. Eigene Hilfswerkzeuge unterstützen den Einstieg und die Einrichtung."
   },
   "elementary OS": {
-    "label": "Design aus einem Guss",
-    "description": "Konsequente, minimalistische Desktop-Gestaltung mit eigener Oberfläche und bewusst begrenzten Anpassungsmöglichkeiten."
+    "label": "Einheitlich und aufgeräumt",
+    "description": "Eine bewusst schlicht gestaltete Oberfläche mit aufeinander abgestimmten Anwendungen. Die Anpassungsmöglichkeiten sind begrenzter als bei vielen anderen Desktops."
   },
   "Pop!_OS COSMIC": {
-    "label": "Produktivität mit COSMIC",
-    "description": "Eigenständiger, moderner COSMIC-Desktop mit durchdachten Fenster-Workflows und vielen Einstellungen direkt im System."
+    "label": "Fenster im Griff mit COSMIC",
+    "description": "Die COSMIC-Oberfläche bietet viele Einstellungen und kann Fenster automatisch nebeneinander anordnen. Der Schwerpunkt liegt auf produktivem Arbeiten."
   },
   "Bazzite": {
-    "label": "Gaming zuerst, Pflege danach",
-    "description": "Gaming-orientiertes, imagebasiertes Fedora-System mit Steam-Fokus, KDE und einfacher Rückkehr zu früheren Systemständen."
+    "label": "Auf Spielen ausgerichtet",
+    "description": "Ein Fedora-basiertes System mit vorbereiteten Spielewerkzeugen und Steam-Fokus. Updates erneuern die Systembasis gemeinsam; frühere Systemstände lassen sich wieder auswählen."
   },
   "Nobara": {
-    "label": "Fedora für Spieler optimiert",
-    "description": "Gaming- und Multimedia-orientierte Fedora-Abwandlung mit zusätzlichen Anpassungen; stärker spezialisiertes Community-Projekt."
+    "label": "Spielen und Medien bearbeiten",
+    "description": "Eine für Spiele und Multimedia angepasste Fedora-Variante. Zusätzliche Werkzeuge erleichtern den Start; Einrichtung und Pflege folgen den Vorgaben des Nobara-Projekts."
   },
   "CachyOS": {
-    "label": "Performance für Enthusiasten",
-    "description": "Arch-basierte Distribution mit Leistungsoptimierungen und aktuellen Paketen – attraktiv für Nutzer, die ein aktives System mögen."
+    "label": "Arch mit Leistungsfokus",
+    "description": "Eine Arch-basierte Distribution mit Leistungsoptimierungen und fortlaufend aktueller Software. Vorkonfigurierte Werkzeuge erleichtern den Start; regelmäßige Systempflege bleibt erforderlich."
   },
   "EndeavourOS": {
     "label": "Arch mit Starthilfe",
-    "description": "Nah an Arch Linux, aber mit komfortablerem Einstieg. Rolling Release und Systempflege bleiben Teil des Konzepts."
+    "description": "Nah an Arch Linux, aber mit Installationshilfe und vorbereiteter Oberfläche. Software wird fortlaufend aktualisiert; Einrichtung und Pflege erfordern Eigeninitiative."
   },
   "Arch Linux": {
-    "label": "Du baust dein Linux selbst",
-    "description": "Minimaler Ausgangspunkt, maximale Kontrolle. Installation, Desktop und laufende Pflege liegen weitgehend in deiner Hand."
+    "label": "Linux selbst zusammenstellen",
+    "description": "Eine minimale Grundlage, aus der du dein System selbst aufbaust. Installation, Oberfläche und laufende Pflege liegen weitgehend in deiner Hand."
   },
   "NixOS": {
-    "label": "Das System als Konfiguration",
-    "description": "Deklarative Systemkonfiguration und reproduzierbare Setups mit mächtigen Rollback-Konzepten – dafür eine deutliche Lernkurve."
+    "label": "Das System als Bauplan",
+    "description": "Du beschreibst die Einrichtung in Konfigurationsdateien und kannst sie erneut anwenden. Frühere Systemstände lassen sich wieder auswählen; das besondere Konzept erfordert Einarbeitung."
   },
   "Omarchy": {
-    "label": "Meinungsstarker Tiling-Workflow",
-    "description": "Vorkonfigurierte Arch-/Hyprland-Umgebung mit tastaturorientiertem Workflow und klaren Designentscheidungen; kein klassischer Desktop."
+    "label": "Fenster automatisch anordnen",
+    "description": "Eine vorkonfigurierte Arch-Umgebung, die Fenster automatisch nebeneinander anordnet und auf Tastaturbedienung setzt. Der Arbeitsstil ist ungewohnt und erfordert Einarbeitung."
   }
 }

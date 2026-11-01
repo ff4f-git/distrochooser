@@ -1,82 +1,82 @@
 {
   "Linux Mint Cinnamon": {
-    "label": "The easy all-rounder",
-    "description": "Familiar controls, proven tools, and little day-to-day maintenance. Cinnamon offers a traditional desktop."
+    "label": "Familiar everyday computing",
+    "description": "A traditional interface with an application menu and established tools. Cinnamon helps you get started and handle everyday tasks."
   },
   "Zorin OS Core": {
-    "label": "An elegant transition",
-    "description": "A beginner-friendly Ubuntu derivative with a polished, familiar interface and an emphasis on switching easily."
+    "label": "An easier transition",
+    "description": "A tidy interface with familiar controls helps people switching from Windows. Its Ubuntu foundation provides a wide choice of software."
   },
   "Ubuntu": {
-    "label": "The popular all-rounder",
-    "description": "Widely used, well documented, and supported by a large software ecosystem. GNOME offers a distinct, streamlined workflow."
+    "label": "Versatile and well documented",
+    "description": "A large community and a wide choice of software. The GNOME interface brings applications and windows together in a central overview."
   },
   "Kubuntu": {
-    "label": "Ubuntu with KDE flexibility",
-    "description": "An Ubuntu foundation with Plasma: familiar desktop interaction and extensive settings out of the box."
+    "label": "Ubuntu with plenty of settings",
+    "description": "An Ubuntu foundation with KDE Plasma: traditional desktop controls and many options for adjusting appearance and behavior."
   },
   "Debian": {
-    "label": "The steady classic",
-    "description": "Conservative package maintenance and a solid foundation for people who value consistency over the newest releases."
+    "label": "Consistency comes first",
+    "description": "Thoroughly tested software and long-term maintenance take priority. Applications are often less recent than in distributions that introduce changes more frequently."
   },
   "Fedora Workstation": {
-    "label": "Modern Linux with GNOME",
-    "description": "Up-to-date technologies, a focused GNOME desktop, and a relatively fast release cycle."
+    "label": "Recent software with GNOME",
+    "description": "Modern software and a tidy GNOME interface. New major releases arrive frequently and require regular release upgrades."
   },
   "Fedora KDE Plasma Desktop": {
-    "label": "Current and customizable",
-    "description": "Fedora with KDE Plasma: modern software and an interface you can personalize without much manual work."
+    "label": "Recent and customizable",
+    "description": "Fedora combines modern software with KDE Plasma. Many settings let you adjust appearance and behavior; regular release upgrades are part of its maintenance."
   },
   "openSUSE Leap": {
-    "label": "A measured KDE foundation",
-    "description": "Focused on consistency, with KDE Plasma, management tools, and Btrfs snapshots for rollbacks when configured appropriately."
+    "label": "A consistent desktop foundation",
+    "description": "Stability-focused releases and system administration tools. With an appropriate setup, you can restore earlier system states."
   },
   "openSUSE Tumbleweed": {
-    "label": "Rolling release with a safety net",
-    "description": "Very recent packages, KDE Plasma, and well-integrated Btrfs/Snapper rollback support in a typical installation."
+    "label": "Rolling updates with a way back",
+    "description": "New software arrives through rolling updates that undergo automated testing. A typical setup saves system states to help you undo changes."
   },
   "MX Linux Xfce": {
-    "label": "Practical and resource-friendly",
-    "description": "A Debian-based distribution with a lightweight Xfce desktop and its own setup and management utilities."
+    "label": "Practical and resource-efficient",
+    "description": "A Debian foundation with the resource-efficient Xfce interface. MX tools help you set up and manage the system."
   },
   "Linux Lite": {
-    "label": "Simple on older PCs",
-    "description": "A lightweight Ubuntu-based desktop distribution with familiar controls and an emphasis on an easy start."
+    "label": "An approachable start with Xfce",
+    "description": "An Ubuntu foundation with a resource-efficient, traditional Xfce interface. Its own tools help you get started and set up the system."
   },
   "elementary OS": {
-    "label": "Consistent by design",
-    "description": "A carefully designed minimalist desktop with its own interface and intentionally limited customization."
+    "label": "Consistent and tidy",
+    "description": "A deliberately simple interface with applications designed to work together. Customization is more limited than on many other desktops."
   },
   "Pop!_OS COSMIC": {
-    "label": "Productivity with COSMIC",
-    "description": "An independent, modern COSMIC desktop with thoughtful window workflows and many built-in options."
+    "label": "Organize your windows with COSMIC",
+    "description": "The COSMIC interface offers many settings and can automatically arrange windows side by side. Its focus is on productive work."
   },
   "Bazzite": {
-    "label": "Gaming first, maintenance second",
-    "description": "A gaming-focused, image-based Fedora system with Steam integration, KDE, and straightforward system rollback."
+    "label": "Built around gaming",
+    "description": "A Fedora-based system with preconfigured gaming tools and a focus on Steam. Updates replace the system foundation together, with earlier system states available to select again."
   },
   "Nobara": {
-    "label": "Fedora tuned for gamers",
-    "description": "A Fedora derivative customized for gaming and multimedia, maintained as a more specialized community project."
+    "label": "Gaming and media creation",
+    "description": "A Fedora variant adapted for gaming and multimedia. Additional tools help you get started; setup and maintenance follow the Nobara project’s guidance."
   },
   "CachyOS": {
-    "label": "Performance for enthusiasts",
-    "description": "An Arch-based distribution with performance tuning and fresh packages, aimed at people who enjoy actively managing their system."
+    "label": "Arch with a performance focus",
+    "description": "An Arch-based distribution with performance tuning and continuously updated software. Preconfigured tools help you get started; regular system maintenance is still required."
   },
   "EndeavourOS": {
     "label": "Arch with a head start",
-    "description": "Close to Arch Linux, but easier to get started with. Rolling releases and ongoing maintenance remain part of the experience."
+    "description": "Close to Arch Linux, with installation assistance and a preconfigured interface. Software is continuously updated; setup and maintenance require a hands-on approach."
   },
   "Arch Linux": {
-    "label": "Build your own Linux",
-    "description": "A minimal starting point with maximum control. Installation, desktop selection, and maintenance are largely up to you."
+    "label": "Assemble your own Linux system",
+    "description": "A minimal foundation for building your own system. Installation, interface selection and ongoing maintenance are largely up to you."
   },
   "NixOS": {
-    "label": "Your system as configuration",
-    "description": "Declarative system configuration and reproducible setups with powerful rollback concepts, but a substantial learning curve."
+    "label": "Your system as a blueprint",
+    "description": "You describe the setup in configuration files and can apply it again. Earlier system states remain available to select; the distinctive approach takes time to learn."
   },
   "Omarchy": {
-    "label": "An opinionated tiling workflow",
-    "description": "A preconfigured Arch/Hyprland environment with keyboard-oriented workflows and deliberate design choices, not a conventional desktop."
+    "label": "Arrange windows automatically",
+    "description": "A preconfigured Arch environment that automatically arranges windows side by side and emphasizes keyboard controls. Its unfamiliar working style takes time to learn."
   }
 }
