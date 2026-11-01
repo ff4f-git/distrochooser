@@ -163,17 +163,49 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 
 **Regel für neue Distributionen:** Jede der drei Antwortspalten getrennt nach tatsächlichem Aufwand, vorhandenen Hilfsmitteln und erreichbarer Gestaltungsfreiheit bewerten. Keine pauschale Gleichsetzung von „einfach“ mit „oberflächlich“ oder von „tiefgreifend“ mit „schwierig“. **Alle Punkte bleiben unverändert.**
 
-### Frage 7 – Wiederherstellung des Systems 
+### Frage 7 – Wiederherstellung des Systems
 
-**Bewertungsrahmen: −10 bis +10 Punkte.** Gemeint ist ausschließlich die **Wiederherstellung des Betriebssystems** nach fehlerhaften Updates oder Konfigurationsänderungen – **nicht die Sicherung persönlicher Daten**. Bewertet wird die tatsächliche Nutzbarkeit der Wiederherstellung im vorgesehenen Installationszustand und der Aufwand, sie einzurichten. Die bloße technische Möglichkeit, irgendwann ein Backup-Programm zu installieren, reicht für eine hohe Bewertung nicht aus.
+**Bewertungsrahmen für Spalte Z („Sehr wichtig“): 0 bis +10 Punkte.** Bewertet wird, wie gut die Distribution einem normalen Nutzer im vorgesehenen Installationszustand einen einfachen und verlässlichen Weg bietet, einen vorherigen Systemzustand nach fehlerhaften Updates oder problematischen Konfigurationsänderungen wiederherzustellen. Es geht ausschließlich um das Betriebssystem, **nicht um die Sicherung persönlicher Daten**.
 
-- **„Sehr wichtig“ – starke Selektion nach Integration:** Besonders hohe Punkte erhalten Distributionen mit **bereits vorgesehenem Btrfs-Dateisystem**, **eingerichteten Snapshots/Rollbacks** und möglichst **Wiederherstellungseinträgen im Bootloader**. Bei openSUSE (Snapper mit Bootloader-Integration), Omarchy und CachyOS wurden solche vorbereiteten Wege besonders berücksichtigt. Die Frage ist auch, ob Btrfs **ohne manuelle Partitionierung** als Installationsstandard bereitsteht. Wenn der normale Installer ext4 verwendet und Btrfs nur über manuelle Partitionierung erreichbar ist, bedeutet das einen erheblichen Mehraufwand für einen Btrfs-basierten Rollback. Einfache, direkt angebotene Alternativen zählen ebenfalls positiv: Linux Mint weist beim Einstieg ausdrücklich auf die Einrichtung von **Timeshift** hin. Timeshift mit **rsync auf ext4** kann Systemzustände sichern und wiederherstellen, ist aber **kein Btrfs-Snapshot** und nicht gleichzusetzen mit einem bereits eingerichteten Bootloader-Rollback.
-- **„Wäre praktisch“ – geringere Gewichtung und geringere Abstände:** Eine Wiederherstellung muss nicht vollständig vorkonfiguriert sein. Einfache Nachrüstung ist akzeptabel, insbesondere wenn die passende Dateisystemgrundlage bereits besteht oder eine integrierte Einrichtungshilfe verfügbar ist. Ab Werk vorhandene Rollbacks behalten einen Vorteil; der Unterschied zu unkompliziert nachrüstbaren Lösungen fällt jedoch geringer aus.
-- **„Nicht wichtig“ – neutral:** Alle Distributionen erhalten **0 Punkte**. Wer keine Präferenz für Systemwiederherstellung äußert, wird dadurch nicht in eine bestimmte Richtung gelenkt.
+Entscheidend ist die tatsächlich bereitgestellte Lösung – nicht, ob sich eine Funktion theoretisch nachinstallieren oder mit entsprechendem Fachwissen einrichten ließe. Der Distrochooser soll Distributionen danach unterscheiden, wie gut sie die Erwartung bereits durch ihr eigenes Konzept erfüllen.
 
-**Technische Abgrenzung:** Btrfs ist Voraussetzung für **Btrfs-Snapshots**, aber nicht für jede Form der Systemwiederherstellung. Ein Btrfs-Dateisystem allein bedeutet noch **keine** eingerichtete Snapshot-Verwaltung und **keinen** funktionsfähigen Bootloader-Rollback. Bei der Bewertung zählen daher Dateisystemstandard, vorhandene Werkzeuge, tatsächliche Integration und der notwendige manuelle Aufwand getrennt. Beispielsweise ist eine Btrfs-Standardinstallation ohne vorkonfiguriertes Rollback nicht mit einer fertigen Snapper-/Bootloader-Lösung gleichzusetzen.
+- **+10:** Besonders gut integrierte und im normalen Installationszustand direkt nutzbare Wiederherstellung.
+- **+5:** Ein sinnvoller und zugänglicher Wiederherstellungsweg mit erkennbaren Einschränkungen.
+- **0:** Kein ausreichend ausgeprägter besonderer Vorteil. Das Fehlen einer integrierten Rollback-Funktion allein ist kein Malus.
+- **Minuspunkte:** Nur bei einem klaren konzeptionellen Nachteil; für diese Spalte wurde kein solcher Nachteil festgestellt.
 
-**Regel für neue Distributionen:** Den realen Standardinstallationsweg prüfen: Dateisystem, Snapshot-Werkzeug, Einrichtung, Wiederherstellungsweg auch bei Startproblemen und erforderliche manuelle Schritte. Bei „Sehr wichtig“ vorbereitete Integration stark belohnen; bei „Wäre praktisch“ die leichte Nachrüstbarkeit stärker gelten lassen. **Die bisherige Punktematrix bleibt vorerst unverändert**; insbesondere wurde eine mögliche Anpassung der Fedora-Werte nur angesprochen, nicht beschlossen.
+**Freigegebene Werte für Spalte Z („Sehr wichtig“):**
+
+| Distribution | Punkte |
+|---|---:|
+| Linux Mint Cinnamon | +5 |
+| Linux Mint Xfce | +5 |
+| Zorin OS Core | 0 |
+| Ubuntu GNOME | 0 |
+| Kubuntu | 0 |
+| Debian GNOME | 0 |
+| Debian KDE | 0 |
+| Fedora Workstation | 0 |
+| Fedora KDE | 0 |
+| openSUSE Leap KDE | +10 |
+| openSUSE Tumbleweed KDE | +10 |
+| MX Linux Xfce | 0 |
+| Linux Lite | 0 |
+| elementary OS | 0 |
+| Pop!_OS COSMIC | 0 |
+| Bazzite KDE | +10 |
+| Nobara KDE | 0 |
+| CachyOS KDE | +5 |
+| EndeavourOS KDE | 0 |
+| Arch Linux (Eigenbau) | 0 |
+| NixOS KDE | +5 |
+| Omarchy | 0 |
+
+**Begründung der Abstufung:** openSUSE wird wegen des besonders gut integrierten Snapshot-/Rollback-Wegs hoch bewertet. Bazzite erhält ebenfalls +10 für das atomare Update- und Rollback-Konzept. Linux Mint erhält +5 für den zugänglichen Timeshift-Einstieg; dies ist nicht mit einem bereits eingerichteten Btrfs-/Bootloader-Rollback gleichzusetzen. NixOS erhält +5 für die nutzbaren Systemgenerationen, deren Handhabung jedoch mehr Verständnis voraussetzt. CachyOS erhält vorläufig +5 für den vorgesehenen Snapshot-Ansatz; die konkrete Standardintegration bleibt bei künftigen Änderungen zu prüfen.
+
+**Abgrenzung:** Btrfs allein ist kein fertiger Rollback. Ein Snapshot allein garantiert noch keinen einfachen Wiederherstellungsweg. Umgekehrt werden Arch und andere Distributionen nicht abgewertet, nur weil ein Nutzer die entsprechenden Werkzeuge selbst einrichten müsste. Theoretische Nachrüstbarkeit ist kein Bonus.
+
+**Spalte AA („Wäre praktisch“) wird separat bewertet.** Die Werte der bisherigen Matrix bleiben dort bis zur gemeinsamen Überarbeitung unverändert. Spalte AB („Nicht wichtig“) bleibt für alle Distributionen bei 0.
 
 ### Frage 8 – Linux-Erfahrung 
 
