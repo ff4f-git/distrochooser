@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 import catalog from '../data/distributions.json' with {type:'json'};
 import model from '../assets/model.json' with {type:'json'};
 import bonuses from '../assets/gpu-bonus.json' with {type:'json'};
-import {validateCatalog,runtimeFromCatalog,generatedFiles,excelExport,simulate,GPU,RAM} from '../assets/catalog-core.js';
+import {validateCatalog,runtimeFromCatalog,generatedFiles,excelExport,simulate,GPU,RAM,canonicalJson} from '../assets/catalog-core.js';
 import {validateSubmission} from '../supabase/functions/submit-statistics/validate.js';
 import {loadPublishedCatalog} from '../assets/catalog-client.js';
 test('migration preserves all 22 distributions, all scores, GPU bonuses and three strengths per language',()=>{
@@ -43,4 +43,8 @@ test('generated Excel is a valid stored ZIP and contains all answer and GPU colu
 test('backend bundled catalog helpers exactly match the browser implementation',async()=>{
  const source=await fs.readFile(new URL('../assets/catalog-core.js',import.meta.url),'utf8');
  for(const p of ['catalog-admin','submit-statistics'])assert.equal(await fs.readFile(new URL('../supabase/functions/'+p+'/catalog.js',import.meta.url),'utf8'),source);
+});
+test('question equality ignores JSONB object-key order but protects values, codes and array order',()=>{
+ const reordered=JSON.parse(canonicalJson(catalog));assert.notEqual(JSON.stringify(reordered.questions),JSON.stringify(catalog.questions));assert.doesNotThrow(()=>validateCatalog(reordered,catalog));
+ for(const mutate of [c=>c.questions[0].title+='x',c=>c.questions[0].options.reverse(),c=>c.questions[0].options[0][1]='WRONG',c=>c.questions.reverse(),c=>c.questions[0].extra=true]){const changed=structuredClone(reordered);mutate(changed);assert.throws(()=>validateCatalog(changed,catalog),/Fragenstruktur/);}
 });

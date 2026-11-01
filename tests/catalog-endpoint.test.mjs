@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import seed from '../data/distributions.json' with {type:'json'};
+import {canonicalJson} from '../assets/catalog-core.js';
 globalThis.Deno={env:{get:key=>key==='SUPABASE_URL'?'https://database.test':'test-server-key'},serve:()=>{}};
 const {handler}=await import('../supabase/functions/catalog-admin/index.ts');
 const original=globalThis.fetch;
@@ -25,7 +26,7 @@ function mock({head='head-a',push=true,failGit=false}={}){
    else if(path.endsWith('/git/commits'))result={sha:'new-commit'};
    else if(path.endsWith('/git/refs/heads/main')){branch='new-commit';result={object:{sha:branch}};}
   }
-  assert.notEqual(result,undefined,'unexpected fetch '+url);return Response.json(result);
+  assert.notEqual(result,undefined,'unexpected fetch '+url);return Response.json(u.hostname==='database.test'?JSON.parse(canonicalJson(result)):result);
  };return writes;
 }
 const req=(body,token=true)=>new Request('https://edge.test/catalog-admin?admin=1',{method:body?'POST':'GET',headers:{Origin:'https://ff4f-git.github.io',...(token?{Authorization:'Bearer test-token'}:{}),...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});
@@ -62,5 +63,10 @@ test('deletion declarations must exactly match missing IDs and cannot remove the
  try{for(const bad of [['unknown'],[seed.distributions[0].id,seed.distributions[0].id]]){
  const writes=mock(),catalog=structuredClone(seed);catalog.distributions.shift();const res=await handler(req({catalog,expectedVersion:seed.version,expectedHead:'head-a',deletedIds:bad}));assert.equal(res.status,400);assert.equal(writes.length,0);}
  const writes=mock(),catalog=structuredClone(seed);catalog.distributions=[];assert.equal((await handler(req({catalog,expectedVersion:seed.version,expectedHead:'head-a',deletedIds:seed.distributions.map(d=>d.id)}))).status,400);assert.equal(writes.length,0);
+ }finally{globalThis.fetch=original;}
+});
+test('publishing accepts questions returned through PostgreSQL JSONB key ordering',async()=>{
+ try{mock();const catalog=JSON.parse(canonicalJson(seed));assert.notEqual(JSON.stringify(catalog.questions),JSON.stringify(seed.questions));catalog.distributions[0].name+=' Test';
+ const res=await handler(req({catalog,expectedVersion:seed.version,expectedHead:'head-a',deletedIds:[]}));assert.equal(res.status,200,await res.clone().text());assert.equal((await res.json()).catalog.distributions[0].name,catalog.distributions[0].name);
  }finally{globalThis.fetch=original;}
 });
