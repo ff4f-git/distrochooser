@@ -75,7 +75,7 @@
     "label": "Arch mit Starthilfe",
     "description": "Nah an Arch Linux, aber mit komfortablerem Einstieg. Rolling Release und Systempflege bleiben Teil des Konzepts."
   },
-  "Arch Linux": {
+  "Arch Linux (Eigenbau2)": {
     "label": "Du baust dein Linux selbst",
     "description": "Minimaler Ausgangspunkt, maximale Kontrolle. Installation, Desktop und laufende Pflege liegen weitgehend in deiner Hand."
   },

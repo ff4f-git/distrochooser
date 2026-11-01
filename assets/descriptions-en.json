@@ -75,7 +75,7 @@
     "label": "Arch with a head start",
     "description": "Close to Arch Linux, but easier to get started with. Rolling releases and ongoing maintenance remain part of the experience."
   },
-  "Arch Linux": {
+  "Arch Linux (Eigenbau2)": {
     "label": "Build your own Linux",
     "description": "A minimal starting point with maximum control. Installation, desktop selection, and maintenance are largely up to you."
   },
