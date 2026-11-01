@@ -623,7 +623,7 @@
     },
     {
       "id": "fedora-kde",
-      "name": "Fedora KDE",
+      "name": "Fedora KDE Plasma Desktop",
       "active": true,
       "url": "",
       "icon": [
@@ -1686,5 +1686,5 @@
       }
     }
   ],
-  "version": "catalog-804e1ba79f4c4a5c167cffe1058e38d43d111825c3557ef09a4b2bc0c4df34c9"
+  "version": "catalog-46a6e2df4e14c9631f3d5da17cdaac12e1b6e34197f00fc1f4caf059479eb8a4"
 }

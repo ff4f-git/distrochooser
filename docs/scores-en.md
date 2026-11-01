@@ -1,6 +1,6 @@
 # Published scores
 
-Version: `catalog-804e1ba79f4c4a5c167cffe1058e38d43d111825c3557ef09a4b2bc0c4df34c9`
+Version: `catalog-46a6e2df4e14c9631f3d5da17cdaac12e1b6e34197f00fc1f4caf059479eb8a4`
 
 Generated from distribution administration. Active distributions only.
 
@@ -14,7 +14,7 @@ Generated from distribution administration. Active distributions only.
 | Kubuntu | 10 | 10 | 5 | 10 | 10 | 5 |
 | Debian | 5 | 5 | -5 | 5 | 10 | 10 |
 | Fedora Workstation | 5 | 5 | 5 | 10 | 15 | 10 |
-| Fedora KDE | 5 | 5 | 5 | 10 | 15 | 10 |
+| Fedora KDE Plasma Desktop | 5 | 5 | 5 | 10 | 15 | 10 |
 | openSUSE Leap KDE | 5 | 10 | -5 | 5 | 5 | 5 |
 | openSUSE Tumbleweed KDE | 5 | 5 | 10 | 10 | 15 | 15 |
 | MX Linux Xfce | 10 | 10 | -5 | 0 | 5 | 5 |
@@ -39,7 +39,7 @@ Generated from distribution administration. Active distributions only.
 | Kubuntu | 0 | 11 | 5 | 0 |
 | Debian | 0 | 6 | 5 | 0 |
 | Fedora Workstation | 0 | 12 | 5 | 0 |
-| Fedora KDE | 0 | 11 | 5 | 0 |
+| Fedora KDE Plasma Desktop | 0 | 11 | 5 | 0 |
 | openSUSE Leap KDE | 0 | 5 | 5 | 0 |
 | openSUSE Tumbleweed KDE | 0 | 9 | 5 | 0 |
 | MX Linux Xfce | 0 | 5 | 10 | 0 |
@@ -64,7 +64,7 @@ Generated from distribution administration. Active distributions only.
 | Kubuntu | 5 | 0 | 0 | 5 | 0 |
 | Debian | -10 | 0 | 0 | 5 | 0 |
 | Fedora Workstation | 10 | 0 | 0 | 5 | 0 |
-| Fedora KDE | 10 | 0 | 0 | 5 | 0 |
+| Fedora KDE Plasma Desktop | 10 | 0 | 0 | 5 | 0 |
 | openSUSE Leap KDE | -10 | 0 | 0 | 5 | 0 |
 | openSUSE Tumbleweed KDE | 15 | 0 | 0 | 5 | 0 |
 | MX Linux Xfce | -5 | 0 | 5 | 10 | 0 |
@@ -89,7 +89,7 @@ Generated from distribution administration. Active distributions only.
 | Kubuntu | 17 | 18 | 4 |
 | Debian | 18 | 12 | 8 |
 | Fedora Workstation | 6 | 20 | 6 |
-| Fedora KDE | 6 | 20 | 8 |
+| Fedora KDE Plasma Desktop | 6 | 20 | 8 |
 | openSUSE Leap KDE | 18 | 12 | 4 |
 | openSUSE Tumbleweed KDE | 2 | 19 | 15 |
 | MX Linux Xfce | 17 | 8 | 3 |
@@ -114,7 +114,7 @@ Generated from distribution administration. Active distributions only.
 | Kubuntu | 5 | 10 | 0 |
 | Debian | 0 | 10 | 0 |
 | Fedora Workstation | 0 | 10 | 0 |
-| Fedora KDE | 5 | 10 | 0 |
+| Fedora KDE Plasma Desktop | 5 | 10 | 0 |
 | openSUSE Leap KDE | 5 | 10 | 0 |
 | openSUSE Tumbleweed KDE | 5 | 10 | 0 |
 | MX Linux Xfce | 5 | 0 | 0 |
@@ -139,7 +139,7 @@ Generated from distribution administration. Active distributions only.
 | Kubuntu | 10 | 10 | 10 |
 | Debian | 5 | 5 | 5 |
 | Fedora Workstation | 10 | 5 | 5 |
-| Fedora KDE | 10 | 10 | 10 |
+| Fedora KDE Plasma Desktop | 10 | 10 | 10 |
 | openSUSE Leap KDE | 5 | 10 | 10 |
 | openSUSE Tumbleweed KDE | 5 | 10 | 10 |
 | MX Linux Xfce | 5 | 0 | 5 |
@@ -164,7 +164,7 @@ Generated from distribution administration. Active distributions only.
 | Kubuntu | 0 | 0 | 0 |
 | Debian | 0 | 0 | 0 |
 | Fedora Workstation | 0 | 0 | 0 |
-| Fedora KDE | 0 | 0 | 0 |
+| Fedora KDE Plasma Desktop | 0 | 0 | 0 |
 | openSUSE Leap KDE | 10 | 5 | 0 |
 | openSUSE Tumbleweed KDE | 10 | 5 | 0 |
 | MX Linux Xfce | 0 | 5 | 0 |
@@ -189,7 +189,7 @@ Generated from distribution administration. Active distributions only.
 | Kubuntu | 10 | 5 | 0 |
 | Debian | -10 | 0 | 40 |
 | Fedora Workstation | 0 | 10 | 20 |
-| Fedora KDE | 0 | 10 | 20 |
+| Fedora KDE Plasma Desktop | 0 | 10 | 20 |
 | openSUSE Leap KDE | 0 | 10 | 20 |
 | openSUSE Tumbleweed KDE | 0 | 10 | 20 |
 | MX Linux Xfce | 10 | 5 | 0 |
@@ -214,7 +214,7 @@ Generated from distribution administration. Active distributions only.
 | Kubuntu | -5 | 5 | 5 | 0 | 5 | 5 | 5 | 5 | 5 | 0 |
 | Debian | -10 | 0 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | Fedora Workstation | -10 | 0 | 5 | 0 | 10 | 0 | 5 | 5 | 0 | 0 |
-| Fedora KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
+| Fedora KDE Plasma Desktop | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | openSUSE Leap KDE | -5 | 5 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
 | openSUSE Tumbleweed KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | MX Linux Xfce | 15 | 10 | -5 | 0 | -10 | 0 | 5 | 5 | 0 | 0 |

@@ -23,7 +23,7 @@
     "label": "Modern Linux with GNOME",
     "description": "Up-to-date technologies, a focused GNOME desktop, and a relatively fast release cycle."
   },
-  "Fedora KDE": {
+  "Fedora KDE Plasma Desktop": {
     "label": "Current and customizable",
     "description": "Fedora with KDE Plasma: modern software and an interface you can personalize without much manual work."
   },

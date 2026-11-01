@@ -23,7 +23,7 @@ export const DISTRO_ICONS = {
     "",
     "#73a9e5"
   ],
-  "Fedora KDE": [
+  "Fedora KDE Plasma Desktop": [
     "",
     "#73a9e5"
   ],
