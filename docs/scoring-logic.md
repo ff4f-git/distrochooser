@@ -6,7 +6,7 @@ Published scores are generated automatically from distribution administration. S
 
 # Published scores
 
-Version: `catalog-b3e3f0c45cc6b5e9d529a38fcfd18bda9238e73f2151e681e09ccefca7dd5ce8`
+Version: `catalog-f321c91002aa9b5b9fc9ee944229e3c6c42de14d923386e16835386333b005e7`
 
 Generated from distribution administration. Active distributions only.
 
@@ -22,7 +22,7 @@ Generated from distribution administration. Active distributions only.
 | Fedora Workstation | 5 | 5 | 5 | 10 | 15 | 10 |
 | Fedora KDE Plasma Desktop | 5 | 5 | 5 | 10 | 15 | 10 |
 | openSUSE Leap | 5 | 10 | -5 | 5 | 5 | 5 |
-| openSUSE Tumbleweed KDE | 5 | 5 | 10 | 10 | 15 | 15 |
+| openSUSE Tumbleweed | 5 | 5 | 10 | 10 | 15 | 15 |
 | MX Linux Xfce | 10 | 10 | -5 | 0 | 5 | 5 |
 | Linux Lite | 10 | 10 | -5 | 0 | 0 | 0 |
 | elementary OS | 10 | 5 | -5 | 5 | 5 | 0 |
@@ -47,7 +47,7 @@ Generated from distribution administration. Active distributions only.
 | Fedora Workstation | 0 | 12 | 5 | 0 |
 | Fedora KDE Plasma Desktop | 0 | 11 | 5 | 0 |
 | openSUSE Leap | 0 | 5 | 5 | 0 |
-| openSUSE Tumbleweed KDE | 0 | 9 | 5 | 0 |
+| openSUSE Tumbleweed | 0 | 9 | 5 | 0 |
 | MX Linux Xfce | 0 | 5 | 10 | 0 |
 | Linux Lite | 0 | 3 | 10 | 0 |
 | elementary OS | 0 | 11 | 0 | 0 |
@@ -72,7 +72,7 @@ Generated from distribution administration. Active distributions only.
 | Fedora Workstation | 10 | 0 | 0 | 5 | 0 |
 | Fedora KDE Plasma Desktop | 10 | 0 | 0 | 5 | 0 |
 | openSUSE Leap | -10 | 0 | 0 | 5 | 0 |
-| openSUSE Tumbleweed KDE | 15 | 0 | 0 | 5 | 0 |
+| openSUSE Tumbleweed | 15 | 0 | 0 | 5 | 0 |
 | MX Linux Xfce | -5 | 0 | 5 | 10 | 0 |
 | Linux Lite | -10 | 0 | 5 | 10 | 0 |
 | elementary OS | -5 | 0 | 0 | 0 | 0 |
@@ -97,7 +97,7 @@ Generated from distribution administration. Active distributions only.
 | Fedora Workstation | 6 | 20 | 6 |
 | Fedora KDE Plasma Desktop | 6 | 20 | 8 |
 | openSUSE Leap | 18 | 12 | 4 |
-| openSUSE Tumbleweed KDE | 2 | 19 | 15 |
+| openSUSE Tumbleweed | 2 | 19 | 15 |
 | MX Linux Xfce | 17 | 8 | 3 |
 | Linux Lite | 17 | 4 | -8 |
 | elementary OS | 13 | 6 | -12 |
@@ -122,7 +122,7 @@ Generated from distribution administration. Active distributions only.
 | Fedora Workstation | 0 | 10 | 0 |
 | Fedora KDE Plasma Desktop | 5 | 10 | 0 |
 | openSUSE Leap | 5 | 10 | 0 |
-| openSUSE Tumbleweed KDE | 5 | 10 | 0 |
+| openSUSE Tumbleweed | 5 | 10 | 0 |
 | MX Linux Xfce | 5 | 0 | 0 |
 | Linux Lite | 10 | 0 | 0 |
 | elementary OS | 0 | 10 | 0 |
@@ -147,7 +147,7 @@ Generated from distribution administration. Active distributions only.
 | Fedora Workstation | 10 | 5 | 5 |
 | Fedora KDE Plasma Desktop | 10 | 10 | 10 |
 | openSUSE Leap | 5 | 10 | 10 |
-| openSUSE Tumbleweed KDE | 5 | 10 | 10 |
+| openSUSE Tumbleweed | 5 | 10 | 10 |
 | MX Linux Xfce | 5 | 0 | 5 |
 | Linux Lite | 5 | 0 | 5 |
 | elementary OS | 10 | 0 | 0 |
@@ -172,7 +172,7 @@ Generated from distribution administration. Active distributions only.
 | Fedora Workstation | 0 | 0 | 0 |
 | Fedora KDE Plasma Desktop | 0 | 0 | 0 |
 | openSUSE Leap | 10 | 5 | 0 |
-| openSUSE Tumbleweed KDE | 10 | 5 | 0 |
+| openSUSE Tumbleweed | 10 | 5 | 0 |
 | MX Linux Xfce | 0 | 5 | 0 |
 | Linux Lite | 0 | 0 | 0 |
 | elementary OS | 0 | 0 | 0 |
@@ -197,7 +197,7 @@ Generated from distribution administration. Active distributions only.
 | Fedora Workstation | 0 | 10 | 20 |
 | Fedora KDE Plasma Desktop | 0 | 10 | 20 |
 | openSUSE Leap | 0 | 10 | 20 |
-| openSUSE Tumbleweed KDE | 0 | 10 | 20 |
+| openSUSE Tumbleweed | 0 | 10 | 20 |
 | MX Linux Xfce | 10 | 5 | 0 |
 | Linux Lite | 10 | 5 | 0 |
 | elementary OS | 10 | 5 | 0 |
@@ -222,7 +222,7 @@ Generated from distribution administration. Active distributions only.
 | Fedora Workstation | -10 | 0 | 5 | 0 | 10 | 0 | 5 | 5 | 0 | 0 |
 | Fedora KDE Plasma Desktop | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | openSUSE Leap | -5 | 5 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
-| openSUSE Tumbleweed KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
+| openSUSE Tumbleweed | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | MX Linux Xfce | 15 | 10 | -5 | 0 | -10 | 0 | 5 | 5 | 0 | 0 |
 | Linux Lite | 15 | 10 | -5 | 0 | -10 | 0 | 5 | 5 | 0 | 0 |
 | elementary OS | -5 | 0 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |

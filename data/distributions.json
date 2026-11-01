@@ -775,7 +775,7 @@
     },
     {
       "id": "opensuse-tumbleweed-kde",
-      "name": "openSUSE Tumbleweed KDE",
+      "name": "openSUSE Tumbleweed",
       "active": true,
       "url": "",
       "icon": [
@@ -1686,5 +1686,5 @@
       }
     }
   ],
-  "version": "catalog-b3e3f0c45cc6b5e9d529a38fcfd18bda9238e73f2151e681e09ccefca7dd5ce8"
+  "version": "catalog-f321c91002aa9b5b9fc9ee944229e3c6c42de14d923386e16835386333b005e7"
 }

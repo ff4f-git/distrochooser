@@ -31,7 +31,7 @@
     "label": "A measured KDE foundation",
     "description": "Focused on consistency, with KDE Plasma, management tools, and Btrfs snapshots for rollbacks when configured appropriately."
   },
-  "openSUSE Tumbleweed KDE": {
+  "openSUSE Tumbleweed": {
     "label": "Rolling release with a safety net",
     "description": "Very recent packages, KDE Plasma, and well-integrated Btrfs/Snapper rollback support in a typical installation."
   },

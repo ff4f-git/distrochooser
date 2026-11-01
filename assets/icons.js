@@ -31,7 +31,7 @@ export const DISTRO_ICONS = {
     "",
     "#75bf48"
   ],
-  "openSUSE Tumbleweed KDE": [
+  "openSUSE Tumbleweed": [
     "",
     "#75bf48"
   ],

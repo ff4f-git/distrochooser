@@ -31,7 +31,7 @@
     "label": "Die bedächtige KDE-Basis",
     "description": "Auf Beständigkeit ausgelegt: KDE Plasma, Cockpit und Myrlyn zur Verwaltung sowie Btrfs-Snapshots für System-Rollbacks bei passender Einrichtung."
   },
-  "openSUSE Tumbleweed KDE": {
+  "openSUSE Tumbleweed": {
     "label": "Rolling Release mit Sicherheitsnetz",
     "description": "Sehr aktuelle Pakete, KDE Plasma und standardmäßig gut integrierte Btrfs/Snapper-Rollbacks bei typischer Installation."
   },
