@@ -1307,7 +1307,7 @@
     },
     {
       "id": "cachyos-kde",
-      "name": "CachyOS KDE",
+      "name": "CachyOS",
       "active": true,
       "url": "",
       "icon": [
@@ -1686,5 +1686,5 @@
       }
     }
   ],
-  "version": "catalog-eba73d1edd747638ec23a544b6b21a963ea74ea8586b92801a87fdf8bb20ef71"
+  "version": "catalog-9a46e8217da096c4ad337907ab10dbd72642e605248e4a241810012bf9e19208"
 }

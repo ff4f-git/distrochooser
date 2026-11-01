@@ -59,7 +59,7 @@
     "label": "Fedora für Spieler optimiert",
     "description": "Gaming- und Multimedia-orientierte Fedora-Abwandlung mit zusätzlichen Anpassungen; stärker spezialisiertes Community-Projekt."
   },
-  "CachyOS KDE": {
+  "CachyOS": {
     "label": "Performance für Enthusiasten",
     "description": "Arch-basierte Distribution mit Leistungsoptimierungen und aktuellen Paketen – attraktiv für Nutzer, die ein aktives System mögen."
   },

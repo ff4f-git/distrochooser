@@ -59,7 +59,7 @@ export const DISTRO_ICONS = {
     "",
     "#a1c2e9"
   ],
-  "CachyOS KDE": [
+  "CachyOS": [
     "",
     "#70c4e8"
   ],

@@ -59,7 +59,7 @@
     "label": "Fedora tuned for gamers",
     "description": "A Fedora derivative customized for gaming and multimedia, maintained as a more specialized community project."
   },
-  "CachyOS KDE": {
+  "CachyOS": {
     "label": "Performance for enthusiasts",
     "description": "An Arch-based distribution with performance tuning and fresh packages, aimed at people who enjoy actively managing their system."
   },

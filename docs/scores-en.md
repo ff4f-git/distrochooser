@@ -1,6 +1,6 @@
 # Published scores
 
-Version: `catalog-eba73d1edd747638ec23a544b6b21a963ea74ea8586b92801a87fdf8bb20ef71`
+Version: `catalog-9a46e8217da096c4ad337907ab10dbd72642e605248e4a241810012bf9e19208`
 
 Generated from distribution administration. Active distributions only.
 
@@ -23,7 +23,7 @@ Generated from distribution administration. Active distributions only.
 | Pop!_OS COSMIC | 5 | 5 | 10 | 10 | 10 | 5 |
 | Bazzite | 5 | 5 | 20 | 0 | 5 | -5 |
 | Nobara KDE | 5 | 5 | 20 | 15 | 5 | 0 |
-| CachyOS KDE | 5 | 5 | 20 | 5 | 10 | 15 |
+| CachyOS | 5 | 5 | 20 | 5 | 10 | 15 |
 | EndeavourOS | 5 | 5 | 5 | 5 | 10 | 15 |
 | Arch Linux | 0 | 5 | 5 | 5 | 15 | 15 |
 | NixOS | 0 | 0 | -10 | -5 | 15 | 15 |
@@ -48,7 +48,7 @@ Generated from distribution administration. Active distributions only.
 | Pop!_OS COSMIC | 0 | 15 | 0 | 0 |
 | Bazzite | 0 | 9 | 0 | 0 |
 | Nobara KDE | 0 | 3 | 5 | 0 |
-| CachyOS KDE | 0 | 6 | 5 | 0 |
+| CachyOS | 0 | 6 | 5 | 0 |
 | EndeavourOS | 0 | 6 | 5 | 0 |
 | Arch Linux | 0 | -11 | 0 | 0 |
 | NixOS | 0 | -8 | 0 | 0 |
@@ -73,7 +73,7 @@ Generated from distribution administration. Active distributions only.
 | Pop!_OS COSMIC | 10 | 0 | 0 | 0 | 0 |
 | Bazzite | 10 | 0 | 0 | -5 | 0 |
 | Nobara KDE | 15 | 0 | 0 | 0 | 0 |
-| CachyOS KDE | 15 | 0 | 0 | 0 | 0 |
+| CachyOS | 15 | 0 | 0 | 0 | 0 |
 | EndeavourOS | 15 | 0 | 0 | 5 | 0 |
 | Arch Linux | 15 | 0 | 0 | 5 | 0 |
 | NixOS | 10 | 0 | 0 | 5 | 0 |
@@ -98,7 +98,7 @@ Generated from distribution administration. Active distributions only.
 | Pop!_OS COSMIC | 9 | 14 | -2 |
 | Bazzite | 15 | -5 | -20 |
 | Nobara KDE | 3 | 10 | 2 |
-| CachyOS KDE | -5 | 3 | 17 |
+| CachyOS | -5 | 3 | 17 |
 | EndeavourOS | -10 | -5 | 15 |
 | Arch Linux | -20 | -20 | 10 |
 | NixOS | -5 | -10 | 14 |
@@ -123,7 +123,7 @@ Generated from distribution administration. Active distributions only.
 | Pop!_OS COSMIC | 0 | 15 | 0 |
 | Bazzite | 5 | 10 | 0 |
 | Nobara KDE | 5 | 10 | 0 |
-| CachyOS KDE | 5 | 10 | 0 |
+| CachyOS | 5 | 10 | 0 |
 | EndeavourOS | 5 | 10 | 0 |
 | Arch Linux | 0 | 0 | 0 |
 | NixOS | 5 | 10 | 0 |
@@ -148,7 +148,7 @@ Generated from distribution administration. Active distributions only.
 | Pop!_OS COSMIC | 10 | 15 | 10 |
 | Bazzite | 10 | 10 | 10 |
 | Nobara KDE | 10 | 10 | 10 |
-| CachyOS KDE | 10 | 10 | 10 |
+| CachyOS | 10 | 10 | 10 |
 | EndeavourOS | 5 | 10 | 10 |
 | Arch Linux | 0 | 0 | 15 |
 | NixOS | 5 | 10 | 10 |
@@ -173,7 +173,7 @@ Generated from distribution administration. Active distributions only.
 | Pop!_OS COSMIC | 0 | 0 | 0 |
 | Bazzite | 10 | 5 | 0 |
 | Nobara KDE | 0 | 0 | 0 |
-| CachyOS KDE | 5 | 5 | 0 |
+| CachyOS | 5 | 5 | 0 |
 | EndeavourOS | 0 | 0 | 0 |
 | Arch Linux | 0 | -5 | 0 |
 | NixOS | 5 | 5 | 0 |
@@ -198,7 +198,7 @@ Generated from distribution administration. Active distributions only.
 | Pop!_OS COSMIC | 0 | 10 | 20 |
 | Bazzite | 10 | 5 | 0 |
 | Nobara KDE | 0 | 10 | 20 |
-| CachyOS KDE | 0 | 10 | 20 |
+| CachyOS | 0 | 10 | 20 |
 | EndeavourOS | 0 | 10 | 20 |
 | Arch Linux | -10 | 0 | 40 |
 | NixOS | -10 | 0 | 40 |
@@ -223,7 +223,7 @@ Generated from distribution administration. Active distributions only.
 | Pop!_OS COSMIC | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
 | Bazzite | -15 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
 | Nobara KDE | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
-| CachyOS KDE | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
+| CachyOS | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
 | EndeavourOS | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | Arch Linux | 5 | 5 | 0 | 0 | -5 | 0 | 5 | 5 | 0 | 0 |
 | NixOS | -10 | 0 | 5 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
