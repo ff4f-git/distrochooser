@@ -188,7 +188,7 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 | NixOS KDE | -10 |
 | Omarchy | -8 |
 
-- **“Tinker, configure, and experiment” (S):** Selects deliberate system design, deep modifications, configuration freedom and personal responsibility, independently of experience. Self-built Arch and NixOS are the positive anchors (+20); Bazzite is the opposite (−20), since direct base-system changes are not its primary intended workflow. EndeavourOS (+19), CachyOS (+17) and Tumbleweed (+15) follow. Tumbleweed can fit both R and S well. Preconfiguration and maintenance needs must be distinguished from freedom to customize; instability is not rewarded. The approved ordering also considers desktop differences; interface customization is assessed separately in Question 6. Minimum −20, maximum +20, spread 40.
+- **“Tinker, configure, and experiment” (S):** Selects how well a distribution enables immediate tinkering, configuration and experimentation, independently of experience. Required work or difficulty is not rewarded. Omarchy is the benchmark (+20), providing a prepared environment for personal modifications. CachyOS follows at +17; EndeavourOS and Tumbleweed at +15. NixOS receives +14 for controlled, declarative experimentation, while its specialized configuration model requires additional learning. Self-built Arch receives +10: substantial freedom, but users must first create their experimentation environment. Bazzite remains the opposite (−20), since direct base-system changes are not its primary intended workflow. Instability is not rewarded. Minimum −20, maximum +20, spread 40.
 
 | Distribution | S |
 |---|---:|
@@ -210,11 +210,10 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 | Bazzite KDE | -20 |
 | Nobara KDE | +2 |
 | CachyOS KDE | +17 |
-| EndeavourOS KDE | +19 |
-| Arch Linux (Eigenbau) | +20 |
-| NixOS KDE | +20 |
-| Omarchy | +12 |
-
+| EndeavourOS KDE | +15 |
+| Arch Linux (Eigenbau) | +10 |
+| NixOS KDE | +14 |
+| Omarchy | +20 |
 
 **Rule for new distributions:** For “Learn,” evaluate educational suitability and entry barriers, not maximum technical complexity. For “Tinker,” evaluate the actual freedom of the system model. Preserve the deliberately different weights.
 

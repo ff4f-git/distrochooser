@@ -189,7 +189,7 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 | NixOS KDE | -10 |
 | Omarchy | -8 |
 
-- **„Basteln, konfigurieren und experimentieren“ (S):** Selektiert bewusste Systemgestaltung, tiefe Eingriffe, Konfigurationsfreiheit und Eigenverantwortung, unabhängig von der Erfahrung. Arch Eigenbau und NixOS bilden die positiven Anker (+20); Bazzite den Gegenpol (−20), weil direkte Änderungen am Basissystem nicht sein primäres Nutzungskonzept sind. EndeavourOS (+19), CachyOS (+17) und Tumbleweed (+15) folgen. Tumbleweed kann sowohl R als auch S gut erfüllen. Vorkonfiguration und Wartungsbedarf sind von Gestaltungsfreiheit zu unterscheiden; Instabilität wird nicht als Vorteil gewertet. Die freigegebene Abstufung berücksichtigt Desktop-Unterschiede ergänzend; die Oberflächenanpassung wird gesondert in Frage 6 bewertet. Minimum −20, Maximum +20, Spannweite 40.
+- **„Basteln, konfigurieren und experimentieren“ (S):** Selektiert danach, wie gut eine Distribution unmittelbares Basteln, Konfigurieren und Experimentieren ermöglicht, unabhängig von der Erfahrung. Nicht der erforderliche Arbeitsaufwand oder die Schwierigkeit wird belohnt. Omarchy bildet die Benchmark (+20): eine vorbereitete Umgebung als Ausgangspunkt für eigene Änderungen. CachyOS folgt mit +17, EndeavourOS und Tumbleweed mit +15. NixOS erhält +14 für kontrolliertes, deklaratives Experimentieren, dessen besonderes Konfigurationsmodell zusätzliche Einarbeitung verlangt. Arch Eigenbau erhält +10: große Freiheit, aber die Experimentierumgebung muss zunächst selbst geschaffen werden. Bazzite bleibt der Gegenpol (−20), weil direkte Änderungen am Basissystem nicht sein primäres Nutzungskonzept sind. Instabilität wird nicht als Vorteil gewertet. Minimum −20, Maximum +20, Spannweite 40.
 
 | Distribution | S |
 |---|---:|
@@ -211,11 +211,10 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 | Bazzite KDE | -20 |
 | Nobara KDE | +2 |
 | CachyOS KDE | +17 |
-| EndeavourOS KDE | +19 |
-| Arch Linux (Eigenbau) | +20 |
-| NixOS KDE | +20 |
-| Omarchy | +12 |
-
+| EndeavourOS KDE | +15 |
+| Arch Linux (Eigenbau) | +10 |
+| NixOS KDE | +14 |
+| Omarchy | +20 |
 
 **Regel für neue Distributionen:** Bei „Lernen“ pädagogische Eignung und Einstiegshürde bewerten, nicht maximale technische Komplexität. Bei „Basteln“ die tatsächliche Freiheit des Systemmodells bewerten. Die absichtlich unterschiedlichen Gewichte beibehalten.
 
