@@ -242,82 +242,6 @@
       }
     },
     {
-      "id": "linux-mint-xfce",
-      "name": "Linux Mint Xfce",
-      "active": true,
-      "url": "",
-      "icon": [
-        "",
-        "#87cf72"
-      ],
-      "descriptions": {
-        "de": {
-          "label": "Schlank und alltagstauglich",
-          "description": "Die ressourcenschonendere Mint-Variante: klassischer Desktop, einfache Bedienung und gut für ältere Rechner."
-        },
-        "en": {
-          "label": "Lightweight and practical",
-          "description": "The more resource-friendly Mint edition: a classic desktop, easy to use, and suitable for older computers."
-        }
-      },
-      "strengths": {
-        "de": [
-          "Ressourcenschonend",
-          "Einsteigerfreundlich",
-          "Stabil und alltagstauglich"
-        ],
-        "en": [
-          "Light on resources",
-          "Beginner-friendly",
-          "Stable for everyday use"
-        ]
-      },
-      "points": {
-        "B": 10,
-        "C": 10,
-        "D": 0,
-        "E": 5,
-        "F": 5,
-        "G": 0,
-        "H": 0,
-        "I": 8,
-        "J": 10,
-        "K": 0,
-        "L": -5,
-        "M": 0,
-        "N": 5,
-        "O": 10,
-        "P": 0,
-        "Q": 20,
-        "R": 7,
-        "S": -6,
-        "T": 10,
-        "U": 0,
-        "V": 0,
-        "W": 5,
-        "X": 0,
-        "Y": 5,
-        "Z": 5,
-        "AA": 5,
-        "AB": 0,
-        "AC": 10,
-        "AD": 5,
-        "AE": 0,
-        "AG": 15,
-        "AH": 10,
-        "AI": -5,
-        "AJ": 0,
-        "AK": -10
-      },
-      "gpu": {
-        "Nvidia GeForce": 5,
-        "AMD Radeon": 5,
-        "Intel Grafik": 5,
-        "Hybrid / mehrere": 5,
-        "Weiß ich nicht": 0
-      }
-    },
-    {
       "id": "zorin-os-core",
       "name": "Zorin OS Core",
       "active": true,
@@ -1838,5 +1762,5 @@
       }
     }
   ],
-  "version": "catalog-3343e09a5703af17c5567e338925f7728070d78835e1bc24a6cc0ca5cee2e126"
+  "version": "catalog-271191c24883f9cca7010fad3bf8c4eeb3285625c2c47a4f5c102ab8f572fd1d"
 }

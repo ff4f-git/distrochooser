@@ -6,7 +6,7 @@ Published scores are generated automatically from distribution administration. S
 
 # Published scores
 
-Version: `catalog-3343e09a5703af17c5567e338925f7728070d78835e1bc24a6cc0ca5cee2e126`
+Version: `catalog-271191c24883f9cca7010fad3bf8c4eeb3285625c2c47a4f5c102ab8f572fd1d`
 
 Generated from distribution administration. Active distributions only.
 
@@ -15,7 +15,6 @@ Generated from distribution administration. Active distributions only.
 | Distribution | B: Alltag & Internet | C: Büro & produktives Arbeiten | D: Gaming | E: Kreative Arbeit | F: Programmieren & Entwickeln | G: Technik & Experimentieren |
 |---|---:|---:|---:|---:|---:|---:|
 | Linux Mint Cinnamon | 10 | 10 | 5 | 5 | 5 | 0 |
-| Linux Mint Xfce | 10 | 10 | 0 | 5 | 5 | 0 |
 | Zorin OS Core | 10 | 10 | 5 | 5 | 5 | 0 |
 | Ubuntu GNOME | 10 | 10 | 5 | 10 | 10 | 5 |
 | Kubuntu | 10 | 10 | 5 | 10 | 10 | 5 |
@@ -42,7 +41,6 @@ Generated from distribution administration. Active distributions only.
 | Distribution | H: Desktop-PC | I: Notebook / Laptop | J: Mini-PC / Sonstiges | K: Noch keinen – ich plane einen Kauf |
 |---|---:|---:|---:|---:|
 | Linux Mint Cinnamon | 0 | 9 | 5 | 0 |
-| Linux Mint Xfce | 0 | 8 | 10 | 0 |
 | Zorin OS Core | 0 | 9 | 5 | 0 |
 | Ubuntu GNOME | 0 | 12 | 5 | 0 |
 | Kubuntu | 0 | 11 | 5 | 0 |
@@ -69,7 +67,6 @@ Generated from distribution administration. Active distributions only.
 | Distribution | L: Weniger als 1 Jahr | M: 1–3 Jahre | N: 4–7 Jahre | O: 8 Jahre oder älter | P: Weiß ich nicht |
 |---|---:|---:|---:|---:|---:|
 | Linux Mint Cinnamon | -5 | 0 | 0 | 5 | 0 |
-| Linux Mint Xfce | -5 | 0 | 5 | 10 | 0 |
 | Zorin OS Core | -5 | 0 | 0 | 5 | 0 |
 | Ubuntu GNOME | 5 | 0 | 0 | 5 | 0 |
 | Kubuntu | 5 | 0 | 0 | 5 | 0 |
@@ -96,7 +93,6 @@ Generated from distribution administration. Active distributions only.
 | Distribution | Q: Einschalten, nutzen, möglichst wenig kümmern | R: Linux kennenlernen und etwas ausprobieren | S: Basteln, konfigurieren und experimentieren |
 |---|---:|---:|---:|
 | Linux Mint Cinnamon | 20 | 7 | -8 |
-| Linux Mint Xfce | 20 | 7 | -6 |
 | Zorin OS Core | 18 | 5 | -10 |
 | Ubuntu GNOME | 17 | 18 | 2 |
 | Kubuntu | 17 | 18 | 4 |
@@ -123,7 +119,6 @@ Generated from distribution administration. Active distributions only.
 | Distribution | T: Klassisch und vertraut | U: Modern und ansprechend | V: Ist mir egal |
 |---|---:|---:|---:|
 | Linux Mint Cinnamon | 10 | 5 | 0 |
-| Linux Mint Xfce | 10 | 0 | 0 |
 | Zorin OS Core | 10 | 10 | 0 |
 | Ubuntu GNOME | 0 | 10 | 0 |
 | Kubuntu | 5 | 10 | 0 |
@@ -150,7 +145,6 @@ Generated from distribution administration. Active distributions only.
 | Distribution | W: Wenig anpassen | X: Etwas anpassen | Y: Alles anpassen |
 |---|---:|---:|---:|
 | Linux Mint Cinnamon | 10 | 10 | 5 |
-| Linux Mint Xfce | 5 | 0 | 5 |
 | Zorin OS Core | 10 | 5 | 5 |
 | Ubuntu GNOME | 10 | 5 | 5 |
 | Kubuntu | 10 | 10 | 10 |
@@ -177,7 +171,6 @@ Generated from distribution administration. Active distributions only.
 | Distribution | Z: Sehr wichtig | AA: Wäre praktisch | AB: Nicht wichtig |
 |---|---:|---:|---:|
 | Linux Mint Cinnamon | 5 | 5 | 0 |
-| Linux Mint Xfce | 5 | 5 | 0 |
 | Zorin OS Core | 0 | 0 | 0 |
 | Ubuntu GNOME | 0 | 0 | 0 |
 | Kubuntu | 0 | 0 | 0 |
@@ -204,7 +197,6 @@ Generated from distribution administration. Active distributions only.
 | Distribution | AC: Anfänger | AD: Fortgeschritten | AE: Profi |
 |---|---:|---:|---:|
 | Linux Mint Cinnamon | 10 | 5 | 0 |
-| Linux Mint Xfce | 10 | 5 | 0 |
 | Zorin OS Core | 10 | 5 | 0 |
 | Ubuntu GNOME | 10 | 5 | 0 |
 | Kubuntu | 10 | 5 | 0 |
@@ -231,7 +223,6 @@ Generated from distribution administration. Active distributions only.
 | Distribution | AG | AH | AI | AJ | AK | Nvidia GeForce | AMD Radeon | Intel Grafik | Hybrid / mehrere | Weiß ich nicht |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Linux Mint Cinnamon | -5 | 5 | 0 | 0 | -5 | 5 | 5 | 5 | 5 | 0 |
-| Linux Mint Xfce | 15 | 10 | -5 | 0 | -10 | 5 | 5 | 5 | 5 | 0 |
 | Zorin OS Core | -10 | 0 | 5 | 0 | 5 | 5 | 5 | 5 | 5 | 0 |
 | Ubuntu GNOME | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
 | Kubuntu | -5 | 5 | 5 | 0 | 5 | 5 | 5 | 5 | 5 | 0 |

@@ -3,10 +3,6 @@ export const DISTRO_ICONS = {
     "",
     "#87cf72"
   ],
-  "Linux Mint Xfce": [
-    "",
-    "#87cf72"
-  ],
   "Zorin OS Core": [
     "",
     "#55a8ff"
