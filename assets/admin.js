@@ -1,48 +1,75 @@
-import {RAM,GPU,validateCatalog} from '../supabase/functions/catalog-admin/catalog.js';
+import {validateCatalog} from './catalog-core.js';
+import {AdminDraft,questionGroups} from './admin-state.js';
 const ENDPOINT='https://sjuzeljqkxffscqrtqxn.supabase.co/functions/v1/catalog-admin';
-const $=id=>document.getElementById(id),form=$('editorForm');
-let token='',catalog,reference,head,selected,baseline,busy=false;
-const deletedIds=new Set();
-const notice=(message,error=false)=>{$('status').textContent=message;$('status').classList.toggle('error',error);};
-const api=async(method='GET',body)=>{const r=await fetch(ENDPOINT+'?admin=1',{method,headers:{Authorization:'Bearer '+token,...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),credentials:'omit',referrerPolicy:'no-referrer'});const data=await r.json();if(!r.ok)throw Error(data.error||'Verbindung fehlgeschlagen.');return data;};
-const field=(label,name,value='',type='text',required=true)=>{const l=document.createElement('label');l.textContent=label;const input=document.createElement(type==='textarea'?'textarea':'input');if(type!=='textarea')input.type=type;input.name=name;input.value=value;input.required=required;l.append(input);return l;};
-const score=(label,name,value,code)=>{const l=field(label,name,value??'','number');const i=l.querySelector('input');i.min='-100';i.max='100';i.step='1';if(['V','AB','AJ'].includes(code))i.readOnly=true;const small=document.createElement('small');small.textContent=code||'GPU';l.prepend(small);return l;};
-function read(){
- const d=structuredClone(catalog.distributions.find(d=>d.id===selected)),f=new FormData(form);
- d.id=String(f.get('id')).trim();d.name=String(f.get('name')).trim();d.url=String(f.get('url')).trim();d.active=$('active').checked;
- for(const lang of ['de','en']){d.descriptions[lang]={label:String(f.get('label-'+lang)),description:String(f.get('description-'+lang))};d.strengths[lang]=[0,1,2].map(i=>String(f.get(`strength-${lang}-${i}`)));}
- for(const code of Object.keys(d.points)){const v=f.get('point-'+code);d.points[code]=v===''?null:Number(v);}
- for(let i=0;i<GPU.length;i++){const v=f.get('gpu-'+i);d.gpu[GPU[i]]=v===''?null:Number(v);}
- return d;
+const $=id=>document.getElementById(id);
+let token='',draft,head,user='',busy=false;
+
+function notice(message,error=false){const target=$('workspace').hidden?$('loginStatus'):$('status');target.textContent=message;target.classList.toggle('error',error);}
+async function api(method='GET',body){const r=await fetch(ENDPOINT+'?admin=1',{method,headers:{Authorization:'Bearer '+token,...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),credentials:'omit',referrerPolicy:'no-referrer'});const data=await r.json();if(!r.ok)throw Error(data.error||'Verbindung fehlgeschlagen.');return data;}
+function field(label,name,value,onInput,{type='text',maxLength}={}){
+ const l=document.createElement('label');l.textContent=label;const input=document.createElement(type==='textarea'?'textarea':'input');if(type!=='textarea')input.type=type;input.name=name;input.value=value;input.required=true;if(maxLength)input.maxLength=maxLength;input.oninput=()=>{onInput(input.value);updateState();};l.append(input);return l;
 }
-function editorDirty(){return catalog&&selected&&JSON.stringify(read())!==baseline;}
-function dirty(){return deletedIds.size>0||editorDirty();}
-function discardNew(){if(selected&&!reference.distributions.some(d=>d.id===selected))catalog.distributions=catalog.distributions.filter(d=>d.id!==selected);}
-function updateState(){$('changeState').textContent=dirty()?'Ungespeicherte Änderungen':'Keine Änderungen';$('state').textContent=$('active').checked?'AKTIV':'DEAKTIVIERT';$('deletions').hidden=deletedIds.size===0;$('deletionText').textContent=[...deletedIds].map(id=>reference.distributions.find(d=>d.id===id)?.name||id).join(', ')+' wird erst mit „Speichern & veröffentlichen“ gelöscht. Historische Versionen und Statistiken bleiben erhalten.';}
-function list(){const filter=$('search').value.toLowerCase();$('distroList').replaceChildren();for(const d of catalog.distributions.filter(d=>!deletedIds.has(d.id)&&d.name.toLowerCase().includes(filter))){const b=document.createElement('button');b.type='button';b.textContent=d.name||'Neue Distribution';b.setAttribute('aria-current',String(d.id===selected));if(!d.active){const t=document.createElement('small');t.textContent='Nicht in Empfehlungen';b.append(t);}b.onclick=()=>{if(busy||d.id===selected)return;if(editorDirty()&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;discardNew();render(d.id);};$('distroList').append(b);}}
-function render(id){
- selected=id;const d=catalog.distributions.find(d=>d.id===id);$('selectedName').textContent=d.name||'Neue Distribution';
- for(const k of ['name','id','url'])form.elements.namedItem(k).value=d[k];form.elements.namedItem('id').readOnly=reference.distributions.some(x=>x.id===id);$('active').checked=d.active;
- $('descriptions').replaceChildren();
- for(const lang of ['de','en']){const box=document.createElement('div');const title=document.createElement('h4');title.textContent=lang==='de'?'Deutsch':'English';box.append(title,field('Kurztext','label-'+lang,d.descriptions[lang].label),field('Beschreibung','description-'+lang,d.descriptions[lang].description,'textarea'));d.strengths[lang].forEach((v,i)=>box.append(field('Stärke '+(i+1),`strength-${lang}-${i}`,v)));$('descriptions').append(box);}
- $('questions').replaceChildren();catalog.questions.forEach((q,index)=>{const section=document.createElement('section');section.className='panel';const h=document.createElement('h3');h.textContent=(index+1)+'. '+q.title;const fields=document.createElement('div');fields.className='score-fields';q.options.forEach(([label,c])=>fields.append(score(label,'point-'+c,d.points[c],c)));section.append(h,fields);$('questions').append(section);});
- $('ram').replaceChildren(...RAM.map(([label,c])=>score(label,'point-'+c,d.points[c],c)));$('gpu').replaceChildren(...GPU.map((k,i)=>score(k,'gpu-'+i,d.gpu[k])));
- baseline=JSON.stringify(read());updateState();list();
+function updateState(){
+ $('changeState').textContent=draft.dirty()?'Ungespeicherte Änderungen':'Keine Änderungen';
+ $('identity').textContent='Verbunden als '+user+' · '+draft.visible().filter(d=>d.active).length+' aktive Distributionen';
+ $('deletions').hidden=draft.deletedIds.size===0;
+ $('deletionText').textContent=[...draft.deletedIds].map(id=>draft.reference.distributions.find(d=>d.id===id)?.name||id).join(', ')+' – zum Löschen vorgemerkt. Erst beim Speichern wirksam; historische Versionen bleiben erhalten.';
+ if(draft.selectedDistribution())$('state').textContent=draft.selectedDistribution().active?'AKTIV':'DEAKTIVIERT';
 }
-$('loginForm').onsubmit=async e=>{e.preventDefault();token=$('token').value.trim();$('token').value='';$('connect').disabled=true;notice('Zugriff wird geprüft …');try{const data=await api();catalog=data.catalog;reference=structuredClone(catalog);head=data.head;deletedIds.clear();$('identity').textContent=data.user+' · '+catalog.distributions.filter(d=>d.active).length+' aktive Distributionen';$('login').hidden=true;$('workspace').hidden=false;$('logout').hidden=false;render(catalog.distributions[0].id);notice('Verbunden. Wähle eine Distribution.');}catch(e){token='';notice(e.message,true);}finally{$('connect').disabled=false;}};
-$('logout').onclick=()=>{if(busy)return;if(dirty()&&!confirm('Ungespeicherte Änderungen verwerfen und abmelden?'))return;deletedIds.clear();token='';catalog=null;reference=null;selected=null;form.reset();$('workspace').hidden=true;$('login').hidden=false;$('logout').hidden=true;notice('Abgemeldet.');};
-$('search').oninput=list;form.addEventListener('input',updateState);
-$('delete').onclick=()=>{
+function list(){
+ const filter=$('search').value.toLowerCase();$('distroList').replaceChildren();
+ for(const d of draft.visible().filter(d=>d.name.toLowerCase().includes(filter))){const b=document.createElement('button');b.type='button';b.textContent=d.name||'Neue Distribution';b.setAttribute('aria-current',String(d.id===draft.selected));if(!d.active){const t=document.createElement('small');t.textContent='Nicht in Empfehlungen';b.append(t);}b.onclick=()=>{if(busy)return;draft.select(d.id);renderMetadata();list();};$('distroList').append(b);}
+}
+function renderMetadata(){
+ const d=draft.selectedDistribution(),form=$('metadataForm');$('selectedName').textContent=d.name||'Neue Distribution';
+ for(const key of ['name','id','url']){const input=form.elements.namedItem(key);input.value=d[key];input.oninput=()=>{if(key==='id'&&draft.catalog.distributions.some(x=>x!==d&&x.id===input.value)){input.value=d.id;notice('Diese ID wird bereits von einer anderen Distribution verwendet.',true);return;}d[key]=input.value;if(key==='id')draft.selected=d.id;if(key==='name')$('selectedName').textContent=d.name||'Neue Distribution';list();updateState();};}
+ form.elements.namedItem('id').readOnly=draft.published(d.id);$('active').checked=d.active;$('descriptions').replaceChildren();
+ for(const lang of ['de','en']){const box=document.createElement('div'),h=document.createElement('h4');h.textContent=lang==='de'?'Deutsch':'English';box.append(h,field('Kurztext','label-'+lang,d.descriptions[lang].label,v=>d.descriptions[lang].label=v,{maxLength:150}),field('Beschreibung','description-'+lang,d.descriptions[lang].description,v=>d.descriptions[lang].description=v,{type:'textarea',maxLength:1500}));d.strengths[lang].forEach((v,i)=>box.append(field('Stärke '+(i+1),`strength-${lang}-${i}`,v,value=>d.strengths[lang][i]=value,{maxLength:300})));$('descriptions').append(box);}updateState();
+}
+function renderQuestions(){
+ const groups=questionGroups(draft.catalog),select=$('questionSelect');
+ if(!select.options.length)for(const g of groups){const option=document.createElement('option');option.value=g.id;option.textContent=g.title;select.append(option);}
+ select.value=draft.question;const group=groups.find(g=>g.id===draft.question);
+ $('matrixCount').textContent=draft.visible().length+' Distributionen';$('matrixCaption').textContent=group.title;
+ $('matrixHint').textContent=group.id==='ram'?'Zusatzpunkte bei „8 Jahre oder älter“.':group.id==='gpu'?'Zusätzliche Punkte bei gewählter Gaming-Nutzung.':'Antwortmöglichkeiten als Spalten. Änderungen bleiben beim Wechsel der Frage erhalten.';
+ const header=document.createElement('tr'),nameHead=document.createElement('th');nameHead.scope='col';nameHead.textContent='Distribution';header.append(nameHead);
+ for(const [label,key]of group.options){const th=document.createElement('th');th.scope='col';th.textContent=label;const code=document.createElement('small');code.textContent=group.kind==='gpu'?'GPU':key;th.append(code);header.append(th);}
+ $('matrixHead').replaceChildren(header);$('matrixBody').replaceChildren();
+ for(const d of draft.visible()){
+  const row=document.createElement('tr'),name=document.createElement('th');name.scope='row';name.textContent=d.name||'Neue Distribution';if(!d.active){const small=document.createElement('small');small.textContent='Deaktiviert';name.append(small);}row.append(name);
+  for(const [label,key]of group.options){
+   const td=document.createElement('td'),input=document.createElement('input');input.type='number';input.min='-100';input.max='100';input.step='1';input.value=d[group.kind][key]??'';input.required=true;input.setAttribute('aria-label',d.name+' – '+label);input.dataset.distro=d.id;input.dataset.code=key;input.readOnly=group.kind==='points'&&['V','AB','AJ'].includes(key);
+   const previous=draft.reference.distributions.find(x=>x.id===d.id)?.[group.kind][key];input.classList.toggle('changed',previous!==d[group.kind][key]);
+   input.oninput=()=>{draft.setScore(d.id,group.kind,key,input.value===''?null:Number(input.value));input.classList.toggle('changed',previous!==d[group.kind][key]);updateState();renderSpread(group);};td.append(input);row.append(td);
+  }$('matrixBody').append(row);
+ }renderSpread(group);
+}
+function renderSpread(group){
+ const row=document.createElement('tr'),label=document.createElement('th');label.scope='row';label.textContent='Spannweite';row.append(label);
+ for(const [,key]of group.options){const values=draft.visible().map(d=>d[group.kind][key]).filter(Number.isFinite),td=document.createElement('td');td.textContent=values.length?String(Math.max(...values)-Math.min(...values)):'—';td.title=values.length?'Minimum '+Math.min(...values)+' · Maximum '+Math.max(...values):'Noch keine Werte';row.append(td);}$('matrixFoot').replaceChildren(row);
+}
+function show(view){
+ if(busy)return;draft.view=view;$('distributionView').hidden=view!=='distributions';$('distributionTools').hidden=view!=='distributions';$('questionView').hidden=view!=='questions';$('questionHelp').hidden=view!=='questions';
+ $('navDistributions').setAttribute('aria-current',view==='distributions'?'page':'false');$('navQuestions').setAttribute('aria-current',view==='questions'?'page':'false');
+ if(view==='questions')renderQuestions();else{renderMetadata();list();}updateState();
+}
+function lock(locked){busy=locked;for(const control of $('workspace').querySelectorAll('input,textarea,select,button'))control.disabled=locked;$('logout').disabled=locked;$('save').textContent=locked?'Wird gespeichert …':'Speichern & veröffentlichen →';}
+
+$('loginForm').onsubmit=async e=>{e.preventDefault();token=$('token').value.trim();$('token').value='';$('connect').disabled=true;notice('Zugriff wird geprüft …');try{const data=await api();draft=new AdminDraft(data.catalog);head=data.head;user=data.user;$('login').hidden=true;$('workspace').hidden=false;$('logout').hidden=false;$('loginStatus').textContent='';$('questionSelect').replaceChildren();show('distributions');notice('');}catch(error){token='';notice(error.message,true);}finally{$('connect').disabled=false;}};
+$('logout').onclick=()=>{if(busy)return;if(draft.dirty()&&!confirm('Alle ungespeicherten Änderungen verwerfen und abmelden?'))return;token='';draft=null;head=null;$('workspace').hidden=true;$('login').hidden=false;$('logout').hidden=true;notice('Abgemeldet.');};
+$('navDistributions').onclick=()=>show('distributions');$('navQuestions').onclick=()=>show('questions');$('openQuestions').onclick=()=>show('questions');
+$('search').oninput=list;$('questionSelect').onchange=()=>{draft.question=$('questionSelect').value;renderQuestions();};
+$('active').onchange=()=>{draft.selectedDistribution().active=$('active').checked;list();updateState();};$('metadataForm').onsubmit=e=>e.preventDefault();
+$('add').onclick=()=>{if(busy)return;draft.add();show('distributions');$('metadataForm').elements.namedItem('name').focus();notice('Neue Distribution angelegt. Stammdaten ausfüllen und anschließend unter „Fragen & Punkte“ die Bewertungen ergänzen.');};
+$('delete').onclick=()=>{if(busy)return;const d=draft.selectedDistribution(),published=draft.published(d.id);if(published&&!confirm('„'+d.name+'“ aus dem aktuellen Katalog löschen? Wirksam erst mit „Speichern & veröffentlichen“. Historische Versionen und Statistiken bleiben erhalten.'))return;try{draft.remove(d.id);renderMetadata();list();notice(published?'Löschung vorgemerkt.':'Unveröffentlichten Entwurf verworfen.');}catch(error){notice(error.message,true);}};
+$('undoDelete').onclick=()=>{if(busy)return;draft.undoDeletions();show(draft.view);notice('Vorgemerkte Löschungen zurückgenommen.');};
+$('reset').onclick=()=>{if(busy||!confirm('Alle ungespeicherten Änderungen aus beiden Bereichen verwerfen?'))return;draft.reset();show(draft.view);notice('Änderungen verworfen.');};
+$('save').onclick=async()=>{
  if(busy)return;
- const d=catalog.distributions.find(d=>d.id===selected),published=reference.distributions.some(x=>x.id===selected);
- const remaining=catalog.distributions.filter(x=>x.id!==selected&&!deletedIds.has(x.id));
- if(!remaining.some(x=>x.active)){notice('Mindestens eine aktive Distribution muss im Katalog bleiben.',true);return;}
- if(published&&!confirm('„'+d.name+'“ aus dem aktuellen Katalog löschen? Wirksam erst mit „Speichern & veröffentlichen“. Historische Versionen und Statistiken bleiben erhalten.'))return;
- if(published)deletedIds.add(selected);else catalog.distributions=catalog.distributions.filter(x=>x.id!==selected);
- render(remaining[0].id);notice(published?'Löschung vorgemerkt. Zum Veröffentlichen unten speichern.':'Unveröffentlichten Entwurf verworfen.');
+ try{
+  const missing=draft.firstMissingScore();if(missing){draft.question=missing.group;show('questions');notice(missing.name+': Bitte alle Punktfelder ausfüllen (Antwort '+missing.key+').',true);$('matrixBody').querySelector('input[data-distro="'+CSS.escape(missing.id)+'"][data-code="'+CSS.escape(missing.key)+'"]')?.focus();return;}
+  const clean=validateCatalog(draft.publishable(),draft.reference),selected=draft.selected,view=draft.view,question=draft.question;lock(true);notice('Wird gespeichert und veröffentlicht …');
+  const data=await api('POST',{catalog:clean,expectedVersion:draft.reference.version,expectedHead:head,deletedIds:[...draft.deletedIds]});draft.load(data.catalog);if(draft.visible().some(d=>d.id===selected))draft.selected=selected;draft.question=question;head=data.head;user=data.user||user;lock(false);show(view);notice(data.unchanged?'Keine Änderungen vorhanden.':'Gespeichert und veröffentlicht. Website, Statistik, Excel und Dokumentation verwenden denselben Stand.');
+ }catch(error){notice(error.message,true);}finally{if(busy)lock(false);}
 };
-$('undoDelete').onclick=()=>{if(busy)return;deletedIds.clear();updateState();list();notice('Alle vorgemerkten Löschungen zurückgenommen.');};
-$('add').onclick=()=>{if(busy)return;if(editorDirty()&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;discardNew();let id='neue-distribution';let n=1;while(catalog.distributions.some(d=>d.id===id))id='neue-distribution-'+n++;const codes=[...catalog.questions.flatMap(q=>q.options.map(o=>o[1])),...RAM.map(o=>o[1])];catalog.distributions.push({id,name:'Neue Distribution',active:false,url:'',icon:['\uf17c','#23bfdc'],descriptions:{de:{label:'',description:''},en:{label:'',description:''}},strengths:{de:['','',''],en:['','','']},points:Object.fromEntries(codes.map(c=>[c,['V','AB','AJ'].includes(c)?0:null])),gpu:Object.fromEntries(GPU.map(k=>[k,null]))});render(id);form.elements.namedItem('name').focus();notice('Neue Distribution: Angaben und alle Bewertungen ausfüllen, dann aktivieren.');};
-$('reset').onclick=()=>{if(busy)return;if(!confirm('Alle ungespeicherten Änderungen einschließlich vorgemerkter Löschungen verwerfen?'))return;catalog=structuredClone(reference);deletedIds.clear();render(catalog.distributions.some(d=>d.id===selected)?selected:catalog.distributions[0].id);notice('Änderungen verworfen.');};
-form.onsubmit=async e=>{e.preventDefault();if(busy||!form.reportValidity())return;busy=true;const oldSelected=selected;$('save').disabled=true;try{const draft=structuredClone(catalog),d=read();draft.distributions[draft.distributions.findIndex(x=>x.id===selected)]=d;draft.distributions=draft.distributions.filter(x=>!deletedIds.has(x.id));const clean=validateCatalog(draft,reference);for(const control of form.elements)control.disabled=true;notice('Wird gespeichert und veröffentlicht. Bitte die Seite geöffnet lassen …');const data=await api('POST',{catalog:clean,expectedVersion:reference.version,expectedHead:head,deletedIds:[...deletedIds]});catalog=data.catalog;reference=structuredClone(catalog);head=data.head;deletedIds.clear();render(d.id);$('identity').textContent=(data.user||'GitHub')+' · '+catalog.distributions.filter(d=>d.active).length+' aktive Distributionen';notice(data.unchanged?'Keine Änderungen vorhanden.':'Gespeichert. Website, Statistik, Excel und Punktetabellen verwenden den neuen Stand.');}catch(e){selected=oldSelected;notice(e.message,true);}finally{busy=false;for(const control of form.elements)control.disabled=false;}};
-window.addEventListener('beforeunload',e=>{if(busy||dirty()){e.preventDefault();e.returnValue='';}});
+window.addEventListener('beforeunload',e=>{if(busy||draft?.dirty()){e.preventDefault();e.returnValue='';}});

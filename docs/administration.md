@@ -1,6 +1,11 @@
 # Distributionen verwalten
 
-Der geschützte Bearbeitungszugang befindet sich unter [admin.html](../admin.html). Es gibt keinen separaten Tabelleneditor: Eine Distribution auswählen, Beschreibung und Werte unter den jeweiligen Fragen bearbeiten, unten **Speichern & veröffentlichen** wählen.
+Der geschützte Bearbeitungszugang befindet sich unter [admin.html](../admin.html). Links stehen zwei Arbeitsbereiche zur Verfügung:
+
+- **Distributionen:** Stammdaten, Beschreibungen, Stärken, Aktivierung und Löschung einzelner Distributionen verwalten. Punktfelder gehören nicht mehr in dieses Formular.
+- **Fragen & Punkte:** Oben eine der acht Fragen oder die Zusatzfragen RAM/GPU auswählen. Alle Distributionen stehen als Zeilen in einer gemeinsamen Tabelle, die Antworten als Spalten. Punkte direkt in der Tabelle bearbeiten; die aktuelle Spannweite steht unten je Antwortspalte. Deaktivierte Distributionen bleiben sichtbar und gekennzeichnet.
+
+Änderungen bleiben beim Wechsel zwischen Fragen, Distributionen und Arbeitsbereichen im Entwurf erhalten. **Speichern & veröffentlichen** übernimmt alle Änderungen gemeinsam. **Änderungen verwerfen** setzt den gesamten Entwurf zurück. Speicheraktionen und Meldungen stehen im normalen Seitenfluss und verdecken keine Eingaben.
 
 ## Zugang
 
@@ -8,8 +13,8 @@ Ein kurzlebiger GitHub Fine-grained Personal Access Token benötigt ausschließl
 
 ## Bearbeiten, hinzufügen, deaktivieren und löschen
 
-- Alle acht Fragen einschließlich RAM-/GPU-Werten erscheinen mit ihren Antworttexten. Ganze Zahlen zwischen −100 und +100 sind erlaubt; neutrale Egal-/Unbekannt-Antworten bleiben 0.
-- **Hinzufügen** erzeugt ein Formular mit leeren Punktfeldern. Alle Werte und deutsch/englischen Texte einschließlich drei Stärken ausfüllen. Eine eindeutige, dauerhafte ID vergeben. Die ID einer veröffentlichten Distribution ist unveränderlich.
+- Alle acht Fragen einschließlich RAM-/GPU-Werten erscheinen im Frageneditor mit ihren Antworttexten. Ganze Zahlen zwischen −100 und +100 sind erlaubt; neutrale Egal-/Unbekannt-Antworten bleiben 0.
+- **Hinzufügen** erzeugt eine neue Distribution. Stammdaten und deutsch/englische Texte einschließlich drei Stärken ausfüllen; die neue Zeile erscheint gleichzeitig in allen Punktetabellen. Die zunächst leeren Punktfelder dort vollständig ergänzen. Beim Speichern führen fehlende Werte zur betreffenden Frage. Eine eindeutige, dauerhafte ID vergeben. Die ID einer veröffentlichten Distribution ist unveränderlich.
 - **In Empfehlungen anzeigen** deaktiviert oder aktiviert die Distribution.
 - **Ausgewählte Distribution löschen** entfernt sie zunächst nur aus dem Entwurf. Eine Rückfrage benennt die Distribution; erst **Speichern & veröffentlichen** entfernt sie aus dem aktuellen Katalog und allen automatisch erzeugten Ausgaben. Frühere Versionen und Statistiken bleiben unverändert. Neu angelegte, noch unveröffentlichte Entwürfe werden ohne zusätzliche Rückfrage verworfen.
 - Vorgemerkte Löschungen werden im Formular angezeigt und lassen sich mit **Löschungen rückgängig machen** zurücknehmen. **Verwerfen** setzt sämtliche ungespeicherten Änderungen einschließlich Löschungen zurück. Mindestens eine aktive Distribution muss erhalten bleiben.
