@@ -135,7 +135,33 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 
 **Diese Frage ist eine zentrale Weichenstellung.** Die drei Antworten haben bewusst unterschiedlich große tatsächliche Punktespannen, obwohl der zulässige Gesamtrahmen −20 bis +20 beträgt. Eine volle Ausschöpfung dieses Rahmens bei jeder Antwort wäre sachlich falsch.
 
-- **„Einfach laufen“ – hohe Gewichtung (positive Werte bis etwa +20):** Wer ein möglichst wartungsarmes, sofort nutzbares System möchte, soll durch diese Präferenz stark gelenkt werden. Bewertet werden der laufende Pflegeaufwand, sinnvolle Voreinstellungen und der Aufwand nach der Installation, nicht bloß die Installationsschwierigkeit. Bestehende Punkte unverändert.
+- **„Einschalten, nutzen, möglichst wenig kümmern“ (Q):** Selektiert nach dem langfristigen Betriebs- und Wartungsaufwand nach erfolgreicher Einrichtung, unabhängig von Linux-Erfahrung. Maßgeblich sind Zuverlässigkeit, aktive Pflege, Update-Komfort und Aufwand bei Störungen. Einsteigerfreundlichkeit wird separat in Frage 8 bewertet. Die am 01.11.2026 freigegebene Neubewertung umfasst 20 Änderungen bei 22 Distributionen; Minimum −20, Maximum +20, Spannweite 40 bleiben erhalten.
+
+| Distribution | Q |
+|---|---:|
+| Linux Mint Cinnamon | +18 |
+| Linux Mint Xfce | +18 |
+| Zorin OS Core | +16 |
+| Ubuntu GNOME | +16 |
+| Kubuntu | +16 |
+| Debian GNOME | +20 |
+| Debian KDE | +20 |
+| Fedora Workstation | +16 |
+| Fedora KDE | +16 |
+| openSUSE Leap KDE | +18 |
+| openSUSE Tumbleweed KDE | +10 |
+| MX Linux Xfce | +18 |
+| Linux Lite | +16 |
+| elementary OS | +14 |
+| Pop!_OS COSMIC | +14 |
+| Bazzite KDE | +20 |
+| Nobara KDE | +14 |
+| CachyOS KDE | -8 |
+| EndeavourOS KDE | -12 |
+| Arch Linux (Eigenbau) | -20 |
+| NixOS KDE | +6 |
+| Omarchy | -10 |
+
 - **„Lernen“ – mittlere Gewichtung (positive Werte bis +10):** Gemeint ist *Linux schrittweise kennenlernen*, nicht „möglichst viel selbst reparieren müssen“. Positiv zählen niedrige Einstiegshürde, verständliche Dokumentation, hilfsbereite Community und die Möglichkeit, später tiefer einzusteigen. Arch und NixOS sind technisch lehrreich, aber für den sanften Einstieg weniger geeignet. **Beschlossene Korrekturen:** Debian GNOME +3 → **+6**, Debian KDE +3 → **+6** (gute Lernbasis und Dokumentation); Bazzite KDE +10 → **+5** (leichter Einstieg, aber durch atomaren Unterbau eingeschränkte klassische Eingriffe ins Basissystem). Alle anderen Lernwerte bleiben unverändert.
 - **„Basteln“ – bewusst geringe Gewichtung (−5 bis +5):** Gewünscht sind Gestaltungsfreiheit und tiefe Systemeingriffe. Arch, EndeavourOS und NixOS erhalten +5; Bazzite −5 wegen der Einschränkungen klassischer Änderungen am Basissystem. Die geringe Spreizung ist *gewollt*: Der Bastelwunsch darf die Gesamtempfehlung weniger stark prägen als der Wunsch, dass das System einfach läuft. Anpassbarkeit und Linux-Erfahrung werden zudem in weiteren Fragen berücksichtigt. **Keine Punktänderungen.**
 
