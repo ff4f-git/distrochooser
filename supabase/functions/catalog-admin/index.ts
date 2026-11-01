@@ -37,7 +37,9 @@ export async function handler(request:Request){
   if(input.expectedVersion!==row.catalog.version)return reply(409,{error:'Der Datenstand wurde inzwischen geändert. Bitte neu laden.'});
   const clean=validateCatalog(input.catalog,reference);
   const existing=new Set(clean.distributions.map(d=>d.id));
-  if(row.catalog.distributions.some((d:{id:string})=>!existing.has(d.id)))return reply(400,{error:'Distributionen bitte deaktivieren statt löschen.'});
+  const removed=row.catalog.distributions.filter((d:{id:string})=>!existing.has(d.id)).map((d:{id:string})=>d.id).sort();
+  const confirmed=input.deletedIds??[];
+  if(!Array.isArray(confirmed)||confirmed.some(id=>typeof id!=='string')||new Set(confirmed).size!==confirmed.length||JSON.stringify([...confirmed].sort())!==JSON.stringify(removed))return reply(400,{error:'Löschungen müssen ausdrücklich im Entwurf vorgemerkt werden.'});
   const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(clean)));
   const version='catalog-'+Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('');
   if(version===row.catalog.version)return reply(200,{catalog:row.catalog,head:ref.object.sha,unchanged:true});

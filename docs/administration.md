@@ -6,11 +6,13 @@ Der geschützte Bearbeitungszugang befindet sich unter [admin.html](../admin.htm
 
 Ein kurzlebiger GitHub Fine-grained Personal Access Token benötigt ausschließlich Zugriff auf `ff4f-git/distrochooser` und **Contents: Read and write**. Das GitHub-Konto muss Schreibrecht für das Repository besitzen. Der Token wird nicht im Repository, Local Storage, Cookies oder in der Datenbank gespeichert. Der Browser hält ihn nur im Arbeitsspeicher; Abmelden oder Schließen der Seite entfernt ihn. Der Server prüft die GitHub-Rechte bei jedem Admin-Zugriff. Token niemals im Chat oder in Issues posten.
 
-## Bearbeiten, hinzufügen und deaktivieren
+## Bearbeiten, hinzufügen, deaktivieren und löschen
 
 - Alle acht Fragen einschließlich RAM-/GPU-Werten erscheinen mit ihren Antworttexten. Ganze Zahlen zwischen −100 und +100 sind erlaubt; neutrale Egal-/Unbekannt-Antworten bleiben 0.
 - **Hinzufügen** erzeugt ein Formular mit leeren Punktfeldern. Alle Werte und deutsch/englischen Texte einschließlich drei Stärken ausfüllen. Eine eindeutige, dauerhafte ID vergeben. Die ID einer veröffentlichten Distribution ist unveränderlich.
-- **In Empfehlungen anzeigen** deaktiviert oder aktiviert die Distribution. Deaktivieren ersetzt endgültiges Löschen: Frühere Versionen bleiben für bereits geöffnete Fragebögen und Statistiken verfügbar.
+- **In Empfehlungen anzeigen** deaktiviert oder aktiviert die Distribution.
+- **Ausgewählte Distribution löschen** entfernt sie zunächst nur aus dem Entwurf. Eine Rückfrage benennt die Distribution; erst **Speichern & veröffentlichen** entfernt sie aus dem aktuellen Katalog und allen automatisch erzeugten Ausgaben. Frühere Versionen und Statistiken bleiben unverändert. Neu angelegte, noch unveröffentlichte Entwürfe werden ohne zusätzliche Rückfrage verworfen.
+- Vorgemerkte Löschungen werden im Formular angezeigt und lassen sich mit **Löschungen rückgängig machen** zurücknehmen. **Verwerfen** setzt sämtliche ungespeicherten Änderungen einschließlich Löschungen zurück. Mindestens eine aktive Distribution muss erhalten bleiben.
 - Name, Beschreibungen und optionaler offizieller HTTPS-Link lassen sich ändern. Neue Distributionen erhalten zunächst ein neutrales Linux-Symbol.
 - Es werden keine Änderungen gespeichert, bevor **Speichern & veröffentlichen** betätigt wird. Beim Verlassen mit ungespeicherten Änderungen erscheint eine Rückfrage.
 

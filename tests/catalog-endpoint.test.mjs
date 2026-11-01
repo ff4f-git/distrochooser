@@ -48,3 +48,19 @@ test('stale edits and permanent deletions cannot overwrite the live catalog',asy
  writes=mock();catalog.distributions.pop();assert.equal((await handler(req({catalog,expectedVersion:seed.version,expectedHead:'head-a'}))).status,400);assert.equal(writes.length,0);
  }finally{globalThis.fetch=original;}
 });
+test('explicit draft deletion publishes a new catalog and retains the previous snapshot',async()=>{
+ try{const writes=mock(),catalog=structuredClone(seed),removed=catalog.distributions.shift();
+ const res=await handler(req({catalog,expectedVersion:seed.version,expectedHead:'head-a',deletedIds:[removed.id]}));
+ assert.equal(res.status,200);const result=await res.json();assert.equal(result.catalog.distributions.length,21);assert.ok(!result.catalog.distributions.some(d=>d.id===removed.id));
+ assert.equal(seed.distributions.length,22);assert.ok(!writes.some(w=>w.path.includes('DELETE')));
+ const tree=writes.find(w=>w.path.endsWith('/git/trees')).body.tree;
+ for(const path of ['assets/model.json','supabase/functions/submit-statistics/model.json','assets/gpu-bonus.json','assets/descriptions-de.json'])assert.ok(!tree.find(e=>e.path===path).content.includes(removed.name));
+ const activation=writes.find(w=>w.path.endsWith('activate_distribution_release'));assert.equal(activation.body.expected_version,seed.version);assert.equal(activation.body.new_catalog.distributions.length,21);
+ }finally{globalThis.fetch=original;}
+});
+test('deletion declarations must exactly match missing IDs and cannot remove the last active distribution',async()=>{
+ try{for(const bad of [['unknown'],[seed.distributions[0].id,seed.distributions[0].id]]){
+ const writes=mock(),catalog=structuredClone(seed);catalog.distributions.shift();const res=await handler(req({catalog,expectedVersion:seed.version,expectedHead:'head-a',deletedIds:bad}));assert.equal(res.status,400);assert.equal(writes.length,0);}
+ const writes=mock(),catalog=structuredClone(seed);catalog.distributions=[];assert.equal((await handler(req({catalog,expectedVersion:seed.version,expectedHead:'head-a',deletedIds:seed.distributions.map(d=>d.id)}))).status,400);assert.equal(writes.length,0);
+ }finally{globalThis.fetch=original;}
+});
