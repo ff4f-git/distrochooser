@@ -699,7 +699,7 @@
     },
     {
       "id": "opensuse-leap-kde",
-      "name": "openSUSE Leap KDE",
+      "name": "openSUSE Leap",
       "active": true,
       "url": "",
       "icon": [
@@ -1686,5 +1686,5 @@
       }
     }
   ],
-  "version": "catalog-46a6e2df4e14c9631f3d5da17cdaac12e1b6e34197f00fc1f4caf059479eb8a4"
+  "version": "catalog-e13ee82f3f658e8794289c347eafee8330d9d47d7bb2ef7beed4b30f5bc199bd"
 }

@@ -27,7 +27,7 @@
     "label": "Aktuell und anpassbar",
     "description": "Fedora mit KDE Plasma: moderne Software und eine Oberfläche, die sich ohne viel Handarbeit gestalten lässt."
   },
-  "openSUSE Leap KDE": {
+  "openSUSE Leap": {
     "label": "Die bedächtige KDE-Basis",
     "description": "Auf Beständigkeit ausgelegt: KDE Plasma, Cockpit und Myrlyn zur Verwaltung sowie Btrfs-Snapshots für System-Rollbacks bei passender Einrichtung."
   },

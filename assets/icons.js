@@ -27,7 +27,7 @@ export const DISTRO_ICONS = {
     "",
     "#73a9e5"
   ],
-  "openSUSE Leap KDE": [
+  "openSUSE Leap": [
     "",
     "#75bf48"
   ],

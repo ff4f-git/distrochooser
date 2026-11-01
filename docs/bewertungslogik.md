@@ -6,7 +6,7 @@ Die jeweils veröffentlichten Werte werden automatisch aus der Distributionsverw
 
 # Veröffentlichte Bewertungen
 
-Version: `catalog-46a6e2df4e14c9631f3d5da17cdaac12e1b6e34197f00fc1f4caf059479eb8a4`
+Version: `catalog-e13ee82f3f658e8794289c347eafee8330d9d47d7bb2ef7beed4b30f5bc199bd`
 
 Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 
@@ -21,7 +21,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Debian | 5 | 5 | -5 | 5 | 10 | 10 |
 | Fedora Workstation | 5 | 5 | 5 | 10 | 15 | 10 |
 | Fedora KDE Plasma Desktop | 5 | 5 | 5 | 10 | 15 | 10 |
-| openSUSE Leap KDE | 5 | 10 | -5 | 5 | 5 | 5 |
+| openSUSE Leap | 5 | 10 | -5 | 5 | 5 | 5 |
 | openSUSE Tumbleweed KDE | 5 | 5 | 10 | 10 | 15 | 15 |
 | MX Linux Xfce | 10 | 10 | -5 | 0 | 5 | 5 |
 | Linux Lite | 10 | 10 | -5 | 0 | 0 | 0 |
@@ -46,7 +46,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Debian | 0 | 6 | 5 | 0 |
 | Fedora Workstation | 0 | 12 | 5 | 0 |
 | Fedora KDE Plasma Desktop | 0 | 11 | 5 | 0 |
-| openSUSE Leap KDE | 0 | 5 | 5 | 0 |
+| openSUSE Leap | 0 | 5 | 5 | 0 |
 | openSUSE Tumbleweed KDE | 0 | 9 | 5 | 0 |
 | MX Linux Xfce | 0 | 5 | 10 | 0 |
 | Linux Lite | 0 | 3 | 10 | 0 |
@@ -71,7 +71,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Debian | -10 | 0 | 0 | 5 | 0 |
 | Fedora Workstation | 10 | 0 | 0 | 5 | 0 |
 | Fedora KDE Plasma Desktop | 10 | 0 | 0 | 5 | 0 |
-| openSUSE Leap KDE | -10 | 0 | 0 | 5 | 0 |
+| openSUSE Leap | -10 | 0 | 0 | 5 | 0 |
 | openSUSE Tumbleweed KDE | 15 | 0 | 0 | 5 | 0 |
 | MX Linux Xfce | -5 | 0 | 5 | 10 | 0 |
 | Linux Lite | -10 | 0 | 5 | 10 | 0 |
@@ -96,7 +96,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Debian | 18 | 12 | 8 |
 | Fedora Workstation | 6 | 20 | 6 |
 | Fedora KDE Plasma Desktop | 6 | 20 | 8 |
-| openSUSE Leap KDE | 18 | 12 | 4 |
+| openSUSE Leap | 18 | 12 | 4 |
 | openSUSE Tumbleweed KDE | 2 | 19 | 15 |
 | MX Linux Xfce | 17 | 8 | 3 |
 | Linux Lite | 17 | 4 | -8 |
@@ -121,7 +121,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Debian | 0 | 10 | 0 |
 | Fedora Workstation | 0 | 10 | 0 |
 | Fedora KDE Plasma Desktop | 5 | 10 | 0 |
-| openSUSE Leap KDE | 5 | 10 | 0 |
+| openSUSE Leap | 5 | 10 | 0 |
 | openSUSE Tumbleweed KDE | 5 | 10 | 0 |
 | MX Linux Xfce | 5 | 0 | 0 |
 | Linux Lite | 10 | 0 | 0 |
@@ -146,7 +146,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Debian | 5 | 5 | 5 |
 | Fedora Workstation | 10 | 5 | 5 |
 | Fedora KDE Plasma Desktop | 10 | 10 | 10 |
-| openSUSE Leap KDE | 5 | 10 | 10 |
+| openSUSE Leap | 5 | 10 | 10 |
 | openSUSE Tumbleweed KDE | 5 | 10 | 10 |
 | MX Linux Xfce | 5 | 0 | 5 |
 | Linux Lite | 5 | 0 | 5 |
@@ -171,7 +171,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Debian | 0 | 0 | 0 |
 | Fedora Workstation | 0 | 0 | 0 |
 | Fedora KDE Plasma Desktop | 0 | 0 | 0 |
-| openSUSE Leap KDE | 10 | 5 | 0 |
+| openSUSE Leap | 10 | 5 | 0 |
 | openSUSE Tumbleweed KDE | 10 | 5 | 0 |
 | MX Linux Xfce | 0 | 5 | 0 |
 | Linux Lite | 0 | 0 | 0 |
@@ -196,7 +196,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Debian | -10 | 0 | 40 |
 | Fedora Workstation | 0 | 10 | 20 |
 | Fedora KDE Plasma Desktop | 0 | 10 | 20 |
-| openSUSE Leap KDE | 0 | 10 | 20 |
+| openSUSE Leap | 0 | 10 | 20 |
 | openSUSE Tumbleweed KDE | 0 | 10 | 20 |
 | MX Linux Xfce | 10 | 5 | 0 |
 | Linux Lite | 10 | 5 | 0 |
@@ -221,7 +221,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Debian | -10 | 0 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | Fedora Workstation | -10 | 0 | 5 | 0 | 10 | 0 | 5 | 5 | 0 | 0 |
 | Fedora KDE Plasma Desktop | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
-| openSUSE Leap KDE | -5 | 5 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
+| openSUSE Leap | -5 | 5 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
 | openSUSE Tumbleweed KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | MX Linux Xfce | 15 | 10 | -5 | 0 | -10 | 0 | 5 | 5 | 0 | 0 |
 | Linux Lite | 15 | 10 | -5 | 0 | -10 | 0 | 5 | 5 | 0 | 0 |
