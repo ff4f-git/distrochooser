@@ -1611,7 +1611,7 @@
     },
     {
       "id": "arch-linux-eigenbau",
-      "name": "Arch Linux (Eigenbau2)",
+      "name": "Arch Linux",
       "active": true,
       "url": "",
       "icon": [
@@ -1838,5 +1838,5 @@
       }
     }
   ],
-  "version": "catalog-3b94b9906b9f0a6afe4ff0959c956b071748249afe023daf05d468fc81e9506c"
+  "version": "catalog-3343e09a5703af17c5567e338925f7728070d78835e1bc24a6cc0ca5cee2e126"
 }

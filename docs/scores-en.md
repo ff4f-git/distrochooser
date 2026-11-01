@@ -1,6 +1,6 @@
 # Published scores
 
-Version: `catalog-3b94b9906b9f0a6afe4ff0959c956b071748249afe023daf05d468fc81e9506c`
+Version: `catalog-3343e09a5703af17c5567e338925f7728070d78835e1bc24a6cc0ca5cee2e126`
 
 Generated from distribution administration. Active distributions only.
 
@@ -27,7 +27,7 @@ Generated from distribution administration. Active distributions only.
 | Nobara KDE | 5 | 5 | 20 | 15 | 5 | 0 |
 | CachyOS KDE | 5 | 5 | 20 | 5 | 10 | 15 |
 | EndeavourOS KDE | 5 | 5 | 5 | 5 | 10 | 15 |
-| Arch Linux (Eigenbau2) | 0 | 5 | 5 | 5 | 15 | 15 |
+| Arch Linux | 0 | 5 | 5 | 5 | 15 | 15 |
 | NixOS KDE | 0 | 0 | -10 | -5 | 15 | 15 |
 | Omarchy | 5 | 0 | 5 | 0 | 15 | 15 |
 
@@ -54,7 +54,7 @@ Generated from distribution administration. Active distributions only.
 | Nobara KDE | 0 | 3 | 5 | 0 |
 | CachyOS KDE | 0 | 6 | 5 | 0 |
 | EndeavourOS KDE | 0 | 6 | 5 | 0 |
-| Arch Linux (Eigenbau2) | 0 | -11 | 0 | 0 |
+| Arch Linux | 0 | -11 | 0 | 0 |
 | NixOS KDE | 0 | -8 | 0 | 0 |
 | Omarchy | 0 | 11 | 0 | 0 |
 
@@ -81,7 +81,7 @@ Generated from distribution administration. Active distributions only.
 | Nobara KDE | 15 | 0 | 0 | 0 | 0 |
 | CachyOS KDE | 15 | 0 | 0 | 0 | 0 |
 | EndeavourOS KDE | 15 | 0 | 0 | 5 | 0 |
-| Arch Linux (Eigenbau2) | 15 | 0 | 0 | 5 | 0 |
+| Arch Linux | 15 | 0 | 0 | 5 | 0 |
 | NixOS KDE | 10 | 0 | 0 | 5 | 0 |
 | Omarchy | 15 | 0 | 0 | 0 | 0 |
 
@@ -108,7 +108,7 @@ Generated from distribution administration. Active distributions only.
 | Nobara KDE | 3 | 10 | 2 |
 | CachyOS KDE | -5 | 3 | 17 |
 | EndeavourOS KDE | -10 | -5 | 15 |
-| Arch Linux (Eigenbau2) | -20 | -20 | 10 |
+| Arch Linux | -20 | -20 | 10 |
 | NixOS KDE | -5 | -10 | 14 |
 | Omarchy | 0 | -8 | 20 |
 
@@ -135,7 +135,7 @@ Generated from distribution administration. Active distributions only.
 | Nobara KDE | 5 | 10 | 0 |
 | CachyOS KDE | 5 | 10 | 0 |
 | EndeavourOS KDE | 5 | 10 | 0 |
-| Arch Linux (Eigenbau2) | 0 | 0 | 0 |
+| Arch Linux | 0 | 0 | 0 |
 | NixOS KDE | 5 | 10 | 0 |
 | Omarchy | -5 | 15 | 0 |
 
@@ -162,7 +162,7 @@ Generated from distribution administration. Active distributions only.
 | Nobara KDE | 10 | 10 | 10 |
 | CachyOS KDE | 10 | 10 | 10 |
 | EndeavourOS KDE | 5 | 10 | 10 |
-| Arch Linux (Eigenbau2) | 0 | 0 | 15 |
+| Arch Linux | 0 | 0 | 15 |
 | NixOS KDE | 5 | 10 | 10 |
 | Omarchy | 15 | 15 | 15 |
 
@@ -189,7 +189,7 @@ Generated from distribution administration. Active distributions only.
 | Nobara KDE | 0 | 0 | 0 |
 | CachyOS KDE | 5 | 5 | 0 |
 | EndeavourOS KDE | 0 | 0 | 0 |
-| Arch Linux (Eigenbau2) | 0 | -5 | 0 |
+| Arch Linux | 0 | -5 | 0 |
 | NixOS KDE | 5 | 5 | 0 |
 | Omarchy | 0 | 5 | 0 |
 
@@ -216,7 +216,7 @@ Generated from distribution administration. Active distributions only.
 | Nobara KDE | 0 | 10 | 20 |
 | CachyOS KDE | 0 | 10 | 20 |
 | EndeavourOS KDE | 0 | 10 | 20 |
-| Arch Linux (Eigenbau2) | -10 | 0 | 40 |
+| Arch Linux | -10 | 0 | 40 |
 | NixOS KDE | -10 | 0 | 40 |
 | Omarchy | 0 | 10 | 20 |
 
@@ -243,6 +243,6 @@ Generated from distribution administration. Active distributions only.
 | Nobara KDE | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
 | CachyOS KDE | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
 | EndeavourOS KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
-| Arch Linux (Eigenbau2) | 5 | 5 | 0 | 0 | -5 | 0 | 5 | 5 | 0 | 0 |
+| Arch Linux | 5 | 5 | 0 | 0 | -5 | 0 | 5 | 5 | 0 | 0 |
 | NixOS KDE | -10 | 0 | 5 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
 | Omarchy | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |

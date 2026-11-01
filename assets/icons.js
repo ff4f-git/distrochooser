@@ -75,7 +75,7 @@ export const DISTRO_ICONS = {
     "",
     "#ab8cf0"
   ],
-  "Arch Linux (Eigenbau2)": [
+  "Arch Linux": [
     "",
     "#38b9e7"
   ],
