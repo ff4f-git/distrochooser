@@ -112,3 +112,10 @@ Use the three SQL reporting queries in the German section above in the **private
 ### Limitations and maintenance
 
 Only an explicit post-result click submits answers. The server validates input and recomputes the top three. Retries with the same submission ID are idempotent, but reloading may create another contribution. Counts measure **submissions, not unique visitors**. Origin checking and a global limit of 1,000 submissions/day are basic controls, not authentication or robust bot protection. Add server-side rate limiting or bot mitigation if needed. Daily deletion targets retention of no more than 90 days; provider logs and backups require separate review. Keep client and server scoring models in sync and redeploy after model changes. Run `node --test tests/statistics.test.mjs` locally, then perform live database and endpoint checks.
+
+
+## Version 2.2.0: Gleichstände / ties
+
+Vor dem aktualisierten Client zuerst `supabase/migrations/202611010001_tied_recommendations.sql` anwenden, danach `submit-statistics` mit der neuen Modellkopie und `validate.js` neu deployen. Das Feld `top3` enthält alle Empfehlungen der ersten drei Rangstufen; `first_places` enthält alle geteilten Erstplatzierungen. Die öffentliche Statistik zählt diese jeweils einmal, die Teilnahme weiterhin nur einmal. Historische Beiträge bleiben unverändert.
+
+Apply the new SQL migration and redeploy the Edge Function before publishing the updated client. The model version is 2.2.0. Live deployment is a separate operation; repository changes alone do not apply the migration.

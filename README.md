@@ -2,7 +2,7 @@
 
 **[Deutsch](#deutsch) · [English](#english)**
 
-A bilingual, browser-based Linux distribution recommender. Answer a few questions and discover three Linux distributions that may suit your hardware, experience, and preferences.
+A bilingual, browser-based Linux distribution recommender. Answer a few questions and discover Linux distributions in the first three score ranks that may suit your hardware, experience, and preferences.
 
 > **Live demo:** https://ff4f-git.github.io/distrochooser/
 
@@ -34,7 +34,7 @@ Linux bietet viele Möglichkeiten – aber welche Distribution passt zu deinem A
 
 ### Wie entstehen die Empfehlungen?
 
-Jede Antwort ist mit Gewichtungen für die berücksichtigten Distributionen verknüpft. Der Distrochooser addiert diese Werte und berücksichtigt bei Gaming gegebenenfalls die Grafikkarte. Anschließend werden die drei höchsten Ergebnisse angezeigt. Die Balken dienen der **relativen Darstellung**, nicht als objektive Qualitäts- oder Kompatibilitätsprozente.
+Jede Antwort ist mit Gewichtungen für die berücksichtigten Distributionen verknüpft. Der Distrochooser addiert diese Werte und berücksichtigt bei Gaming gegebenenfalls die Grafikkarte. Anschließend werden alle Ergebnisse der ersten drei Rangstufen angezeigt. Die Balken dienen der **relativen Darstellung**, nicht als objektive Qualitäts- oder Kompatibilitätsprozente.
 
 Die Gewichtungen sind bewusst redaktionelle Einschätzungen. Sie können sich mit der Entwicklung von Distributionen ändern und ersetzen keine eigene Recherche, insbesondere bei Treibern, Hardware-Kompatibilität und Spielen mit Anti-Cheat.
 
@@ -70,7 +70,7 @@ Linux offers a wealth of choices, but where should you start? **Linux Distrochoo
 
 ### How does it work?
 
-Each answer contributes weighted points to the included distributions. Gaming-related answers may also include a graphics-hardware adjustment. The three highest-scoring distributions are then shown. The visual bars express **relative scores**, not objective quality or compatibility percentages.
+Each answer contributes weighted points to the included distributions. Gaming-related answers may also include a graphics-hardware adjustment. All distributions in the first three distinct score ranks are then shown. The visual bars express **relative scores**, not objective quality or compatibility percentages.
 
 Weights reflect editorial judgment and may change as distributions evolve. Always verify hardware, driver, and game compatibility independently, especially for multiplayer games with anti-cheat systems.
 
@@ -106,3 +106,12 @@ docs/                       Concept and scoring notes / Dokumentation
 **Technology / Technik:** Vanilla HTML, CSS, and JavaScript modules. No framework or user account required for the questionnaire. Recommendations run entirely in the browser using local JSON assets loaded through HTTP(S). The optional statistics feature uses a separate Supabase database and Edge Function only when explicitly enabled and submitted by a visitor.
 
 **License / Lizenz:** No open-source license has been granted yet. All rights reserved until a license is explicitly added.
+
+
+<!-- Result ranking rule, 2026-11-01 -->
+### Ergebnisränge bei Punktgleichstand
+
+Die ersten drei unterschiedlichen Punktwerte bilden Platz 1, 2 und 3. Alle punktgleichen Distributionen teilen sich denselben Platz; kein Rang wird übersprungen. Beispiel: 90, 90, 80, 70 ergibt 1, 1, 2, 3. Deshalb können mehr als drei Empfehlungen erscheinen. Die Punkte selbst werden durch einen Gleichstand nicht verändert.
+
+
+Version 2.2.0: Notebook-Spalte I mit −15 bis +15 Punkten; drei Rangstufen einschließlich Gleichständen. Für die Statistik vor Veröffentlichung SQL-Migration `202611010001_tied_recommendations.sql` anwenden und die Edge Function neu deployen.
