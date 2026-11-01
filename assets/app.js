@@ -1,4 +1,5 @@
 import { DISTRO_ICONS } from './icons.js';
+import {loadPublishedCatalog} from './catalog-client.js';
 import { STATISTICS_ENDPOINT } from './statistics-config.js';
 import { createStatisticsClient } from './statistics.js';
 
@@ -11,7 +12,7 @@ const STAT_TEXT = {
 };
 
 function statisticsPayload() {
-  return { modelVersion:'2.2.0', language,
+  return { modelVersion:DATA.version, language,
     answers:answers.map(codes => [...codes].sort()),
     ram:answers[2][0] === 'O' ? ram : null,
     gpu:answers[0].includes('D') ? gpu : null,
@@ -34,17 +35,15 @@ function renderStatistics() {
 }
 
 // Keep answer codes and GPU bonus keys stable across languages.
-const [DATA, GPU_BONUS, DESCRIPTIONS_DE, DESCRIPTIONS_EN, QUESTIONS_EN] = await Promise.all([
-  'model.json', 'gpu-bonus.json', 'descriptions-de.json', 'descriptions-en.json', 'questions-en.json'
-].map(async file => {
-  const response = await fetch(new URL(file, import.meta.url));
-  if (!response.ok) throw new Error(`Cannot load ${file}: ${response.status}`);
-  return response.json();
-}));
+const published = await loadPublishedCatalog();
+const DATA=published.model, GPU_BONUS=published.bonuses;
+const DESCRIPTIONS_DE=published.descriptionsDe, DESCRIPTIONS_EN=published.descriptionsEn;
+const CATALOG_ICONS=published.icons, CATALOG_URLS=published.urls;
+const QUESTIONS_EN=await (await fetch(new URL('questions-en.json',import.meta.url))).json();
 
 const TEXT = {
   de: {
-    ready: 'System bereit. Finde dein Linux.', loaded: '✓ 22 Distributionen geladen',
+    ready: 'System bereit. Finde dein Linux.', loaded: '✓ '+DATA.distros.length+' Distributionen geladen',
     engine: '✓ Empfehlungssystem bereit', ramTitle: 'Zusatzfrage // Wie viel Arbeitsspeicher (RAM) hat dein Rechner?',
     ramHelp: 'Bei Rechnern ab 8 Jahren korrigiert der Arbeitsspeicher die altersbedingte Empfehlung.',
     gpuTitle: 'Zusatzfrage // Welche Grafikkarte nutzt du?', gpuHelp: 'Damit du die Empfehlung besser einordnen kannst.',
@@ -60,7 +59,7 @@ const TEXT = {
     graphics: 'Grafikkarte: ', gamingEnd: 'Achte besonders auf die Unterstützung deiner Spiele und Treiber.'
   },
   en: {
-    ready: 'System ready. Find your Linux.', loaded: '✓ 22 distributions loaded',
+    ready: 'System ready. Find your Linux.', loaded: '✓ '+DATA.distros.length+' distributions loaded',
     engine: '✓ Recommendation engine ready', ramTitle: 'Extra question // How much RAM does your computer have?',
     ramHelp: 'For computers aged 8 years or older, RAM helps refine the age-based recommendation.',
     gpuTitle: 'Extra question // Which graphics card do you use?', gpuHelp: 'This helps put the recommendation in context.',
@@ -242,272 +241,7 @@ function scoreDistributions() {
 }
 
 // Three editorially defined strengths per distribution; rankings still use the scoring matrix.
-const DISTRO_STRENGTHS = {
-  "Linux Mint Cinnamon": {
-    "de": [
-      "Einsteigerfreundlich",
-      "Vertraute Desktop-Oberfläche",
-      "Alltagstauglich"
-    ],
-    "en": [
-      "Beginner-friendly",
-      "Familiar desktop layout",
-      "Great for everyday tasks"
-    ]
-  },
-  "Linux Mint Xfce": {
-    "de": [
-      "Ressourcenschonend",
-      "Einsteigerfreundlich",
-      "Stabil und alltagstauglich"
-    ],
-    "en": [
-      "Light on resources",
-      "Beginner-friendly",
-      "Stable for everyday use"
-    ]
-  },
-  "Zorin OS Core": {
-    "de": [
-      "Einfacher Umstieg von Windows",
-      "Modernes, ansprechendes Design",
-      "Einsteigerfreundlich"
-    ],
-    "en": [
-      "Easy transition from Windows",
-      "Modern, polished design",
-      "Beginner-friendly"
-    ]
-  },
-  "Ubuntu GNOME": {
-    "de": [
-      "Große Community und umfangreiche Hilfe",
-      "Moderner GNOME-Desktop",
-      "Vielseitig einsetzbar"
-    ],
-    "en": [
-      "Large community and extensive help",
-      "Modern GNOME desktop",
-      "Versatile for work and development"
-    ]
-  },
-  "Kubuntu": {
-    "de": [
-      "Umfangreiche Anpassungsmöglichkeiten",
-      "Vertraute und moderne Desktop-Oberfläche",
-      "Große Softwareauswahl und Ubuntu-Basis"
-    ],
-    "en": [
-      "Extensive customization",
-      "Familiar yet modern desktop",
-      "Wide software selection and Ubuntu base"
-    ]
-  },
-  "Debian GNOME": {
-    "de": [
-      "Hohe Stabilität",
-      "Bewährte, langfristig gepflegte Pakete",
-      "Flexibel mit GNOME-Desktop"
-    ],
-    "en": [
-      "High stability",
-      "Well-tested, long-maintained packages",
-      "Flexible GNOME desktop"
-    ]
-  },
-  "Debian KDE": {
-    "de": [
-      "Hohe Stabilität",
-      "Bewährte, langfristig gepflegte Pakete",
-      "Anpassbarer KDE-Plasma-Desktop"
-    ],
-    "en": [
-      "High stability",
-      "Well-tested, long-maintained packages",
-      "Customizable KDE Plasma desktop"
-    ]
-  },
-  "Fedora Workstation": {
-    "de": [
-      "Aktuelle Technologien",
-      "Modernes GNOME-Erlebnis",
-      "Gut für Entwicklung und produktive Arbeit"
-    ],
-    "en": [
-      "Modern technologies",
-      "Up-to-date GNOME experience",
-      "Strong for development and productivity"
-    ]
-  },
-  "Fedora KDE": {
-    "de": [
-      "Aktuelle Technologien",
-      "Anpassbarer KDE-Plasma-Desktop",
-      "Gut für Entwicklung und produktive Arbeit"
-    ],
-    "en": [
-      "Modern technologies",
-      "Customizable KDE Plasma desktop",
-      "Strong for development and productivity"
-    ]
-  },
-  "openSUSE Leap KDE": {
-    "de": [
-      "Stabilitätsorientierte Veröffentlichungen",
-      "Werkzeuge zur Systemverwaltung",
-      "Anpassbarer KDE-Plasma-Desktop"
-    ],
-    "en": [
-      "Stability-focused releases",
-      "System administration tools",
-      "Customizable KDE Plasma desktop"
-    ]
-  },
-  "openSUSE Tumbleweed KDE": {
-    "de": [
-      "Aktuelle Software durch Rolling Release",
-      "Automatisierte Qualitätstests mit openQA",
-      "Snapshots und Wiederherstellung mit Snapper"
-    ],
-    "en": [
-      "Current software through rolling release",
-      "Automated testing with openQA",
-      "Snapshots and rollback with Snapper"
-    ]
-  },
-  "MX Linux Xfce": {
-    "de": [
-      "Ressourcenschonender Xfce-Desktop",
-      "Praktische MX-Werkzeuge",
-      "Stabile Debian-Basis"
-    ],
-    "en": [
-      "Lightweight Xfce desktop",
-      "Practical MX tools",
-      "Stable Debian base"
-    ]
-  },
-  "Linux Lite": {
-    "de": [
-      "Einfacher Einstieg",
-      "Vertraute Bedienung",
-      "Für ältere Hardware geeignet"
-    ],
-    "en": [
-      "Easy to get started",
-      "Familiar interface",
-      "Suitable for older hardware"
-    ]
-  },
-  "elementary OS": {
-    "de": [
-      "Konsistentes, elegantes Design",
-      "Einfacher, fokussierter Desktop",
-      "Integrierte Desktop-Anwendungen"
-    ],
-    "en": [
-      "Consistent, elegant design",
-      "Simple, focused desktop",
-      "Integrated desktop applications"
-    ]
-  },
-  "Pop!_OS COSMIC": {
-    "de": [
-      "Produktives Arbeiten mit COSMIC",
-      "Entwicklerfreundliche Arbeitsumgebung",
-      "Fokus auf Hardware- und Grafikunterstützung"
-    ],
-    "en": [
-      "Productivity with COSMIC",
-      "Developer-friendly workflow",
-      "Focus on hardware and graphics support"
-    ]
-  },
-  "Bazzite KDE": {
-    "de": [
-      "Gaming-orientierte Einrichtung",
-      "Steam- und Controller-Fokus",
-      "Rollback-freundliches Systemkonzept"
-    ],
-    "en": [
-      "Gaming-oriented setup",
-      "Steam and controller focus",
-      "Rollback-friendly system design"
-    ]
-  },
-  "Nobara KDE": {
-    "de": [
-      "Gaming- und Streaming-Fokus",
-      "Vorbereitete Multimedia-Werkzeuge",
-      "KDE-Plasma-Anpassbarkeit"
-    ],
-    "en": [
-      "Gaming and streaming focus",
-      "Preconfigured multimedia tools",
-      "KDE Plasma customization"
-    ]
-  },
-  "CachyOS KDE": {
-    "de": [
-      "Performance-orientierte Optimierungen",
-      "Aktuelle Arch-basierte Software",
-      "Anpassbarer KDE-Plasma-Desktop"
-    ],
-    "en": [
-      "Performance-focused optimizations",
-      "Current Arch-based software",
-      "Customizable KDE Plasma desktop"
-    ]
-  },
-  "EndeavourOS KDE": {
-    "de": [
-      "Arch-nahe Erfahrung mit Installer",
-      "Rolling Release und aktuelle Pakete",
-      "Große Konfigurationsfreiheit"
-    ],
-    "en": [
-      "Arch-like experience with installer",
-      "Rolling release and current packages",
-      "Extensive configuration freedom"
-    ]
-  },
-  "Arch Linux (Eigenbau)": {
-    "de": [
-      "Maximale Kontrolle",
-      "Aktuelle Software durch Rolling Release",
-      "Lernen und Experimentieren"
-    ],
-    "en": [
-      "Maximum control",
-      "Current software through rolling release",
-      "Learning and experimentation"
-    ]
-  },
-  "NixOS KDE": {
-    "de": [
-      "Deklarative Systemkonfiguration",
-      "Reproduzierbare Setups und Rollbacks",
-      "Große Anpassungsfreiheit"
-    ],
-    "en": [
-      "Declarative system configuration",
-      "Reproducible setups and rollbacks",
-      "Extensive customization"
-    ]
-  },
-  "Omarchy": {
-    "de": [
-      "Vorkonfigurierte Tiling-Arbeitsumgebung",
-      "Tastaturorientierter Workflow",
-      "Arch-Basis für erfahrene Nutzer"
-    ],
-    "en": [
-      "Preconfigured tiling environment",
-      "Keyboard-focused workflow",
-      "Arch base for experienced users"
-    ]
-  }
-};
+const DISTRO_STRENGTHS = published.strengths;
 
 function showResults(scroll = true) {
   resultsVisible = true;
@@ -534,7 +268,7 @@ function showResults(scroll = true) {
     const glyph = document.createElement('span');
     glyph.className = 'distro-icon';
     glyph.setAttribute('aria-hidden', 'true');
-    const icon = DISTRO_ICONS[distro.name] || ['\uf17c', '#23bfdc'];
+    const icon = CATALOG_ICONS[distro.name] || DISTRO_ICONS[distro.name] || ['\uf17c', '#23bfdc'];
     glyph.textContent = icon[0];
     glyph.style.color = icon[1];
     const title = document.createElement('h2');
@@ -567,6 +301,7 @@ function showResults(scroll = true) {
     }
     explanation.append(list);
     article.append(rank, head, label, meter, reason, explanation);
+    if(CATALOG_URLS[distro.name]){const link=document.createElement('a');link.href=CATALOG_URLS[distro.name];link.target='_blank';link.rel='noopener noreferrer';link.textContent=language==='de'?'Offizielle Webseite ↗':'Official website ↗';article.append(link);}
     $('resultList').append(article);
   });
 

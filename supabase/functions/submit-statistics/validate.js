@@ -1,5 +1,5 @@
-export function validateSubmission(input, model, bonuses) {
-  if (!input || input.modelVersion !== '2.2.0' || input.consentVersion !== '1'
+export function validateSubmission(input, model, bonuses, expectedVersion = '2.2.0') {
+  if (!input || input.modelVersion !== expectedVersion || input.consentVersion !== '1'
       || !['de', 'en'].includes(input.language)
       || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(input.submissionId)) throw new Error('invalid metadata');
   if (!Array.isArray(input.answers) || input.answers.length !== model.questions.length) throw new Error('invalid answers');

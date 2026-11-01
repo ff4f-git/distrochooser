@@ -1,6 +1,7 @@
 import model from './model.json' with { type: 'json' };
 import bonuses from './gpu-bonus.json' with { type: 'json' };
 import { validateSubmission } from './validate.js';
+import { runtimeFromCatalog } from './catalog.js';
 
 Deno.serve(async request => {
   const origin = Deno.env.get('STATISTICS_ORIGIN') || 'https://ff4f-git.github.io';
@@ -40,7 +41,18 @@ Deno.serve(async request => {
   try {
     const bytes = new Uint8Array(size); let offset = 0;
     for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.length; }
-    row = validateSubmission(JSON.parse(new TextDecoder().decode(bytes)), model, bonuses);
+    const input=JSON.parse(new TextDecoder().decode(bytes));
+    const version=input?.modelVersion;
+    if(version==='2.2.0'||(typeof version==='string'&&/^catalog-[0-9a-f]{64}$/.test(version))){
+      const url=Deno.env.get('SUPABASE_URL'),key=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+      if(!url||!key)return reply(503,{ok:false});
+      const published=await fetch(`${url}/rest/v1/distribution_releases?select=catalog&version=eq.${encodeURIComponent(version)}`,{headers:{apikey:key,Authorization:`Bearer ${key}`},signal:AbortSignal.timeout(8000)});
+      if(!published.ok)return reply(503,{ok:false});
+      const releases=await published.json();
+      if(!releases.length)return reply(400,{ok:false});
+      const runtime=runtimeFromCatalog(releases[0].catalog);
+      row=validateSubmission(input,runtime.model,runtime.bonuses,version);
+    }else throw Error('Unknown model version');
   } catch { return reply(400, {ok:false}); }
   const url = Deno.env.get('SUPABASE_URL');
   const key = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');

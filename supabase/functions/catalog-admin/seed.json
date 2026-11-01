@@ -1,0 +1,1842 @@
+{
+  "schemaVersion": 1,
+  "questions": [
+    {
+      "title": "Wofür möchtest du deinen Rechner hauptsächlich nutzen?",
+      "hint": "Du kannst mehrere Antworten auswählen.",
+      "multi": true,
+      "options": [
+        [
+          "Alltag & Internet",
+          "B"
+        ],
+        [
+          "Büro & produktives Arbeiten",
+          "C"
+        ],
+        [
+          "Gaming",
+          "D"
+        ],
+        [
+          "Kreative Arbeit",
+          "E"
+        ],
+        [
+          "Programmieren & Entwickeln",
+          "F"
+        ],
+        [
+          "Technik & Experimentieren",
+          "G"
+        ]
+      ]
+    },
+    {
+      "title": "Was für einen Rechner nutzt du?",
+      "options": [
+        [
+          "Desktop-PC",
+          "H"
+        ],
+        [
+          "Notebook / Laptop",
+          "I"
+        ],
+        [
+          "Mini-PC / Sonstiges",
+          "J"
+        ],
+        [
+          "Noch keinen – ich plane einen Kauf",
+          "K"
+        ]
+      ]
+    },
+    {
+      "title": "Wie alt ist dein Rechner ungefähr?",
+      "options": [
+        [
+          "Weniger als 1 Jahr",
+          "L"
+        ],
+        [
+          "1–3 Jahre",
+          "M"
+        ],
+        [
+          "4–7 Jahre",
+          "N"
+        ],
+        [
+          "8 Jahre oder älter",
+          "O"
+        ],
+        [
+          "Weiß ich nicht",
+          "P"
+        ]
+      ]
+    },
+    {
+      "title": "Wie möchtest du mit deinem Betriebssystem umgehen?",
+      "options": [
+        [
+          "Einschalten, nutzen, möglichst wenig kümmern",
+          "Q"
+        ],
+        [
+          "Linux kennenlernen und etwas ausprobieren",
+          "R"
+        ],
+        [
+          "Basteln, konfigurieren und experimentieren",
+          "S"
+        ]
+      ]
+    },
+    {
+      "title": "Wie wichtig ist dir das Aussehen?",
+      "options": [
+        [
+          "Klassisch und vertraut",
+          "T"
+        ],
+        [
+          "Modern und ansprechend",
+          "U"
+        ],
+        [
+          "Ist mir egal",
+          "V"
+        ]
+      ]
+    },
+    {
+      "title": "Wie möchtest du deine Desktop-Oberfläche anpassen?",
+      "options": [
+        [
+          "Wenig anpassen",
+          "W"
+        ],
+        [
+          "Etwas anpassen",
+          "X"
+        ],
+        [
+          "Alles anpassen",
+          "Y"
+        ]
+      ]
+    },
+    {
+      "title": "Wie wichtig ist dir, Änderungen einfach rückgängig zu machen?",
+      "options": [
+        [
+          "Sehr wichtig",
+          "Z"
+        ],
+        [
+          "Wäre praktisch",
+          "AA"
+        ],
+        [
+          "Nicht wichtig",
+          "AB"
+        ]
+      ]
+    },
+    {
+      "title": "Wie viel Erfahrung hast du bereits mit Linux?",
+      "options": [
+        [
+          "Anfänger",
+          "AC"
+        ],
+        [
+          "Fortgeschritten",
+          "AD"
+        ],
+        [
+          "Profi",
+          "AE"
+        ]
+      ]
+    }
+  ],
+  "distributions": [
+    {
+      "id": "linux-mint-cinnamon",
+      "name": "Linux Mint Cinnamon",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#87cf72"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Der unkomplizierte Allrounder",
+          "description": "Vertraute Bedienung, bewährte Werkzeuge und wenig Aufwand im Alltag. Cinnamon bietet einen klassischen Desktop."
+        },
+        "en": {
+          "label": "The easy all-rounder",
+          "description": "Familiar controls, proven tools, and little day-to-day maintenance. Cinnamon offers a traditional desktop."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Einsteigerfreundlich",
+          "Vertraute Desktop-Oberfläche",
+          "Alltagstauglich"
+        ],
+        "en": [
+          "Beginner-friendly",
+          "Familiar desktop layout",
+          "Great for everyday tasks"
+        ]
+      },
+      "points": {
+        "B": 10,
+        "C": 10,
+        "D": 5,
+        "E": 5,
+        "F": 5,
+        "G": 0,
+        "H": 0,
+        "I": 9,
+        "J": 5,
+        "K": 0,
+        "L": -5,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": 20,
+        "R": 7,
+        "S": -8,
+        "T": 10,
+        "U": 5,
+        "V": 0,
+        "W": 10,
+        "X": 10,
+        "Y": 5,
+        "Z": 5,
+        "AA": 5,
+        "AB": 0,
+        "AC": 10,
+        "AD": 5,
+        "AE": 0,
+        "AG": -5,
+        "AH": 5,
+        "AI": 0,
+        "AJ": 0,
+        "AK": -5
+      },
+      "gpu": {
+        "Nvidia GeForce": 5,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 5,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "linux-mint-xfce",
+      "name": "Linux Mint Xfce",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#87cf72"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Schlank und alltagstauglich",
+          "description": "Die ressourcenschonendere Mint-Variante: klassischer Desktop, einfache Bedienung und gut für ältere Rechner."
+        },
+        "en": {
+          "label": "Lightweight and practical",
+          "description": "The more resource-friendly Mint edition: a classic desktop, easy to use, and suitable for older computers."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Ressourcenschonend",
+          "Einsteigerfreundlich",
+          "Stabil und alltagstauglich"
+        ],
+        "en": [
+          "Light on resources",
+          "Beginner-friendly",
+          "Stable for everyday use"
+        ]
+      },
+      "points": {
+        "B": 10,
+        "C": 10,
+        "D": 0,
+        "E": 5,
+        "F": 5,
+        "G": 0,
+        "H": 0,
+        "I": 8,
+        "J": 10,
+        "K": 0,
+        "L": -5,
+        "M": 0,
+        "N": 5,
+        "O": 10,
+        "P": 0,
+        "Q": 20,
+        "R": 7,
+        "S": -6,
+        "T": 10,
+        "U": 0,
+        "V": 0,
+        "W": 5,
+        "X": 0,
+        "Y": 5,
+        "Z": 5,
+        "AA": 5,
+        "AB": 0,
+        "AC": 10,
+        "AD": 5,
+        "AE": 0,
+        "AG": 15,
+        "AH": 10,
+        "AI": -5,
+        "AJ": 0,
+        "AK": -10
+      },
+      "gpu": {
+        "Nvidia GeForce": 5,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 5,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "zorin-os-core",
+      "name": "Zorin OS Core",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#55a8ff"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Der elegante Umstieg",
+          "description": "Einsteigerfreundliches Ubuntu-Derivat mit aufgeräumter, vertraut wirkender Oberfläche und Fokus auf einfachen Umstieg."
+        },
+        "en": {
+          "label": "An elegant transition",
+          "description": "A beginner-friendly Ubuntu derivative with a polished, familiar interface and an emphasis on switching easily."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Einfacher Umstieg von Windows",
+          "Modernes, ansprechendes Design",
+          "Einsteigerfreundlich"
+        ],
+        "en": [
+          "Easy transition from Windows",
+          "Modern, polished design",
+          "Beginner-friendly"
+        ]
+      },
+      "points": {
+        "B": 10,
+        "C": 10,
+        "D": 5,
+        "E": 5,
+        "F": 5,
+        "G": 0,
+        "H": 0,
+        "I": 9,
+        "J": 5,
+        "K": 0,
+        "L": -5,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": 18,
+        "R": 5,
+        "S": -10,
+        "T": 10,
+        "U": 10,
+        "V": 0,
+        "W": 10,
+        "X": 5,
+        "Y": 5,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 10,
+        "AD": 5,
+        "AE": 0,
+        "AG": -10,
+        "AH": 0,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 5
+      },
+      "gpu": {
+        "Nvidia GeForce": 5,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 5,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "ubuntu-gnome",
+      "name": "Ubuntu GNOME",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#e95420"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Der große Allrounder",
+          "description": "Weit verbreitet, gut dokumentiert und mit großem Softwareangebot. GNOME setzt auf einen klaren, eigenständigen Workflow."
+        },
+        "en": {
+          "label": "The popular all-rounder",
+          "description": "Widely used, well documented, and supported by a large software ecosystem. GNOME offers a distinct, streamlined workflow."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Große Community und umfangreiche Hilfe",
+          "Moderner GNOME-Desktop",
+          "Vielseitig einsetzbar"
+        ],
+        "en": [
+          "Large community and extensive help",
+          "Modern GNOME desktop",
+          "Versatile for work and development"
+        ]
+      },
+      "points": {
+        "B": 10,
+        "C": 10,
+        "D": 5,
+        "E": 10,
+        "F": 10,
+        "G": 5,
+        "H": 0,
+        "I": 12,
+        "J": 5,
+        "K": 0,
+        "L": 5,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": 17,
+        "R": 18,
+        "S": 2,
+        "T": 0,
+        "U": 10,
+        "V": 0,
+        "W": 10,
+        "X": 5,
+        "Y": 5,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 10,
+        "AD": 5,
+        "AE": 0,
+        "AG": -10,
+        "AH": 0,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 10
+      },
+      "gpu": {
+        "Nvidia GeForce": 5,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 5,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "kubuntu",
+      "name": "Kubuntu",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#69b8ee"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Ubuntu mit KDE-Freiheit",
+          "description": "Die Ubuntu-Basis kombiniert mit Plasma: vertraute Desktop-Bedienung und viele Einstellungen direkt an Bord."
+        },
+        "en": {
+          "label": "Ubuntu with KDE flexibility",
+          "description": "An Ubuntu foundation with Plasma: familiar desktop interaction and extensive settings out of the box."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Umfangreiche Anpassungsmöglichkeiten",
+          "Vertraute und moderne Desktop-Oberfläche",
+          "Große Softwareauswahl und Ubuntu-Basis"
+        ],
+        "en": [
+          "Extensive customization",
+          "Familiar yet modern desktop",
+          "Wide software selection and Ubuntu base"
+        ]
+      },
+      "points": {
+        "B": 10,
+        "C": 10,
+        "D": 5,
+        "E": 10,
+        "F": 10,
+        "G": 5,
+        "H": 0,
+        "I": 11,
+        "J": 5,
+        "K": 0,
+        "L": 5,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": 17,
+        "R": 18,
+        "S": 4,
+        "T": 5,
+        "U": 10,
+        "V": 0,
+        "W": 10,
+        "X": 10,
+        "Y": 10,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 10,
+        "AD": 5,
+        "AE": 0,
+        "AG": -5,
+        "AH": 5,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 5
+      },
+      "gpu": {
+        "Nvidia GeForce": 5,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 5,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "debian-gnome",
+      "name": "Debian GNOME",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#d70a53"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Der ruhige Klassiker",
+          "description": "Konservative Paketpflege und eine solide Basis für alle, die Beständigkeit höher schätzen als neueste Versionen."
+        },
+        "en": {
+          "label": "The steady classic",
+          "description": "Conservative package maintenance and a solid foundation for people who value consistency over the newest releases."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Hohe Stabilität",
+          "Bewährte, langfristig gepflegte Pakete",
+          "Flexibel mit GNOME-Desktop"
+        ],
+        "en": [
+          "High stability",
+          "Well-tested, long-maintained packages",
+          "Flexible GNOME desktop"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 5,
+        "D": -5,
+        "E": 5,
+        "F": 10,
+        "G": 10,
+        "H": 0,
+        "I": 6,
+        "J": 5,
+        "K": 0,
+        "L": -10,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": 18,
+        "R": 12,
+        "S": 8,
+        "T": 0,
+        "U": 10,
+        "V": 0,
+        "W": 5,
+        "X": 5,
+        "Y": 5,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": -10,
+        "AD": 0,
+        "AE": 40,
+        "AG": -10,
+        "AH": 0,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 5
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "debian-kde",
+      "name": "Debian KDE",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#d70a53"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Beständigkeit trifft Flexibilität",
+          "description": "Debians ruhige Basis mit dem vielseitigen Plasma-Desktop – stabil im Konzept, anpassbar in der Oberfläche."
+        },
+        "en": {
+          "label": "Stability meets flexibility",
+          "description": "Debian’s steady foundation paired with the versatile Plasma desktop: conservative at its core, customizable on the surface."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Hohe Stabilität",
+          "Bewährte, langfristig gepflegte Pakete",
+          "Anpassbarer KDE-Plasma-Desktop"
+        ],
+        "en": [
+          "High stability",
+          "Well-tested, long-maintained packages",
+          "Customizable KDE Plasma desktop"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 5,
+        "D": -5,
+        "E": 5,
+        "F": 10,
+        "G": 10,
+        "H": 0,
+        "I": 5,
+        "J": 5,
+        "K": 0,
+        "L": -10,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": 18,
+        "R": 12,
+        "S": 10,
+        "T": 5,
+        "U": 10,
+        "V": 0,
+        "W": 5,
+        "X": 10,
+        "Y": 10,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": -10,
+        "AD": 0,
+        "AE": 40,
+        "AG": -5,
+        "AH": 5,
+        "AI": 0,
+        "AJ": 0,
+        "AK": 0
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "fedora-workstation",
+      "name": "Fedora Workstation",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#73a9e5"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Modernes Linux mit GNOME",
+          "description": "Aktuelle Technologien, ein klarer GNOME-Desktop und ein vergleichsweise zügiger Veröffentlichungsrhythmus."
+        },
+        "en": {
+          "label": "Modern Linux with GNOME",
+          "description": "Up-to-date technologies, a focused GNOME desktop, and a relatively fast release cycle."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Aktuelle Technologien",
+          "Modernes GNOME-Erlebnis",
+          "Gut für Entwicklung und produktive Arbeit"
+        ],
+        "en": [
+          "Modern technologies",
+          "Up-to-date GNOME experience",
+          "Strong for development and productivity"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 5,
+        "D": 5,
+        "E": 10,
+        "F": 15,
+        "G": 10,
+        "H": 0,
+        "I": 12,
+        "J": 5,
+        "K": 0,
+        "L": 10,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": 6,
+        "R": 20,
+        "S": 6,
+        "T": 0,
+        "U": 10,
+        "V": 0,
+        "W": 10,
+        "X": 5,
+        "Y": 5,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 0,
+        "AD": 10,
+        "AE": 20,
+        "AG": -10,
+        "AH": 0,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 10
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "fedora-kde",
+      "name": "Fedora KDE",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#73a9e5"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Aktuell und anpassbar",
+          "description": "Fedora mit KDE Plasma: moderne Software und eine Oberfläche, die sich ohne viel Handarbeit gestalten lässt."
+        },
+        "en": {
+          "label": "Current and customizable",
+          "description": "Fedora with KDE Plasma: modern software and an interface you can personalize without much manual work."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Aktuelle Technologien",
+          "Anpassbarer KDE-Plasma-Desktop",
+          "Gut für Entwicklung und produktive Arbeit"
+        ],
+        "en": [
+          "Modern technologies",
+          "Customizable KDE Plasma desktop",
+          "Strong for development and productivity"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 5,
+        "D": 5,
+        "E": 10,
+        "F": 15,
+        "G": 10,
+        "H": 0,
+        "I": 11,
+        "J": 5,
+        "K": 0,
+        "L": 10,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": 6,
+        "R": 20,
+        "S": 8,
+        "T": 5,
+        "U": 10,
+        "V": 0,
+        "W": 10,
+        "X": 10,
+        "Y": 10,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 0,
+        "AD": 10,
+        "AE": 20,
+        "AG": -5,
+        "AH": 5,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 5
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "opensuse-leap-kde",
+      "name": "openSUSE Leap KDE",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#75bf48"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Die bedächtige KDE-Basis",
+          "description": "Auf Beständigkeit ausgelegt: KDE Plasma, Cockpit und Myrlyn zur Verwaltung sowie Btrfs-Snapshots für System-Rollbacks bei passender Einrichtung."
+        },
+        "en": {
+          "label": "A measured KDE foundation",
+          "description": "Focused on consistency, with KDE Plasma, management tools, and Btrfs snapshots for rollbacks when configured appropriately."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Stabilitätsorientierte Veröffentlichungen",
+          "Werkzeuge zur Systemverwaltung",
+          "Anpassbarer KDE-Plasma-Desktop"
+        ],
+        "en": [
+          "Stability-focused releases",
+          "System administration tools",
+          "Customizable KDE Plasma desktop"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 10,
+        "D": -5,
+        "E": 5,
+        "F": 5,
+        "G": 5,
+        "H": 0,
+        "I": 5,
+        "J": 5,
+        "K": 0,
+        "L": -10,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": 18,
+        "R": 12,
+        "S": 4,
+        "T": 5,
+        "U": 10,
+        "V": 0,
+        "W": 5,
+        "X": 10,
+        "Y": 10,
+        "Z": 10,
+        "AA": 5,
+        "AB": 0,
+        "AC": 0,
+        "AD": 10,
+        "AE": 20,
+        "AG": -5,
+        "AH": 5,
+        "AI": 0,
+        "AJ": 0,
+        "AK": 0
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "opensuse-tumbleweed-kde",
+      "name": "openSUSE Tumbleweed KDE",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#75bf48"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Rolling Release mit Sicherheitsnetz",
+          "description": "Sehr aktuelle Pakete, KDE Plasma und standardmäßig gut integrierte Btrfs/Snapper-Rollbacks bei typischer Installation."
+        },
+        "en": {
+          "label": "Rolling release with a safety net",
+          "description": "Very recent packages, KDE Plasma, and well-integrated Btrfs/Snapper rollback support in a typical installation."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Aktuelle Software durch Rolling Release",
+          "Automatisierte Qualitätstests mit openQA",
+          "Snapshots und Wiederherstellung mit Snapper"
+        ],
+        "en": [
+          "Current software through rolling release",
+          "Automated testing with openQA",
+          "Snapshots and rollback with Snapper"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 5,
+        "D": 10,
+        "E": 10,
+        "F": 15,
+        "G": 15,
+        "H": 0,
+        "I": 9,
+        "J": 5,
+        "K": 0,
+        "L": 15,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": 2,
+        "R": 19,
+        "S": 15,
+        "T": 5,
+        "U": 10,
+        "V": 0,
+        "W": 5,
+        "X": 10,
+        "Y": 10,
+        "Z": 10,
+        "AA": 5,
+        "AB": 0,
+        "AC": 0,
+        "AD": 10,
+        "AE": 20,
+        "AG": -5,
+        "AH": 5,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 5
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "mx-linux-xfce",
+      "name": "MX Linux Xfce",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#b4c4d0"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Praktisch und ressourcenschonend",
+          "description": "Debian-basierte Distribution mit leichtem Xfce-Desktop und eigenen Werkzeugen für Verwaltung und Einrichtung."
+        },
+        "en": {
+          "label": "Practical and resource-friendly",
+          "description": "A Debian-based distribution with a lightweight Xfce desktop and its own setup and management utilities."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Ressourcenschonender Xfce-Desktop",
+          "Praktische MX-Werkzeuge",
+          "Stabile Debian-Basis"
+        ],
+        "en": [
+          "Lightweight Xfce desktop",
+          "Practical MX tools",
+          "Stable Debian base"
+        ]
+      },
+      "points": {
+        "B": 10,
+        "C": 10,
+        "D": -5,
+        "E": 0,
+        "F": 5,
+        "G": 5,
+        "H": 0,
+        "I": 5,
+        "J": 10,
+        "K": 0,
+        "L": -5,
+        "M": 0,
+        "N": 5,
+        "O": 10,
+        "P": 0,
+        "Q": 17,
+        "R": 8,
+        "S": 3,
+        "T": 5,
+        "U": 0,
+        "V": 0,
+        "W": 5,
+        "X": 0,
+        "Y": 5,
+        "Z": 0,
+        "AA": 5,
+        "AB": 0,
+        "AC": 10,
+        "AD": 5,
+        "AE": 0,
+        "AG": 15,
+        "AH": 10,
+        "AI": -5,
+        "AJ": 0,
+        "AK": -10
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "linux-lite",
+      "name": "Linux Lite",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#9ec4e4"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Einfach auf älteren PCs",
+          "description": "Ubuntu-basierte, leichtgewichtige Desktop-Distribution mit vertrauter Bedienung und Fokus auf den unkomplizierten Einstieg."
+        },
+        "en": {
+          "label": "Simple on older PCs",
+          "description": "A lightweight Ubuntu-based desktop distribution with familiar controls and an emphasis on an easy start."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Einfacher Einstieg",
+          "Vertraute Bedienung",
+          "Für ältere Hardware geeignet"
+        ],
+        "en": [
+          "Easy to get started",
+          "Familiar interface",
+          "Suitable for older hardware"
+        ]
+      },
+      "points": {
+        "B": 10,
+        "C": 10,
+        "D": -5,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0,
+        "I": 3,
+        "J": 10,
+        "K": 0,
+        "L": -10,
+        "M": 0,
+        "N": 5,
+        "O": 10,
+        "P": 0,
+        "Q": 17,
+        "R": 4,
+        "S": -8,
+        "T": 10,
+        "U": 0,
+        "V": 0,
+        "W": 5,
+        "X": 0,
+        "Y": 5,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 10,
+        "AD": 5,
+        "AE": 0,
+        "AG": 15,
+        "AH": 10,
+        "AI": -5,
+        "AJ": 0,
+        "AK": -10
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "elementary-os",
+      "name": "elementary OS",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#a4b7c9"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Design aus einem Guss",
+          "description": "Konsequente, minimalistische Desktop-Gestaltung mit eigener Oberfläche und bewusst begrenzten Anpassungsmöglichkeiten."
+        },
+        "en": {
+          "label": "Consistent by design",
+          "description": "A carefully designed minimalist desktop with its own interface and intentionally limited customization."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Konsistentes, elegantes Design",
+          "Einfacher, fokussierter Desktop",
+          "Integrierte Desktop-Anwendungen"
+        ],
+        "en": [
+          "Consistent, elegant design",
+          "Simple, focused desktop",
+          "Integrated desktop applications"
+        ]
+      },
+      "points": {
+        "B": 10,
+        "C": 5,
+        "D": -5,
+        "E": 5,
+        "F": 5,
+        "G": 0,
+        "H": 0,
+        "I": 11,
+        "J": 0,
+        "K": 0,
+        "L": -5,
+        "M": 0,
+        "N": 0,
+        "O": 0,
+        "P": 0,
+        "Q": 13,
+        "R": 6,
+        "S": -12,
+        "T": 0,
+        "U": 10,
+        "V": 0,
+        "W": 10,
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 10,
+        "AD": 5,
+        "AE": 0,
+        "AG": -5,
+        "AH": 0,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 5
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "pop-os-cosmic",
+      "name": "Pop!_OS COSMIC",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#55c6ce"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Produktivität mit COSMIC",
+          "description": "Eigenständiger, moderner COSMIC-Desktop mit durchdachten Fenster-Workflows und vielen Einstellungen direkt im System."
+        },
+        "en": {
+          "label": "Productivity with COSMIC",
+          "description": "An independent, modern COSMIC desktop with thoughtful window workflows and many built-in options."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Produktives Arbeiten mit COSMIC",
+          "Entwicklerfreundliche Arbeitsumgebung",
+          "Fokus auf Hardware- und Grafikunterstützung"
+        ],
+        "en": [
+          "Productivity with COSMIC",
+          "Developer-friendly workflow",
+          "Focus on hardware and graphics support"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 5,
+        "D": 10,
+        "E": 10,
+        "F": 10,
+        "G": 5,
+        "H": 0,
+        "I": 15,
+        "J": 0,
+        "K": 0,
+        "L": 10,
+        "M": 0,
+        "N": 0,
+        "O": 0,
+        "P": 0,
+        "Q": 9,
+        "R": 14,
+        "S": -2,
+        "T": 0,
+        "U": 15,
+        "V": 0,
+        "W": 10,
+        "X": 15,
+        "Y": 10,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 0,
+        "AD": 10,
+        "AE": 20,
+        "AG": -10,
+        "AH": -5,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 10
+      },
+      "gpu": {
+        "Nvidia GeForce": 5,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 5,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "bazzite-kde",
+      "name": "Bazzite KDE",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#b88ef0"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Gaming zuerst, Pflege danach",
+          "description": "Gaming-orientiertes, imagebasiertes Fedora-System mit Steam-Fokus, KDE und einfacher Rückkehr zu früheren Systemständen."
+        },
+        "en": {
+          "label": "Gaming first, maintenance second",
+          "description": "A gaming-focused, image-based Fedora system with Steam integration, KDE, and straightforward system rollback."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Gaming-orientierte Einrichtung",
+          "Steam- und Controller-Fokus",
+          "Rollback-freundliches Systemkonzept"
+        ],
+        "en": [
+          "Gaming-oriented setup",
+          "Steam and controller focus",
+          "Rollback-friendly system design"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 5,
+        "D": 20,
+        "E": 0,
+        "F": 5,
+        "G": -5,
+        "H": 0,
+        "I": 9,
+        "J": 0,
+        "K": 0,
+        "L": 10,
+        "M": 0,
+        "N": 0,
+        "O": -5,
+        "P": 0,
+        "Q": 15,
+        "R": -5,
+        "S": -20,
+        "T": 5,
+        "U": 10,
+        "V": 0,
+        "W": 10,
+        "X": 10,
+        "Y": 10,
+        "Z": 10,
+        "AA": 5,
+        "AB": 0,
+        "AC": 10,
+        "AD": 5,
+        "AE": 0,
+        "AG": -15,
+        "AH": -5,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 10
+      },
+      "gpu": {
+        "Nvidia GeForce": 5,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "nobara-kde",
+      "name": "Nobara KDE",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#a1c2e9"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Fedora für Spieler optimiert",
+          "description": "Gaming- und Multimedia-orientierte Fedora-Abwandlung mit zusätzlichen Anpassungen; stärker spezialisiertes Community-Projekt."
+        },
+        "en": {
+          "label": "Fedora tuned for gamers",
+          "description": "A Fedora derivative customized for gaming and multimedia, maintained as a more specialized community project."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Gaming- und Streaming-Fokus",
+          "Vorbereitete Multimedia-Werkzeuge",
+          "KDE-Plasma-Anpassbarkeit"
+        ],
+        "en": [
+          "Gaming and streaming focus",
+          "Preconfigured multimedia tools",
+          "KDE Plasma customization"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 5,
+        "D": 20,
+        "E": 15,
+        "F": 5,
+        "G": 0,
+        "H": 0,
+        "I": 3,
+        "J": 5,
+        "K": 0,
+        "L": 15,
+        "M": 0,
+        "N": 0,
+        "O": 0,
+        "P": 0,
+        "Q": 3,
+        "R": 10,
+        "S": 2,
+        "T": 5,
+        "U": 10,
+        "V": 0,
+        "W": 10,
+        "X": 10,
+        "Y": 10,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 0,
+        "AD": 10,
+        "AE": 20,
+        "AG": -10,
+        "AH": -5,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 10
+      },
+      "gpu": {
+        "Nvidia GeForce": 5,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 5,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "cachyos-kde",
+      "name": "CachyOS KDE",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#70c4e8"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Performance für Enthusiasten",
+          "description": "Arch-basierte Distribution mit Leistungsoptimierungen und aktuellen Paketen – attraktiv für Nutzer, die ein aktives System mögen."
+        },
+        "en": {
+          "label": "Performance for enthusiasts",
+          "description": "An Arch-based distribution with performance tuning and fresh packages, aimed at people who enjoy actively managing their system."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Performance-orientierte Optimierungen",
+          "Aktuelle Arch-basierte Software",
+          "Anpassbarer KDE-Plasma-Desktop"
+        ],
+        "en": [
+          "Performance-focused optimizations",
+          "Current Arch-based software",
+          "Customizable KDE Plasma desktop"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 5,
+        "D": 20,
+        "E": 5,
+        "F": 10,
+        "G": 15,
+        "H": 0,
+        "I": 6,
+        "J": 5,
+        "K": 0,
+        "L": 15,
+        "M": 0,
+        "N": 0,
+        "O": 0,
+        "P": 0,
+        "Q": -5,
+        "R": 3,
+        "S": 17,
+        "T": 5,
+        "U": 10,
+        "V": 0,
+        "W": 10,
+        "X": 10,
+        "Y": 10,
+        "Z": 5,
+        "AA": 5,
+        "AB": 0,
+        "AC": 0,
+        "AD": 10,
+        "AE": 20,
+        "AG": -10,
+        "AH": 0,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 10
+      },
+      "gpu": {
+        "Nvidia GeForce": 5,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "endeavouros-kde",
+      "name": "EndeavourOS KDE",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#ab8cf0"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Arch mit Starthilfe",
+          "description": "Nah an Arch Linux, aber mit komfortablerem Einstieg. Rolling Release und Systempflege bleiben Teil des Konzepts."
+        },
+        "en": {
+          "label": "Arch with a head start",
+          "description": "Close to Arch Linux, but easier to get started with. Rolling releases and ongoing maintenance remain part of the experience."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Arch-nahe Erfahrung mit Installer",
+          "Rolling Release und aktuelle Pakete",
+          "Große Konfigurationsfreiheit"
+        ],
+        "en": [
+          "Arch-like experience with installer",
+          "Rolling release and current packages",
+          "Extensive configuration freedom"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 5,
+        "D": 5,
+        "E": 5,
+        "F": 10,
+        "G": 15,
+        "H": 0,
+        "I": 6,
+        "J": 5,
+        "K": 0,
+        "L": 15,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": -10,
+        "R": -5,
+        "S": 15,
+        "T": 5,
+        "U": 10,
+        "V": 0,
+        "W": 5,
+        "X": 10,
+        "Y": 10,
+        "Z": 0,
+        "AA": 0,
+        "AB": 0,
+        "AC": 0,
+        "AD": 10,
+        "AE": 20,
+        "AG": -5,
+        "AH": 5,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 5
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "arch-linux-eigenbau",
+      "name": "Arch Linux (Eigenbau)",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#38b9e7"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Du baust dein Linux selbst",
+          "description": "Minimaler Ausgangspunkt, maximale Kontrolle. Installation, Desktop und laufende Pflege liegen weitgehend in deiner Hand."
+        },
+        "en": {
+          "label": "Build your own Linux",
+          "description": "A minimal starting point with maximum control. Installation, desktop selection, and maintenance are largely up to you."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Maximale Kontrolle",
+          "Aktuelle Software durch Rolling Release",
+          "Lernen und Experimentieren"
+        ],
+        "en": [
+          "Maximum control",
+          "Current software through rolling release",
+          "Learning and experimentation"
+        ]
+      },
+      "points": {
+        "B": 0,
+        "C": 5,
+        "D": 5,
+        "E": 5,
+        "F": 15,
+        "G": 15,
+        "H": 0,
+        "I": -11,
+        "J": 0,
+        "K": 0,
+        "L": 15,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": -20,
+        "R": -20,
+        "S": 10,
+        "T": 0,
+        "U": 0,
+        "V": 0,
+        "W": 0,
+        "X": 0,
+        "Y": 15,
+        "Z": 0,
+        "AA": -5,
+        "AB": 0,
+        "AC": -10,
+        "AD": 0,
+        "AE": 40,
+        "AG": 5,
+        "AH": 5,
+        "AI": 0,
+        "AJ": 0,
+        "AK": -5
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "nixos-kde",
+      "name": "NixOS KDE",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#81b7e8"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Das System als Konfiguration",
+          "description": "Deklarative Systemkonfiguration und reproduzierbare Setups mit mächtigen Rollback-Konzepten – dafür eine deutliche Lernkurve."
+        },
+        "en": {
+          "label": "Your system as configuration",
+          "description": "Declarative system configuration and reproducible setups with powerful rollback concepts, but a substantial learning curve."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Deklarative Systemkonfiguration",
+          "Reproduzierbare Setups und Rollbacks",
+          "Große Anpassungsfreiheit"
+        ],
+        "en": [
+          "Declarative system configuration",
+          "Reproducible setups and rollbacks",
+          "Extensive customization"
+        ]
+      },
+      "points": {
+        "B": 0,
+        "C": 0,
+        "D": -10,
+        "E": -5,
+        "F": 15,
+        "G": 15,
+        "H": 0,
+        "I": -8,
+        "J": 0,
+        "K": 0,
+        "L": 10,
+        "M": 0,
+        "N": 0,
+        "O": 5,
+        "P": 0,
+        "Q": -5,
+        "R": -10,
+        "S": 14,
+        "T": 5,
+        "U": 10,
+        "V": 0,
+        "W": 5,
+        "X": 10,
+        "Y": 10,
+        "Z": 5,
+        "AA": 5,
+        "AB": 0,
+        "AC": -10,
+        "AD": 0,
+        "AE": 40,
+        "AG": -10,
+        "AH": 0,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 5
+      },
+      "gpu": {
+        "Nvidia GeForce": 0,
+        "AMD Radeon": 0,
+        "Intel Grafik": 0,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    },
+    {
+      "id": "omarchy",
+      "name": "Omarchy",
+      "active": true,
+      "url": "",
+      "icon": [
+        "",
+        "#d3b3ff"
+      ],
+      "descriptions": {
+        "de": {
+          "label": "Meinungsstarker Tiling-Workflow",
+          "description": "Vorkonfigurierte Arch-/Hyprland-Umgebung mit tastaturorientiertem Workflow und klaren Designentscheidungen; kein klassischer Desktop."
+        },
+        "en": {
+          "label": "An opinionated tiling workflow",
+          "description": "A preconfigured Arch/Hyprland environment with keyboard-oriented workflows and deliberate design choices, not a conventional desktop."
+        }
+      },
+      "strengths": {
+        "de": [
+          "Vorkonfigurierte Tiling-Arbeitsumgebung",
+          "Tastaturorientierter Workflow",
+          "Arch-Basis für erfahrene Nutzer"
+        ],
+        "en": [
+          "Preconfigured tiling environment",
+          "Keyboard-focused workflow",
+          "Arch base for experienced users"
+        ]
+      },
+      "points": {
+        "B": 5,
+        "C": 0,
+        "D": 5,
+        "E": 0,
+        "F": 15,
+        "G": 15,
+        "H": 0,
+        "I": 11,
+        "J": 0,
+        "K": 0,
+        "L": 15,
+        "M": 0,
+        "N": 0,
+        "O": 0,
+        "P": 0,
+        "Q": 0,
+        "R": -8,
+        "S": 20,
+        "T": -5,
+        "U": 15,
+        "V": 0,
+        "W": 15,
+        "X": 15,
+        "Y": 15,
+        "Z": 0,
+        "AA": 5,
+        "AB": 0,
+        "AC": 0,
+        "AD": 10,
+        "AE": 20,
+        "AG": -10,
+        "AH": -5,
+        "AI": 5,
+        "AJ": 0,
+        "AK": 10
+      },
+      "gpu": {
+        "Nvidia GeForce": 5,
+        "AMD Radeon": 5,
+        "Intel Grafik": 5,
+        "Hybrid / mehrere": 0,
+        "Weiß ich nicht": 0
+      }
+    }
+  ],
+  "version": "catalog-72eb113322c0121bd9ec068de93f975894027546f622d97f90c85aed0d1bbe97"
+}

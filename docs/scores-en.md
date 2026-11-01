@@ -1,0 +1,248 @@
+# Published scores
+
+Version: `catalog-72eb113322c0121bd9ec068de93f975894027546f622d97f90c85aed0d1bbe97`
+
+Generated from distribution administration. Active distributions only.
+
+## Wofür möchtest du deinen Rechner hauptsächlich nutzen?
+
+| Distribution | B: Alltag & Internet | C: Büro & produktives Arbeiten | D: Gaming | E: Kreative Arbeit | F: Programmieren & Entwickeln | G: Technik & Experimentieren |
+|---|---:|---:|---:|---:|---:|---:|
+| Linux Mint Cinnamon | 10 | 10 | 5 | 5 | 5 | 0 |
+| Linux Mint Xfce | 10 | 10 | 0 | 5 | 5 | 0 |
+| Zorin OS Core | 10 | 10 | 5 | 5 | 5 | 0 |
+| Ubuntu GNOME | 10 | 10 | 5 | 10 | 10 | 5 |
+| Kubuntu | 10 | 10 | 5 | 10 | 10 | 5 |
+| Debian GNOME | 5 | 5 | -5 | 5 | 10 | 10 |
+| Debian KDE | 5 | 5 | -5 | 5 | 10 | 10 |
+| Fedora Workstation | 5 | 5 | 5 | 10 | 15 | 10 |
+| Fedora KDE | 5 | 5 | 5 | 10 | 15 | 10 |
+| openSUSE Leap KDE | 5 | 10 | -5 | 5 | 5 | 5 |
+| openSUSE Tumbleweed KDE | 5 | 5 | 10 | 10 | 15 | 15 |
+| MX Linux Xfce | 10 | 10 | -5 | 0 | 5 | 5 |
+| Linux Lite | 10 | 10 | -5 | 0 | 0 | 0 |
+| elementary OS | 10 | 5 | -5 | 5 | 5 | 0 |
+| Pop!_OS COSMIC | 5 | 5 | 10 | 10 | 10 | 5 |
+| Bazzite KDE | 5 | 5 | 20 | 0 | 5 | -5 |
+| Nobara KDE | 5 | 5 | 20 | 15 | 5 | 0 |
+| CachyOS KDE | 5 | 5 | 20 | 5 | 10 | 15 |
+| EndeavourOS KDE | 5 | 5 | 5 | 5 | 10 | 15 |
+| Arch Linux (Eigenbau) | 0 | 5 | 5 | 5 | 15 | 15 |
+| NixOS KDE | 0 | 0 | -10 | -5 | 15 | 15 |
+| Omarchy | 5 | 0 | 5 | 0 | 15 | 15 |
+
+## Was für einen Rechner nutzt du?
+
+| Distribution | H: Desktop-PC | I: Notebook / Laptop | J: Mini-PC / Sonstiges | K: Noch keinen – ich plane einen Kauf |
+|---|---:|---:|---:|---:|
+| Linux Mint Cinnamon | 0 | 9 | 5 | 0 |
+| Linux Mint Xfce | 0 | 8 | 10 | 0 |
+| Zorin OS Core | 0 | 9 | 5 | 0 |
+| Ubuntu GNOME | 0 | 12 | 5 | 0 |
+| Kubuntu | 0 | 11 | 5 | 0 |
+| Debian GNOME | 0 | 6 | 5 | 0 |
+| Debian KDE | 0 | 5 | 5 | 0 |
+| Fedora Workstation | 0 | 12 | 5 | 0 |
+| Fedora KDE | 0 | 11 | 5 | 0 |
+| openSUSE Leap KDE | 0 | 5 | 5 | 0 |
+| openSUSE Tumbleweed KDE | 0 | 9 | 5 | 0 |
+| MX Linux Xfce | 0 | 5 | 10 | 0 |
+| Linux Lite | 0 | 3 | 10 | 0 |
+| elementary OS | 0 | 11 | 0 | 0 |
+| Pop!_OS COSMIC | 0 | 15 | 0 | 0 |
+| Bazzite KDE | 0 | 9 | 0 | 0 |
+| Nobara KDE | 0 | 3 | 5 | 0 |
+| CachyOS KDE | 0 | 6 | 5 | 0 |
+| EndeavourOS KDE | 0 | 6 | 5 | 0 |
+| Arch Linux (Eigenbau) | 0 | -11 | 0 | 0 |
+| NixOS KDE | 0 | -8 | 0 | 0 |
+| Omarchy | 0 | 11 | 0 | 0 |
+
+## Wie alt ist dein Rechner ungefähr?
+
+| Distribution | L: Weniger als 1 Jahr | M: 1–3 Jahre | N: 4–7 Jahre | O: 8 Jahre oder älter | P: Weiß ich nicht |
+|---|---:|---:|---:|---:|---:|
+| Linux Mint Cinnamon | -5 | 0 | 0 | 5 | 0 |
+| Linux Mint Xfce | -5 | 0 | 5 | 10 | 0 |
+| Zorin OS Core | -5 | 0 | 0 | 5 | 0 |
+| Ubuntu GNOME | 5 | 0 | 0 | 5 | 0 |
+| Kubuntu | 5 | 0 | 0 | 5 | 0 |
+| Debian GNOME | -10 | 0 | 0 | 5 | 0 |
+| Debian KDE | -10 | 0 | 0 | 5 | 0 |
+| Fedora Workstation | 10 | 0 | 0 | 5 | 0 |
+| Fedora KDE | 10 | 0 | 0 | 5 | 0 |
+| openSUSE Leap KDE | -10 | 0 | 0 | 5 | 0 |
+| openSUSE Tumbleweed KDE | 15 | 0 | 0 | 5 | 0 |
+| MX Linux Xfce | -5 | 0 | 5 | 10 | 0 |
+| Linux Lite | -10 | 0 | 5 | 10 | 0 |
+| elementary OS | -5 | 0 | 0 | 0 | 0 |
+| Pop!_OS COSMIC | 10 | 0 | 0 | 0 | 0 |
+| Bazzite KDE | 10 | 0 | 0 | -5 | 0 |
+| Nobara KDE | 15 | 0 | 0 | 0 | 0 |
+| CachyOS KDE | 15 | 0 | 0 | 0 | 0 |
+| EndeavourOS KDE | 15 | 0 | 0 | 5 | 0 |
+| Arch Linux (Eigenbau) | 15 | 0 | 0 | 5 | 0 |
+| NixOS KDE | 10 | 0 | 0 | 5 | 0 |
+| Omarchy | 15 | 0 | 0 | 0 | 0 |
+
+## Wie möchtest du mit deinem Betriebssystem umgehen?
+
+| Distribution | Q: Einschalten, nutzen, möglichst wenig kümmern | R: Linux kennenlernen und etwas ausprobieren | S: Basteln, konfigurieren und experimentieren |
+|---|---:|---:|---:|
+| Linux Mint Cinnamon | 20 | 7 | -8 |
+| Linux Mint Xfce | 20 | 7 | -6 |
+| Zorin OS Core | 18 | 5 | -10 |
+| Ubuntu GNOME | 17 | 18 | 2 |
+| Kubuntu | 17 | 18 | 4 |
+| Debian GNOME | 18 | 12 | 8 |
+| Debian KDE | 18 | 12 | 10 |
+| Fedora Workstation | 6 | 20 | 6 |
+| Fedora KDE | 6 | 20 | 8 |
+| openSUSE Leap KDE | 18 | 12 | 4 |
+| openSUSE Tumbleweed KDE | 2 | 19 | 15 |
+| MX Linux Xfce | 17 | 8 | 3 |
+| Linux Lite | 17 | 4 | -8 |
+| elementary OS | 13 | 6 | -12 |
+| Pop!_OS COSMIC | 9 | 14 | -2 |
+| Bazzite KDE | 15 | -5 | -20 |
+| Nobara KDE | 3 | 10 | 2 |
+| CachyOS KDE | -5 | 3 | 17 |
+| EndeavourOS KDE | -10 | -5 | 15 |
+| Arch Linux (Eigenbau) | -20 | -20 | 10 |
+| NixOS KDE | -5 | -10 | 14 |
+| Omarchy | 0 | -8 | 20 |
+
+## Wie wichtig ist dir das Aussehen?
+
+| Distribution | T: Klassisch und vertraut | U: Modern und ansprechend | V: Ist mir egal |
+|---|---:|---:|---:|
+| Linux Mint Cinnamon | 10 | 5 | 0 |
+| Linux Mint Xfce | 10 | 0 | 0 |
+| Zorin OS Core | 10 | 10 | 0 |
+| Ubuntu GNOME | 0 | 10 | 0 |
+| Kubuntu | 5 | 10 | 0 |
+| Debian GNOME | 0 | 10 | 0 |
+| Debian KDE | 5 | 10 | 0 |
+| Fedora Workstation | 0 | 10 | 0 |
+| Fedora KDE | 5 | 10 | 0 |
+| openSUSE Leap KDE | 5 | 10 | 0 |
+| openSUSE Tumbleweed KDE | 5 | 10 | 0 |
+| MX Linux Xfce | 5 | 0 | 0 |
+| Linux Lite | 10 | 0 | 0 |
+| elementary OS | 0 | 10 | 0 |
+| Pop!_OS COSMIC | 0 | 15 | 0 |
+| Bazzite KDE | 5 | 10 | 0 |
+| Nobara KDE | 5 | 10 | 0 |
+| CachyOS KDE | 5 | 10 | 0 |
+| EndeavourOS KDE | 5 | 10 | 0 |
+| Arch Linux (Eigenbau) | 0 | 0 | 0 |
+| NixOS KDE | 5 | 10 | 0 |
+| Omarchy | -5 | 15 | 0 |
+
+## Wie möchtest du deine Desktop-Oberfläche anpassen?
+
+| Distribution | W: Wenig anpassen | X: Etwas anpassen | Y: Alles anpassen |
+|---|---:|---:|---:|
+| Linux Mint Cinnamon | 10 | 10 | 5 |
+| Linux Mint Xfce | 5 | 0 | 5 |
+| Zorin OS Core | 10 | 5 | 5 |
+| Ubuntu GNOME | 10 | 5 | 5 |
+| Kubuntu | 10 | 10 | 10 |
+| Debian GNOME | 5 | 5 | 5 |
+| Debian KDE | 5 | 10 | 10 |
+| Fedora Workstation | 10 | 5 | 5 |
+| Fedora KDE | 10 | 10 | 10 |
+| openSUSE Leap KDE | 5 | 10 | 10 |
+| openSUSE Tumbleweed KDE | 5 | 10 | 10 |
+| MX Linux Xfce | 5 | 0 | 5 |
+| Linux Lite | 5 | 0 | 5 |
+| elementary OS | 10 | 0 | 0 |
+| Pop!_OS COSMIC | 10 | 15 | 10 |
+| Bazzite KDE | 10 | 10 | 10 |
+| Nobara KDE | 10 | 10 | 10 |
+| CachyOS KDE | 10 | 10 | 10 |
+| EndeavourOS KDE | 5 | 10 | 10 |
+| Arch Linux (Eigenbau) | 0 | 0 | 15 |
+| NixOS KDE | 5 | 10 | 10 |
+| Omarchy | 15 | 15 | 15 |
+
+## Wie wichtig ist dir, Änderungen einfach rückgängig zu machen?
+
+| Distribution | Z: Sehr wichtig | AA: Wäre praktisch | AB: Nicht wichtig |
+|---|---:|---:|---:|
+| Linux Mint Cinnamon | 5 | 5 | 0 |
+| Linux Mint Xfce | 5 | 5 | 0 |
+| Zorin OS Core | 0 | 0 | 0 |
+| Ubuntu GNOME | 0 | 0 | 0 |
+| Kubuntu | 0 | 0 | 0 |
+| Debian GNOME | 0 | 0 | 0 |
+| Debian KDE | 0 | 0 | 0 |
+| Fedora Workstation | 0 | 0 | 0 |
+| Fedora KDE | 0 | 0 | 0 |
+| openSUSE Leap KDE | 10 | 5 | 0 |
+| openSUSE Tumbleweed KDE | 10 | 5 | 0 |
+| MX Linux Xfce | 0 | 5 | 0 |
+| Linux Lite | 0 | 0 | 0 |
+| elementary OS | 0 | 0 | 0 |
+| Pop!_OS COSMIC | 0 | 0 | 0 |
+| Bazzite KDE | 10 | 5 | 0 |
+| Nobara KDE | 0 | 0 | 0 |
+| CachyOS KDE | 5 | 5 | 0 |
+| EndeavourOS KDE | 0 | 0 | 0 |
+| Arch Linux (Eigenbau) | 0 | -5 | 0 |
+| NixOS KDE | 5 | 5 | 0 |
+| Omarchy | 0 | 5 | 0 |
+
+## Wie viel Erfahrung hast du bereits mit Linux?
+
+| Distribution | AC: Anfänger | AD: Fortgeschritten | AE: Profi |
+|---|---:|---:|---:|
+| Linux Mint Cinnamon | 10 | 5 | 0 |
+| Linux Mint Xfce | 10 | 5 | 0 |
+| Zorin OS Core | 10 | 5 | 0 |
+| Ubuntu GNOME | 10 | 5 | 0 |
+| Kubuntu | 10 | 5 | 0 |
+| Debian GNOME | -10 | 0 | 40 |
+| Debian KDE | -10 | 0 | 40 |
+| Fedora Workstation | 0 | 10 | 20 |
+| Fedora KDE | 0 | 10 | 20 |
+| openSUSE Leap KDE | 0 | 10 | 20 |
+| openSUSE Tumbleweed KDE | 0 | 10 | 20 |
+| MX Linux Xfce | 10 | 5 | 0 |
+| Linux Lite | 10 | 5 | 0 |
+| elementary OS | 10 | 5 | 0 |
+| Pop!_OS COSMIC | 0 | 10 | 20 |
+| Bazzite KDE | 10 | 5 | 0 |
+| Nobara KDE | 0 | 10 | 20 |
+| CachyOS KDE | 0 | 10 | 20 |
+| EndeavourOS KDE | 0 | 10 | 20 |
+| Arch Linux (Eigenbau) | -10 | 0 | 40 |
+| NixOS KDE | -10 | 0 | 40 |
+| Omarchy | 0 | 10 | 20 |
+
+## RAM / GPU
+
+| Distribution | AG | AH | AI | AJ | AK | Nvidia GeForce | AMD Radeon | Intel Grafik | Hybrid / mehrere | Weiß ich nicht |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Linux Mint Cinnamon | -5 | 5 | 0 | 0 | -5 | 5 | 5 | 5 | 5 | 0 |
+| Linux Mint Xfce | 15 | 10 | -5 | 0 | -10 | 5 | 5 | 5 | 5 | 0 |
+| Zorin OS Core | -10 | 0 | 5 | 0 | 5 | 5 | 5 | 5 | 5 | 0 |
+| Ubuntu GNOME | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
+| Kubuntu | -5 | 5 | 5 | 0 | 5 | 5 | 5 | 5 | 5 | 0 |
+| Debian GNOME | -10 | 0 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
+| Debian KDE | -5 | 5 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
+| Fedora Workstation | -10 | 0 | 5 | 0 | 10 | 0 | 5 | 5 | 0 | 0 |
+| Fedora KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
+| openSUSE Leap KDE | -5 | 5 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
+| openSUSE Tumbleweed KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
+| MX Linux Xfce | 15 | 10 | -5 | 0 | -10 | 0 | 5 | 5 | 0 | 0 |
+| Linux Lite | 15 | 10 | -5 | 0 | -10 | 0 | 5 | 5 | 0 | 0 |
+| elementary OS | -5 | 0 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
+| Pop!_OS COSMIC | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
+| Bazzite KDE | -15 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
+| Nobara KDE | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
+| CachyOS KDE | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
+| EndeavourOS KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
+| Arch Linux (Eigenbau) | 5 | 5 | 0 | 0 | -5 | 0 | 5 | 5 | 0 | 0 |
+| NixOS KDE | -10 | 0 | 5 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
+| Omarchy | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |

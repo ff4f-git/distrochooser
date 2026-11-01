@@ -1,0 +1,46 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import catalog from '../data/distributions.json' with {type:'json'};
+import model from '../assets/model.json' with {type:'json'};
+import bonuses from '../assets/gpu-bonus.json' with {type:'json'};
+import {validateCatalog,runtimeFromCatalog,generatedFiles,excelExport,simulate,GPU,RAM} from '../assets/catalog-core.js';
+import {validateSubmission} from '../supabase/functions/submit-statistics/validate.js';
+import {loadPublishedCatalog} from '../assets/catalog-client.js';
+test('migration preserves all 22 distributions, all scores, GPU bonuses and three strengths per language',()=>{
+ const r=runtimeFromCatalog(catalog);assert.deepEqual(r.model.distros.map(({id,...d})=>d),model.distros);assert.deepEqual(r.bonuses,bonuses);
+ for(const d of catalog.distributions)for(const lang of ['de','en'])assert.equal(d.strengths[lang].length,3);
+ assert.equal(validateCatalog(catalog,catalog).distributions.length,22);
+});
+test('adding and deactivating a distribution updates every generated runtime asset',()=>{
+ const c=structuredClone(catalog);const added={...structuredClone(c.distributions[0]),id:'test-distro',name:'Test distro'};c.distributions.push(added);c.distributions[0].active=false;
+ const clean={...validateCatalog(c,catalog),version:'catalog-'+'a'.repeat(64)},files=generatedFiles(clean),r=runtimeFromCatalog(clean);
+ assert.equal(r.model.distros.length,22);assert.ok(!r.model.distros.some(d=>d.name===catalog.distributions[0].name));assert.ok(r.model.distros.some(d=>d.name==='Test distro'));
+ assert.deepEqual(JSON.parse(files['assets/model.json']),JSON.parse(files['supabase/functions/submit-statistics/model.json']));
+ assert.ok(JSON.parse(files['assets/descriptions-de.json'])['Test distro']);assert.ok(files['docs/scores-de.md'].includes('Test distro'));assert.ok(clean.distributions.some(d=>!d.active));
+});
+test('rejects duplicates, missing scores, invalid values, question edits and script URLs',()=>{
+ const changes=[c=>c.distributions.push(c.distributions[0]),c=>delete c.distributions[0].points.Q,c=>c.distributions[0].points.Q=1.5,c=>c.distributions[0].points.V=2,c=>c.distributions[0].url='javascript:alert(1)',c=>c.questions[0].title='changed',c=>c.distributions.forEach(d=>d.active=false)];
+ for(const change of changes){const c=structuredClone(catalog);change(c);assert.throws(()=>validateCatalog(c,catalog));}
+});
+test('version-specific server validation and admin simulator have identical ranks',()=>{
+ const c=structuredClone(catalog);c.version='catalog-'+'b'.repeat(64);c.distributions[0].active=false;const r=runtimeFromCatalog(c);
+ for(const handle of ['Q','R','S'])for(const experience of ['AC','AD','AE']){
+  const answers=[['B','D'],['H'],['M'],[handle],['U'],['X'],['AA'],[experience]];
+  const input={modelVersion:c.version,consentVersion:'1',submissionId:crypto.randomUUID(),language:'de',answers,ram:null,gpu:'AMD Radeon'};
+  const row=validateSubmission(input,r.model,r.bonuses,c.version);assert.deepEqual(row.top3,simulate(c,answers,'','AMD Radeon').map(d=>d.name));
+  assert.throws(()=>validateSubmission(input,r.model,r.bonuses,'other-version'));
+ }
+});
+test('fallback preserves a pinned catalog, rather than combining separately cached files',async()=>{
+ let calls=0;const loaded=await loadPublishedCatalog(async()=>{calls++;return calls===1?{ok:false}:{ok:true,json:async()=>catalog};});assert.equal(calls,2);assert.equal(loaded.model.version,catalog.version);
+});
+test('generated Excel is a valid stored ZIP and contains all answer and GPU columns',async()=>{
+ const bytes=excelExport(catalog);assert.equal(new DataView(bytes.buffer).getUint32(0,true),0x04034b50);
+ const text=new TextDecoder().decode(bytes);assert.ok(text.includes('xl/worksheets/sheet1.xml'));for(const code of [...RAM.map(o=>o[1]),'Q','R','S','AC','AD','AE'])assert.ok(text.includes(code+': '));for(const key of GPU)assert.ok(text.includes('GPU: '+key));
+ await fs.writeFile('/workspace/scratch/ab1ee3469989/catalog-export-test.xlsx',bytes);
+});
+test('backend bundled catalog helpers exactly match the browser implementation',async()=>{
+ const source=await fs.readFile(new URL('../assets/catalog-core.js',import.meta.url),'utf8');
+ for(const p of ['catalog-admin','submit-statistics'])assert.equal(await fs.readFile(new URL('../supabase/functions/'+p+'/catalog.js',import.meta.url),'utf8'),source);
+});

@@ -26,7 +26,7 @@ Linux bietet viele Möglichkeiten – aber welche Distribution passt zu deinem A
 
 - Acht Fragen zu Einsatzzweck, Hardware, Bedienung, Gestaltung, Anpassbarkeit, Wiederherstellung und Linux-Erfahrung.
 - Zwei bedingte Zusatzfragen zu Arbeitsspeicher und Grafikkarte.
-- Eine Auswahl aus **22 Distributionsvarianten**.
+- Eine redaktionell gepflegte Distributionsauswahl.
 - Drei Empfehlungen mit kurzen Erläuterungen und relativer visueller Einordnung.
 - Umschaltbare Oberfläche auf **Deutsch und Englisch**, auch während des Fragebogens.
 - Eine transparente Punktematrix und eine dokumentierte Bewertungslogik.
@@ -62,7 +62,7 @@ Linux offers a wealth of choices, but where should you start? **Linux Distrochoo
 
 - Eight questions covering usage, hardware, ease of use, appearance, customization, recovery options, and Linux experience.
 - Two conditional follow-up questions about RAM and graphics hardware.
-- **22 distribution variants** to compare.
+- An editorially maintained distribution catalog.
 - Three recommendations with brief explanations and relative visual comparisons.
 - A **German/English** language switch that works throughout the questionnaire.
 - An inspectable scoring matrix and documentation of the recommendation model.
@@ -87,7 +87,8 @@ index.html                  Web application / Webanwendung
 assets/app.js               Questionnaire, language switch, scoring, results
 assets/styles.css           Visual design / Gestaltung
 assets/icons.js             Distribution icon mappings
-data/punktematrix.xlsx      Source scoring matrix / Punktematrix
+data/distributions.json     Versioned catalog / versionierter Distributionskatalog
+data/punktematrix.xlsx      Generated Excel export / automatisch erzeugter Export
 assets/model.json           Distribution points and German questions
 assets/gpu-bonus.json       Gaming GPU adjustments
 assets/questions-en.json    English questions and answer labels
@@ -115,3 +116,7 @@ Die ersten drei unterschiedlichen Punktwerte bilden Platz 1, 2 und 3. Alle punkt
 
 
 Version 2.2.0: Notebook-Spalte I mit −15 bis +15 Punkten; drei Rangstufen einschließlich Gleichständen. Für die Statistik vor Veröffentlichung SQL-Migration `202611010001_tied_recommendations.sql` anwenden und die Edge Function neu deployen.
+
+## Administration
+
+Distributionen, Beschreibungen und sämtliche Bewertungen werden über [die Distributionsverwaltung](https://ff4f-git.github.io/distrochooser/admin.html) gepflegt. Ein Speichervorgang veröffentlicht die geprüfte Version für Website und Statistik und erzeugt JSON-Dateien, Excel und Punktetabellen. [Zugang und Betrieb](docs/administration.md).

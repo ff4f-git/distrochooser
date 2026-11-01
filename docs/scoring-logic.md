@@ -2,6 +2,8 @@
 
 **[Deutsch](bewertungslogik.md) · English**
 
+Current scores are listed in [the generated score table](scores-en.md). Edit distributions through [the administration tool](administration.md). The sections below describe editorial principles.
+
 ## 1. Basic principle
 The Distrochooser does not recommend the most popular distributions or personal favorites. It compares the user’s requirements with distributions’ strengths and weaknesses, particularly their underlying technical concept and the interaction of their components.
 

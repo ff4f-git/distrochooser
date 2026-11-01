@@ -2,6 +2,8 @@
 
 **Deutsch · [English](scoring-logic.md)**
 
+Die aktuellen vollständigen Punktwerte stehen in [der automatisch erzeugten Tabelle](scores-de.md). Bearbeitung erfolgt über [die Distributionsverwaltung](administration.md). Die folgenden Abschnitte dokumentieren die redaktionellen Prinzipien.
+
 ## 1. Grundprinzip
 Der Distrochooser empfiehlt nicht die beliebtesten Distributionen oder persönliche Favoriten. Er vergleicht die Anforderungen des Nutzers mit den Stärken und Schwächen der Distributionen – insbesondere ihrem technischen Grundkonzept und dem Zusammenspiel ihrer Bestandteile.
 
