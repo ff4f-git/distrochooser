@@ -1,14 +1,9 @@
 // Shared by the admin, publication service and tests. No credentials or dependencies.
 export const RAM = [['4 GB oder weniger','AG'],['8 GB','AH'],['16 GB','AI'],['Weiß ich nicht','AJ'],['32 GB oder mehr','AK']];
 export const GPU = ['Nvidia GeForce','AMD Radeon','Intel Grafik','Hybrid / mehrere','Weiß ich nicht'];
-// JSONB may reorder object keys. Array order and actual values remain significant.
-export function canonicalJson(value){
-  const sorted=v=>Array.isArray(v)?v.map(sorted):v!==null&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(key=>[key,sorted(v[key])])):v;
-  return JSON.stringify(sorted(value));
-}
 export function validateCatalog(input, reference) {
   if (!input || input.schemaVersion !== 1 || !Array.isArray(input.distributions) || input.distributions.length > 150) throw Error('Ungültiger Katalog.');
-  if (canonicalJson(input.questions) !== canonicalJson(reference.questions)) throw Error('Die Fragenstruktur darf hier nicht geändert werden.');
+  if (JSON.stringify(input.questions) !== JSON.stringify(reference.questions)) throw Error('Die Fragenstruktur darf hier nicht geändert werden.');
   const codes = [...input.questions.flatMap(q=>q.options.map(o=>o[1])), ...RAM.map(o=>o[1])];
   const ids=new Set(), names=new Set(); let active=0;
   const distributions=input.distributions.map(d=>{

@@ -40,9 +40,13 @@ test('generated Excel is a valid stored ZIP and contains all answer and GPU colu
  const text=new TextDecoder().decode(bytes);assert.ok(text.includes('xl/worksheets/sheet1.xml'));for(const code of [...RAM.map(o=>o[1]),'Q','R','S','AC','AD','AE'])assert.ok(text.includes(code+': '));for(const key of GPU)assert.ok(text.includes('GPU: '+key));
  await fs.writeFile('/workspace/scratch/ab1ee3469989/catalog-export-test.xlsx',bytes);
 });
-test('backend bundled catalog helpers exactly match the browser implementation',async()=>{
+test('admin validation matches the browser and statistics runtime stays compatible',async()=>{
  const source=await fs.readFile(new URL('../assets/catalog-core.js',import.meta.url),'utf8');
- for(const p of ['catalog-admin','submit-statistics'])assert.equal(await fs.readFile(new URL('../supabase/functions/'+p+'/catalog.js',import.meta.url),'utf8'),source);
+ assert.equal(await fs.readFile(new URL('../supabase/functions/catalog-admin/catalog.js',import.meta.url),'utf8'),source);
+ const {runtimeFromCatalog:statisticsRuntime}=await import('../supabase/functions/submit-statistics/catalog.js');
+ assert.deepEqual(statisticsRuntime(catalog),runtimeFromCatalog(catalog));
+ const changed=structuredClone(catalog);changed.distributions[0].active=false;changed.distributions[1].name='Renamed distribution';
+ assert.deepEqual(statisticsRuntime(changed),runtimeFromCatalog(changed));
 });
 test('question equality ignores JSONB object-key order but protects values, codes and array order',()=>{
  const reordered=JSON.parse(canonicalJson(catalog));assert.notEqual(JSON.stringify(reordered.questions),JSON.stringify(catalog.questions));assert.doesNotThrow(()=>validateCatalog(reordered,catalog));
