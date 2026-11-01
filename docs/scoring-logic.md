@@ -162,17 +162,40 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 
 **Rule for new distributions:** Evaluate each of the three answer columns separately by actual effort, available tools, and attainable freedom. Do not equate “easy” with “superficial” or “extensive” with “difficult.” **All scores remain unchanged.**
 
-### Question 7 – System recovery 
+### Question 7 – System recovery
 
-**Scoring range: −10 to +10 points.** This refers exclusively to **recovering the operating system** after faulty updates or configuration changes—**not backing up personal data**. Evaluate actual recovery usability in the intended installation state and the effort required to set it up. The mere possibility of eventually installing a backup application is insufficient for a high score.
+These scores concern restoring the **operating system** after problematic updates or configuration changes, not backing up personal files. The approved main model (`assets/model.json`) is authoritative.
 
-- **“Very important” – strong differentiation based on integration:** Particularly high scores go to distributions with an **already intended Btrfs filesystem**, **configured snapshots/rollbacks**, and preferably **recovery entries in the bootloader**. Such prepared paths were particularly considered for openSUSE (Snapper with bootloader integration), Omarchy, and CachyOS. Another factor is whether Btrfs is an installation default **without manual partitioning**. If the normal installer uses ext4 and Btrfs requires manual partitioning, a Btrfs-based rollback involves considerable extra effort. Simple alternatives offered directly also count positively: Linux Mint explicitly prompts new users to configure **Timeshift**. Timeshift using **rsync on ext4** can save and restore system states, but is **not a Btrfs snapshot** and is not equivalent to a preconfigured bootloader rollback.
-- **“Would be useful” – lower weighting and smaller gaps:** Recovery need not be completely preconfigured. Straightforward later setup is acceptable, particularly if the appropriate filesystem foundation already exists or an integrated setup assistant is available. Out-of-the-box rollbacks retain an advantage, but the gap to easily added solutions is smaller.
-- **“Not important” – neutral:** All distributions receive **0 points**. Users expressing no recovery preference are not steered in a particular direction by this question.
+- **Very important (Z):** +10 for especially well-integrated rollback, +5 for accessible but limited recovery, 0 without a sufficiently strong built-in advantage. No negative scores were approved for this answer.
+- **Would be useful (AA):** +5 for integrated or easily configured recovery, 0 for noticeable setup effort, −5 for exceptionally high setup effort compared with other distributions.
+- **Not important (AB):** 0 for all distributions, so recovery preferences do not affect the ranking.
 
-**Technical distinction:** Btrfs is required for **Btrfs snapshots**, but not for every form of system recovery. A Btrfs filesystem alone does **not** imply configured snapshot management or a working bootloader rollback. Filesystem defaults, available tools, actual integration, and required manual effort therefore count separately. For example, a default Btrfs installation without preconfigured rollback is not equivalent to a complete Snapper/bootloader solution.
+| Distribution | Z: Very important | AA: Would be useful | AB: Not important |
+|---|---:|---:|---:|
+| Linux Mint Cinnamon | +5 | +5 | 0 |
+| Linux Mint Xfce | +5 | +5 | 0 |
+| Zorin OS Core | 0 | 0 | 0 |
+| Ubuntu GNOME | 0 | 0 | 0 |
+| Kubuntu | 0 | 0 | 0 |
+| Debian GNOME | 0 | 0 | 0 |
+| Debian KDE | 0 | 0 | 0 |
+| Fedora Workstation | 0 | 0 | 0 |
+| Fedora KDE | 0 | 0 | 0 |
+| openSUSE Leap KDE | +10 | +5 | 0 |
+| openSUSE Tumbleweed KDE | +10 | +5 | 0 |
+| MX Linux Xfce | 0 | +5 | 0 |
+| Linux Lite | 0 | 0 | 0 |
+| elementary OS | 0 | 0 | 0 |
+| Pop!_OS COSMIC | 0 | 0 | 0 |
+| Bazzite KDE | +10 | +5 | 0 |
+| Nobara KDE | 0 | 0 | 0 |
+| CachyOS KDE | +5 | +5 | 0 |
+| EndeavourOS KDE | 0 | 0 | 0 |
+| Arch Linux (Eigenbau) | 0 | -5 | 0 |
+| NixOS KDE | +5 | +5 | 0 |
+| Omarchy | 0 | +5 | 0 |
 
-**Rule for new distributions:** Check the actual default installation path: filesystem, snapshot tool, setup, recovery path even when booting fails, and required manual steps. For “Very important,” strongly reward prepared integration; for “Would be useful,” give more credit to easy later setup. **The existing scoring matrix remains unchanged for now**; in particular, a possible Fedora adjustment was discussed but not agreed.
+openSUSE's integrated Snapper recovery and Bazzite's atomic rollback receive the highest Z scores. Mint's Timeshift setup, CachyOS's snapshot approach and NixOS generations receive +5. Arch Linux (custom installation) receives −5 only for AA due to the substantial manual setup effort. A filesystem supporting snapshots alone does not guarantee a usable recovery path.
 
 ### Question 8 – Linux experience 
 
