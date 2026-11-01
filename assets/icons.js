@@ -63,7 +63,7 @@ export const DISTRO_ICONS = {
     "",
     "#70c4e8"
   ],
-  "EndeavourOS KDE": [
+  "EndeavourOS": [
     "",
     "#ab8cf0"
   ],

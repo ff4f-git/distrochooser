@@ -1,6 +1,6 @@
 # Veröffentlichte Bewertungen
 
-Version: `catalog-86c8474305735b191f473127bddc477ec1f264ea093fe169cd4d8de67d3da5cc`
+Version: `catalog-eba73d1edd747638ec23a544b6b21a963ea74ea8586b92801a87fdf8bb20ef71`
 
 Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 
@@ -24,7 +24,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Bazzite | 5 | 5 | 20 | 0 | 5 | -5 |
 | Nobara KDE | 5 | 5 | 20 | 15 | 5 | 0 |
 | CachyOS KDE | 5 | 5 | 20 | 5 | 10 | 15 |
-| EndeavourOS KDE | 5 | 5 | 5 | 5 | 10 | 15 |
+| EndeavourOS | 5 | 5 | 5 | 5 | 10 | 15 |
 | Arch Linux | 0 | 5 | 5 | 5 | 15 | 15 |
 | NixOS | 0 | 0 | -10 | -5 | 15 | 15 |
 | Omarchy | 5 | 0 | 5 | 0 | 15 | 15 |
@@ -49,7 +49,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Bazzite | 0 | 9 | 0 | 0 |
 | Nobara KDE | 0 | 3 | 5 | 0 |
 | CachyOS KDE | 0 | 6 | 5 | 0 |
-| EndeavourOS KDE | 0 | 6 | 5 | 0 |
+| EndeavourOS | 0 | 6 | 5 | 0 |
 | Arch Linux | 0 | -11 | 0 | 0 |
 | NixOS | 0 | -8 | 0 | 0 |
 | Omarchy | 0 | 11 | 0 | 0 |
@@ -74,7 +74,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Bazzite | 10 | 0 | 0 | -5 | 0 |
 | Nobara KDE | 15 | 0 | 0 | 0 | 0 |
 | CachyOS KDE | 15 | 0 | 0 | 0 | 0 |
-| EndeavourOS KDE | 15 | 0 | 0 | 5 | 0 |
+| EndeavourOS | 15 | 0 | 0 | 5 | 0 |
 | Arch Linux | 15 | 0 | 0 | 5 | 0 |
 | NixOS | 10 | 0 | 0 | 5 | 0 |
 | Omarchy | 15 | 0 | 0 | 0 | 0 |
@@ -99,7 +99,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Bazzite | 15 | -5 | -20 |
 | Nobara KDE | 3 | 10 | 2 |
 | CachyOS KDE | -5 | 3 | 17 |
-| EndeavourOS KDE | -10 | -5 | 15 |
+| EndeavourOS | -10 | -5 | 15 |
 | Arch Linux | -20 | -20 | 10 |
 | NixOS | -5 | -10 | 14 |
 | Omarchy | 0 | -8 | 20 |
@@ -124,7 +124,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Bazzite | 5 | 10 | 0 |
 | Nobara KDE | 5 | 10 | 0 |
 | CachyOS KDE | 5 | 10 | 0 |
-| EndeavourOS KDE | 5 | 10 | 0 |
+| EndeavourOS | 5 | 10 | 0 |
 | Arch Linux | 0 | 0 | 0 |
 | NixOS | 5 | 10 | 0 |
 | Omarchy | -5 | 15 | 0 |
@@ -149,7 +149,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Bazzite | 10 | 10 | 10 |
 | Nobara KDE | 10 | 10 | 10 |
 | CachyOS KDE | 10 | 10 | 10 |
-| EndeavourOS KDE | 5 | 10 | 10 |
+| EndeavourOS | 5 | 10 | 10 |
 | Arch Linux | 0 | 0 | 15 |
 | NixOS | 5 | 10 | 10 |
 | Omarchy | 15 | 15 | 15 |
@@ -174,7 +174,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Bazzite | 10 | 5 | 0 |
 | Nobara KDE | 0 | 0 | 0 |
 | CachyOS KDE | 5 | 5 | 0 |
-| EndeavourOS KDE | 0 | 0 | 0 |
+| EndeavourOS | 0 | 0 | 0 |
 | Arch Linux | 0 | -5 | 0 |
 | NixOS | 5 | 5 | 0 |
 | Omarchy | 0 | 5 | 0 |
@@ -199,7 +199,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Bazzite | 10 | 5 | 0 |
 | Nobara KDE | 0 | 10 | 20 |
 | CachyOS KDE | 0 | 10 | 20 |
-| EndeavourOS KDE | 0 | 10 | 20 |
+| EndeavourOS | 0 | 10 | 20 |
 | Arch Linux | -10 | 0 | 40 |
 | NixOS | -10 | 0 | 40 |
 | Omarchy | 0 | 10 | 20 |
@@ -224,7 +224,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Bazzite | -15 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
 | Nobara KDE | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
 | CachyOS KDE | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
-| EndeavourOS KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
+| EndeavourOS | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | Arch Linux | 5 | 5 | 0 | 0 | -5 | 0 | 5 | 5 | 0 | 0 |
 | NixOS | -10 | 0 | 5 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
 | Omarchy | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |

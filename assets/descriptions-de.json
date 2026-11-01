@@ -63,7 +63,7 @@
     "label": "Performance für Enthusiasten",
     "description": "Arch-basierte Distribution mit Leistungsoptimierungen und aktuellen Paketen – attraktiv für Nutzer, die ein aktives System mögen."
   },
-  "EndeavourOS KDE": {
+  "EndeavourOS": {
     "label": "Arch mit Starthilfe",
     "description": "Nah an Arch Linux, aber mit komfortablerem Einstieg. Rolling Release und Systempflege bleiben Teil des Konzepts."
   },
