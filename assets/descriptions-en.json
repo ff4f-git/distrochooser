@@ -7,7 +7,7 @@
     "label": "An elegant transition",
     "description": "A beginner-friendly Ubuntu derivative with a polished, familiar interface and an emphasis on switching easily."
   },
-  "Ubuntu GNOME": {
+  "Ubuntu": {
     "label": "The popular all-rounder",
     "description": "Widely used, well documented, and supported by a large software ecosystem. GNOME offers a distinct, streamlined workflow."
   },
@@ -51,7 +51,7 @@
     "label": "Productivity with COSMIC",
     "description": "An independent, modern COSMIC desktop with thoughtful window workflows and many built-in options."
   },
-  "Bazzite KDE": {
+  "Bazzite": {
     "label": "Gaming first, maintenance second",
     "description": "A gaming-focused, image-based Fedora system with Steam integration, KDE, and straightforward system rollback."
   },

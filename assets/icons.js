@@ -7,7 +7,7 @@ export const DISTRO_ICONS = {
     "",
     "#55a8ff"
   ],
-  "Ubuntu GNOME": [
+  "Ubuntu": [
     "",
     "#e95420"
   ],
@@ -51,7 +51,7 @@ export const DISTRO_ICONS = {
     "",
     "#55c6ce"
   ],
-  "Bazzite KDE": [
+  "Bazzite": [
     "",
     "#b88ef0"
   ],

@@ -1,6 +1,6 @@
 # Published scores
 
-Version: `catalog-e13ee82f3f658e8794289c347eafee8330d9d47d7bb2ef7beed4b30f5bc199bd`
+Version: `catalog-b3e3f0c45cc6b5e9d529a38fcfd18bda9238e73f2151e681e09ccefca7dd5ce8`
 
 Generated from distribution administration. Active distributions only.
 
@@ -10,7 +10,7 @@ Generated from distribution administration. Active distributions only.
 |---|---:|---:|---:|---:|---:|---:|
 | Linux Mint Cinnamon | 10 | 10 | 5 | 5 | 5 | 0 |
 | Zorin OS Core | 10 | 10 | 5 | 5 | 5 | 0 |
-| Ubuntu GNOME | 10 | 10 | 5 | 10 | 10 | 5 |
+| Ubuntu | 10 | 10 | 5 | 10 | 10 | 5 |
 | Kubuntu | 10 | 10 | 5 | 10 | 10 | 5 |
 | Debian | 5 | 5 | -5 | 5 | 10 | 10 |
 | Fedora Workstation | 5 | 5 | 5 | 10 | 15 | 10 |
@@ -21,7 +21,7 @@ Generated from distribution administration. Active distributions only.
 | Linux Lite | 10 | 10 | -5 | 0 | 0 | 0 |
 | elementary OS | 10 | 5 | -5 | 5 | 5 | 0 |
 | Pop!_OS COSMIC | 5 | 5 | 10 | 10 | 10 | 5 |
-| Bazzite KDE | 5 | 5 | 20 | 0 | 5 | -5 |
+| Bazzite | 5 | 5 | 20 | 0 | 5 | -5 |
 | Nobara KDE | 5 | 5 | 20 | 15 | 5 | 0 |
 | CachyOS KDE | 5 | 5 | 20 | 5 | 10 | 15 |
 | EndeavourOS KDE | 5 | 5 | 5 | 5 | 10 | 15 |
@@ -35,7 +35,7 @@ Generated from distribution administration. Active distributions only.
 |---|---:|---:|---:|---:|
 | Linux Mint Cinnamon | 0 | 9 | 5 | 0 |
 | Zorin OS Core | 0 | 9 | 5 | 0 |
-| Ubuntu GNOME | 0 | 12 | 5 | 0 |
+| Ubuntu | 0 | 12 | 5 | 0 |
 | Kubuntu | 0 | 11 | 5 | 0 |
 | Debian | 0 | 6 | 5 | 0 |
 | Fedora Workstation | 0 | 12 | 5 | 0 |
@@ -46,7 +46,7 @@ Generated from distribution administration. Active distributions only.
 | Linux Lite | 0 | 3 | 10 | 0 |
 | elementary OS | 0 | 11 | 0 | 0 |
 | Pop!_OS COSMIC | 0 | 15 | 0 | 0 |
-| Bazzite KDE | 0 | 9 | 0 | 0 |
+| Bazzite | 0 | 9 | 0 | 0 |
 | Nobara KDE | 0 | 3 | 5 | 0 |
 | CachyOS KDE | 0 | 6 | 5 | 0 |
 | EndeavourOS KDE | 0 | 6 | 5 | 0 |
@@ -60,7 +60,7 @@ Generated from distribution administration. Active distributions only.
 |---|---:|---:|---:|---:|---:|
 | Linux Mint Cinnamon | -5 | 0 | 0 | 5 | 0 |
 | Zorin OS Core | -5 | 0 | 0 | 5 | 0 |
-| Ubuntu GNOME | 5 | 0 | 0 | 5 | 0 |
+| Ubuntu | 5 | 0 | 0 | 5 | 0 |
 | Kubuntu | 5 | 0 | 0 | 5 | 0 |
 | Debian | -10 | 0 | 0 | 5 | 0 |
 | Fedora Workstation | 10 | 0 | 0 | 5 | 0 |
@@ -71,7 +71,7 @@ Generated from distribution administration. Active distributions only.
 | Linux Lite | -10 | 0 | 5 | 10 | 0 |
 | elementary OS | -5 | 0 | 0 | 0 | 0 |
 | Pop!_OS COSMIC | 10 | 0 | 0 | 0 | 0 |
-| Bazzite KDE | 10 | 0 | 0 | -5 | 0 |
+| Bazzite | 10 | 0 | 0 | -5 | 0 |
 | Nobara KDE | 15 | 0 | 0 | 0 | 0 |
 | CachyOS KDE | 15 | 0 | 0 | 0 | 0 |
 | EndeavourOS KDE | 15 | 0 | 0 | 5 | 0 |
@@ -85,7 +85,7 @@ Generated from distribution administration. Active distributions only.
 |---|---:|---:|---:|
 | Linux Mint Cinnamon | 20 | 7 | -8 |
 | Zorin OS Core | 18 | 5 | -10 |
-| Ubuntu GNOME | 17 | 18 | 2 |
+| Ubuntu | 17 | 18 | 2 |
 | Kubuntu | 17 | 18 | 4 |
 | Debian | 18 | 12 | 8 |
 | Fedora Workstation | 6 | 20 | 6 |
@@ -96,7 +96,7 @@ Generated from distribution administration. Active distributions only.
 | Linux Lite | 17 | 4 | -8 |
 | elementary OS | 13 | 6 | -12 |
 | Pop!_OS COSMIC | 9 | 14 | -2 |
-| Bazzite KDE | 15 | -5 | -20 |
+| Bazzite | 15 | -5 | -20 |
 | Nobara KDE | 3 | 10 | 2 |
 | CachyOS KDE | -5 | 3 | 17 |
 | EndeavourOS KDE | -10 | -5 | 15 |
@@ -110,7 +110,7 @@ Generated from distribution administration. Active distributions only.
 |---|---:|---:|---:|
 | Linux Mint Cinnamon | 10 | 5 | 0 |
 | Zorin OS Core | 10 | 10 | 0 |
-| Ubuntu GNOME | 0 | 10 | 0 |
+| Ubuntu | 0 | 10 | 0 |
 | Kubuntu | 5 | 10 | 0 |
 | Debian | 0 | 10 | 0 |
 | Fedora Workstation | 0 | 10 | 0 |
@@ -121,7 +121,7 @@ Generated from distribution administration. Active distributions only.
 | Linux Lite | 10 | 0 | 0 |
 | elementary OS | 0 | 10 | 0 |
 | Pop!_OS COSMIC | 0 | 15 | 0 |
-| Bazzite KDE | 5 | 10 | 0 |
+| Bazzite | 5 | 10 | 0 |
 | Nobara KDE | 5 | 10 | 0 |
 | CachyOS KDE | 5 | 10 | 0 |
 | EndeavourOS KDE | 5 | 10 | 0 |
@@ -135,7 +135,7 @@ Generated from distribution administration. Active distributions only.
 |---|---:|---:|---:|
 | Linux Mint Cinnamon | 10 | 10 | 5 |
 | Zorin OS Core | 10 | 5 | 5 |
-| Ubuntu GNOME | 10 | 5 | 5 |
+| Ubuntu | 10 | 5 | 5 |
 | Kubuntu | 10 | 10 | 10 |
 | Debian | 5 | 5 | 5 |
 | Fedora Workstation | 10 | 5 | 5 |
@@ -146,7 +146,7 @@ Generated from distribution administration. Active distributions only.
 | Linux Lite | 5 | 0 | 5 |
 | elementary OS | 10 | 0 | 0 |
 | Pop!_OS COSMIC | 10 | 15 | 10 |
-| Bazzite KDE | 10 | 10 | 10 |
+| Bazzite | 10 | 10 | 10 |
 | Nobara KDE | 10 | 10 | 10 |
 | CachyOS KDE | 10 | 10 | 10 |
 | EndeavourOS KDE | 5 | 10 | 10 |
@@ -160,7 +160,7 @@ Generated from distribution administration. Active distributions only.
 |---|---:|---:|---:|
 | Linux Mint Cinnamon | 5 | 5 | 0 |
 | Zorin OS Core | 0 | 0 | 0 |
-| Ubuntu GNOME | 0 | 0 | 0 |
+| Ubuntu | 0 | 0 | 0 |
 | Kubuntu | 0 | 0 | 0 |
 | Debian | 0 | 0 | 0 |
 | Fedora Workstation | 0 | 0 | 0 |
@@ -171,7 +171,7 @@ Generated from distribution administration. Active distributions only.
 | Linux Lite | 0 | 0 | 0 |
 | elementary OS | 0 | 0 | 0 |
 | Pop!_OS COSMIC | 0 | 0 | 0 |
-| Bazzite KDE | 10 | 5 | 0 |
+| Bazzite | 10 | 5 | 0 |
 | Nobara KDE | 0 | 0 | 0 |
 | CachyOS KDE | 5 | 5 | 0 |
 | EndeavourOS KDE | 0 | 0 | 0 |
@@ -185,7 +185,7 @@ Generated from distribution administration. Active distributions only.
 |---|---:|---:|---:|
 | Linux Mint Cinnamon | 10 | 5 | 0 |
 | Zorin OS Core | 10 | 5 | 0 |
-| Ubuntu GNOME | 10 | 5 | 0 |
+| Ubuntu | 10 | 5 | 0 |
 | Kubuntu | 10 | 5 | 0 |
 | Debian | -10 | 0 | 40 |
 | Fedora Workstation | 0 | 10 | 20 |
@@ -196,7 +196,7 @@ Generated from distribution administration. Active distributions only.
 | Linux Lite | 10 | 5 | 0 |
 | elementary OS | 10 | 5 | 0 |
 | Pop!_OS COSMIC | 0 | 10 | 20 |
-| Bazzite KDE | 10 | 5 | 0 |
+| Bazzite | 10 | 5 | 0 |
 | Nobara KDE | 0 | 10 | 20 |
 | CachyOS KDE | 0 | 10 | 20 |
 | EndeavourOS KDE | 0 | 10 | 20 |
@@ -210,7 +210,7 @@ Generated from distribution administration. Active distributions only.
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Linux Mint Cinnamon | -5 | 5 | 0 | 0 | -5 | 5 | 5 | 5 | 5 | 0 |
 | Zorin OS Core | -10 | 0 | 5 | 0 | 5 | 5 | 5 | 5 | 5 | 0 |
-| Ubuntu GNOME | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
+| Ubuntu | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
 | Kubuntu | -5 | 5 | 5 | 0 | 5 | 5 | 5 | 5 | 5 | 0 |
 | Debian | -10 | 0 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | Fedora Workstation | -10 | 0 | 5 | 0 | 10 | 0 | 5 | 5 | 0 | 0 |
@@ -221,7 +221,7 @@ Generated from distribution administration. Active distributions only.
 | Linux Lite | 15 | 10 | -5 | 0 | -10 | 0 | 5 | 5 | 0 | 0 |
 | elementary OS | -5 | 0 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | Pop!_OS COSMIC | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
-| Bazzite KDE | -15 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
+| Bazzite | -15 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
 | Nobara KDE | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
 | CachyOS KDE | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
 | EndeavourOS KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |

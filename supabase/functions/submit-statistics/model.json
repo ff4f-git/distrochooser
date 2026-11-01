@@ -1,5 +1,5 @@
 {
-  "version": "catalog-e13ee82f3f658e8794289c347eafee8330d9d47d7bb2ef7beed4b30f5bc199bd",
+  "version": "catalog-b3e3f0c45cc6b5e9d529a38fcfd18bda9238e73f2151e681e09ccefca7dd5ce8",
   "questions": [
     {
       "title": "Wofür möchtest du deinen Rechner hauptsächlich nutzen?",
@@ -249,7 +249,7 @@
     },
     {
       "id": "ubuntu-gnome",
-      "name": "Ubuntu GNOME",
+      "name": "Ubuntu",
       "points": {
         "B": 10,
         "C": 10,
@@ -700,7 +700,7 @@
     },
     {
       "id": "bazzite-kde",
-      "name": "Bazzite KDE",
+      "name": "Bazzite",
       "points": {
         "B": 5,
         "C": 5,
