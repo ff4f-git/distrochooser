@@ -1,6 +1,6 @@
 # Veröffentlichte Bewertungen
 
-Version: `catalog-271191c24883f9cca7010fad3bf8c4eeb3285625c2c47a4f5c102ab8f572fd1d`
+Version: `catalog-804e1ba79f4c4a5c167cffe1058e38d43d111825c3557ef09a4b2bc0c4df34c9`
 
 Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 
@@ -12,8 +12,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Zorin OS Core | 10 | 10 | 5 | 5 | 5 | 0 |
 | Ubuntu GNOME | 10 | 10 | 5 | 10 | 10 | 5 |
 | Kubuntu | 10 | 10 | 5 | 10 | 10 | 5 |
-| Debian GNOME | 5 | 5 | -5 | 5 | 10 | 10 |
-| Debian KDE | 5 | 5 | -5 | 5 | 10 | 10 |
+| Debian | 5 | 5 | -5 | 5 | 10 | 10 |
 | Fedora Workstation | 5 | 5 | 5 | 10 | 15 | 10 |
 | Fedora KDE | 5 | 5 | 5 | 10 | 15 | 10 |
 | openSUSE Leap KDE | 5 | 10 | -5 | 5 | 5 | 5 |
@@ -38,8 +37,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Zorin OS Core | 0 | 9 | 5 | 0 |
 | Ubuntu GNOME | 0 | 12 | 5 | 0 |
 | Kubuntu | 0 | 11 | 5 | 0 |
-| Debian GNOME | 0 | 6 | 5 | 0 |
-| Debian KDE | 0 | 5 | 5 | 0 |
+| Debian | 0 | 6 | 5 | 0 |
 | Fedora Workstation | 0 | 12 | 5 | 0 |
 | Fedora KDE | 0 | 11 | 5 | 0 |
 | openSUSE Leap KDE | 0 | 5 | 5 | 0 |
@@ -64,8 +62,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Zorin OS Core | -5 | 0 | 0 | 5 | 0 |
 | Ubuntu GNOME | 5 | 0 | 0 | 5 | 0 |
 | Kubuntu | 5 | 0 | 0 | 5 | 0 |
-| Debian GNOME | -10 | 0 | 0 | 5 | 0 |
-| Debian KDE | -10 | 0 | 0 | 5 | 0 |
+| Debian | -10 | 0 | 0 | 5 | 0 |
 | Fedora Workstation | 10 | 0 | 0 | 5 | 0 |
 | Fedora KDE | 10 | 0 | 0 | 5 | 0 |
 | openSUSE Leap KDE | -10 | 0 | 0 | 5 | 0 |
@@ -90,8 +87,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Zorin OS Core | 18 | 5 | -10 |
 | Ubuntu GNOME | 17 | 18 | 2 |
 | Kubuntu | 17 | 18 | 4 |
-| Debian GNOME | 18 | 12 | 8 |
-| Debian KDE | 18 | 12 | 10 |
+| Debian | 18 | 12 | 8 |
 | Fedora Workstation | 6 | 20 | 6 |
 | Fedora KDE | 6 | 20 | 8 |
 | openSUSE Leap KDE | 18 | 12 | 4 |
@@ -116,8 +112,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Zorin OS Core | 10 | 10 | 0 |
 | Ubuntu GNOME | 0 | 10 | 0 |
 | Kubuntu | 5 | 10 | 0 |
-| Debian GNOME | 0 | 10 | 0 |
-| Debian KDE | 5 | 10 | 0 |
+| Debian | 0 | 10 | 0 |
 | Fedora Workstation | 0 | 10 | 0 |
 | Fedora KDE | 5 | 10 | 0 |
 | openSUSE Leap KDE | 5 | 10 | 0 |
@@ -142,8 +137,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Zorin OS Core | 10 | 5 | 5 |
 | Ubuntu GNOME | 10 | 5 | 5 |
 | Kubuntu | 10 | 10 | 10 |
-| Debian GNOME | 5 | 5 | 5 |
-| Debian KDE | 5 | 10 | 10 |
+| Debian | 5 | 5 | 5 |
 | Fedora Workstation | 10 | 5 | 5 |
 | Fedora KDE | 10 | 10 | 10 |
 | openSUSE Leap KDE | 5 | 10 | 10 |
@@ -168,8 +162,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Zorin OS Core | 0 | 0 | 0 |
 | Ubuntu GNOME | 0 | 0 | 0 |
 | Kubuntu | 0 | 0 | 0 |
-| Debian GNOME | 0 | 0 | 0 |
-| Debian KDE | 0 | 0 | 0 |
+| Debian | 0 | 0 | 0 |
 | Fedora Workstation | 0 | 0 | 0 |
 | Fedora KDE | 0 | 0 | 0 |
 | openSUSE Leap KDE | 10 | 5 | 0 |
@@ -194,8 +187,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Zorin OS Core | 10 | 5 | 0 |
 | Ubuntu GNOME | 10 | 5 | 0 |
 | Kubuntu | 10 | 5 | 0 |
-| Debian GNOME | -10 | 0 | 40 |
-| Debian KDE | -10 | 0 | 40 |
+| Debian | -10 | 0 | 40 |
 | Fedora Workstation | 0 | 10 | 20 |
 | Fedora KDE | 0 | 10 | 20 |
 | openSUSE Leap KDE | 0 | 10 | 20 |
@@ -220,8 +212,7 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Zorin OS Core | -10 | 0 | 5 | 0 | 5 | 5 | 5 | 5 | 5 | 0 |
 | Ubuntu GNOME | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
 | Kubuntu | -5 | 5 | 5 | 0 | 5 | 5 | 5 | 5 | 5 | 0 |
-| Debian GNOME | -10 | 0 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
-| Debian KDE | -5 | 5 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
+| Debian | -10 | 0 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | Fedora Workstation | -10 | 0 | 5 | 0 | 10 | 0 | 5 | 5 | 0 | 0 |
 | Fedora KDE | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
 | openSUSE Leap KDE | -5 | 5 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |

@@ -1,5 +1,5 @@
 {
-  "version": "catalog-271191c24883f9cca7010fad3bf8c4eeb3285625c2c47a4f5c102ab8f572fd1d",
+  "version": "catalog-804e1ba79f4c4a5c167cffe1058e38d43d111825c3557ef09a4b2bc0c4df34c9",
   "questions": [
     {
       "title": "Wofür möchtest du deinen Rechner hauptsächlich nutzen?",
@@ -331,7 +331,7 @@
     },
     {
       "id": "debian-gnome",
-      "name": "Debian GNOME",
+      "name": "Debian",
       "points": {
         "B": 5,
         "C": 5,
@@ -368,47 +368,6 @@
         "AI": 5,
         "AJ": 0,
         "AK": 5
-      }
-    },
-    {
-      "id": "debian-kde",
-      "name": "Debian KDE",
-      "points": {
-        "B": 5,
-        "C": 5,
-        "D": -5,
-        "E": 5,
-        "F": 10,
-        "G": 10,
-        "H": 0,
-        "I": 5,
-        "J": 5,
-        "K": 0,
-        "L": -10,
-        "M": 0,
-        "N": 0,
-        "O": 5,
-        "P": 0,
-        "Q": 18,
-        "R": 12,
-        "S": 10,
-        "T": 5,
-        "U": 10,
-        "V": 0,
-        "W": 5,
-        "X": 10,
-        "Y": 10,
-        "Z": 0,
-        "AA": 0,
-        "AB": 0,
-        "AC": -10,
-        "AD": 0,
-        "AE": 40,
-        "AG": -5,
-        "AH": 5,
-        "AI": 0,
-        "AJ": 0,
-        "AK": 0
       }
     },
     {

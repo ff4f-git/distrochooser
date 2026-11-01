@@ -471,7 +471,7 @@
     },
     {
       "id": "debian-gnome",
-      "name": "Debian GNOME",
+      "name": "Debian",
       "active": true,
       "url": "",
       "icon": [
@@ -536,82 +536,6 @@
         "AI": 5,
         "AJ": 0,
         "AK": 5
-      },
-      "gpu": {
-        "Nvidia GeForce": 0,
-        "AMD Radeon": 5,
-        "Intel Grafik": 5,
-        "Hybrid / mehrere": 0,
-        "Weiß ich nicht": 0
-      }
-    },
-    {
-      "id": "debian-kde",
-      "name": "Debian KDE",
-      "active": true,
-      "url": "",
-      "icon": [
-        "",
-        "#d70a53"
-      ],
-      "descriptions": {
-        "de": {
-          "label": "Beständigkeit trifft Flexibilität",
-          "description": "Debians ruhige Basis mit dem vielseitigen Plasma-Desktop – stabil im Konzept, anpassbar in der Oberfläche."
-        },
-        "en": {
-          "label": "Stability meets flexibility",
-          "description": "Debian’s steady foundation paired with the versatile Plasma desktop: conservative at its core, customizable on the surface."
-        }
-      },
-      "strengths": {
-        "de": [
-          "Hohe Stabilität",
-          "Bewährte, langfristig gepflegte Pakete",
-          "Anpassbarer KDE-Plasma-Desktop"
-        ],
-        "en": [
-          "High stability",
-          "Well-tested, long-maintained packages",
-          "Customizable KDE Plasma desktop"
-        ]
-      },
-      "points": {
-        "B": 5,
-        "C": 5,
-        "D": -5,
-        "E": 5,
-        "F": 10,
-        "G": 10,
-        "H": 0,
-        "I": 5,
-        "J": 5,
-        "K": 0,
-        "L": -10,
-        "M": 0,
-        "N": 0,
-        "O": 5,
-        "P": 0,
-        "Q": 18,
-        "R": 12,
-        "S": 10,
-        "T": 5,
-        "U": 10,
-        "V": 0,
-        "W": 5,
-        "X": 10,
-        "Y": 10,
-        "Z": 0,
-        "AA": 0,
-        "AB": 0,
-        "AC": -10,
-        "AD": 0,
-        "AE": 40,
-        "AG": -5,
-        "AH": 5,
-        "AI": 0,
-        "AJ": 0,
-        "AK": 0
       },
       "gpu": {
         "Nvidia GeForce": 0,
@@ -1762,5 +1686,5 @@
       }
     }
   ],
-  "version": "catalog-271191c24883f9cca7010fad3bf8c4eeb3285625c2c47a4f5c102ab8f572fd1d"
+  "version": "catalog-804e1ba79f4c4a5c167cffe1058e38d43d111825c3557ef09a4b2bc0c4df34c9"
 }

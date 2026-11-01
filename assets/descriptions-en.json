@@ -15,13 +15,9 @@
     "label": "Ubuntu with KDE flexibility",
     "description": "An Ubuntu foundation with Plasma: familiar desktop interaction and extensive settings out of the box."
   },
-  "Debian GNOME": {
+  "Debian": {
     "label": "The steady classic",
     "description": "Conservative package maintenance and a solid foundation for people who value consistency over the newest releases."
-  },
-  "Debian KDE": {
-    "label": "Stability meets flexibility",
-    "description": "Debian’s steady foundation paired with the versatile Plasma desktop: conservative at its core, customizable on the surface."
   },
   "Fedora Workstation": {
     "label": "Modern Linux with GNOME",

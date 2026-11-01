@@ -15,11 +15,7 @@ export const DISTRO_ICONS = {
     "",
     "#69b8ee"
   ],
-  "Debian GNOME": [
-    "",
-    "#d70a53"
-  ],
-  "Debian KDE": [
+  "Debian": [
     "",
     "#d70a53"
   ],

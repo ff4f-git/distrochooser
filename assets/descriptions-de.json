@@ -15,13 +15,9 @@
     "label": "Ubuntu mit KDE-Freiheit",
     "description": "Die Ubuntu-Basis kombiniert mit Plasma: vertraute Desktop-Bedienung und viele Einstellungen direkt an Bord."
   },
-  "Debian GNOME": {
+  "Debian": {
     "label": "Der ruhige Klassiker",
     "description": "Konservative Paketpflege und eine solide Basis für alle, die Beständigkeit höher schätzen als neueste Versionen."
-  },
-  "Debian KDE": {
-    "label": "Beständigkeit trifft Flexibilität",
-    "description": "Debians ruhige Basis mit dem vielseitigen Plasma-Desktop – stabil im Konzept, anpassbar in der Oberfläche."
   },
   "Fedora Workstation": {
     "label": "Modernes Linux mit GNOME",
