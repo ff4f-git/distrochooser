@@ -1,6 +1,6 @@
 import {validateCatalog} from './catalog-core.js';
-import {AdminDraft,questionGroups} from './admin-state.js';
-import {publishVerified} from './admin-publication.js';
+import {AdminDraft,questionGroups} from './admin-state.js?v=3.1.1';
+import {publishVerified} from './admin-publication.js?v=3.1.1';
 const ENDPOINT='https://sjuzeljqkxffscqrtqxn.supabase.co/functions/v1/catalog-admin';
 const $=id=>document.getElementById(id);
 let token='',draft,head,user='',busy=false;
