@@ -4,18 +4,18 @@ import { createStatisticsClient } from './statistics.js';
 
 const statistics = createStatisticsClient(STATISTICS_ENDPOINT);
 const STAT_TEXT = {
-  de: {title:'Freiwillige Statistik', help:'Mit deinem Klick übermittelst du deine Antwortkombination, zutreffende RAM-/GPU-Auswahl, die drei Empfehlungen, Sprache und Modellversion an unseren Statistikdienst (Supabase). Die Teilnahme ist freiwillig und beeinflusst dein Ergebnis nicht. Keine Namen, E-Mail-Adressen, Cookies oder dauerhaften Besucherkennungen. Deine IP-Adresse wird technisch an den Dienst übertragen und kann in dessen Betriebsprotokollen vorkommen; sie wird nicht in unserem Statistikdatensatz gespeichert. Die Datensätze werden nach spätestens 90 Tagen gelöscht.',
+  de: {title:'Freiwillige Statistik', help:'Mit deinem Klick übermittelst du deine Antwortkombination, zutreffende RAM-/GPU-Auswahl, die Empfehlungen der ersten drei Rangstufen, Sprache und Modellversion an unseren Statistikdienst (Supabase). Die Teilnahme ist freiwillig und beeinflusst dein Ergebnis nicht. Keine Namen, E-Mail-Adressen, Cookies oder dauerhaften Besucherkennungen. Deine IP-Adresse wird technisch an den Dienst übertragen und kann in dessen Betriebsprotokollen vorkommen; sie wird nicht in unserem Statistikdatensatz gespeichert. Die Datensätze werden nach spätestens 90 Tagen gelöscht.',
     button:'Ergebnis zur Statistik beitragen', sending:'Wird gesendet …', sent:'Danke! Dein Ergebnis wurde gezählt.', error:'Senden fehlgeschlagen. Du kannst es erneut versuchen.', unavailable:'Die Statistik ist noch nicht eingerichtet. Es werden keine Antworten übertragen.'},
-  en: {title:'Optional statistics', help:'By clicking, you send your answer combination, applicable RAM/GPU selection, three recommendations, language and model version to our statistics service (Supabase). Participation is optional and does not affect your results. No names, email addresses, cookies or persistent visitor identifiers. Your IP address is technically transmitted to the service and may appear in its operational logs; it is not stored in our statistics records. Records are deleted within 90 days.',
+  en: {title:'Optional statistics', help:'By clicking, you send your answer combination, applicable RAM/GPU selection, recommendations from the first three ranks, language and model version to our statistics service (Supabase). Participation is optional and does not affect your results. No names, email addresses, cookies or persistent visitor identifiers. Your IP address is technically transmitted to the service and may appear in its operational logs; it is not stored in our statistics records. Records are deleted within 90 days.',
     button:'Contribute my result to statistics', sending:'Sending …', sent:'Thank you! Your result was counted.', error:'Could not send. You can try again.', unavailable:'Statistics are not configured yet. No answers are transmitted.'}
 };
 
 function statisticsPayload() {
-  return { modelVersion:'2.1.1', language,
+  return { modelVersion:'2.2.0', language,
     answers:answers.map(codes => [...codes].sort()),
     ram:answers[2][0] === 'O' ? ram : null,
     gpu:answers[0].includes('D') ? gpu : null,
-    top3:scoreDistributions().slice(0,3).map(distro => distro.name) };
+    top3:rankRecommendations(scoreDistributions()).map(distro => distro.name) };
 }
 function statisticsKey(payload) {
   // Language changes must not count the same answers again.
@@ -215,7 +215,18 @@ function render() {
   $('next').textContent = step === DATA.questions.length - 1 ? t.calculate : t.next;
 }
 
-// Preserve the v2.0 weighting, sorting, and top-three recommendation logic.
+// Dense ranks: show every distribution in the first three distinct score groups.
+function rankRecommendations(scored) {
+  let rank = 0;
+  let previousScore;
+  return scored.map(distro => {
+    if (rank === 0 || distro.score !== previousScore) rank++;
+    previousScore = distro.score;
+    return {...distro, rank};
+  }).filter(distro => distro.rank <= 3);
+}
+
+// Preserve weighting and stable ordering within tied score groups.
 function scoreDistributions() {
   const usage = answers[0];
   const otherCodes = answers.slice(1).flat();
@@ -506,7 +517,7 @@ function showResults(scroll = true) {
   const best = scored[0].score;
   $('resultList').replaceChildren();
 
-  scored.slice(0, 3).forEach((distro, index) => {
+  rankRecommendations(scored).forEach(distro => {
     const relative = best > 0 ? distro.score / best : (distro.score === best ? 1 : 0);
     const visualWidth = Math.max(0, Math.min(100, (relative - 0.5) * 200));
     const article = document.createElement('article');
@@ -514,7 +525,7 @@ function showResults(scroll = true) {
 
     const rank = document.createElement('div');
     rank.className = 'rank';
-    rank.textContent = `#${String(index + 1).padStart(2, '0')} // ${index === 0 ? t.best : t.alternative}`;
+    rank.textContent = `#${String(distro.rank).padStart(2, '0')} // ${distro.rank === 1 ? t.best : t.alternative}`;
 
     const head = document.createElement('div');
     head.className = 'result-head';

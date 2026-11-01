@@ -49,7 +49,7 @@ Jede zusätzliche Frage muss die Empfehlungen sinnvoll unterscheiden. Eine Frage
 Die **konkreten Bewertungsrahmen, Begründungen und Rechenregeln** stehen in [Bewertungslogik](bewertungslogik.md); die Einzelwerte in der Excel-Punktematrix.
 
 ## Ergebnis und Grenzen
-Es erscheinen **drei Empfehlungen** mit kurzen Beschreibungen und rein visuellen Vergleichsbalken. Im Ergebnis werden **weder Prozentwerte noch Punktzahlen** angezeigt. Der Balken des höchsten tatsächlich erreichten Gesamtpunktwerts ist vollständig gefüllt; die anderen Balken werden auf einer intern verkürzten Skala von 50 bis 100 % des Bestwerts dargestellt. Die Balken sind eine visuelle Rang- und Abstandshilfe, keine Eignungswahrscheinlichkeit. Konkrete Hardware-, Anwendungs- und Spielekompatibilität muss gegebenenfalls zusätzlich geprüft werden. Snapshots ersetzen kein Backup.
+Es erscheinen Empfehlungen der **ersten drei Rangstufen**, einschließlich aller punktgleichen Distributionen, mit kurzen Beschreibungen und rein visuellen Vergleichsbalken. Im Ergebnis werden **weder Prozentwerte noch Punktzahlen** angezeigt. Der Balken des höchsten tatsächlich erreichten Gesamtpunktwerts ist vollständig gefüllt; die anderen Balken werden auf einer intern verkürzten Skala von 50 bis 100 % des Bestwerts dargestellt. Die Balken sind eine visuelle Rang- und Abstandshilfe, keine Eignungswahrscheinlichkeit. Konkrete Hardware-, Anwendungs- und Spielekompatibilität muss gegebenenfalls zusätzlich geprüft werden. Snapshots ersetzen kein Backup.
 
 ## Umsetzung
 - **22 kuratierte Distributionsvarianten**, bewusst ohne Manjaro.
@@ -58,3 +58,9 @@ Es erscheinen **drei Empfehlungen** mit kurzen Beschreibungen und rein visuellen
 - Auf der Live-Webseite bleibt der Abschluss **„Du möchtest Linux ausprobieren und umsteigen?“** mit **„IT-Anfrage starten“** erhalten.
 
 **KISS:** Acht verständliche Fragen für den Besucher, eine nachvollziehbare, differenzierte Bewertung im Hintergrund.
+
+
+<!-- Result ranking rule, 2026-11-01 -->
+### Ergebnisränge bei Punktgleichstand
+
+Die ersten drei unterschiedlichen Punktwerte bilden Platz 1, 2 und 3. Alle punktgleichen Distributionen teilen sich denselben Platz; kein Rang wird übersprungen. Beispiel: 90, 90, 80, 70 ergibt 1, 1, 2, 3. Deshalb können mehr als drei Empfehlungen erscheinen. Die Punkte selbst werden durch einen Gleichstand nicht verändert.

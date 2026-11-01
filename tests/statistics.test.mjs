@@ -1,10 +1,12 @@
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import model from '../assets/model.json' with {type:'json'};
 import bonuses from '../assets/gpu-bonus.json' with {type:'json'};
 import {validateSubmission} from '../supabase/functions/submit-statistics/validate.js';
 import {createStatisticsClient} from '../assets/statistics.js';
-const payload = () => ({submissionId:crypto.randomUUID(), consentVersion:'1',modelVersion:'2.1.1', language:'de',answers:model.questions.map(q=>[q.options[0][1]]),ram:null,gpu:null});
+const payload = () => ({submissionId:crypto.randomUUID(), consentVersion:'1',modelVersion:'2.2.0', language:'de',answers:model.questions.map(q=>[q.options[0][1]]),ram:null,gpu:null});
 test('no network without opt-in; disabled configuration cannot send', async()=>{
   let calls=0;
   const c=createStatisticsClient('',async()=>{calls++;});
@@ -30,7 +32,7 @@ test('failed requests remain retryable with the same submission UUID',async()=>{
 test('server ignores forged results and strips stale conditional answers',()=>{
   const p=payload();p.top3=['fake'];p.ram='AK';p.gpu='Nvidia GeForce';
   const row=validateSubmission(p,model,bonuses);
-  assert.equal(row.ram,null);assert.equal(row.gpu,null);assert.equal(row.top3.length,3);assert.ok(!row.top3.includes('fake'));
+  assert.equal(row.ram,null);assert.equal(row.gpu,null);assert.ok(row.top3.length >= 3);assert.ok(!row.top3.includes('fake'));
 });
 test('invalid, incomplete, duplicate and wrong-question codes are rejected',()=>{
   for(const change of [p=>p.answers.pop(),p=>p.answers[0]=[],p=>p.answers[0]=['B','B'],p=>p.answers[1]=['B'],p=>p.answers[1]=['H','I'],p=>p.modelVersion='fake',p=>p.consentVersion='0']){
@@ -41,4 +43,30 @@ test('old hardware requires valid RAM; gaming accepts optional known GPU only',(
   const p=payload();p.answers[2]=['O'];assert.throws(()=>validateSubmission(p,model,bonuses));
   p.ram='AI';p.answers[0]=['D'];p.gpu='';assert.doesNotThrow(()=>validateSubmission(p,model,bonuses));
   p.gpu='fake';assert.throws(()=>validateSubmission(p,model,bonuses));
+});
+
+test('server includes all tied recommendations and all first places',()=>{
+  const p=payload();
+  for (const scores of [[10,10,9,8,8,7],[10,9,9,8,7],[10,9,8,8,7],[10,10,10,10]]) {
+    const fixture={...model,distros:scores.map((score,i)=>({name:`D${i}`,points:{B:score}}))};
+    const row=validateSubmission(p,fixture,{});
+    const allowed=[...new Set(scores)].slice(0,3);
+    assert.deepEqual(row.top3,scores.flatMap((score,i)=>allowed.includes(score)?[`D${i}`]:[]));
+    assert.deepEqual(row.first_places,scores.flatMap((score,i)=>score===scores[0]?[`D${i}`]:[]));
+  }
+});
+
+test('browser and server select the same three dense ranks',()=>{
+  const source=readFileSync(new URL('../assets/app.js',import.meta.url),'utf8');
+  const helper=source.slice(source.indexOf('function rankRecommendations('),source.indexOf('// Preserve weighting'));
+  const rank=vm.runInNewContext(helper+'; rankRecommendations');
+  for(const scores of [[90,90,80,70,70,60],[90,80,80,70,60],[90,80,70,70],[0,0,-1,-2,-3],[]]) {
+    const ranked=rank(scores.map((score,i)=>({name:`D${i}`,score})));
+    const unique=[...new Set(scores)].slice(0,3);
+    assert.deepEqual(Array.from(ranked,d=>d.rank),scores.filter(s=>unique.includes(s)).map(s=>unique.indexOf(s)+1));
+    if(scores.length) {
+      const fixture={...model,distros:scores.map((score,i)=>({name:`D${i}`,points:{B:score}}))};
+      assert.deepEqual(Array.from(ranked,d=>d.name),validateSubmission(payload(),fixture,{}).top3);
+    }
+  }
 });

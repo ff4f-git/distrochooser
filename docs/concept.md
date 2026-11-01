@@ -49,7 +49,7 @@ The GPU question appears **only for gaming**. “I don’t know” is a valid an
 The **specific scoring ranges, explanations, and calculation rules** are documented in [Scoring logic](scoring-logic.md); individual values are in the [Excel scoring matrix](../data/punktematrix.xlsx).
 
 ## Results and limitations
-The tool displays **three recommendations** with brief descriptions and purely visual comparison bars. Results show **neither percentages nor point totals**. The bar for the highest total actually achieved is completely filled; the other bars use an internally shortened scale from 50 to 100% of that best score. The bars help compare rank and distance; they do not express the probability of suitability. Specific hardware, application, and game compatibility may need separate verification. Snapshots do not replace backups.
+The tool displays recommendations from **the first three score ranks**, including ties with brief descriptions and purely visual comparison bars. Results show **neither percentages nor point totals**. The bar for the highest total actually achieved is completely filled; the other bars use an internally shortened scale from 50 to 100% of that best score. The bars help compare rank and distance; they do not express the probability of suitability. Specific hardware, application, and game compatibility may need separate verification. Snapshots do not replace backups.
 
 ## Implementation
 - **22 curated distribution variants**, deliberately excluding Manjaro.
@@ -58,3 +58,9 @@ The tool displays **three recommendations** with brief descriptions and purely v
 - The live website retains the closing invitation **“Would you like to try Linux and switch?”** with **“Start an IT inquiry.”**
 
 **KISS:** Eight understandable questions for visitors, with transparent, differentiated scoring behind the scenes.
+
+
+<!-- Result ranking rule, 2026-11-01 -->
+### Tied result ranks
+
+The first three distinct scores define ranks 1, 2 and 3. All tied distributions share a rank; no rank is skipped. Scores 90, 90, 80, 70 yield ranks 1, 1, 2, 3. More than three recommendations may therefore appear. Ties do not change scores.

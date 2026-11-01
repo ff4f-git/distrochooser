@@ -28,7 +28,7 @@ Die vorgesehenen Punktebereiche werden daher **so weit ausgeschöpft, wie es die
 | Frage | Bewertungsrahmen | Bewertungsmaßstab |
 |---|---|---|
 | 1. Hauptnutzung | −10 bis +10 je Auswahl | Eignung für den Einsatzzweck |
-| 2. Gerätetyp | −10 bis +10 | Eignung für die Geräteart |
+| 2. Gerätetyp | Notebook: −15 bis +15; übrige: −10 bis +10 | Eignung für die Geräteart |
 | 3. Gerätealter | −10 bis +10 | Anforderungen an die Hardware |
 | 4. Umgang mit dem System | −20 bis +20 | Gewünschter Einrichtungs- und Wartungsaufwand |
 | 5. Aussehen | −5 bis +5 | Optische Vorlieben; bewusst schwächer gewichtet |
@@ -105,7 +105,7 @@ Hinzu kommen gut integrierte Büro- und Kommunikationssoftware, ein verständlic
 
 ### Frage 2 – Gerätetyp
 
-**Bewertungsrahmen: −10 bis +10 Punkte.** Der Gerätetyp ist grundsätzlich ein ergänzendes Eignungskriterium, kein pauschaler Ausschluss. Wir nutzen größere Abstände nur, wenn gerätespezifische Unterschiede sie sachlich rechtfertigen. Kleine Punktdifferenzen sind bewusst sinnvoll: Sie können bei ansonsten knappen Gesamtwerten die Reihenfolge beeinflussen.
+**Bewertungsrahmen: Notebook −15 bis +15 Punkte; Desktop und Mini-PC weiterhin −10 bis +10.** Notebook-Integration wird stärker gewichtet, weil Energieverwaltung, Standby und mobile Hardwarefunktionen den täglichen Betrieb wesentlich bestimmen. Bewertet wird die vorhandene Integration, keine garantierte Kompatibilität jedes Geräts.
 
 **Antwort „Desktop-PC“:** Ein stationärer Desktop stellt üblicherweise keine besonderen Anforderungen an Energieverwaltung oder Mobilität. Deshalb liegen die Punktwerte bewusst relativ nah beieinander. Leichte Vorteile bei der Unterstützung und Integration aktueller Desktop-Hardware werden berücksichtigt; keine künstlichen großen Abstände.
 
@@ -115,7 +115,7 @@ Hinzu kommen gut integrierte Büro- und Kommunikationssoftware, ein verständlic
 
 **Antwort „Noch kein Gerät“:** Alle Distributionen erhalten **0 Punkte**. Ohne bekannten Gerätetyp lässt sich keine begründete gerätespezifische Bevorzugung ableiten.
 
-**Regel für neue Distributionen:** Den konkreten Auslieferungs- beziehungsweise Grundinstallationszustand und die tatsächlich aktivierte Hardwareintegration prüfen. Nicht allein die theoretische Installierbarkeit bewerten. Bei Desktop und Mini-PC nur so stark spreizen, wie die realen Unterschiede es rechtfertigen; beim Notebook dürfen klare Integrationsvorteile deutlich stärker zählen. Die Punktwerte der Excel-Matrix bleiben unverändert.
+**Regel für neue Distributionen:** Den konkreten Auslieferungs- beziehungsweise Grundinstallationszustand und die tatsächlich aktivierte Hardwareintegration prüfen. Nicht allein die theoretische Installierbarkeit bewerten. Bei Desktop und Mini-PC nur so stark spreizen, wie die realen Unterschiede es rechtfertigen; beim Notebook dürfen klare Integrationsvorteile deutlich stärker zählen. Die Notebook-Werte wurden am 01.11.2026 übernommen; die übrigen Gerätespalten bleiben unverändert.
 
 ### Frage 3 – Gerätealter und RAM-Zusatzfrage
 
@@ -200,6 +200,42 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 ## 6. Berechnung und Ergebnis
 Für jede Distribution werden die Punkte aller gewählten Antworten addiert. Bei der Hauptnutzung zählen **alle** ausgewählten Nutzungsarten. Es gibt keine versteckte Durchschnittsbildung.
 
-Die **drei höchsten Gesamtwerte** werden angezeigt. Bei Gleichstand gilt die festgelegte Katalogreihenfolge. Die Gesamtpunkte bleiben intern; **im Endergebnis werden weder Punktzahlen noch Prozentwerte angezeigt**. Der erste Balken entspricht dem höchsten tatsächlich erreichten Gesamtpunktwert und ist immer voll. Die beiden anderen Balken zeigen das Verhältnis zu diesem Bestwert auf einer **rein visuellen, intern auf 50–100 % verkürzten Skala**: Balkenbreite = max(0, min(100, (Gesamtpunkte / Bestwert − 0,5) × 200)), sofern Bestwert > 0. Die Skalierung und Formel werden dem Nutzer nicht angezeigt. Die Punktevergabe, Rangfolge und Gleichstandsregel bleiben unverändert.
+Alle Distributionen der **ersten drei unterschiedlichen Gesamtpunktwerte** werden angezeigt. Punktgleiche Distributionen teilen sich einen Rang; innerhalb eines Rangs bleibt die Katalogreihenfolge erhalten. Die Gesamtpunkte bleiben intern; **im Endergebnis werden weder Punktzahlen noch Prozentwerte angezeigt**. Der erste Balken entspricht dem höchsten tatsächlich erreichten Gesamtpunktwert und ist immer voll. Die übrigen Balken zeigen das Verhältnis zu diesem Bestwert auf einer **rein visuellen, intern auf 50–100 % verkürzten Skala**: Balkenbreite = max(0, min(100, (Gesamtpunkte / Bestwert − 0,5) × 200)), sofern Bestwert > 0. Die Skalierung und Formel werden dem Nutzer nicht angezeigt. Gleichstände ändern die Gesamtpunkte nicht.
 
 **Maßstab:** Nicht eine bestimmte Distribution soll gewinnen, sondern diejenige, deren Gesamtpaket am besten zu den Antworten passt. *It depends.*
+
+
+<!-- Result ranking rule, 2026-11-01 -->
+### Ergebnisränge bei Punktgleichstand
+
+Die ersten drei unterschiedlichen Punktwerte bilden Platz 1, 2 und 3. Alle punktgleichen Distributionen teilen sich denselben Platz; kein Rang wird übersprungen. Beispiel: 90, 90, 80, 70 ergibt 1, 1, 2, 3. Deshalb können mehr als drei Empfehlungen erscheinen. Die Punkte selbst werden durch einen Gleichstand nicht verändert.
+
+
+### Übernommene Notebook-Spalte I (01.11.2026)
+
+Freigegebene Projektbewertung nach der gemeinsamen Prüfung. Bazzite erhält +9, EndeavourOS +6. Die Werte sind keine Messung von Akkulaufzeit oder Hardwarekompatibilität.
+
+| Distribution | Punkte |
+|---|---:|
+| Linux Mint Cinnamon | +9 |
+| Linux Mint Xfce | +8 |
+| Zorin OS Core | +9 |
+| Ubuntu GNOME | +12 |
+| Kubuntu | +11 |
+| Debian GNOME | +6 |
+| Debian KDE | +5 |
+| Fedora Workstation | +12 |
+| Fedora KDE | +11 |
+| openSUSE Leap KDE | +5 |
+| openSUSE Tumbleweed KDE | +9 |
+| MX Linux Xfce | +5 |
+| Linux Lite | +3 |
+| elementary OS | +11 |
+| Pop!_OS COSMIC | +15 |
+| Bazzite KDE | +9 |
+| Nobara KDE | +3 |
+| CachyOS KDE | +6 |
+| EndeavourOS KDE | +6 |
+| Arch Linux (Eigenbau) | -11 |
+| NixOS KDE | -8 |
+| Omarchy | +11 |

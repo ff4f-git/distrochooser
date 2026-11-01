@@ -28,7 +28,7 @@ The available scoring ranges are therefore **used as fully as actual differences
 | Question | Scoring range | Criterion |
 |---|---|---|
 | 1. Main use | −10 to +10 per selection | Suitability for the use case |
-| 2. Device type | −10 to +10 | Suitability for the type of device |
+| 2. Device type | Laptop: −15 to +15; others: −10 to +10 | Suitability for the type of device |
 | 3. Device age | −10 to +10 | Hardware requirements |
 | 4. Approach to the system | −20 to +20 | Desired setup and maintenance effort |
 | 5. Appearance | −5 to +5 | Visual preferences; deliberately lower weighting |
@@ -104,7 +104,7 @@ Well-integrated office and communication software, an understandable interface, 
 
 ### Question 2 – Device type
 
-**Scoring range: −10 to +10 points.** Device type is generally a supplementary suitability criterion, not a categorical exclusion. Larger gaps are used only when objectively justified by device-specific differences. Small differences are deliberately useful: they can affect the order when total scores are otherwise close.
+**Scoring range: laptop −15 to +15 points; desktop and mini PC remain −10 to +10.** Laptop integration carries more weight because power management, suspend and mobile hardware functions are central to daily use. Scores assess existing integration, not guaranteed compatibility with every device.
 
 **“Desktop PC”:** A stationary desktop usually has no special power management or mobility requirements. Scores are therefore deliberately fairly close. Small advantages in support and integration of current desktop hardware are recognized; no artificially large gaps.
 
@@ -114,7 +114,7 @@ Well-integrated office and communication software, an understandable interface, 
 
 **“No device yet”:** All distributions receive **0 points**. Without a known device type, no justified device-specific preference can be inferred.
 
-**Rule for new distributions:** Check the actual shipped or basic installation state and hardware integration that is genuinely enabled. Do not evaluate theoretical installability alone. For desktops and mini PCs, use only the spread real differences justify; clear laptop integration benefits may carry considerably more weight. Excel matrix scores remain unchanged.
+**Rule for new distributions:** Check the actual shipped or basic installation state and hardware integration that is genuinely enabled. Do not evaluate theoretical installability alone. For desktops and mini PCs, use only the spread real differences justify; clear laptop integration benefits may carry considerably more weight. Laptop scores were adopted on 1 November 2026; other device columns remain unchanged.
 
 ### Question 3 – Device age and RAM follow-up 
 
@@ -199,6 +199,42 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 ## 6. Calculation and results
 For each distribution, points from all selected answers are added. For main use, **all** selected uses count. There is no hidden averaging.
 
-The **three highest totals** are displayed. Ties follow the predefined catalog order. Total points remain internal; **final results display neither point totals nor percentages**. The first bar corresponds to the highest total actually achieved and is always full. The other two bars show their relationship to that best score on a **purely visual scale internally shortened to 50–100%**: bar width = max(0, min(100, (total points / best score − 0.5) × 200)), provided best score > 0. The scale and formula are not shown to users. Scoring, ranking, and tie-breaking remain unchanged.
+All distributions in the **first three distinct score groups** are displayed. Tied distributions share a rank; catalog order is retained within each rank. Total points remain internal; **final results display neither point totals nor percentages**. The first bar corresponds to the highest total actually achieved and is always full. The remaining bars show their relationship to that best score on a **purely visual scale internally shortened to 50–100%**: bar width = max(0, min(100, (total points / best score − 0.5) × 200)), provided best score > 0. The scale and formula are not shown to users. Ties do not change total scores.
 
 **Criterion:** The winner should be the distribution whose overall package best matches the answers, rather than a predetermined distribution. *It depends.*
+
+
+<!-- Result ranking rule, 2026-11-01 -->
+### Tied result ranks
+
+The first three distinct scores define ranks 1, 2 and 3. All tied distributions share a rank; no rank is skipped. Scores 90, 90, 80, 70 yield ranks 1, 1, 2, 3. More than three recommendations may therefore appear. Ties do not change scores.
+
+
+### Adopted laptop column I (1 November 2026)
+
+Approved project ratings following the joint review. Bazzite receives +9 and EndeavourOS +6. These ratings are not measurements of battery life or hardware compatibility.
+
+| Distribution | Points |
+|---|---:|
+| Linux Mint Cinnamon | +9 |
+| Linux Mint Xfce | +8 |
+| Zorin OS Core | +9 |
+| Ubuntu GNOME | +12 |
+| Kubuntu | +11 |
+| Debian GNOME | +6 |
+| Debian KDE | +5 |
+| Fedora Workstation | +12 |
+| Fedora KDE | +11 |
+| openSUSE Leap KDE | +5 |
+| openSUSE Tumbleweed KDE | +9 |
+| MX Linux Xfce | +5 |
+| Linux Lite | +3 |
+| elementary OS | +11 |
+| Pop!_OS COSMIC | +15 |
+| Bazzite KDE | +9 |
+| Nobara KDE | +3 |
+| CachyOS KDE | +6 |
+| EndeavourOS KDE | +6 |
+| Arch Linux (Eigenbau) | -11 |
+| NixOS KDE | -8 |
+| Omarchy | +11 |
