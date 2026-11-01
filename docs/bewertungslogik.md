@@ -189,7 +189,33 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 | NixOS KDE | -10 |
 | Omarchy | -8 |
 
-- **„Basteln“ – bewusst geringe Gewichtung (−5 bis +5):** Gewünscht sind Gestaltungsfreiheit und tiefe Systemeingriffe. Arch, EndeavourOS und NixOS erhalten +5; Bazzite −5 wegen der Einschränkungen klassischer Änderungen am Basissystem. Die geringe Spreizung ist *gewollt*: Der Bastelwunsch darf die Gesamtempfehlung weniger stark prägen als der Wunsch, dass das System einfach läuft. Anpassbarkeit und Linux-Erfahrung werden zudem in weiteren Fragen berücksichtigt. **Keine Punktänderungen.**
+- **„Basteln, konfigurieren und experimentieren“ (S):** Selektiert bewusste Systemgestaltung, tiefe Eingriffe, Konfigurationsfreiheit und Eigenverantwortung, unabhängig von der Erfahrung. Arch Eigenbau und NixOS bilden die positiven Anker (+20); Bazzite den Gegenpol (−20), weil direkte Änderungen am Basissystem nicht sein primäres Nutzungskonzept sind. EndeavourOS (+19), CachyOS (+17) und Tumbleweed (+15) folgen. Tumbleweed kann sowohl R als auch S gut erfüllen. Vorkonfiguration und Wartungsbedarf sind von Gestaltungsfreiheit zu unterscheiden; Instabilität wird nicht als Vorteil gewertet. Die freigegebene Abstufung berücksichtigt Desktop-Unterschiede ergänzend; die Oberflächenanpassung wird gesondert in Frage 6 bewertet. Minimum −20, Maximum +20, Spannweite 40.
+
+| Distribution | S |
+|---|---:|
+| Linux Mint Cinnamon | -8 |
+| Linux Mint Xfce | -6 |
+| Zorin OS Core | -10 |
+| Ubuntu GNOME | +2 |
+| Kubuntu | +4 |
+| Debian GNOME | +8 |
+| Debian KDE | +10 |
+| Fedora Workstation | +6 |
+| Fedora KDE | +8 |
+| openSUSE Leap KDE | +4 |
+| openSUSE Tumbleweed KDE | +15 |
+| MX Linux Xfce | +3 |
+| Linux Lite | -8 |
+| elementary OS | -12 |
+| Pop!_OS COSMIC | -2 |
+| Bazzite KDE | -20 |
+| Nobara KDE | +2 |
+| CachyOS KDE | +17 |
+| EndeavourOS KDE | +19 |
+| Arch Linux (Eigenbau) | +20 |
+| NixOS KDE | +20 |
+| Omarchy | +12 |
+
 
 **Regel für neue Distributionen:** Bei „Lernen“ pädagogische Eignung und Einstiegshürde bewerten, nicht maximale technische Komplexität. Bei „Basteln“ die tatsächliche Freiheit des Systemmodells bewerten. Die absichtlich unterschiedlichen Gewichte beibehalten.
 

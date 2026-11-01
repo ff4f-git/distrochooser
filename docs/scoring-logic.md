@@ -188,7 +188,33 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 | NixOS KDE | -10 |
 | Omarchy | -8 |
 
-- **“Tinker” – deliberately low weighting (−5 to +5):** The preference is for customization freedom and deep system modifications. Arch, EndeavourOS, and NixOS receive +5; Bazzite receives −5 due to restrictions on traditional base-system changes. The narrow spread is *intentional*: the desire to tinker should influence the overall recommendation less strongly than the desire for a system that simply works. Customization and Linux experience are also considered in later questions. **No score changes.**
+- **“Tinker, configure, and experiment” (S):** Selects deliberate system design, deep modifications, configuration freedom and personal responsibility, independently of experience. Self-built Arch and NixOS are the positive anchors (+20); Bazzite is the opposite (−20), since direct base-system changes are not its primary intended workflow. EndeavourOS (+19), CachyOS (+17) and Tumbleweed (+15) follow. Tumbleweed can fit both R and S well. Preconfiguration and maintenance needs must be distinguished from freedom to customize; instability is not rewarded. The approved ordering also considers desktop differences; interface customization is assessed separately in Question 6. Minimum −20, maximum +20, spread 40.
+
+| Distribution | S |
+|---|---:|
+| Linux Mint Cinnamon | -8 |
+| Linux Mint Xfce | -6 |
+| Zorin OS Core | -10 |
+| Ubuntu GNOME | +2 |
+| Kubuntu | +4 |
+| Debian GNOME | +8 |
+| Debian KDE | +10 |
+| Fedora Workstation | +6 |
+| Fedora KDE | +8 |
+| openSUSE Leap KDE | +4 |
+| openSUSE Tumbleweed KDE | +15 |
+| MX Linux Xfce | +3 |
+| Linux Lite | -8 |
+| elementary OS | -12 |
+| Pop!_OS COSMIC | -2 |
+| Bazzite KDE | -20 |
+| Nobara KDE | +2 |
+| CachyOS KDE | +17 |
+| EndeavourOS KDE | +19 |
+| Arch Linux (Eigenbau) | +20 |
+| NixOS KDE | +20 |
+| Omarchy | +12 |
+
 
 **Rule for new distributions:** For “Learn,” evaluate educational suitability and entry barriers, not maximum technical complexity. For “Tinker,” evaluate the actual freedom of the system model. Preserve the deliberately different weights.
 
