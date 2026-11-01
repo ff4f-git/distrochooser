@@ -162,7 +162,33 @@ Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umf
 | NixOS KDE | -5 |
 | Omarchy | 0 |
 
-- **„Lernen“ – mittlere Gewichtung (positive Werte bis +10):** Gemeint ist *Linux schrittweise kennenlernen*, nicht „möglichst viel selbst reparieren müssen“. Positiv zählen niedrige Einstiegshürde, verständliche Dokumentation, hilfsbereite Community und die Möglichkeit, später tiefer einzusteigen. Arch und NixOS sind technisch lehrreich, aber für den sanften Einstieg weniger geeignet. **Beschlossene Korrekturen:** Debian GNOME +3 → **+6**, Debian KDE +3 → **+6** (gute Lernbasis und Dokumentation); Bazzite KDE +10 → **+5** (leichter Einstieg, aber durch atomaren Unterbau eingeschränkte klassische Eingriffe ins Basissystem). Alle anderen Lernwerte bleiben unverändert.
+- **„Linux kennenlernen und etwas ausprobieren“ (R):** Bevorzugt den Mittelweg zwischen möglichst wenig Systempflege (Q) und intensiver Systemgestaltung (S), unabhängig von der Erfahrung. Moderne, gut getestete und vielseitige Systeme stehen oben. Fedora Workstation/KDE bilden den positiven Anker (+20); Arch Eigenbau den Gegenpol (−20), da der Selbstaufbau stärker zu S passt. Das ist keine Aussage über die grundsätzliche Lernfähigkeit der Systeme. Bazzites vorgegebenes Systemmodell und NixOS’ spezieller Konfigurationsansatz liegen aus unterschiedlichen Gründen unterhalb des Mittelwegs. Minimum −20, Maximum +20, Spannweite 40.
+
+| Distribution | R |
+|---|---:|
+| Linux Mint Cinnamon | +7 |
+| Linux Mint Xfce | +7 |
+| Zorin OS Core | +5 |
+| Ubuntu GNOME | +18 |
+| Kubuntu | +18 |
+| Debian GNOME | +12 |
+| Debian KDE | +12 |
+| Fedora Workstation | +20 |
+| Fedora KDE | +20 |
+| openSUSE Leap KDE | +12 |
+| openSUSE Tumbleweed KDE | +19 |
+| MX Linux Xfce | +8 |
+| Linux Lite | +4 |
+| elementary OS | +6 |
+| Pop!_OS COSMIC | +14 |
+| Bazzite KDE | -5 |
+| Nobara KDE | +10 |
+| CachyOS KDE | +3 |
+| EndeavourOS KDE | -5 |
+| Arch Linux (Eigenbau) | -20 |
+| NixOS KDE | -10 |
+| Omarchy | -8 |
+
 - **„Basteln“ – bewusst geringe Gewichtung (−5 bis +5):** Gewünscht sind Gestaltungsfreiheit und tiefe Systemeingriffe. Arch, EndeavourOS und NixOS erhalten +5; Bazzite −5 wegen der Einschränkungen klassischer Änderungen am Basissystem. Die geringe Spreizung ist *gewollt*: Der Bastelwunsch darf die Gesamtempfehlung weniger stark prägen als der Wunsch, dass das System einfach läuft. Anpassbarkeit und Linux-Erfahrung werden zudem in weiteren Fragen berücksichtigt. **Keine Punktänderungen.**
 
 **Regel für neue Distributionen:** Bei „Lernen“ pädagogische Eignung und Einstiegshürde bewerten, nicht maximale technische Komplexität. Bei „Basteln“ die tatsächliche Freiheit des Systemmodells bewerten. Die absichtlich unterschiedlichen Gewichte beibehalten.

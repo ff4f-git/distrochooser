@@ -161,7 +161,33 @@ Thus, with 32+ GB, lightweight systems are not favored because of age, and more 
 | NixOS KDE | -5 |
 | Omarchy | 0 |
 
-- **“Learn” – medium weighting (positive values up to +10):** This means *gradually learning Linux*, not “having to fix as much as possible yourself.” A low entry barrier, understandable documentation, a helpful community, and opportunities to explore more deeply later count positively. Arch and NixOS are technically educational but less suitable for a gentle introduction. **Agreed corrections:** Debian GNOME +3 → **+6**, Debian KDE +3 → **+6** (good learning foundation and documentation); Bazzite KDE +10 → **+5** (easy entry, but the atomic base restricts traditional base-system modifications). All other learning scores remain unchanged.
+- **“Learn Linux and try a few things” (R):** Favors the middle ground between minimal system maintenance (Q) and intensive system customization (S), independently of experience. Modern, well-tested, versatile systems lead. Fedora Workstation/KDE are the positive anchor (+20); self-built Arch is the opposite (−20), since building the system fits S more closely. This is not a judgment about whether these systems can teach Linux. Bazzite’s prescribed system model and NixOS’s specialized configuration approach fall below the middle ground for different reasons. Minimum −20, maximum +20, spread 40.
+
+| Distribution | R |
+|---|---:|
+| Linux Mint Cinnamon | +7 |
+| Linux Mint Xfce | +7 |
+| Zorin OS Core | +5 |
+| Ubuntu GNOME | +18 |
+| Kubuntu | +18 |
+| Debian GNOME | +12 |
+| Debian KDE | +12 |
+| Fedora Workstation | +20 |
+| Fedora KDE | +20 |
+| openSUSE Leap KDE | +12 |
+| openSUSE Tumbleweed KDE | +19 |
+| MX Linux Xfce | +8 |
+| Linux Lite | +4 |
+| elementary OS | +6 |
+| Pop!_OS COSMIC | +14 |
+| Bazzite KDE | -5 |
+| Nobara KDE | +10 |
+| CachyOS KDE | +3 |
+| EndeavourOS KDE | -5 |
+| Arch Linux (Eigenbau) | -20 |
+| NixOS KDE | -10 |
+| Omarchy | -8 |
+
 - **“Tinker” – deliberately low weighting (−5 to +5):** The preference is for customization freedom and deep system modifications. Arch, EndeavourOS, and NixOS receive +5; Bazzite receives −5 due to restrictions on traditional base-system changes. The narrow spread is *intentional*: the desire to tinker should influence the overall recommendation less strongly than the desire for a system that simply works. Customization and Linux experience are also considered in later questions. **No score changes.**
 
 **Rule for new distributions:** For “Learn,” evaluate educational suitability and entry barriers, not maximum technical complexity. For “Tinker,” evaluate the actual freedom of the system model. Preserve the deliberately different weights.
