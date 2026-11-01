@@ -23,7 +23,7 @@ Ein kurzlebiger GitHub Fine-grained Personal Access Token benötigt ausschließl
 - `data/punktematrix.xlsx` als **Export**, nicht als Eingabequelle;
 - `docs/scores-de.md` und `docs/scores-en.md` mit vollständigen aktuellen Punktetabellen.
 
-Die ausführlichen Begründungen in `bewertungslogik.md` und `scoring-logic.md` bleiben redaktionelle Dokumente. Für den jeweils aktuellen Zahlenstand sind die automatisch erzeugten Punktetabellen maßgeblich.
+Auch `bewertungslogik.md` und `scoring-logic.md` werden mit den aktuellen Tabellen erzeugt. Die bisherigen ausführlichen Begründungen bleiben unter `scoring-rationale-de.md` und `scoring-rationale-en.md` als redaktionelle Dokumente mit historischen Beispielen erhalten.
 
 Die Edge Function `catalog-admin` erstellt einen Commit auf `main` und aktiviert danach denselben Katalog in einer Transaktion in Supabase. Erst dann meldet das Formular Erfolg. Bei einer Änderung auf `main` oder einer konkurrierenden Veröffentlichung wird ein veralteter Stand abgelehnt. Wenn nach dem Commit die Datenbank vorübergehend nicht erreichbar ist, kann derselbe Speichervorgang wiederholt werden; der identische Commit-Katalog wird dann aktiviert.
 
