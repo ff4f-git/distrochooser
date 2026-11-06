@@ -97,14 +97,16 @@ assets/descriptions-en.json English result descriptions
 assets/statistics-config.js  Active public statistics endpoint
 supabase/migrations/         Private storage and public aggregation SQL migrations
 supabase/functions/          Server-side submission handler / Serverfunktion
-docs/statistics-setup.md     Bilingual setup and operations / Anleitung DE/EN
+docs/statistics-setup.md     Supabase setup (statistics + catalog) / Einrichtung DE/EN
+supabase/functions/catalog-admin/ Versioned catalog API and publishing / Katalogverwaltung
+supabase/functions/submit-statistics/ Optional statistics / freiwillige Statistik
 statistik.html                Public statistics dashboard / Öffentliche Statistik
 datenschutz.html             Privacy notice / Datenschutzhinweise
 docs/public-statistics.md    Public dashboard configuration / Einrichtung
 docs/                       Concept and scoring notes / Dokumentation
 ```
 
-**Technology / Technik:** Vanilla HTML, CSS, and JavaScript modules. No framework or user account required for the questionnaire. Recommendations run entirely in the browser using local JSON assets loaded through HTTP(S). The optional statistics feature uses a separate Supabase database and Edge Function only when explicitly enabled and submitted by a visitor.
+**Technology / Technik:** Vanilla HTML, CSS, and JavaScript modules. No framework or user account required for the questionnaire. Recommendations are calculated in the browser using the current versioned catalog served by Supabase, with `data/distributions.json` as the static fallback. Supabase also provides the protected catalog publishing service and optional statistics; only an explicit opt-in submits questionnaire statistics.
 
 **License / Lizenz:** No open-source license has been granted yet. All rights reserved until a license is explicitly added.
 
@@ -116,6 +118,12 @@ Die ersten drei unterschiedlichen Punktwerte bilden Platz 1, 2 und 3. Alle punkt
 
 
 Version 2.2.0: Notebook-Spalte I mit −15 bis +15 Punkten; drei Rangstufen einschließlich Gleichständen. Für die Statistik vor Veröffentlichung SQL-Migration `202611010001_tied_recommendations.sql` anwenden und die Edge Function neu deployen.
+
+## Supabase installation / Supabase-Einrichtung
+
+**DE:** Bei einer neuen Installation alle fünf SQL-Migrationen in Reihenfolge ausführen, beide Edge Functions (`submit-statistics`, `catalog-admin`) bereitstellen und den aktuellen Katalog als erste Veröffentlichung in Supabase registrieren. Für reine Punkteänderungen ist danach kein erneutes Deployment nötig. [Vollständige Anleitung](docs/statistics-setup.md) · [Katalogverwaltung](docs/administration.md).
+
+**EN:** On a fresh installation, apply all five SQL migrations in order, deploy both Edge Functions (`submit-statistics` and `catalog-admin`), and register the initial versioned catalog in Supabase. Subsequent scoring changes do not require function redeployment. [Full setup guide](docs/statistics-setup.md) · [Catalog administration](docs/administration.md).
 
 ## Administration
 
