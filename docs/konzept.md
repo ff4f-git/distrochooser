@@ -12,7 +12,7 @@ Die ersten drei **unterschiedlichen** Punktwerte bilden die Ränge. Bei Gleichst
 
 Der Fragebogen läuft im Browser; die aktuelle Katalogversion kommt aus der veröffentlichten Datenverwaltung, mit statischer JSON-Datei als Fallback. Die freiwillige Statistik wird ausschließlich nach ausdrücklicher Zustimmung übermittelt.
 
-[JSON-Punktematrix](../data/distributions.json) · [Administration](administration.md)
+[Bewertungslogik](bewertungslogik.md) · [JSON-Punktematrix](../data/distributions.json) · [Administration](administration.md)
 
 ---
 
@@ -28,4 +28,4 @@ The top three **distinct** totals define the ranks. Ties may result in more than
 
 The questionnaire runs in the browser; the current catalog is fetched from the published catalog service with a static JSON fallback. Optional statistics are submitted only with explicit consent.
 
-[JSON scoring matrix](../data/distributions.json) · [Administration](administration.md)
+[Scoring logic](bewertungslogik.md) · [JSON scoring matrix](../data/distributions.json) · [Administration](administration.md)

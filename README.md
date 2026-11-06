@@ -40,7 +40,7 @@ Die Gewichtungen sind bewusst redaktionelle Einschätzungen. Sie können sich mi
 
 **Freiwillige Statistik:** Beiträge werden ausschließlich nach ausdrücklichem Klick auf „Ergebnis zur Statistik beitragen“ übertragen. Nach erfolgreichem Beitrag erscheint ein zusätzlicher Link „Öffentliche Statistik ansehen“ im Ergebnisbereich; der Footer-Link ist immer sichtbar. Die [öffentliche Statistik](statistik.html) zeigt ab dem ersten Beitrag die Gesamtzahl und maximal drei Distributionen, sortiert nach Häufigkeit ihrer **Erstplatzierung** (bei Gleichstand alphabetisch). Es handelt sich um Empfehlungen des Modells, nicht um Nutzerstimmen für eine Distribution. Die Statistik umfasst etwa 90 Tage und ist nicht repräsentativ. [Betrieb und Einrichtung (DE/EN)](docs/statistics-setup.md).
 
-Mehr dazu: [Konzept](docs/konzept.md) · [JSON-Punktematrix](data/distributions.json)
+Mehr dazu: [Konzept](docs/konzept.md) · [Bewertungslogik](docs/bewertungslogik.md) · [JSON-Punktematrix](data/distributions.json)
 
 ---
 
@@ -76,7 +76,7 @@ Weights reflect editorial judgment and may change as distributions evolve. Alway
 
 **Optional statistics:** Only an explicit click submits a result. After a successful contribution, a “View public statistics” link appears in the results; the footer link remains available to everyone. The [public dashboard](statistik.html) displays the total and up to three most frequent **first-choice recommendations** starting with the first contribution (alphabetical tie-break). These are model recommendations, not votes for a distribution. Figures cover approximately 90 days and are not representative. [Operations guide](docs/statistics-setup.md).
 
-For a closer look, see the [concept](docs/konzept.md) and [JSON scoring matrix](data/distributions.json).
+For a closer look, see the [concept](docs/konzept.md), [scoring logic](docs/bewertungslogik.md) and [JSON scoring matrix](data/distributions.json).
 
 ---
 
