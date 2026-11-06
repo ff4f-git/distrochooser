@@ -1,6 +1,6 @@
 # Veröffentlichte Bewertungen
 
-Version: `catalog-be656837cda10e7621834c8d4a9698e8acb062ec134b14a94ef15dc87d324946`
+Version: `catalog-2e48346b1f101b38ac6cd743cd72fd35a05900b6f507dc30e38fd9a96c2a643f`
 
 Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 
@@ -28,6 +28,11 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | 0 | 5 | 5 | 5 | 15 | 15 |
 | NixOS | 0 | 0 | -10 | -5 | 15 | 15 |
 | Omarchy | 5 | 0 | 5 | 0 | 15 | 15 |
+| Solus | 10 | 10 | 5 | 5 | 15 | 5 |
+| Gentoo Linux | -10 | -10 | -5 | -5 | 10 | 20 |
+| TUXEDO OS | 10 | 10 | 10 | 10 | 10 | 5 |
+| Void Linux | -5 | -5 | -5 | -5 | 10 | 20 |
+| antiX | 10 | 5 | -10 | -10 | 0 | 5 |
 
 ## Was für einen Rechner nutzt du?
 
@@ -53,6 +58,11 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | 0 | -11 | 0 | 0 |
 | NixOS | 0 | -8 | 0 | 0 |
 | Omarchy | 0 | 11 | 0 | 0 |
+| Solus | 0 | 9 | 5 | 0 |
+| Gentoo Linux | 0 | -10 | 0 | 0 |
+| TUXEDO OS | 0 | 15 | 0 | 0 |
+| Void Linux | 0 | -6 | 5 | 0 |
+| antiX | 0 | 3 | 10 | 0 |
 
 ## Wie alt ist dein Rechner ungefähr?
 
@@ -78,6 +88,11 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | 15 | 0 | 0 | 5 | 0 |
 | NixOS | 10 | 0 | 0 | 5 | 0 |
 | Omarchy | 15 | 0 | 0 | 0 | 0 |
+| Solus | 10 | 0 | 0 | 0 | 0 |
+| Gentoo Linux | 15 | 0 | 0 | 5 | 0 |
+| TUXEDO OS | 10 | 0 | 0 | -5 | 0 |
+| Void Linux | 10 | 0 | 5 | 10 | 0 |
+| antiX | -10 | 0 | 5 | 15 | 0 |
 
 ## Wie möchtest du mit deinem Betriebssystem umgehen?
 
@@ -103,6 +118,11 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | -20 | -20 | 10 |
 | NixOS | -5 | -10 | 14 |
 | Omarchy | 0 | -8 | 20 |
+| Solus | 12 | 10 | 0 |
+| Gentoo Linux | -20 | -20 | 20 |
+| TUXEDO OS | 18 | 12 | -5 |
+| Void Linux | -15 | -10 | 20 |
+| antiX | 5 | 10 | 5 |
 
 ## Wie wichtig ist dir das Aussehen?
 
@@ -128,6 +148,11 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | 0 | 0 | 0 |
 | NixOS | 5 | 10 | 0 |
 | Omarchy | -5 | 15 | 0 |
+| Solus | 5 | 10 | 0 |
+| Gentoo Linux | 0 | 0 | 0 |
+| TUXEDO OS | 5 | 10 | 0 |
+| Void Linux | 0 | 0 | 0 |
+| antiX | 5 | -5 | 0 |
 
 ## Wie möchtest du deine Desktop-Oberfläche anpassen?
 
@@ -153,6 +178,11 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | 0 | 0 | 15 |
 | NixOS | 5 | 10 | 10 |
 | Omarchy | 15 | 15 | 15 |
+| Solus | 10 | 5 | 5 |
+| Gentoo Linux | 0 | 5 | 10 |
+| TUXEDO OS | 10 | 10 | 10 |
+| Void Linux | 0 | 5 | 10 |
+| antiX | 5 | 5 | 10 |
 
 ## Wie wichtig ist dir, Änderungen einfach rückgängig zu machen?
 
@@ -178,6 +208,11 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | 0 | -5 | 0 |
 | NixOS | 5 | 5 | 0 |
 | Omarchy | 0 | 5 | 0 |
+| Solus | 0 | 0 | 0 |
+| Gentoo Linux | 0 | -5 | 0 |
+| TUXEDO OS | 0 | 0 | 0 |
+| Void Linux | 0 | -5 | 0 |
+| antiX | 5 | 5 | 0 |
 
 ## Wie viel Erfahrung hast du bereits mit Linux?
 
@@ -203,6 +238,11 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | -10 | 0 | 40 |
 | NixOS | -10 | 0 | 40 |
 | Omarchy | 0 | 10 | 20 |
+| Solus | 10 | 5 | 0 |
+| Gentoo Linux | -10 | 0 | 40 |
+| TUXEDO OS | 10 | 5 | 0 |
+| Void Linux | -10 | 0 | 40 |
+| antiX | 0 | 10 | 20 |
 
 ## RAM / GPU
 
@@ -228,3 +268,8 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | 5 | 5 | 0 | 0 | -5 | 0 | 5 | 5 | 0 | 0 |
 | NixOS | -10 | 0 | 5 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
 | Omarchy | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
+| Solus | -5 | 5 | 5 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
+| Gentoo Linux | 5 | 5 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
+| TUXEDO OS | -10 | 0 | 5 | 0 | 0 | 5 | 5 | 5 | 5 | 0 |
+| Void Linux | 10 | 10 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
+| antiX | 20 | 10 | -5 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |

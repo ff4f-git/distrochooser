@@ -78,6 +78,26 @@ export const DISTRO_ICONS = {
   "Omarchy": [
     "",
     "#d3b3ff"
+  ],
+  "Solus": [
+    "",
+    "#23bfdc"
+  ],
+  "Gentoo Linux": [
+    "",
+    "#23bfdc"
+  ],
+  "TUXEDO OS": [
+    "",
+    "#23bfdc"
+  ],
+  "Void Linux": [
+    "",
+    "#23bfdc"
+  ],
+  "antiX": [
+    "",
+    "#23bfdc"
   ]
 }
 ;

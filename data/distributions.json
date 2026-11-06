@@ -1688,7 +1688,7 @@
     {
       "id": "solus",
       "name": "Solus",
-      "active": false,
+      "active": true,
       "url": "https://getsol.us/",
       "icon": [
         "",
@@ -1764,7 +1764,7 @@
     {
       "id": "gentoo-linux",
       "name": "Gentoo Linux",
-      "active": false,
+      "active": true,
       "url": "https://www.gentoo.org/",
       "icon": [
         "",
@@ -1840,7 +1840,7 @@
     {
       "id": "tuxedo-os",
       "name": "TUXEDO OS",
-      "active": false,
+      "active": true,
       "url": "https://www.tuxedocomputers.com/os",
       "icon": [
         "",
@@ -1916,7 +1916,7 @@
     {
       "id": "void-linux",
       "name": "Void Linux",
-      "active": false,
+      "active": true,
       "url": "https://voidlinux.org/",
       "icon": [
         "",
@@ -1992,7 +1992,7 @@
     {
       "id": "antix",
       "name": "antiX",
-      "active": false,
+      "active": true,
       "url": "https://antixlinux.com/",
       "icon": [
         "",
@@ -2066,5 +2066,5 @@
       }
     }
   ],
-  "version": "catalog-be656837cda10e7621834c8d4a9698e8acb062ec134b14a94ef15dc87d324946"
+  "version": "catalog-2e48346b1f101b38ac6cd743cd72fd35a05900b6f507dc30e38fd9a96c2a643f"
 }

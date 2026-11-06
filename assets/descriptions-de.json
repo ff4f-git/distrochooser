@@ -78,5 +78,25 @@
   "Omarchy": {
     "label": "Fenster automatisch anordnen",
     "description": "Eine vorkonfigurierte Arch-Umgebung, die Fenster automatisch nebeneinander anordnet und auf Tastaturbedienung setzt. Der Arbeitsstil ist ungewohnt und erfordert Einarbeitung."
+  },
+  "Solus": {
+    "label": "Eigenständig und auf den Desktop ausgerichtet",
+    "description": "Eine eigenständige Distribution mit vorbereiteten Desktop-Oberflächen und einer eigenen Softwareauswahl. Fortlaufende Updates halten das System aktuell."
+  },
+  "Gentoo Linux": {
+    "label": "Linux bis ins Detail gestalten",
+    "description": "Softwarefunktionen und Systemaufbau lassen sich sehr gezielt anpassen. Programme können aus Quellcode gebaut oder als fertige Pakete installiert werden; Einrichtung und Pflege brauchen Zeit und Erfahrung."
+  },
+  "TUXEDO OS": {
+    "label": "KDE mit TUXEDO-Werkzeugen",
+    "description": "Eine vorbereitete KDE-Plasma-Oberfläche mit zusätzlichen Werkzeugen von TUXEDO Computers. Ein Schwerpunkt ist die Abstimmung auf unterstützte Geräte dieses Herstellers."
+  },
+  "Void Linux": {
+    "label": "Schlanke Grundlage zum Selbstgestalten",
+    "description": "Eine eigenständige Distribution mit fortlaufenden Updates und schlankem Systemaufbau. Softwareauswahl, Einrichtung und Pflege erfordern Eigeninitiative und Erfahrung."
+  },
+  "antiX": {
+    "label": "Sparsam auf älteren Rechnern",
+    "description": "Eine Debian-basierte Distribution mit besonders sparsamer Oberfläche für ältere oder leistungsschwächere Rechner. Sie bietet vielseitige Werkzeuge für den Betrieb direkt vom USB-Stick."
   }
 }

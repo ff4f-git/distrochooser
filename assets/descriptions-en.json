@@ -78,5 +78,25 @@
   "Omarchy": {
     "label": "Arrange windows automatically",
     "description": "A preconfigured Arch environment that automatically arranges windows side by side and emphasizes keyboard controls. Its unfamiliar working style takes time to learn."
+  },
+  "Solus": {
+    "label": "Independent and desktop-focused",
+    "description": "An independent distribution with preconfigured desktop interfaces and its own software selection. Rolling updates keep the system current."
+  },
+  "Gentoo Linux": {
+    "label": "Shape Linux in detail",
+    "description": "Software features and the system layout can be tailored closely to your needs. Programs can be built from source or installed as ready-made packages; setup and maintenance take time and experience."
+  },
+  "TUXEDO OS": {
+    "label": "KDE with TUXEDO tools",
+    "description": "A preconfigured KDE Plasma interface with additional tools from TUXEDO Computers. A key focus is integration with supported devices from this manufacturer."
+  },
+  "Void Linux": {
+    "label": "A lean foundation to make your own",
+    "description": "An independent distribution with rolling updates and a lean system layout. Software selection, setup and maintenance require a hands-on approach and experience."
+  },
+  "antiX": {
+    "label": "Lightweight on older computers",
+    "description": "A Debian-based distribution with a particularly resource-efficient interface for older or less powerful computers. It offers versatile tools for running directly from a USB drive."
   }
 }
