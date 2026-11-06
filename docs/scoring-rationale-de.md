@@ -29,15 +29,15 @@ Die vorgesehenen Punktebereiche werden daher **so weit ausgeschöpft, wie es die
 
 | Frage | Bewertungsrahmen | Bewertungsmaßstab |
 |---|---|---|
-| 1. Hauptnutzung | −10 bis +10 je Auswahl | Eignung für den Einsatzzweck |
+| 1. Hauptnutzung | −10 bis +20 je Auswahl | Eignung für den Einsatzzweck |
 | 2. Gerätetyp | Notebook: −15 bis +15; übrige: −10 bis +10 | Eignung für die Geräteart |
-| 3. Gerätealter | −10 bis +10 | Anforderungen an die Hardware |
+| 3. Gerätealter | −10 bis +15 | Anforderungen an die Hardware |
 | 4. Umgang mit dem System | −20 bis +20 | Gewünschter Einrichtungs- und Wartungsaufwand |
-| 5. Aussehen | −5 bis +5 | Optische Vorlieben; bewusst schwächer gewichtet |
+| 5. Aussehen | −5 bis +10 | Optische Vorlieben; bewusst schwächer gewichtet |
 | 6. Anpassung | −10 bis +10 | Gewünschte Gestaltungsfreiheit |
-| 7. Wiederherstellung | −10 bis +10 | Praktisch nutzbare Systemwiederherstellung, Integration und Einrichtungsaufwand (keine Datensicherung) |
+| 7. Wiederherstellung | −5 bis +10 | Praktisch nutzbare Systemwiederherstellung, Integration und Einrichtungsaufwand (keine Datensicherung) |
 | 8. Linux-Erfahrung | −20 bis +40 | Erfahrung und zumutbare Eigenverantwortung |
-| RAM-Zusatzfrage | −10 bis +10 | Ressourcenbedarf älterer Rechner |
+| RAM-Zusatzfrage | −15 bis +20 | Ressourcenbedarf älterer Rechner |
 | GPU-Zusatzfrage | 0 bis +5 | Zusätzliche Gaming-Eignung |
 
 **Die Bereiche sind Bewertungsrahmen, nicht die tatsächlich vorkommenden Minimal- und Maximalwerte jeder Antwortspalte.** Die konkreten Punkte stehen in der Excel-Matrix.
@@ -123,7 +123,7 @@ Hinzu kommen gut integrierte Büro- und Kommunikationssoftware, ein verständlic
 
 **Bewertungsrahmen Gerätealter: −10 bis +10 Punkte.** Die Altersangabe dient der groben technischen Tendenz: Bei **unter einem Jahr** werden aktuelle Kernel, Treiber und Firmware gegenüber konservativen LTS-Ständen bevorzugt; bei **1–3 Jahren** sind alle Distributionen neutral (0 Punkte); bei **4–7 Jahren** erhalten ressourcenschonende Systeme moderate Vorteile; bei **8+ Jahren** ist diese Bevorzugung stärker. **Unbekannt** bleibt neutral (0 Punkte). Es wird nicht unterstellt, dass jeder alte Rechner schwach ist.
 
-**RAM-Zusatzfrage (−10 bis +10 Punkte):** Die Altersfrage bewertet technische Tendenzen, keine exakte Hardwareleistung. Die RAM-Zusatzfrage erscheint ausschließlich bei „8 Jahre oder älter“.
+**RAM-Zusatzfrage (aktuell −15 bis +20 Punkte):** Die Altersfrage bewertet technische Tendenzen, keine exakte Hardwareleistung. Die RAM-Zusatzfrage erscheint ausschließlich bei „8 Jahre oder älter“.
 
 - **4 GB oder weniger:** bisherige starke RAM-Selektion zugunsten ressourcenschonender Systeme bleibt erhalten.
 - **8 GB:** bisherige moderate RAM-Selektion bleibt erhalten.
@@ -131,7 +131,7 @@ Hinzu kommen gut integrierte Büro- und Kommunikationssoftware, ein verständlic
 - **32 GB oder mehr:** Die Alterswertung wird vollständig ausgeglichen. RAM-Zusatzpunkte = negative Alterspunkte. Ergebnis aus Gerätealter + RAM = 0.
 - **Weiß ich nicht:** 0 zusätzliche Punkte; Alterswertung bleibt bestehen.
 
-Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umfangreichere Systeme deshalb benachteiligt. Andere Antworten bestimmen die Empfehlung. Die RAM-Korrektur ist eine bewusst vereinfachte Näherung; sie misst nicht CPU/GPU-Leistung. Die Werte liegen jeweils im Bereich −10 bis +10.
+Damit werden bei 32+ GB weder Leichtgewichte wegen des Alters bevorzugt noch umfangreichere Systeme deshalb benachteiligt. Andere Antworten bestimmen die Empfehlung. Die RAM-Korrektur ist eine bewusst vereinfachte Näherung; sie misst nicht CPU/GPU-Leistung. Die aktuellen Werte reichen von −15 bis +20; besonders sparsame Systeme wie antiX erhalten bei sehr wenig RAM einen gezielten Bonus.
 
 ### Frage 4 – Umgang mit dem System 
 

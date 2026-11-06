@@ -26,7 +26,7 @@ Linux bietet viele Möglichkeiten – aber welche Distribution passt zu deinem A
 
 - Acht Fragen zu Einsatzzweck, Hardware, Bedienung, Gestaltung, Anpassbarkeit, Wiederherstellung und Linux-Erfahrung.
 - Zwei bedingte Zusatzfragen zu Arbeitsspeicher und Grafikkarte.
-- Eine redaktionell gepflegte Distributionsauswahl.
+- Eine redaktionell gepflegte Auswahl von **25 aktiven Distributionen**, einschließlich Solus, Gentoo Linux, TUXEDO OS, Void Linux und antiX.
 - Drei Empfehlungen mit kurzen Erläuterungen und relativer visueller Einordnung.
 - Umschaltbare Oberfläche auf **Deutsch und Englisch**, auch während des Fragebogens.
 - Eine transparente Punktematrix und eine dokumentierte Bewertungslogik.
@@ -62,7 +62,7 @@ Linux offers a wealth of choices, but where should you start? **Linux Distrochoo
 
 - Eight questions covering usage, hardware, ease of use, appearance, customization, recovery options, and Linux experience.
 - Two conditional follow-up questions about RAM and graphics hardware.
-- An editorially maintained distribution catalog.
+- An editorially maintained catalog of **25 active distributions**, including Solus, Gentoo Linux, TUXEDO OS, Void Linux, and antiX.
 - Three recommendations with brief explanations and relative visual comparisons.
 - A **German/English** language switch that works throughout the questionnaire.
 - An inspectable scoring matrix and documentation of the recommendation model.

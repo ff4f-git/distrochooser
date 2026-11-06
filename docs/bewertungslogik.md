@@ -6,7 +6,7 @@ Die jeweils veröffentlichten Werte werden automatisch aus der Distributionsverw
 
 # Veröffentlichte Bewertungen
 
-Version: `catalog-2e48346b1f101b38ac6cd743cd72fd35a05900b6f507dc30e38fd9a96c2a643f`
+Version: `catalog-bddb535add7174de1b7d19af34cd9581bbb204ee803d3e8e215f4c54c9563240`
 
 Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 
@@ -34,8 +34,8 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | 0 | 5 | 5 | 5 | 15 | 15 |
 | NixOS | 0 | 0 | -10 | -5 | 15 | 15 |
 | Omarchy | 5 | 0 | 5 | 0 | 15 | 15 |
-| Solus | 10 | 10 | 5 | 5 | 15 | 5 |
-| Gentoo Linux | -10 | -10 | -5 | -5 | 10 | 20 |
+| Solus | 10 | 10 | 5 | 5 | 10 | 5 |
+| Gentoo Linux | -10 | -10 | -5 | -5 | 15 | 20 |
 | TUXEDO OS | 10 | 10 | 10 | 10 | 10 | 5 |
 | Void Linux | -5 | -5 | -5 | -5 | 10 | 20 |
 | antiX | 10 | 5 | -10 | -10 | 0 | 5 |
@@ -274,8 +274,8 @@ Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 | Arch Linux | 5 | 5 | 0 | 0 | -5 | 0 | 5 | 5 | 0 | 0 |
 | NixOS | -10 | 0 | 5 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
 | Omarchy | -10 | -5 | 5 | 0 | 10 | 5 | 5 | 5 | 0 | 0 |
-| Solus | -5 | 5 | 5 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
-| Gentoo Linux | 5 | 5 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
-| TUXEDO OS | -10 | 0 | 5 | 0 | 0 | 5 | 5 | 5 | 5 | 0 |
-| Void Linux | 10 | 10 | 0 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
-| antiX | 20 | 10 | -5 | 0 | 0 | 0 | 5 | 5 | 0 | 0 |
+| Solus | -5 | 5 | 5 | 0 | 5 | 0 | 5 | 5 | 0 | 0 |
+| Gentoo Linux | 5 | 5 | 0 | 0 | -5 | 0 | 5 | 5 | 0 | 0 |
+| TUXEDO OS | -10 | 0 | 5 | 0 | 10 | 5 | 5 | 5 | 5 | 0 |
+| Void Linux | 10 | 10 | 0 | 0 | -5 | 0 | 5 | 5 | 0 | 0 |
+| antiX | 20 | 10 | -5 | 0 | -10 | 0 | 5 | 5 | 0 | 0 |

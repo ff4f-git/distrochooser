@@ -29,15 +29,15 @@ The available scoring ranges are therefore **used as fully as actual differences
 
 | Question | Scoring range | Criterion |
 |---|---|---|
-| 1. Main use | −10 to +10 per selection | Suitability for the use case |
+| 1. Main use | −10 to +20 per selection | Suitability for the use case |
 | 2. Device type | Laptop: −15 to +15; others: −10 to +10 | Suitability for the type of device |
-| 3. Device age | −10 to +10 | Hardware requirements |
+| 3. Device age | −10 to +15 | Hardware requirements |
 | 4. Approach to the system | −20 to +20 | Desired setup and maintenance effort |
-| 5. Appearance | −5 to +5 | Visual preferences; deliberately lower weighting |
+| 5. Appearance | −5 to +10 | Visual preferences; deliberately lower weighting |
 | 6. Customization | −10 to +10 | Desired freedom to customize |
-| 7. Recovery | −10 to +10 | Usable system recovery, integration, and setup effort (not data backup) |
+| 7. Recovery | −5 to +10 | Usable system recovery, integration, and setup effort (not data backup) |
 | 8. Linux experience | −20 to +40 | Experience and reasonable level of personal responsibility |
-| RAM follow-up | −10 to +10 | Resource requirements of older computers |
+| RAM follow-up | −15 to +20 | Resource requirements of older computers |
 | GPU follow-up | 0 to +5 | Additional gaming suitability |
 
 **These are allowed scoring ranges, not the actual minimum and maximum values present in each answer column.** Specific points are listed in the Excel matrix.
@@ -122,7 +122,7 @@ Well-integrated office and communication software, an understandable interface, 
 
 **Device age scoring range: −10 to +10 points.** Age indicates a broad technical tendency: for **under one year**, current kernels, drivers, and firmware are favored over conservative LTS versions; for **1–3 years**, all distributions are neutral (0 points); for **4–7 years**, resource-efficient systems receive moderate advantages; for **8+ years**, this preference is stronger. **Unknown** remains neutral (0 points). Not every old computer is assumed to be weak.
 
-**RAM follow-up (−10 to +10 points):** The age question assesses technical tendencies, not exact hardware performance. The RAM follow-up appears exclusively for “8 years or older.”
+**RAM follow-up (currently −15 to +20 points):** The age question assesses technical tendencies, not exact hardware performance. The RAM follow-up appears exclusively for “8 years or older.”
 
 - **4 GB or less:** Retain the existing strong RAM-based preference for resource-efficient systems.
 - **8 GB:** Retain the existing moderate RAM-based differentiation.
@@ -130,7 +130,7 @@ Well-integrated office and communication software, an understandable interface, 
 - **32 GB or more:** Fully offset the age score. Additional RAM points = negative age points. Device age + RAM = 0.
 - **I don’t know:** 0 additional points; retain the age score.
 
-Thus, with 32+ GB, lightweight systems are not favored because of age, and more extensive systems are not penalized for it. Other answers determine the recommendation. The RAM correction is a deliberately simplified approximation; it does not measure CPU/GPU performance. Values remain within −10 to +10.
+Thus, with 32+ GB, lightweight systems are not favored because of age, and more extensive systems are not penalized for it. Other answers determine the recommendation. The RAM correction is a deliberately simplified approximation; it does not measure CPU/GPU performance. Current scores range from −15 to +20; exceptionally lightweight systems such as antiX receive a targeted bonus on low-RAM hardware.
 
 ### Question 4 – Approach to the system 
 
