@@ -38,7 +38,7 @@ Jede Antwort ist mit Gewichtungen für die berücksichtigten Distributionen verk
 
 Die Gewichtungen sind bewusst redaktionelle Einschätzungen. Sie können sich mit der Entwicklung von Distributionen ändern und ersetzen keine eigene Recherche, insbesondere bei Treibern, Hardware-Kompatibilität und Spielen mit Anti-Cheat.
 
-**Freiwillige Statistik (Stand 27.10.2026):** Live und erfolgreich getestet: Beiträge werden ausschließlich nach ausdrücklichem Klick auf „Ergebnis zur Statistik beitragen“ übertragen. Nach erfolgreichem Beitrag erscheint ein zusätzlicher Link „Öffentliche Statistik ansehen“ im Ergebnisbereich; der Footer-Link ist immer sichtbar. Die [öffentliche Statistik](statistik.html) zeigt ab dem ersten Beitrag die Gesamtzahl und maximal drei Distributionen, sortiert nach Häufigkeit ihrer **Erstplatzierung** (bei Gleichstand alphabetisch). Es handelt sich um Empfehlungen des Modells, nicht um Nutzerstimmen für eine Distribution. Die Statistik umfasst etwa 90 Tage und ist nicht repräsentativ. [Betrieb und Einrichtung (DE/EN)](docs/statistics-setup.md) · [Öffentliche Auswertung](docs/public-statistics.md).
+**Freiwillige Statistik:** Beiträge werden ausschließlich nach ausdrücklichem Klick auf „Ergebnis zur Statistik beitragen“ übertragen. Nach erfolgreichem Beitrag erscheint ein zusätzlicher Link „Öffentliche Statistik ansehen“ im Ergebnisbereich; der Footer-Link ist immer sichtbar. Die [öffentliche Statistik](statistik.html) zeigt ab dem ersten Beitrag die Gesamtzahl und maximal drei Distributionen, sortiert nach Häufigkeit ihrer **Erstplatzierung** (bei Gleichstand alphabetisch). Es handelt sich um Empfehlungen des Modells, nicht um Nutzerstimmen für eine Distribution. Die Statistik umfasst etwa 90 Tage und ist nicht repräsentativ. [Betrieb und Einrichtung (DE/EN)](docs/statistics-setup.md).
 
 Mehr dazu: [Konzept](docs/konzept.md) · [Bewertungslogik](docs/bewertungslogik.md) · [Punktematrix](data/punktematrix.xlsx)
 
@@ -74,7 +74,7 @@ Each answer contributes weighted points to the included distributions. Gaming-re
 
 Weights reflect editorial judgment and may change as distributions evolve. Always verify hardware, driver, and game compatibility independently, especially for multiplayer games with anti-cheat systems.
 
-**Optional statistics (27 October 2026):** Live and tested. Only an explicit click submits a result. After a successful contribution, a “View public statistics” link appears in the results; the footer link remains available to everyone. The [public dashboard](statistik.html) displays the total and up to three most frequent **first-choice recommendations** starting with the first contribution (alphabetical tie-break). These are model recommendations, not votes for a distribution. Figures cover approximately 90 days and are not representative. [Operations guide](docs/statistics-setup.md) · [Public statistics](docs/public-statistics.md).
+**Optional statistics:** Only an explicit click submits a result. After a successful contribution, a “View public statistics” link appears in the results; the footer link remains available to everyone. The [public dashboard](statistik.html) displays the total and up to three most frequent **first-choice recommendations** starting with the first contribution (alphabetical tie-break). These are model recommendations, not votes for a distribution. Figures cover approximately 90 days and are not representative. [Operations guide](docs/statistics-setup.md).
 
 For a closer look, see the [concept](docs/concept.md), [scoring documentation](docs/scoring-logic.md), and [scoring matrix](data/punktematrix.xlsx).
 
@@ -102,8 +102,7 @@ supabase/functions/catalog-admin/ Versioned catalog API and publishing / Katalog
 supabase/functions/submit-statistics/ Optional statistics / freiwillige Statistik
 statistik.html                Public statistics dashboard / Öffentliche Statistik
 datenschutz.html             Privacy notice / Datenschutzhinweise
-docs/public-statistics.md    Public dashboard configuration / Einrichtung
-docs/                       Concept and scoring notes / Dokumentation
+docs/                       Short concept, scoring, administration and setup guides / Dokumentation
 ```
 
 **Technology / Technik:** Vanilla HTML, CSS, and JavaScript modules. No framework or user account required for the questionnaire. Recommendations are calculated in the browser using the current versioned catalog served by Supabase, with `data/distributions.json` as the static fallback. Supabase also provides the protected catalog publishing service and optional statistics; only an explicit opt-in submits questionnaire statistics.
@@ -116,8 +115,6 @@ docs/                       Concept and scoring notes / Dokumentation
 
 Die ersten drei unterschiedlichen Punktwerte bilden Platz 1, 2 und 3. Alle punktgleichen Distributionen teilen sich denselben Platz; kein Rang wird übersprungen. Beispiel: 90, 90, 80, 70 ergibt 1, 1, 2, 3. Deshalb können mehr als drei Empfehlungen erscheinen. Die Punkte selbst werden durch einen Gleichstand nicht verändert.
 
-
-Version 2.2.0: Notebook-Spalte I mit −15 bis +15 Punkten; drei Rangstufen einschließlich Gleichständen. Für die Statistik vor Veröffentlichung SQL-Migration `202611010001_tied_recommendations.sql` anwenden und die Edge Function neu deployen.
 
 ## Supabase installation / Supabase-Einrichtung
 

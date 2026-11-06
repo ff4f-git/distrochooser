@@ -1,47 +1,24 @@
-# Distributionen verwalten
+# Distributionsverwaltung
 
-Der geschützte Bearbeitungszugang befindet sich unter [admin.html](../admin.html). Links stehen zwei Arbeitsbereiche zur Verfügung:
+[Admin-Oberfläche](../admin.html) · [Supabase-Einrichtung](statistics-setup.md)
 
-- **Distributionen:** Stammdaten, Beschreibungen, Stärken, Aktivierung und Löschung einzelner Distributionen verwalten. Punktfelder gehören nicht mehr in dieses Formular.
-- **Fragen & Punkte:** Oben eine der acht Fragen oder die Zusatzfragen RAM/GPU auswählen. Alle Distributionen stehen als Zeilen in einer gemeinsamen Tabelle, die Antworten als Spalten. Punkte direkt in der Tabelle bearbeiten; die aktuelle Spannweite steht unten je Antwortspalte. Deaktivierte Distributionen bleiben sichtbar und gekennzeichnet.
+## Bearbeiten
 
-Änderungen bleiben beim Wechsel zwischen Fragen, Distributionen und Arbeitsbereichen im Entwurf erhalten. **Speichern & veröffentlichen** übernimmt alle Änderungen gemeinsam. **Änderungen verwerfen** setzt den gesamten Entwurf zurück. Speicheraktionen und Meldungen stehen im normalen Seitenfluss und verdecken keine Eingaben.
+1. Mit einem **kurzlebigen GitHub Fine-grained Token** anmelden: Repository `ff4f-git/distrochooser`, Berechtigung **Contents: Read and write**. Token nie veröffentlichen oder im Repository speichern.
+2. Unter **Distributionen** Namen, Texte (DE/EN), drei Stärken je Sprache, Links und Aktivierung pflegen.
+3. Unter **Fragen & Punkte** die acht Fragen und Zusatzfragen RAM/GPU bearbeiten. Jede Distribution ist eine Zeile; ganze Punktwerte von −100 bis +100 sind zulässig. Neutrale Antworten bleiben 0.
+4. **Speichern & veröffentlichen** erzeugt einen GitHub-Commit und aktiviert dieselbe Katalogversion in Supabase. Änderungen verwerfen setzt den Entwurf zurück.
 
-Vor dem Speichern werden sichtbare Stammdaten erneut aus dem Formular übernommen, auch wenn ein Browser keine Eingabeereignisse gemeldet hat. Die Erfolgsmeldung erscheint erst nach einem unabhängigen Neuladen und vollständigen Vergleich des veröffentlichten Katalogs. Bei Fehlern bleiben die Änderungen im Entwurf; die Meldung nennt den betroffenen Schritt und eine Vorgangskennung.
+Neue Distributionen benötigen eine eindeutige, dauerhafte ID, vollständige Texte und alle Punktwerte. Deaktivierte Distributionen bleiben im Katalog, erscheinen aber nicht in neuen Empfehlungen. Löschungen werden erst beim Veröffentlichen wirksam.
 
-## Zugang
+## Daten und Veröffentlichung
 
-Ein kurzlebiger GitHub Fine-grained Personal Access Token benötigt ausschließlich Zugriff auf `ff4f-git/distrochooser` und **Contents: Read and write**. Das GitHub-Konto muss Schreibrecht für das Repository besitzen. Der Token wird nicht im Repository, Local Storage, Cookies oder in der Datenbank gespeichert. Der Browser hält ihn nur im Arbeitsspeicher; Abmelden oder Schließen der Seite entfernt ihn. Der Server prüft die GitHub-Rechte bei jedem Admin-Zugriff. Token niemals im Chat oder in Issues posten.
+**Einzige redaktionelle Quelle:** `data/distributions.json`. Automatisch erzeugt werden Website-/Statistikmodelle, GPU-Boni, Beschreibungen, Symbole, [Excel-Matrix](../data/punktematrix.xlsx) und [Punktetabellen](scores-de.md) ([EN](scores-en.md)). **Diese Ausgaben nicht einzeln bearbeiten.**
 
-## Bearbeiten, hinzufügen, deaktivieren und löschen
+`catalog-admin` veröffentlicht die Dateien auf GitHub und aktiviert die Katalogversion in Supabase. Die Website verwendet die veröffentlichte Version; die statische JSON-Datei ist ein Fallback. `submit-statistics` prüft freiwillige Beiträge anhand der zugehörigen archivierten Version. **Reine Punkte- und Katalogänderungen benötigen kein Edge-Function-Deployment.**
 
-- Alle acht Fragen einschließlich RAM-/GPU-Werten erscheinen im Frageneditor mit ihren Antworttexten. Ganze Zahlen zwischen −100 und +100 sind erlaubt; neutrale Egal-/Unbekannt-Antworten bleiben 0.
-- **Hinzufügen** erzeugt eine neue Distribution. Stammdaten und deutsch/englische Texte einschließlich drei Stärken ausfüllen; die neue Zeile erscheint gleichzeitig in allen Punktetabellen. Die zunächst leeren Punktfelder dort vollständig ergänzen. Beim Speichern führen fehlende Werte zur betreffenden Frage. Eine eindeutige, dauerhafte ID vergeben. Die ID einer veröffentlichten Distribution ist unveränderlich.
-- **In Empfehlungen anzeigen** deaktiviert oder aktiviert die Distribution.
-- **Ausgewählte Distribution löschen** entfernt sie zunächst nur aus dem Entwurf. Eine Rückfrage benennt die Distribution; erst **Speichern & veröffentlichen** entfernt sie aus dem aktuellen Katalog und allen automatisch erzeugten Ausgaben. Frühere Versionen und Statistiken bleiben unverändert. Neu angelegte, noch unveröffentlichte Entwürfe werden ohne zusätzliche Rückfrage verworfen.
-- Vorgemerkte Löschungen werden im Formular angezeigt und lassen sich mit **Löschungen rückgängig machen** zurücknehmen. **Verwerfen** setzt sämtliche ungespeicherten Änderungen einschließlich Löschungen zurück. Mindestens eine aktive Distribution muss erhalten bleiben.
-- Name, Beschreibungen und optionaler offizieller HTTPS-Link lassen sich ändern. Neue Distributionen erhalten zunächst ein neutrales Linux-Symbol.
-- Es werden keine Änderungen gespeichert, bevor **Speichern & veröffentlichen** betätigt wird. Beim Verlassen mit ungespeicherten Änderungen erscheint eine Rückfrage.
+## Betrieb
 
-## Ein Datenstand, alle Ausgaben
+Bei einer **Neuinstallation** alle fünf SQL-Migrationen in Reihenfolge anwenden, beide Edge Functions deployen und den ersten Katalogstand registrieren: [Schrittfolge](statistics-setup.md). Bestehende Installationen nicht neu initialisieren.
 
-`data/distributions.json` enthält den vollständigen versionierten Katalog mit stabilen IDs, aktiv/inaktiv, Texten, Stärken, Symbolen, Punkten und GPU-Boni. Eine Veröffentlichung erzeugt daraus automatisch:
-
-- `assets/model.json` und die entsprechende Statistikmodell-Kopie;
-- beide GPU-Dateien, Beschreibungen und Symbole;
-- `data/punktematrix.xlsx` als **Export**, nicht als Eingabequelle;
-- `docs/scores-de.md` und `docs/scores-en.md` mit vollständigen aktuellen Punktetabellen.
-
-Auch `bewertungslogik.md` und `scoring-logic.md` werden mit den aktuellen Tabellen erzeugt. Die bisherigen ausführlichen Begründungen bleiben unter `scoring-rationale-de.md` und `scoring-rationale-en.md` als redaktionelle Dokumente mit historischen Beispielen erhalten.
-
-Die Edge Function `catalog-admin` erstellt einen Commit auf `main` und aktiviert danach denselben Katalog in einer Transaktion in Supabase. Erst dann meldet das Formular Erfolg. Bei einer Änderung auf `main` oder einer konkurrierenden Veröffentlichung wird ein veralteter Stand abgelehnt. Wenn nach dem Commit die Datenbank vorübergehend nicht erreichbar ist, kann derselbe Speichervorgang wiederholt werden; der identische Commit-Katalog wird dann aktiviert.
-
-Die Website lädt einen vollständigen veröffentlichten Katalog über den öffentlichen Lesezugang der Funktion. Als Ausfallsicherung dient die vollständige statische Katalogdatei. Ein geöffneter Fragebogen behält seine Versionskennung. `submit-statistics` berechnet dessen Ergebnis mit genau dieser gespeicherten Version erneut. Neue Punktwerte benötigen dadurch **kein erneutes Edge-Function-Deployment**. Alte Versionen und bestehende Statistikdatensätze bleiben erhalten.
-
-## Betrieb und Tests
-
-Beide Funktionen werden mit `verify_jwt = false` bereitgestellt: `catalog-admin` prüft selbst GitHub-Schreibrechte; der öffentliche Lesezugriff liefert nur ohnehin öffentliche Katalogdaten. Schreibende Datenbankzugriffe sind ausschließlich mit dem serverseitigen Service-Key möglich. Tabellen und Aktivierungs-RPC sind für `anon` und `authenticated` gesperrt; RLS ist aktiv.
-
-Neue Installation: **alle fünf Migrationen in Dateireihenfolge** anwenden, insbesondere `202611010002_catalog_admin.sql`; den aktuellen Katalog aus `data/distributions.json` in `distribution_releases` registrieren und `distribution_release_current` auf dessen Version setzen. Den zugehörigen GitHub-Commit als `github_commit` verwenden. Falls alte Statistikbeiträge mit `2.2.0` übernommen werden, zusätzlich diesen historischen Katalog als archivierte Version registrieren. Beide Funktionen `submit-statistics` und `catalog-admin` samt relativen Abhängigkeiten deployen (`npx supabase functions deploy <name> --use-api`). Bestehende Installationen nicht neu initialisieren. Ausführliche Schrittfolge: [Supabase-Einrichtung](statistics-setup.md). Die mitgelieferte `seed.json` bestimmt die unveränderliche Fragenstruktur. Keine Geheimnisse in den Client oder in Git schreiben.
-
-Prüfen mit `node --test tests/*.test.mjs`. Die Tests kontrollieren unveränderte Ausgangswerte, Hinzufügen/Deaktivieren, Validierungsfehler, Versionsbindung, Ranggleichheit und Excel-Ausgabe. Die gespeicherten Statistikdaten werden durch Tests nicht verändert.
+Tests: `node --test tests/*.test.mjs`. Der GitHub-Token bleibt nur während der Sitzung im Browser; Datenbank-Service-Schlüssel gehören ausschließlich auf den Server.
