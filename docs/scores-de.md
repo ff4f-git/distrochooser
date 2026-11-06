@@ -1,6 +1,6 @@
 # Veröffentlichte Bewertungen
 
-Version: `catalog-428f9546cd1bdbb4564f29bf53d4661327b9f760321333f3f7a8a785ba1fc0f6`
+Version: `catalog-452a7c90371666d9e188bf039240496bf18568dee7455d3859b6fd8187b1aca6`
 
 Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 
