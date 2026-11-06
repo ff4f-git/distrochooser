@@ -13,7 +13,7 @@ Neue Distributionen benötigen eine eindeutige, dauerhafte ID, vollständige Tex
 
 ## Daten und Veröffentlichung
 
-**Einzige redaktionelle Quelle:** `data/distributions.json`. Automatisch erzeugt werden Website-/Statistikmodelle, GPU-Boni, Beschreibungen, Symbole, [Excel-Matrix](../data/punktematrix.xlsx) und [Punktetabellen](scores-de.md) ([EN](scores-en.md)). **Diese Ausgaben nicht einzeln bearbeiten.**
+**Einzige redaktionelle Quelle:** `data/distributions.json`. Automatisch erzeugt werden Website-/Statistikmodelle, GPU-Boni, Beschreibungen, Symbole und die [Excel-Matrix](../data/punktematrix.xlsx). **Diese Ausgaben nicht einzeln bearbeiten.**
 
 `catalog-admin` veröffentlicht die Dateien auf GitHub und aktiviert die Katalogversion in Supabase. Die Website verwendet die veröffentlichte Version; die statische JSON-Datei ist ein Fallback. `submit-statistics` prüft freiwillige Beiträge anhand der zugehörigen archivierten Version. **Reine Punkte- und Katalogänderungen benötigen kein Edge-Function-Deployment.**
 
