@@ -1,26 +1,25 @@
-# Distributionsverwaltung
+# Eigene Distrochooser-Instanz verwalten
 
-[Admin-Oberfläche](../admin.html) · [Supabase-Einrichtung](statistics-setup.md)
+[Supabase-Einrichtung](statistics-setup.md) · [Konzept](konzept.md)
 
-## Bearbeiten
+## Einrichtung nach Fork oder Download
 
-1. **Nur für den Repository-Betreiber und ausdrücklich berechtigte Mitwirkende:** Mit einem kurzlebigen GitHub Fine-grained Token für `ff4f-git/distrochooser` anmelden. Der Token benötigt **Contents: Read and write**. Andere Besucher benötigen keinen Admin-Zugang und dürfen keine Schreibrechte erhalten. Token nie veröffentlichen oder im Repository speichern.
-2. Unter **Distributionen** Namen, Texte (DE/EN), drei Stärken je Sprache, Links und Aktivierung pflegen.
-3. Unter **Fragen & Punkte** die acht Fragen und Zusatzfragen RAM/GPU bearbeiten. Jede Distribution ist eine Zeile; ganze Punktwerte von −100 bis +100 sind zulässig. Neutrale Antworten bleiben 0.
-4. **Speichern & veröffentlichen** erzeugt einen GitHub-Commit und aktiviert dieselbe Katalogversion in Supabase. Änderungen verwerfen setzt den Entwurf zurück.
+1. Das Projekt in ein **eigenes GitHub-Repository** forken oder hochladen und die Website selbst hosten.
+2. Ein **eigenes Supabase-Projekt** gemäß [Installationsanleitung](statistics-setup.md) einrichten.
+3. Die fest eingetragenen Projektadressen anpassen:
+   - `supabase/functions/catalog-admin/index.ts`: `REPO` auf `eigener-name/eigenes-repo` und `ORIGIN` auf den Ursprung der eigenen Website setzen.
+   - `supabase/functions/submit-statistics/index.ts`: `STATISTICS_ORIGIN` für die eigene Website setzen.
+   - `assets/admin.js`, `assets/catalog-client.js` und `assets/statistics-config.js`: die Supabase-Funktions-URLs durch die URLs des **eigenen Projekts** ersetzen.
+4. Beide Edge Functions deployen und den initialen Katalog in Supabase registrieren (siehe Installationsanleitung).
+5. Für das **eigene Repository** einen GitHub Fine-grained Token mit **Contents: Read and write** erstellen. Den Token nur im Admin-Panel der eigenen Website verwenden, nicht in Code oder Konfiguration speichern.
 
-Neue Distributionen benötigen eine eindeutige, dauerhafte ID, vollständige Texte und alle Punktwerte. Deaktivierte Distributionen bleiben im Katalog, erscheinen aber nicht in neuen Empfehlungen. Löschungen werden erst beim Veröffentlichen wirksam.
+## Änderungen veröffentlichen
 
-Wer das Projekt selbst betreiben möchte, muss es **forken** und im Admin-Code die fest eingetragene Repository-Adresse sowie die Supabase-Konfiguration auf die **eigene Instanz** umstellen. Ein Fork erhält keine Schreibrechte auf dieses Repository.
+1. Im eigenen `admin.html` den GitHub-Token eingeben.
+2. Unter **Distributionen** Stammdaten, DE/EN-Texte, Stärken und Aktivierung bearbeiten.
+3. Unter **Fragen & Punkte** die Bewertungen für Fragen, RAM und GPU anpassen.
+4. **Speichern & veröffentlichen** schreibt die aktualisierte `data/distributions.json` und die benötigten Laufzeitdateien in das eigene GitHub-Repository und aktiviert dieselbe Katalogversion im eigenen Supabase-Projekt.
 
-## Daten und Veröffentlichung
+Die JSON-Datei ist die **einzige Datenquelle** für die Bewertungen. Die daraus erzeugten Laufzeitdateien nicht einzeln bearbeiten. Für reine Punkteänderungen ist kein erneutes Edge-Function-Deployment erforderlich.
 
-**Einzige redaktionelle Quelle:** `data/distributions.json`. Automatisch erzeugt werden Website-/Statistikmodelle, GPU-Boni, Beschreibungen, Symbole. **Diese Ausgaben nicht einzeln bearbeiten.**
-
-`catalog-admin` veröffentlicht die Dateien auf GitHub und aktiviert die Katalogversion in Supabase. Die Website verwendet die veröffentlichte Version; die statische JSON-Datei ist ein Fallback. `submit-statistics` prüft freiwillige Beiträge anhand der zugehörigen archivierten Version. **Reine Punkte- und Katalogänderungen benötigen kein Edge-Function-Deployment.**
-
-## Betrieb
-
-Bei einer **Neuinstallation** alle fünf SQL-Migrationen in Reihenfolge anwenden, beide Edge Functions deployen und den ersten Katalogstand registrieren: [Schrittfolge](statistics-setup.md). Bestehende Installationen nicht neu initialisieren.
-
-Tests: `node --test tests/*.test.mjs`. Der GitHub-Token bleibt nur während der Sitzung im Browser; Datenbank-Service-Schlüssel gehören ausschließlich auf den Server.
+Tests: `node --test tests/*.test.mjs`. GitHub-Tokens gehören nicht ins Repository; der Supabase-Service-Schlüssel bleibt ausschließlich serverseitig.
