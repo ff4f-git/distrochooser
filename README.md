@@ -40,7 +40,7 @@ Die Gewichtungen sind bewusst redaktionelle Einschätzungen. Sie können sich mi
 
 **Freiwillige Statistik:** Beiträge werden ausschließlich nach ausdrücklichem Klick auf „Ergebnis zur Statistik beitragen“ übertragen. Nach erfolgreichem Beitrag erscheint ein zusätzlicher Link „Öffentliche Statistik ansehen“ im Ergebnisbereich; der Footer-Link ist immer sichtbar. Die [öffentliche Statistik](statistik.html) zeigt ab dem ersten Beitrag die Gesamtzahl und maximal drei Distributionen, sortiert nach Häufigkeit ihrer **Erstplatzierung** (bei Gleichstand alphabetisch). Es handelt sich um Empfehlungen des Modells, nicht um Nutzerstimmen für eine Distribution. Die Statistik umfasst etwa 90 Tage und ist nicht repräsentativ. [Betrieb und Einrichtung (DE/EN)](docs/statistics-setup.md).
 
-Mehr dazu: [Konzept](docs/konzept.md) · [Punktematrix](data/punktematrix.xlsx)
+Mehr dazu: [Konzept](docs/konzept.md) · [JSON-Punktematrix](data/distributions.json)
 
 ---
 
@@ -76,7 +76,7 @@ Weights reflect editorial judgment and may change as distributions evolve. Alway
 
 **Optional statistics:** Only an explicit click submits a result. After a successful contribution, a “View public statistics” link appears in the results; the footer link remains available to everyone. The [public dashboard](statistik.html) displays the total and up to three most frequent **first-choice recommendations** starting with the first contribution (alphabetical tie-break). These are model recommendations, not votes for a distribution. Figures cover approximately 90 days and are not representative. [Operations guide](docs/statistics-setup.md).
 
-For a closer look, see the [concept](docs/concept.md), and [scoring matrix](data/punktematrix.xlsx).
+For a closer look, see the [concept](docs/concept.md), and [JSON scoring matrix](data/distributions.json).
 
 ---
 
@@ -88,7 +88,6 @@ assets/app.js               Questionnaire, language switch, scoring, results
 assets/styles.css           Visual design / Gestaltung
 assets/icons.js             Distribution icon mappings
 data/distributions.json     Versioned catalog / versionierter Distributionskatalog
-data/punktematrix.xlsx      Generated Excel export / automatisch erzeugter Export
 assets/model.json           Distribution points and German questions
 assets/gpu-bonus.json       Gaming GPU adjustments
 assets/questions-en.json    English questions and answer labels
@@ -124,4 +123,4 @@ Die ersten drei unterschiedlichen Punktwerte bilden Platz 1, 2 und 3. Alle punkt
 
 ## Administration
 
-Distributionen, Beschreibungen und sämtliche Bewertungen werden über [die Distributionsverwaltung](https://ff4f-git.github.io/distrochooser/admin.html) gepflegt. Ein Speichervorgang veröffentlicht die geprüfte Version für Website und Statistik und erzeugt JSON-Dateien, Excel und Punktetabellen. [Zugang und Betrieb](docs/administration.md).
+Distributionen, Beschreibungen und sämtliche Bewertungen werden über [die Distributionsverwaltung](https://ff4f-git.github.io/distrochooser/admin.html) gepflegt. Ein Speichervorgang veröffentlicht die geprüfte Version für Website und Statistik und erzeugt die benötigten JSON-Dateien. [Zugang und Betrieb](docs/administration.md).

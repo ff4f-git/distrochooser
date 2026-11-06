@@ -12,4 +12,4 @@ Die ersten drei **unterschiedlichen** Punktwerte bilden die Ränge. Bei Gleichst
 
 Der Fragebogen läuft im Browser; die aktuelle Katalogversion kommt aus der veröffentlichten Datenverwaltung, mit statischer JSON-Datei als Fallback. Die freiwillige Statistik wird ausschließlich nach ausdrücklicher Zustimmung übermittelt.
 
-[Punktematrix](../data/punktematrix.xlsx) · [Administration](administration.md)
+[JSON-Punktematrix](../data/distributions.json) · [Administration](administration.md)

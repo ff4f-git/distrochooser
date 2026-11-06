@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 import catalog from '../data/distributions.json' with {type:'json'};
 import model from '../assets/model.json' with {type:'json'};
 import bonuses from '../assets/gpu-bonus.json' with {type:'json'};
-import {validateCatalog,runtimeFromCatalog,generatedFiles,excelExport,simulate,GPU,RAM,canonicalJson} from '../assets/catalog-core.js';
+import {validateCatalog,runtimeFromCatalog,generatedFiles,simulate,GPU,RAM,canonicalJson} from '../assets/catalog-core.js';
 import {validateSubmission} from '../supabase/functions/submit-statistics/validate.js';
 import {loadPublishedCatalog} from '../assets/catalog-client.js';
 test('catalog preserves all distributions, all scores, GPU bonuses and three strengths per language',()=>{
@@ -34,11 +34,6 @@ test('version-specific server validation and admin simulator have identical rank
 });
 test('fallback preserves a pinned catalog, rather than combining separately cached files',async()=>{
  let calls=0;const loaded=await loadPublishedCatalog(async()=>{calls++;return calls===1?{ok:false}:{ok:true,json:async()=>catalog};});assert.equal(calls,2);assert.equal(loaded.model.version,catalog.version);
-});
-test('generated Excel is a valid stored ZIP and contains all answer and GPU columns',async()=>{
- const bytes=excelExport(catalog);assert.equal(new DataView(bytes.buffer).getUint32(0,true),0x04034b50);
- const text=new TextDecoder().decode(bytes);assert.ok(text.includes('xl/worksheets/sheet1.xml'));for(const code of [...RAM.map(o=>o[1]),'Q','R','S','AC','AD','AE'])assert.ok(text.includes(code+': '));for(const key of GPU)assert.ok(text.includes('GPU: '+key));
- await fs.writeFile('/workspace/scratch/ab1ee3469989/catalog-export-test.xlsx',bytes);
 });
 test('admin validation matches the browser and statistics runtime stays compatible',async()=>{
  const source=await fs.readFile(new URL('../assets/catalog-core.js',import.meta.url),'utf8');

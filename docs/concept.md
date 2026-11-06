@@ -12,4 +12,4 @@ The top three **distinct** totals define the ranks. Ties may result in more than
 
 The questionnaire runs in the browser; the current catalog is fetched from the published catalog service with a static JSON fallback. Optional statistics are submitted only with explicit consent.
 
-[Scoring matrix](../data/punktematrix.xlsx) · [Administration](administration.md)
+[JSON scoring matrix](../data/distributions.json) · [Administration](administration.md)

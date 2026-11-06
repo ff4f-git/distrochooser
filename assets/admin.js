@@ -72,7 +72,7 @@ $('save').onclick=async()=>{
   captureMetadata();
   const missing=draft.firstMissingScore();if(missing){draft.question=missing.group;show('questions');notice(missing.name+': Bitte alle Punktfelder ausfüllen (Antwort '+missing.key+').',true);$('matrixBody').querySelector('input[data-distro="'+CSS.escape(missing.id)+'"][data-code="'+CSS.escape(missing.key)+'"]')?.focus();return;}
   const clean=validateCatalog(draft.publishable(),draft.reference),selected=draft.selected,view=draft.view,question=draft.question;lock(true);notice('Wird gespeichert und veröffentlicht …');
-  const data=await publishVerified(api,{catalog:clean,reference:draft.reference,head,deletedIds:[...draft.deletedIds]});draft.load(data.catalog);if(draft.visible().some(d=>d.id===selected))draft.selected=selected;draft.question=question;head=data.head;user=data.user||user;lock(false);show(view);notice(data.unchanged?'Keine Änderungen vorhanden.':'Gespeichert, erneut geladen und bestätigt. Website, Statistik, Excel und Dokumentation verwenden denselben Stand.');
+  const data=await publishVerified(api,{catalog:clean,reference:draft.reference,head,deletedIds:[...draft.deletedIds]});draft.load(data.catalog);if(draft.visible().some(d=>d.id===selected))draft.selected=selected;draft.question=question;head=data.head;user=data.user||user;lock(false);show(view);notice(data.unchanged?'Keine Änderungen vorhanden.':'Gespeichert, erneut geladen und bestätigt. Website und Statistik verwenden denselben Stand.');
  }catch(error){notice(error.message,true);}finally{if(busy)lock(false);}
 };
 window.addEventListener('beforeunload',e=>{if(busy||draft?.dirty()){e.preventDefault();e.returnValue='';}});

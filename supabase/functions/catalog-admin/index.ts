@@ -1,4 +1,4 @@
-import {validateCatalog,runtimeFromCatalog,generatedFiles,excelExport} from './catalog.js';
+import {validateCatalog,generatedFiles} from './catalog.js';
 import reference from './seed.json' with {type:'json'};
 const REPO='ff4f-git/distrochooser';
 const ORIGIN='https://ff4f-git.github.io';
@@ -9,7 +9,6 @@ const db=async(path:string,init:RequestInit={})=>{
  if(!res.ok){let code='';try{const detail=await res.json();if(typeof detail.code==='string')code=detail.code;}catch{}throw Error('Datenverwaltung: HTTP '+res.status+(code?' ('+code+')':'')+'.');}return res.status===204?null:res.json();
 };
 const current=async()=>{const rows=await db('distribution_release_current?select=version&singleton=eq.true');if(!rows.length)throw Error('Keine Veröffentlichung vorhanden.');const [row]=await db('distribution_releases?select=catalog,github_commit&version=eq.'+encodeURIComponent(rows[0].version));return row;};
-const base64=(bytes:Uint8Array)=>{let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(s);};
 export async function handler(request:Request){
  const requestId=crypto.randomUUID();let stage='Zugriff prüfen';
  const headers={'Access-Control-Allow-Origin':ORIGIN,'Vary':'Origin','Access-Control-Allow-Headers':'content-type,authorization','Access-Control-Allow-Methods':'GET,POST,OPTIONS','Cache-Control':'no-store'};
@@ -51,8 +50,7 @@ export async function handler(request:Request){
   if(committedVersion!==version){
    if(input.expectedHead!==commit)return reply(409,{error:'main wurde zwischenzeitlich geändert. Bitte neu laden.'});
    stage='GitHub-Veröffentlichung erzeugen';const sourceCommit=await gh('repos/'+REPO+'/git/commits/'+commit);
-   const binary=await gh('repos/'+REPO+'/git/blobs',{method:'POST',body:JSON.stringify({encoding:'base64',content:base64(excelExport(catalog))})});
-   const tree=await gh('repos/'+REPO+'/git/trees',{method:'POST',body:JSON.stringify({base_tree:sourceCommit.tree.sha,tree:[...Object.entries(generatedFiles(catalog)).map(([path,content])=>({path,mode:'100644',type:'blob',content})),{path:'data/punktematrix.xlsx',mode:'100644',type:'blob',sha:binary.sha}]})});
+   const tree=await gh('repos/'+REPO+'/git/trees',{method:'POST',body:JSON.stringify({base_tree:sourceCommit.tree.sha,tree:[...Object.entries(generatedFiles(catalog)).map(([path,content])=>({path,mode:'100644',type:'blob',content}))]})});
    const created=await gh('repos/'+REPO+'/git/commits',{method:'POST',body:JSON.stringify({message:'Publish distribution catalog '+version.slice(8,20)+' by '+user.login,tree:tree.sha,parents:[commit]})});
    stage='main aktualisieren';await gh('repos/'+REPO+'/git/refs/heads/main',{method:'PATCH',body:JSON.stringify({sha:created.sha,force:false})});commit=created.sha;
    const verifiedRef=await gh('repos/'+REPO+'/git/ref/heads/main');if(verifiedRef.object.sha!==commit)throw Error('Der neue Commit konnte auf main nicht bestätigt werden.');
