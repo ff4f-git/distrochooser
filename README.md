@@ -38,7 +38,7 @@ Jede Antwort ist mit Gewichtungen für die berücksichtigten Distributionen verk
 
 Die Gewichtungen sind bewusst redaktionelle Einschätzungen. Sie können sich mit der Entwicklung von Distributionen ändern und ersetzen keine eigene Recherche, insbesondere bei Treibern, Hardware-Kompatibilität und Spielen mit Anti-Cheat.
 
-**Freiwillige Statistik:** Beiträge werden ausschließlich nach ausdrücklichem Klick auf „Ergebnis zur Statistik beitragen“ übertragen. Nach erfolgreichem Beitrag erscheint ein zusätzlicher Link „Öffentliche Statistik ansehen“ im Ergebnisbereich; der Footer-Link ist immer sichtbar. Die [öffentliche Statistik](statistik.html) zeigt ab dem ersten Beitrag die Gesamtzahl und maximal drei Distributionen, sortiert nach Häufigkeit ihrer **Erstplatzierung** (bei Gleichstand alphabetisch). Es handelt sich um Empfehlungen des Modells, nicht um Nutzerstimmen für eine Distribution. Die Statistik umfasst etwa 90 Tage und ist nicht repräsentativ. [Betrieb und Einrichtung (DE/EN)](docs/statistics-setup.md).
+**Freiwillige Statistik:** Beiträge werden ausschließlich nach ausdrücklichem Klick auf „Ergebnis zur Statistik beitragen“ übertragen. Nach erfolgreichem Beitrag erscheint ein zusätzlicher Link „Öffentliche Statistik ansehen“ im Ergebnisbereich; der Footer-Link ist immer sichtbar. Die [öffentliche Statistik](statistik.html) zeigt ab dem ersten Beitrag die Gesamtzahl und maximal drei Distributionen, sortiert nach Häufigkeit ihrer **Erstplatzierung** (bei Gleichstand alphabetisch). Es handelt sich um Empfehlungen des Modells, nicht um Nutzerstimmen für eine Distribution. Die Statistik umfasst etwa 90 Tage und ist nicht repräsentativ. [Installation und Einrichtung (DE/EN)](docs/statistics-setup.md).
 
 Mehr dazu: [Konzept](docs/konzept.md) · [Bewertungslogik](docs/bewertungslogik.md) · [JSON-Punktematrix](data/distributions.json)
 
@@ -119,7 +119,7 @@ Die ersten drei unterschiedlichen Punktwerte bilden Platz 1, 2 und 3. Alle punkt
 
 **DE:** Bei einer neuen Installation alle fünf SQL-Migrationen in Reihenfolge ausführen, beide Edge Functions (`submit-statistics`, `catalog-admin`) bereitstellen und den aktuellen Katalog als erste Veröffentlichung in Supabase registrieren. Für reine Punkteänderungen ist danach kein erneutes Deployment nötig. [Vollständige Anleitung](docs/statistics-setup.md) · [Katalogverwaltung](docs/administration.md).
 
-**EN:** On a fresh installation, apply all five SQL migrations in order, deploy both Edge Functions (`submit-statistics` and `catalog-admin`), and register the initial versioned catalog in Supabase. Subsequent scoring changes do not require function redeployment. [Full setup guide](docs/statistics-setup.md) · [Catalog administration](docs/administration.md).
+**EN:** On a fresh installation, apply all five SQL migrations in order, deploy both Edge Functions (`submit-statistics` and `catalog-admin`), and register the initial versioned catalog in Supabase. Subsequent scoring changes do not require function redeployment. [Step-by-step installation guide](docs/statistics-setup.md) · [Catalog administration](docs/administration.md).
 
 ## Administration
 
