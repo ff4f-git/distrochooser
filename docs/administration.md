@@ -4,12 +4,14 @@
 
 ## Bearbeiten
 
-1. Mit einem **kurzlebigen GitHub Fine-grained Token** anmelden: Repository `ff4f-git/distrochooser`, Berechtigung **Contents: Read and write**. Token nie veröffentlichen oder im Repository speichern.
+1. **Nur für den Repository-Betreiber und ausdrücklich berechtigte Mitwirkende:** Mit einem kurzlebigen GitHub Fine-grained Token für `ff4f-git/distrochooser` anmelden. Der Token benötigt **Contents: Read and write**. Andere Besucher benötigen keinen Admin-Zugang und dürfen keine Schreibrechte erhalten. Token nie veröffentlichen oder im Repository speichern.
 2. Unter **Distributionen** Namen, Texte (DE/EN), drei Stärken je Sprache, Links und Aktivierung pflegen.
 3. Unter **Fragen & Punkte** die acht Fragen und Zusatzfragen RAM/GPU bearbeiten. Jede Distribution ist eine Zeile; ganze Punktwerte von −100 bis +100 sind zulässig. Neutrale Antworten bleiben 0.
 4. **Speichern & veröffentlichen** erzeugt einen GitHub-Commit und aktiviert dieselbe Katalogversion in Supabase. Änderungen verwerfen setzt den Entwurf zurück.
 
 Neue Distributionen benötigen eine eindeutige, dauerhafte ID, vollständige Texte und alle Punktwerte. Deaktivierte Distributionen bleiben im Katalog, erscheinen aber nicht in neuen Empfehlungen. Löschungen werden erst beim Veröffentlichen wirksam.
+
+Wer das Projekt selbst betreiben möchte, muss es **forken** und im Admin-Code die fest eingetragene Repository-Adresse sowie die Supabase-Konfiguration auf die **eigene Instanz** umstellen. Ein Fork erhält keine Schreibrechte auf dieses Repository.
 
 ## Daten und Veröffentlichung
 
