@@ -6,7 +6,7 @@ Die jeweils veröffentlichten Werte werden automatisch aus der Distributionsverw
 
 # Veröffentlichte Bewertungen
 
-Version: `catalog-1fd21890df51d9851ec2e2f069125eced9c82b3a9fd3291da0391b7a7bad78b0`
+Version: `catalog-c21647983e6a3df8313b019bc1875dcc8311b7c82358bd01152c1d2bb8acce97`
 
 Automatisch aus der Distributionsverwaltung erzeugt. Nur aktive Distributionen.
 
